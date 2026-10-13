@@ -2,7 +2,7 @@
 
 A task-agnostic model compression and measurement toolchain for the **SEC 2026 Minimalist Edge AI Challenge, Software Optimization Track**.
 
-**Author: 楊元蓁 (Price Yang)** — Copyright (c) 2026 楊元蓁 (Price Yang). See [AUTHORS.md](AUTHORS.md); the same attribution is embedded in every exported model and report.
+**Author: 張維銚 (David Chang)** — Copyright (c) 2026 張維銚 (David Chang). See [AUTHORS.md](AUTHORS.md); the same attribution is embedded in every exported model and report.
 
 Input: a model plus a task adapter. Output: several compressed versions (structured pruning × INT8 quantization), every metric for each version, a Pareto plot, and a configurable total score.
 
