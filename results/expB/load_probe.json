@@ -1,0 +1,3418 @@
+{
+ "experiment": "B",
+ "stage": 0,
+ "written_utc": "2026-09-23T08:51:32.455748+00:00",
+ "protocol": "results/paper/b_design_registered.md",
+ "note": "Session-construction wall clock sizes the budget (8.3) and is NEVER a result (12). No inference was timed in this stage.",
+ "interpreters": {
+  "ort1163": {
+   "reported_ort": "1.16.3",
+   "numpy": "2.4.6",
+   "python": "3.11.9",
+   "probe_rc": 0,
+   "probe_wall_s": 10.7,
+   "n_loads": 34,
+   "n_fails": 4
+  },
+  "ort1201": {
+   "reported_ort": "1.20.1",
+   "numpy": "2.4.6",
+   "python": "3.11.9",
+   "probe_rc": 0,
+   "probe_wall_s": 6.1,
+   "n_loads": 35,
+   "n_fails": 3
+  },
+  "ort1211": {
+   "reported_ort": "1.21.1",
+   "numpy": "2.4.6",
+   "python": "3.11.9",
+   "probe_rc": 0,
+   "probe_wall_s": 6.6,
+   "n_loads": 35,
+   "n_fails": 3
+  },
+  "ort1221": {
+   "reported_ort": "1.22.1",
+   "numpy": "2.4.6",
+   "python": "3.11.9",
+   "probe_rc": 0,
+   "probe_wall_s": 6.4,
+   "n_loads": 35,
+   "n_fails": 3
+  },
+  "ort1232": {
+   "reported_ort": "1.23.2",
+   "numpy": "2.4.6",
+   "python": "3.11.9",
+   "probe_rc": 0,
+   "probe_wall_s": 5.0,
+   "n_loads": 35,
+   "n_fails": 3
+  },
+  "ort1244": {
+   "reported_ort": "1.24.4",
+   "numpy": "2.4.6",
+   "python": "3.11.9",
+   "probe_rc": 0,
+   "probe_wall_s": 5.3,
+   "n_loads": 38,
+   "n_fails": 0
+  },
+  "ort1251": {
+   "reported_ort": "1.25.1",
+   "numpy": "2.4.6",
+   "python": "3.11.9",
+   "probe_rc": 0,
+   "probe_wall_s": 5.3,
+   "n_loads": 38,
+   "n_fails": 0
+  },
+  "ort1260": {
+   "reported_ort": "1.26.0",
+   "numpy": "2.4.6",
+   "python": "3.11.9",
+   "probe_rc": 0,
+   "probe_wall_s": 5.2,
+   "n_loads": 38,
+   "n_fails": 0
+  },
+  "ort1270": {
+   "reported_ort": "1.27.0",
+   "numpy": "2.4.6",
+   "python": "3.11.9",
+   "probe_rc": 0,
+   "probe_wall_s": 5.2,
+   "n_loads": 38,
+   "n_fails": 0
+  },
+  "ort1280": {
+   "reported_ort": "1.28.0",
+   "numpy": "2.4.6",
+   "python": "3.11.9",
+   "probe_rc": 0,
+   "probe_wall_s": 5.2,
+   "n_loads": 38,
+   "n_fails": 0
+  },
+  "ort1300": {
+   "reported_ort": "1.30.0",
+   "numpy": "2.4.6",
+   "python": "3.11.9",
+   "probe_rc": 0,
+   "probe_wall_s": 5.6,
+   "n_loads": 38,
+   "n_fails": 0
+  }
+ },
+ "n_files": 38,
+ "files": {
+  "r50/p00_fp32": {
+   "path": "C:/Users/User/Desktop/SEC/edge-ai-toolkit/results/stress_resnet50_dyn/models/p00_fp32.onnx",
+   "sha256": "19b355585c64d4b599fd029f4bb4a2d9bd41a503d3118a103bf461a75574b6e5",
+   "bytes": 94032583
+  },
+  "r50/p00_int8": {
+   "path": "C:/Users/User/Desktop/SEC/edge-ai-toolkit/results/stress_resnet50_dyn/models/p00_int8.onnx",
+   "sha256": "41a987f1bc46dd3190eb3e2f5f0ef012049eab80c2a69141c55efff0b9ad4c4b",
+   "bytes": 24036316
+  },
+  "r50/p00_int8_dyn_conv": {
+   "path": "C:/Users/User/Desktop/SEC/edge-ai-toolkit/results/stress_resnet50_dyn/models/p00_int8_dyn_conv.onnx",
+   "sha256": "63f183f117cfcdcdc446ff57f91a54e163238f303dd0acc3c63867ff56583847",
+   "bytes": 23693547
+  },
+  "c3_224x224/a01": {
+   "path": "D:/sec_models/c3_224x224/a01.onnx",
+   "sha256": "7c536d02e2f6af9569e5f3c7a4d8282060072119524c93c8da71e63876b4722b",
+   "bytes": 2415805
+  },
+  "c3_224x224/a02": {
+   "path": "D:/sec_models/c3_224x224/a02.onnx",
+   "sha256": "41a36090dafe98f4ad8f9b7fe0b218c56ac3c031e547f0367c30655d2702bffe",
+   "bytes": 3593903
+  },
+  "c3_224x224/a03": {
+   "path": "D:/sec_models/c3_224x224/a03.onnx",
+   "sha256": "e6429d274805654c79ba68dc886c1efd4eff95393e747c35d3fdab579febd8a0",
+   "bytes": 25753167
+  },
+  "c3_224x224/b02": {
+   "path": "D:/sec_models/c3_224x224/b02.onnx",
+   "sha256": "eda9007c0449f118f02b1e8c4ba6b43bec51a7d7ab677566d42929eb3da02874",
+   "bytes": 9228567
+  },
+  "c3_224x224/b03": {
+   "path": "D:/sec_models/c3_224x224/b03.onnx",
+   "sha256": "1d655ead9b9a9438f58e46b151cc78fa304d420a56f904d692b43089837ce194",
+   "bytes": 8589884
+  },
+  "c3_224x224/b15": {
+   "path": "D:/sec_models/c3_224x224/b15.onnx",
+   "sha256": "3da17dfad1b7ba23c93fac6dbf49f6db78cd42f7519e915a2e27d37c5c0a972b",
+   "bytes": 1293388
+  },
+  "c3_224x224/b16": {
+   "path": "D:/sec_models/c3_224x224/b16.onnx",
+   "sha256": "7d25f0bfa7a92e9a67d8049facd4454911ca4388a303fc61ee14664b1010c717",
+   "bytes": 10191535
+  },
+  "c3_224x224/c01": {
+   "path": "D:/sec_models/c3_224x224/c01.onnx",
+   "sha256": "def183c935215f146c675fbf97889bfe36ff1856dfb75412a679c3f5b020cfaa",
+   "bytes": 21760409
+  },
+  "c3_224x224/c05": {
+   "path": "D:/sec_models/c3_224x224/c05.onnx",
+   "sha256": "0723876d0a12903d84705a98c29851774fc947448b43b730db84f9ae15976415",
+   "bytes": 11731625
+  },
+  "y256/256_p00_fp32": {
+   "path": "C:/Users/User/Desktop/SEC/edge-ai-toolkit/results/detection_dyn/models/256_p00_fp32.onnx",
+   "sha256": "1aa3b72e152ccad41806339ef8606831bb5f28549369979ba9a3d9d158633a8f",
+   "bytes": 12687054
+  },
+  "y256/256_p00_int8": {
+   "path": "C:/Users/User/Desktop/SEC/edge-ai-toolkit/results/detection_dyn/models/256_p00_int8.onnx",
+   "sha256": "c4a6e37c4a1491c865f410d1d0fa5def08ca639bfed0b3b6754cf7ac4145d5f3",
+   "bytes": 3533305
+  },
+  "y256/256_p00_int8_dyn_conv": {
+   "path": "C:/Users/User/Desktop/SEC/edge-ai-toolkit/results/detection_dyn/models/256_p00_int8_dyn_conv.onnx",
+   "sha256": "8f8e7af841b5f463a96f69179456c21f5fcf87c9e1a6dcc1f470ec7a81c6ef97",
+   "bytes": 3365567
+  },
+  "c224_224x3/a04": {
+   "path": "D:/sec_models/c224_224x3/a04.onnx",
+   "sha256": "6837d0b19625d4aff8266d7197a7f3775afd82a8c40f9fd0283d52db4955566f",
+   "bytes": 13469992
+  },
+  "c224_224x3/c02": {
+   "path": "D:/sec_models/c224_224x3/c02.onnx",
+   "sha256": "1a11f43a2fa14473fefff49a2d323e2ccaf915b4c6e96557f1aaa92d67c2b13a",
+   "bytes": 24459648
+  },
+  "mv64/p00_fp32": {
+   "path": "C:/Users/User/Desktop/SEC/edge-ai-toolkit/results/mobilevit_r64/models/p00_fp32.onnx",
+   "sha256": "8bba9618966c5739448d67738b4a0051e99125d96d8bda2673746b40103289fa",
+   "bytes": 4014666
+  },
+  "mv64/p00_int8": {
+   "path": "C:/Users/User/Desktop/SEC/edge-ai-toolkit/results/mobilevit_r64/models/p00_int8.onnx",
+   "sha256": "911de4ee3257966074fe54952cf7ad5ed546798fe138fa8997efce9b11b1f629",
+   "bytes": 1796122
+  },
+  "mv64/p00_int8_dyn_mm": {
+   "path": "C:/Users/User/Desktop/SEC/edge-ai-toolkit/results/mobilevit_r64/models/p00_int8_dyn_mm.onnx",
+   "sha256": "9c0025026d71ead82278eba5122264009deee1eb8b4c272a8422f786348794f4",
+   "bytes": 2701375
+  },
+  "c3_320x320/b01": {
+   "path": "D:/sec_models/c3_320x320/b01.onnx",
+   "sha256": "d1538e0f392836832e7bbc0c80285396491444b2614e07bc04ee26d38de7b88c",
+   "bytes": 7160419
+  },
+  "c3_320x320/b18": {
+   "path": "D:/sec_models/c3_320x320/b18.onnx",
+   "sha256": "c410f847a75bcfe976fdca2620b9a426fb1d689ab5083d7862395e8d3b2e0e34",
+   "bytes": 488222
+  },
+  "mv256/p00_fp32": {
+   "path": "C:/Users/User/Desktop/SEC/edge-ai-toolkit/results/mobilevit_r256/models/p00_fp32.onnx",
+   "sha256": "9ab14ae019564ef51b4f45103cd4db77f6c0c7a6ebdc9fb841f63f9f5448b138",
+   "bytes": 4014982
+  },
+  "mv256/p00_int8": {
+   "path": "C:/Users/User/Desktop/SEC/edge-ai-toolkit/results/mobilevit_r256/models/p00_int8.onnx",
+   "sha256": "ae5d630c76ccc5d40983777666afc619250cfed3ae072ac9492ed354c68d32cd",
+   "bytes": 1796576
+  },
+  "mv256/p00_int8_dyn_mm": {
+   "path": "C:/Users/User/Desktop/SEC/edge-ai-toolkit/results/mobilevit_r256/models/p00_int8_dyn_mm.onnx",
+   "sha256": "7da9e649cd59fb9f23ef37994b80d8011e5ced7fe591f67e286ca9e22841c6f8",
+   "bytes": 2701833
+  },
+  "c3_299x299/b05": {
+   "path": "D:/sec_models/c3_299x299/b05.onnx",
+   "sha256": "a70e6a824c413ab9a1242ce08e6327fc71e78a1a3351e4416607451914c33472",
+   "bytes": 24865194
+  },
+  "deit224/p00_fp32": {
+   "path": "C:/Users/User/Desktop/SEC/edge-ai-toolkit/results/deit_224/models/p00_fp32.onnx",
+   "sha256": "47f7ea618ea7b456eb4143438a7c592a614c8b1f1df9c7f55a79633e7c68dcf9",
+   "bytes": 22124249
+  },
+  "deit224/p00_int8": {
+   "path": "C:/Users/User/Desktop/SEC/edge-ai-toolkit/results/deit_224/models/p00_int8.onnx",
+   "sha256": "deffb7d51b6a0331c7d4f4a85f5c2c1b87583e178e81588e9c343b8a7facbc81",
+   "bytes": 6160292
+  },
+  "deit224/p00_int8_dyn_mm": {
+   "path": "C:/Users/User/Desktop/SEC/edge-ai-toolkit/results/deit_224/models/p00_int8_dyn_mm.onnx",
+   "sha256": "c7406a58789afe1600ab547ea03547ea9662b66ec3692624d7f4bd2318827f30",
+   "bytes": 6416697
+  },
+  "c1_64x64/a05": {
+   "path": "D:/sec_models/c1_64x64/a05.onnx",
+   "sha256": "3e47195d79e9593294df9e81a6d296a1e10969b68a717284081c29493a0ff5f1",
+   "bytes": 19300656
+  },
+  "mnv2/p00_fp32": {
+   "path": "C:/Users/User/Desktop/SEC/edge-ai-toolkit/results/classification_dyn/models/p00_fp32.onnx",
+   "sha256": "c0980c89d299a492d90b42b599b4359237c31b7c6e4363035a53552682a739b1",
+   "bytes": 8919751
+  },
+  "mnv2/p00_int8": {
+   "path": "C:/Users/User/Desktop/SEC/edge-ai-toolkit/results/classification_dyn/models/p00_int8.onnx",
+   "sha256": "ad770b998718b3a07b36a11edcbc9f5c52547d8459624579087d3de6a246a88c",
+   "bytes": 2621368
+  },
+  "mnv2/p00_int8_dyn_conv": {
+   "path": "C:/Users/User/Desktop/SEC/edge-ai-toolkit/results/classification_dyn/models/p00_int8_dyn_conv.onnx",
+   "sha256": "fc9c8d273f5ad80d9a86c1c30e95662f94662f818d5ff1984f01a49fb2a606fc",
+   "bytes": 2421448
+  },
+  "c3_112x112/c04": {
+   "path": "D:/sec_models/c3_112x112/c04.onnx",
+   "sha256": "f0d7093aff10e2638c734c5f18a6a7eabd2b9239b20bdb9b8090865a6f69a1ed",
+   "bytes": 1364007
+  },
+  "ae/p00_fp32": {
+   "path": "C:/Users/User/Desktop/SEC/edge-ai-toolkit/results/anomaly/models/p00_fp32.onnx",
+   "sha256": "b5ccd9a0dd354d9119323f194e879f2fe20209fbec32c956d07360535166aef1",
+   "bytes": 198371
+  },
+  "ae/p00_int8": {
+   "path": "C:/Users/User/Desktop/SEC/edge-ai-toolkit/results/anomaly/models/p00_int8.onnx",
+   "sha256": "f88884883b10aa1d6480f010d4a06af19fcab437188128e52fc6fd97742d88ff",
+   "bytes": 64088
+  },
+  "c3_240x320/a06": {
+   "path": "D:/sec_models/c3_240x320/a06.onnx",
+   "sha256": "093a9a55ff05fd71ace744593fd0c81eab8306d6d8c38b0892c5b3cff7f08265",
+   "bytes": 458144
+  },
+  "c56_56x3/c03": {
+   "path": "D:/sec_models/c56_56x3/c03.onnx",
+   "sha256": "d76ccb210397bca910c224172a54a12c0b0cc5bcb8573b317f0df758c265b093",
+   "bytes": 111182
+  }
+ },
+ "probe": {
+  "1.16.3": {
+   "env_dir": "ort1163",
+   "files": {
+    "r50/p00_fp32": {
+     "key": "r50/p00_fp32",
+     "loads": true,
+     "construct_s": 0.38943509999808157,
+     "input": "input",
+     "err": ""
+    },
+    "r50/p00_int8": {
+     "key": "r50/p00_int8",
+     "loads": true,
+     "construct_s": 0.20329540000238921,
+     "input": "input",
+     "err": ""
+    },
+    "r50/p00_int8_dyn_conv": {
+     "key": "r50/p00_int8_dyn_conv",
+     "loads": false,
+     "construct_s": 0.15116250000573928,
+     "input": "",
+     "err": "[ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+    },
+    "c3_224x224/a01": {
+     "key": "c3_224x224/a01",
+     "loads": true,
+     "construct_s": 0.22840480000013486,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/a02": {
+     "key": "c3_224x224/a02",
+     "loads": true,
+     "construct_s": 0.24292769999738084,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/a03": {
+     "key": "c3_224x224/a03",
+     "loads": true,
+     "construct_s": 0.24707720000151312,
+     "input": "data",
+     "err": ""
+    },
+    "c3_224x224/b02": {
+     "key": "c3_224x224/b02",
+     "loads": true,
+     "construct_s": 0.5085808999938308,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/b03": {
+     "key": "c3_224x224/b03",
+     "loads": true,
+     "construct_s": 0.7443173999999999,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/b15": {
+     "key": "c3_224x224/b15",
+     "loads": true,
+     "construct_s": 0.04381920000014361,
+     "input": "data_0",
+     "err": ""
+    },
+    "c3_224x224/b16": {
+     "key": "c3_224x224/b16",
+     "loads": true,
+     "construct_s": 0.16281329999765148,
+     "input": "data_0",
+     "err": ""
+    },
+    "c3_224x224/c01": {
+     "key": "c3_224x224/c01",
+     "loads": true,
+     "construct_s": 0.2090597999995225,
+     "input": "EfficientNet::input_0",
+     "err": ""
+    },
+    "c3_224x224/c05": {
+     "key": "c3_224x224/c05",
+     "loads": true,
+     "construct_s": 0.07553729999926873,
+     "input": "pixel_values",
+     "err": ""
+    },
+    "y256/256_p00_fp32": {
+     "key": "y256/256_p00_fp32",
+     "loads": true,
+     "construct_s": 0.1589008000009926,
+     "input": "input",
+     "err": ""
+    },
+    "y256/256_p00_int8": {
+     "key": "y256/256_p00_int8",
+     "loads": true,
+     "construct_s": 0.4766405999980634,
+     "input": "input",
+     "err": ""
+    },
+    "y256/256_p00_int8_dyn_conv": {
+     "key": "y256/256_p00_int8_dyn_conv",
+     "loads": false,
+     "construct_s": 0.2376141999993706,
+     "input": "",
+     "err": "[ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/model.0/conv/Conv_quant'"
+    },
+    "c224_224x3/a04": {
+     "key": "c224_224x3/a04",
+     "loads": true,
+     "construct_s": 0.3098496000020532,
+     "input": "images:0",
+     "err": ""
+    },
+    "c224_224x3/c02": {
+     "key": "c224_224x3/c02",
+     "loads": true,
+     "construct_s": 0.18823020000127144,
+     "input": "EfficientNet::input_0",
+     "err": ""
+    },
+    "mv64/p00_fp32": {
+     "key": "mv64/p00_fp32",
+     "loads": true,
+     "construct_s": 0.303147300001001,
+     "input": "input",
+     "err": ""
+    },
+    "mv64/p00_int8": {
+     "key": "mv64/p00_int8",
+     "loads": true,
+     "construct_s": 0.8052960999993957,
+     "input": "input",
+     "err": ""
+    },
+    "mv64/p00_int8_dyn_mm": {
+     "key": "mv64/p00_int8_dyn_mm",
+     "loads": true,
+     "construct_s": 0.3071494000032544,
+     "input": "input",
+     "err": ""
+    },
+    "c3_320x320/b01": {
+     "key": "c3_320x320/b01",
+     "loads": true,
+     "construct_s": 0.4198007000013604,
+     "input": "input",
+     "err": ""
+    },
+    "c3_320x320/b18": {
+     "key": "c3_320x320/b18",
+     "loads": true,
+     "construct_s": 0.1285591000050772,
+     "input": "images",
+     "err": ""
+    },
+    "mv256/p00_fp32": {
+     "key": "mv256/p00_fp32",
+     "loads": true,
+     "construct_s": 0.2045990000042366,
+     "input": "input",
+     "err": ""
+    },
+    "mv256/p00_int8": {
+     "key": "mv256/p00_int8",
+     "loads": true,
+     "construct_s": 0.9347866999960388,
+     "input": "input",
+     "err": ""
+    },
+    "mv256/p00_int8_dyn_mm": {
+     "key": "mv256/p00_int8_dyn_mm",
+     "loads": true,
+     "construct_s": 0.3727595000018482,
+     "input": "input",
+     "err": ""
+    },
+    "c3_299x299/b05": {
+     "key": "c3_299x299/b05",
+     "loads": false,
+     "construct_s": 0.026928200000838842,
+     "input": "",
+     "err": "[ONNXRuntimeError] : 1 : FAIL : Load model from D:/sec_models/c3_299x299/b05.onnx failed:C:\\a\\_work\\1\\s\\onnxruntime\\core\\graph\\model.cc:150 onnxruntime::Model::Model Unsupported model IR version: 10, max supported IR version: 9 "
+    },
+    "deit224/p00_fp32": {
+     "key": "deit224/p00_fp32",
+     "loads": true,
+     "construct_s": 0.3010590999983833,
+     "input": "input",
+     "err": ""
+    },
+    "deit224/p00_int8": {
+     "key": "deit224/p00_int8",
+     "loads": true,
+     "construct_s": 0.8173649000018486,
+     "input": "input",
+     "err": ""
+    },
+    "deit224/p00_int8_dyn_mm": {
+     "key": "deit224/p00_int8_dyn_mm",
+     "loads": true,
+     "construct_s": 0.3263225999980932,
+     "input": "input",
+     "err": ""
+    },
+    "c1_64x64/a05": {
+     "key": "c1_64x64/a05",
+     "loads": true,
+     "construct_s": 0.06899159999738913,
+     "input": "Input3",
+     "err": ""
+    },
+    "mnv2/p00_fp32": {
+     "key": "mnv2/p00_fp32",
+     "loads": true,
+     "construct_s": 0.061013799997454043,
+     "input": "input",
+     "err": ""
+    },
+    "mnv2/p00_int8": {
+     "key": "mnv2/p00_int8",
+     "loads": true,
+     "construct_s": 0.09767870000359835,
+     "input": "input",
+     "err": ""
+    },
+    "mnv2/p00_int8_dyn_conv": {
+     "key": "mnv2/p00_int8_dyn_conv",
+     "loads": false,
+     "construct_s": 0.15108389999659266,
+     "input": "",
+     "err": "[ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/features/features.0/features.0.0/Conv_quant'"
+    },
+    "c3_112x112/c04": {
+     "key": "c3_112x112/c04",
+     "loads": true,
+     "construct_s": 0.18895509999856586,
+     "input": "data",
+     "err": ""
+    },
+    "ae/p00_fp32": {
+     "key": "ae/p00_fp32",
+     "loads": true,
+     "construct_s": 0.007165099996200297,
+     "input": "input",
+     "err": ""
+    },
+    "ae/p00_int8": {
+     "key": "ae/p00_int8",
+     "loads": true,
+     "construct_s": 0.025852899998426437,
+     "input": "input",
+     "err": ""
+    },
+    "c3_240x320/a06": {
+     "key": "c3_240x320/a06",
+     "loads": true,
+     "construct_s": 0.059031700002378784,
+     "input": "input",
+     "err": ""
+    },
+    "c56_56x3/c03": {
+     "key": "c56_56x3/c03",
+     "loads": true,
+     "construct_s": 0.042230400002154056,
+     "input": "Model::input_0",
+     "err": ""
+    }
+   }
+  },
+  "1.20.1": {
+   "env_dir": "ort1201",
+   "files": {
+    "r50/p00_fp32": {
+     "key": "r50/p00_fp32",
+     "loads": true,
+     "construct_s": 0.28886860000056913,
+     "input": "input",
+     "err": ""
+    },
+    "r50/p00_int8": {
+     "key": "r50/p00_int8",
+     "loads": true,
+     "construct_s": 0.11026289999426808,
+     "input": "input",
+     "err": ""
+    },
+    "r50/p00_int8_dyn_conv": {
+     "key": "r50/p00_int8_dyn_conv",
+     "loads": false,
+     "construct_s": 0.11051420000148937,
+     "input": "",
+     "err": "[ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+    },
+    "c3_224x224/a01": {
+     "key": "c3_224x224/a01",
+     "loads": true,
+     "construct_s": 0.12903270000242628,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/a02": {
+     "key": "c3_224x224/a02",
+     "loads": true,
+     "construct_s": 0.03842840000288561,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/a03": {
+     "key": "c3_224x224/a03",
+     "loads": true,
+     "construct_s": 0.2013682000033441,
+     "input": "data",
+     "err": ""
+    },
+    "c3_224x224/b02": {
+     "key": "c3_224x224/b02",
+     "loads": true,
+     "construct_s": 0.24791910000203643,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/b03": {
+     "key": "c3_224x224/b03",
+     "loads": true,
+     "construct_s": 0.3894280000022263,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/b15": {
+     "key": "c3_224x224/b15",
+     "loads": true,
+     "construct_s": 0.019098400000075344,
+     "input": "data_0",
+     "err": ""
+    },
+    "c3_224x224/b16": {
+     "key": "c3_224x224/b16",
+     "loads": true,
+     "construct_s": 0.12762049999582814,
+     "input": "data_0",
+     "err": ""
+    },
+    "c3_224x224/c01": {
+     "key": "c3_224x224/c01",
+     "loads": true,
+     "construct_s": 0.13385679999919375,
+     "input": "EfficientNet::input_0",
+     "err": ""
+    },
+    "c3_224x224/c05": {
+     "key": "c3_224x224/c05",
+     "loads": true,
+     "construct_s": 0.09150049999880139,
+     "input": "pixel_values",
+     "err": ""
+    },
+    "y256/256_p00_fp32": {
+     "key": "y256/256_p00_fp32",
+     "loads": true,
+     "construct_s": 0.11648560000321595,
+     "input": "input",
+     "err": ""
+    },
+    "y256/256_p00_int8": {
+     "key": "y256/256_p00_int8",
+     "loads": true,
+     "construct_s": 0.18347799999901326,
+     "input": "input",
+     "err": ""
+    },
+    "y256/256_p00_int8_dyn_conv": {
+     "key": "y256/256_p00_int8_dyn_conv",
+     "loads": false,
+     "construct_s": 0.09404630000062753,
+     "input": "",
+     "err": "[ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/model.0/conv/Conv_quant'"
+    },
+    "c224_224x3/a04": {
+     "key": "c224_224x3/a04",
+     "loads": true,
+     "construct_s": 0.19340620000002673,
+     "input": "images:0",
+     "err": ""
+    },
+    "c224_224x3/c02": {
+     "key": "c224_224x3/c02",
+     "loads": true,
+     "construct_s": 0.10337010000512237,
+     "input": "EfficientNet::input_0",
+     "err": ""
+    },
+    "mv64/p00_fp32": {
+     "key": "mv64/p00_fp32",
+     "loads": true,
+     "construct_s": 0.12037920000148006,
+     "input": "input",
+     "err": ""
+    },
+    "mv64/p00_int8": {
+     "key": "mv64/p00_int8",
+     "loads": true,
+     "construct_s": 0.31426300000021,
+     "input": "input",
+     "err": ""
+    },
+    "mv64/p00_int8_dyn_mm": {
+     "key": "mv64/p00_int8_dyn_mm",
+     "loads": true,
+     "construct_s": 0.2122075000006589,
+     "input": "input",
+     "err": ""
+    },
+    "c3_320x320/b01": {
+     "key": "c3_320x320/b01",
+     "loads": true,
+     "construct_s": 0.16371950000029756,
+     "input": "input",
+     "err": ""
+    },
+    "c3_320x320/b18": {
+     "key": "c3_320x320/b18",
+     "loads": true,
+     "construct_s": 0.06001999999716645,
+     "input": "images",
+     "err": ""
+    },
+    "mv256/p00_fp32": {
+     "key": "mv256/p00_fp32",
+     "loads": true,
+     "construct_s": 0.21860559999913676,
+     "input": "input",
+     "err": ""
+    },
+    "mv256/p00_int8": {
+     "key": "mv256/p00_int8",
+     "loads": true,
+     "construct_s": 0.36043610000342596,
+     "input": "input",
+     "err": ""
+    },
+    "mv256/p00_int8_dyn_mm": {
+     "key": "mv256/p00_int8_dyn_mm",
+     "loads": true,
+     "construct_s": 0.21177320000424515,
+     "input": "input",
+     "err": ""
+    },
+    "c3_299x299/b05": {
+     "key": "c3_299x299/b05",
+     "loads": true,
+     "construct_s": 0.23120409999683034,
+     "input": "x",
+     "err": ""
+    },
+    "deit224/p00_fp32": {
+     "key": "deit224/p00_fp32",
+     "loads": true,
+     "construct_s": 0.14677089999895543,
+     "input": "input",
+     "err": ""
+    },
+    "deit224/p00_int8": {
+     "key": "deit224/p00_int8",
+     "loads": true,
+     "construct_s": 0.3754162000041106,
+     "input": "input",
+     "err": ""
+    },
+    "deit224/p00_int8_dyn_mm": {
+     "key": "deit224/p00_int8_dyn_mm",
+     "loads": true,
+     "construct_s": 0.2321343000003253,
+     "input": "input",
+     "err": ""
+    },
+    "c1_64x64/a05": {
+     "key": "c1_64x64/a05",
+     "loads": true,
+     "construct_s": 0.15341809999517864,
+     "input": "Input3",
+     "err": ""
+    },
+    "mnv2/p00_fp32": {
+     "key": "mnv2/p00_fp32",
+     "loads": true,
+     "construct_s": 0.1158653000020422,
+     "input": "input",
+     "err": ""
+    },
+    "mnv2/p00_int8": {
+     "key": "mnv2/p00_int8",
+     "loads": true,
+     "construct_s": 0.04054330000508344,
+     "input": "input",
+     "err": ""
+    },
+    "mnv2/p00_int8_dyn_conv": {
+     "key": "mnv2/p00_int8_dyn_conv",
+     "loads": false,
+     "construct_s": 0.04810029999498511,
+     "input": "",
+     "err": "[ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/features/features.0/features.0.0/Conv_quant'"
+    },
+    "c3_112x112/c04": {
+     "key": "c3_112x112/c04",
+     "loads": true,
+     "construct_s": 0.03317980000429088,
+     "input": "data",
+     "err": ""
+    },
+    "ae/p00_fp32": {
+     "key": "ae/p00_fp32",
+     "loads": true,
+     "construct_s": 0.00246540000080131,
+     "input": "input",
+     "err": ""
+    },
+    "ae/p00_int8": {
+     "key": "ae/p00_int8",
+     "loads": true,
+     "construct_s": 0.004715700000815559,
+     "input": "input",
+     "err": ""
+    },
+    "c3_240x320/a06": {
+     "key": "c3_240x320/a06",
+     "loads": true,
+     "construct_s": 0.027445799998531584,
+     "input": "input",
+     "err": ""
+    },
+    "c56_56x3/c03": {
+     "key": "c56_56x3/c03",
+     "loads": true,
+     "construct_s": 0.019157900002028327,
+     "input": "Model::input_0",
+     "err": ""
+    }
+   }
+  },
+  "1.21.1": {
+   "env_dir": "ort1211",
+   "files": {
+    "r50/p00_fp32": {
+     "key": "r50/p00_fp32",
+     "loads": true,
+     "construct_s": 0.36212350000278093,
+     "input": "input",
+     "err": ""
+    },
+    "r50/p00_int8": {
+     "key": "r50/p00_int8",
+     "loads": true,
+     "construct_s": 0.17067810000298778,
+     "input": "input",
+     "err": ""
+    },
+    "r50/p00_int8_dyn_conv": {
+     "key": "r50/p00_int8_dyn_conv",
+     "loads": false,
+     "construct_s": 0.14124620000075083,
+     "input": "",
+     "err": "[ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+    },
+    "c3_224x224/a01": {
+     "key": "c3_224x224/a01",
+     "loads": true,
+     "construct_s": 0.05408979999629082,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/a02": {
+     "key": "c3_224x224/a02",
+     "loads": true,
+     "construct_s": 0.0427445000022999,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/a03": {
+     "key": "c3_224x224/a03",
+     "loads": true,
+     "construct_s": 0.09534079999866663,
+     "input": "data",
+     "err": ""
+    },
+    "c3_224x224/b02": {
+     "key": "c3_224x224/b02",
+     "loads": true,
+     "construct_s": 0.30999680000240915,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/b03": {
+     "key": "c3_224x224/b03",
+     "loads": true,
+     "construct_s": 0.5314878999997745,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/b15": {
+     "key": "c3_224x224/b15",
+     "loads": true,
+     "construct_s": 0.021319999999832362,
+     "input": "data_0",
+     "err": ""
+    },
+    "c3_224x224/b16": {
+     "key": "c3_224x224/b16",
+     "loads": true,
+     "construct_s": 0.16061610000178916,
+     "input": "data_0",
+     "err": ""
+    },
+    "c3_224x224/c01": {
+     "key": "c3_224x224/c01",
+     "loads": true,
+     "construct_s": 0.17085619999852497,
+     "input": "EfficientNet::input_0",
+     "err": ""
+    },
+    "c3_224x224/c05": {
+     "key": "c3_224x224/c05",
+     "loads": true,
+     "construct_s": 0.04696500000136439,
+     "input": "pixel_values",
+     "err": ""
+    },
+    "y256/256_p00_fp32": {
+     "key": "y256/256_p00_fp32",
+     "loads": true,
+     "construct_s": 0.07117720000678673,
+     "input": "input",
+     "err": ""
+    },
+    "y256/256_p00_int8": {
+     "key": "y256/256_p00_int8",
+     "loads": true,
+     "construct_s": 0.20931739999650745,
+     "input": "input",
+     "err": ""
+    },
+    "y256/256_p00_int8_dyn_conv": {
+     "key": "y256/256_p00_int8_dyn_conv",
+     "loads": false,
+     "construct_s": 0.09170979999908013,
+     "input": "",
+     "err": "[ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/model.0/conv/Conv_quant'"
+    },
+    "c224_224x3/a04": {
+     "key": "c224_224x3/a04",
+     "loads": true,
+     "construct_s": 0.12143630000355188,
+     "input": "images:0",
+     "err": ""
+    },
+    "c224_224x3/c02": {
+     "key": "c224_224x3/c02",
+     "loads": true,
+     "construct_s": 0.12278630000218982,
+     "input": "EfficientNet::input_0",
+     "err": ""
+    },
+    "mv64/p00_fp32": {
+     "key": "mv64/p00_fp32",
+     "loads": true,
+     "construct_s": 0.1265440999995917,
+     "input": "input",
+     "err": ""
+    },
+    "mv64/p00_int8": {
+     "key": "mv64/p00_int8",
+     "loads": true,
+     "construct_s": 0.350044999999227,
+     "input": "input",
+     "err": ""
+    },
+    "mv64/p00_int8_dyn_mm": {
+     "key": "mv64/p00_int8_dyn_mm",
+     "loads": true,
+     "construct_s": 0.15789980000408832,
+     "input": "input",
+     "err": ""
+    },
+    "c3_320x320/b01": {
+     "key": "c3_320x320/b01",
+     "loads": true,
+     "construct_s": 0.24689340000622906,
+     "input": "input",
+     "err": ""
+    },
+    "c3_320x320/b18": {
+     "key": "c3_320x320/b18",
+     "loads": true,
+     "construct_s": 0.0640244000023813,
+     "input": "images",
+     "err": ""
+    },
+    "mv256/p00_fp32": {
+     "key": "mv256/p00_fp32",
+     "loads": true,
+     "construct_s": 0.2113586000050418,
+     "input": "input",
+     "err": ""
+    },
+    "mv256/p00_int8": {
+     "key": "mv256/p00_int8",
+     "loads": true,
+     "construct_s": 0.40041159999964293,
+     "input": "input",
+     "err": ""
+    },
+    "mv256/p00_int8_dyn_mm": {
+     "key": "mv256/p00_int8_dyn_mm",
+     "loads": true,
+     "construct_s": 0.15548420000413898,
+     "input": "input",
+     "err": ""
+    },
+    "c3_299x299/b05": {
+     "key": "c3_299x299/b05",
+     "loads": true,
+     "construct_s": 0.2468005000046105,
+     "input": "x",
+     "err": ""
+    },
+    "deit224/p00_fp32": {
+     "key": "deit224/p00_fp32",
+     "loads": true,
+     "construct_s": 0.19739619999745628,
+     "input": "input",
+     "err": ""
+    },
+    "deit224/p00_int8": {
+     "key": "deit224/p00_int8",
+     "loads": true,
+     "construct_s": 0.416487499998766,
+     "input": "input",
+     "err": ""
+    },
+    "deit224/p00_int8_dyn_mm": {
+     "key": "deit224/p00_int8_dyn_mm",
+     "loads": true,
+     "construct_s": 0.29042089999711607,
+     "input": "input",
+     "err": ""
+    },
+    "c1_64x64/a05": {
+     "key": "c1_64x64/a05",
+     "loads": true,
+     "construct_s": 0.05762370000593364,
+     "input": "Input3",
+     "err": ""
+    },
+    "mnv2/p00_fp32": {
+     "key": "mnv2/p00_fp32",
+     "loads": true,
+     "construct_s": 0.10578069999610307,
+     "input": "input",
+     "err": ""
+    },
+    "mnv2/p00_int8": {
+     "key": "mnv2/p00_int8",
+     "loads": true,
+     "construct_s": 0.0853352000049199,
+     "input": "input",
+     "err": ""
+    },
+    "mnv2/p00_int8_dyn_conv": {
+     "key": "mnv2/p00_int8_dyn_conv",
+     "loads": false,
+     "construct_s": 0.07511820000217995,
+     "input": "",
+     "err": "[ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/features/features.0/features.0.0/Conv_quant'"
+    },
+    "c3_112x112/c04": {
+     "key": "c3_112x112/c04",
+     "loads": true,
+     "construct_s": 0.05113820000406122,
+     "input": "data",
+     "err": ""
+    },
+    "ae/p00_fp32": {
+     "key": "ae/p00_fp32",
+     "loads": true,
+     "construct_s": 0.0032693000030121766,
+     "input": "input",
+     "err": ""
+    },
+    "ae/p00_int8": {
+     "key": "ae/p00_int8",
+     "loads": true,
+     "construct_s": 0.008780899996054359,
+     "input": "input",
+     "err": ""
+    },
+    "c3_240x320/a06": {
+     "key": "c3_240x320/a06",
+     "loads": true,
+     "construct_s": 0.06620180000027176,
+     "input": "input",
+     "err": ""
+    },
+    "c56_56x3/c03": {
+     "key": "c56_56x3/c03",
+     "loads": true,
+     "construct_s": 0.07007480000174837,
+     "input": "Model::input_0",
+     "err": ""
+    }
+   }
+  },
+  "1.22.1": {
+   "env_dir": "ort1221",
+   "files": {
+    "r50/p00_fp32": {
+     "key": "r50/p00_fp32",
+     "loads": true,
+     "construct_s": 0.3262773999958881,
+     "input": "input",
+     "err": ""
+    },
+    "r50/p00_int8": {
+     "key": "r50/p00_int8",
+     "loads": true,
+     "construct_s": 0.14225460000307066,
+     "input": "input",
+     "err": ""
+    },
+    "r50/p00_int8_dyn_conv": {
+     "key": "r50/p00_int8_dyn_conv",
+     "loads": false,
+     "construct_s": 0.18161639999743784,
+     "input": "",
+     "err": "[ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+    },
+    "c3_224x224/a01": {
+     "key": "c3_224x224/a01",
+     "loads": true,
+     "construct_s": 0.11529120000341209,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/a02": {
+     "key": "c3_224x224/a02",
+     "loads": true,
+     "construct_s": 0.04896509999525733,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/a03": {
+     "key": "c3_224x224/a03",
+     "loads": true,
+     "construct_s": 0.15069229999789968,
+     "input": "data",
+     "err": ""
+    },
+    "c3_224x224/b02": {
+     "key": "c3_224x224/b02",
+     "loads": true,
+     "construct_s": 0.24210210000455845,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/b03": {
+     "key": "c3_224x224/b03",
+     "loads": true,
+     "construct_s": 0.43765629999688827,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/b15": {
+     "key": "c3_224x224/b15",
+     "loads": true,
+     "construct_s": 0.021321000000170898,
+     "input": "data_0",
+     "err": ""
+    },
+    "c3_224x224/b16": {
+     "key": "c3_224x224/b16",
+     "loads": true,
+     "construct_s": 0.15131449999898905,
+     "input": "data_0",
+     "err": ""
+    },
+    "c3_224x224/c01": {
+     "key": "c3_224x224/c01",
+     "loads": true,
+     "construct_s": 0.09709529999963706,
+     "input": "EfficientNet::input_0",
+     "err": ""
+    },
+    "c3_224x224/c05": {
+     "key": "c3_224x224/c05",
+     "loads": true,
+     "construct_s": 0.07223830000293674,
+     "input": "pixel_values",
+     "err": ""
+    },
+    "y256/256_p00_fp32": {
+     "key": "y256/256_p00_fp32",
+     "loads": true,
+     "construct_s": 0.07262919999629958,
+     "input": "input",
+     "err": ""
+    },
+    "y256/256_p00_int8": {
+     "key": "y256/256_p00_int8",
+     "loads": true,
+     "construct_s": 0.1516600999966613,
+     "input": "input",
+     "err": ""
+    },
+    "y256/256_p00_int8_dyn_conv": {
+     "key": "y256/256_p00_int8_dyn_conv",
+     "loads": false,
+     "construct_s": 0.21565459999692393,
+     "input": "",
+     "err": "[ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/model.0/conv/Conv_quant'"
+    },
+    "c224_224x3/a04": {
+     "key": "c224_224x3/a04",
+     "loads": true,
+     "construct_s": 0.10102949999418342,
+     "input": "images:0",
+     "err": ""
+    },
+    "c224_224x3/c02": {
+     "key": "c224_224x3/c02",
+     "loads": true,
+     "construct_s": 0.20942989999457495,
+     "input": "EfficientNet::input_0",
+     "err": ""
+    },
+    "mv64/p00_fp32": {
+     "key": "mv64/p00_fp32",
+     "loads": true,
+     "construct_s": 0.13764060000539757,
+     "input": "input",
+     "err": ""
+    },
+    "mv64/p00_int8": {
+     "key": "mv64/p00_int8",
+     "loads": true,
+     "construct_s": 0.4162427999981446,
+     "input": "input",
+     "err": ""
+    },
+    "mv64/p00_int8_dyn_mm": {
+     "key": "mv64/p00_int8_dyn_mm",
+     "loads": true,
+     "construct_s": 0.15399259999685455,
+     "input": "input",
+     "err": ""
+    },
+    "c3_320x320/b01": {
+     "key": "c3_320x320/b01",
+     "loads": true,
+     "construct_s": 0.19844259999808855,
+     "input": "input",
+     "err": ""
+    },
+    "c3_320x320/b18": {
+     "key": "c3_320x320/b18",
+     "loads": true,
+     "construct_s": 0.0907770999983768,
+     "input": "images",
+     "err": ""
+    },
+    "mv256/p00_fp32": {
+     "key": "mv256/p00_fp32",
+     "loads": true,
+     "construct_s": 0.20889490000263322,
+     "input": "input",
+     "err": ""
+    },
+    "mv256/p00_int8": {
+     "key": "mv256/p00_int8",
+     "loads": true,
+     "construct_s": 0.28987010000128066,
+     "input": "input",
+     "err": ""
+    },
+    "mv256/p00_int8_dyn_mm": {
+     "key": "mv256/p00_int8_dyn_mm",
+     "loads": true,
+     "construct_s": 0.19612610000331188,
+     "input": "input",
+     "err": ""
+    },
+    "c3_299x299/b05": {
+     "key": "c3_299x299/b05",
+     "loads": true,
+     "construct_s": 0.15286750000086613,
+     "input": "x",
+     "err": ""
+    },
+    "deit224/p00_fp32": {
+     "key": "deit224/p00_fp32",
+     "loads": true,
+     "construct_s": 0.18994930000189925,
+     "input": "input",
+     "err": ""
+    },
+    "deit224/p00_int8": {
+     "key": "deit224/p00_int8",
+     "loads": true,
+     "construct_s": 0.37413849999575177,
+     "input": "input",
+     "err": ""
+    },
+    "deit224/p00_int8_dyn_mm": {
+     "key": "deit224/p00_int8_dyn_mm",
+     "loads": true,
+     "construct_s": 0.17264010000508279,
+     "input": "input",
+     "err": ""
+    },
+    "c1_64x64/a05": {
+     "key": "c1_64x64/a05",
+     "loads": true,
+     "construct_s": 0.14858960000128718,
+     "input": "Input3",
+     "err": ""
+    },
+    "mnv2/p00_fp32": {
+     "key": "mnv2/p00_fp32",
+     "loads": true,
+     "construct_s": 0.08754200000112178,
+     "input": "input",
+     "err": ""
+    },
+    "mnv2/p00_int8": {
+     "key": "mnv2/p00_int8",
+     "loads": true,
+     "construct_s": 0.050904200004879385,
+     "input": "input",
+     "err": ""
+    },
+    "mnv2/p00_int8_dyn_conv": {
+     "key": "mnv2/p00_int8_dyn_conv",
+     "loads": false,
+     "construct_s": 0.046670100004121196,
+     "input": "",
+     "err": "[ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/features/features.0/features.0.0/Conv_quant'"
+    },
+    "c3_112x112/c04": {
+     "key": "c3_112x112/c04",
+     "loads": true,
+     "construct_s": 0.0827181000058772,
+     "input": "data",
+     "err": ""
+    },
+    "ae/p00_fp32": {
+     "key": "ae/p00_fp32",
+     "loads": true,
+     "construct_s": 0.004447899998922367,
+     "input": "input",
+     "err": ""
+    },
+    "ae/p00_int8": {
+     "key": "ae/p00_int8",
+     "loads": true,
+     "construct_s": 0.0089977000025101,
+     "input": "input",
+     "err": ""
+    },
+    "c3_240x320/a06": {
+     "key": "c3_240x320/a06",
+     "loads": true,
+     "construct_s": 0.055641899998590816,
+     "input": "input",
+     "err": ""
+    },
+    "c56_56x3/c03": {
+     "key": "c56_56x3/c03",
+     "loads": true,
+     "construct_s": 0.057221600000048056,
+     "input": "Model::input_0",
+     "err": ""
+    }
+   }
+  },
+  "1.23.2": {
+   "env_dir": "ort1232",
+   "files": {
+    "r50/p00_fp32": {
+     "key": "r50/p00_fp32",
+     "loads": true,
+     "construct_s": 0.3184186999933445,
+     "input": "input",
+     "err": ""
+    },
+    "r50/p00_int8": {
+     "key": "r50/p00_int8",
+     "loads": true,
+     "construct_s": 0.0939488000003621,
+     "input": "input",
+     "err": ""
+    },
+    "r50/p00_int8_dyn_conv": {
+     "key": "r50/p00_int8_dyn_conv",
+     "loads": false,
+     "construct_s": 0.07388979999814183,
+     "input": "",
+     "err": "[ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+    },
+    "c3_224x224/a01": {
+     "key": "c3_224x224/a01",
+     "loads": true,
+     "construct_s": 0.05655720000504516,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/a02": {
+     "key": "c3_224x224/a02",
+     "loads": true,
+     "construct_s": 0.04477970000152709,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/a03": {
+     "key": "c3_224x224/a03",
+     "loads": true,
+     "construct_s": 0.10042539999994915,
+     "input": "data",
+     "err": ""
+    },
+    "c3_224x224/b02": {
+     "key": "c3_224x224/b02",
+     "loads": true,
+     "construct_s": 0.18480310000450118,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/b03": {
+     "key": "c3_224x224/b03",
+     "loads": true,
+     "construct_s": 0.4278993999978411,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/b15": {
+     "key": "c3_224x224/b15",
+     "loads": true,
+     "construct_s": 0.02784339999925578,
+     "input": "data_0",
+     "err": ""
+    },
+    "c3_224x224/b16": {
+     "key": "c3_224x224/b16",
+     "loads": true,
+     "construct_s": 0.05854090000502765,
+     "input": "data_0",
+     "err": ""
+    },
+    "c3_224x224/c01": {
+     "key": "c3_224x224/c01",
+     "loads": true,
+     "construct_s": 0.09922029999870574,
+     "input": "EfficientNet::input_0",
+     "err": ""
+    },
+    "c3_224x224/c05": {
+     "key": "c3_224x224/c05",
+     "loads": true,
+     "construct_s": 0.03208370000356808,
+     "input": "pixel_values",
+     "err": ""
+    },
+    "y256/256_p00_fp32": {
+     "key": "y256/256_p00_fp32",
+     "loads": true,
+     "construct_s": 0.07053869999799645,
+     "input": "input",
+     "err": ""
+    },
+    "y256/256_p00_int8": {
+     "key": "y256/256_p00_int8",
+     "loads": true,
+     "construct_s": 0.15685219999431865,
+     "input": "input",
+     "err": ""
+    },
+    "y256/256_p00_int8_dyn_conv": {
+     "key": "y256/256_p00_int8_dyn_conv",
+     "loads": false,
+     "construct_s": 0.09289340000395896,
+     "input": "",
+     "err": "[ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/model.0/conv/Conv_quant'"
+    },
+    "c224_224x3/a04": {
+     "key": "c224_224x3/a04",
+     "loads": true,
+     "construct_s": 0.10457709999900544,
+     "input": "images:0",
+     "err": ""
+    },
+    "c224_224x3/c02": {
+     "key": "c224_224x3/c02",
+     "loads": true,
+     "construct_s": 0.10570320000260836,
+     "input": "EfficientNet::input_0",
+     "err": ""
+    },
+    "mv64/p00_fp32": {
+     "key": "mv64/p00_fp32",
+     "loads": true,
+     "construct_s": 0.11348240000370424,
+     "input": "input",
+     "err": ""
+    },
+    "mv64/p00_int8": {
+     "key": "mv64/p00_int8",
+     "loads": true,
+     "construct_s": 0.30698979999579024,
+     "input": "input",
+     "err": ""
+    },
+    "mv64/p00_int8_dyn_mm": {
+     "key": "mv64/p00_int8_dyn_mm",
+     "loads": true,
+     "construct_s": 0.14941710000130115,
+     "input": "input",
+     "err": ""
+    },
+    "c3_320x320/b01": {
+     "key": "c3_320x320/b01",
+     "loads": true,
+     "construct_s": 0.19770189999690047,
+     "input": "input",
+     "err": ""
+    },
+    "c3_320x320/b18": {
+     "key": "c3_320x320/b18",
+     "loads": true,
+     "construct_s": 0.03509460000350373,
+     "input": "images",
+     "err": ""
+    },
+    "mv256/p00_fp32": {
+     "key": "mv256/p00_fp32",
+     "loads": true,
+     "construct_s": 0.1272185999987414,
+     "input": "input",
+     "err": ""
+    },
+    "mv256/p00_int8": {
+     "key": "mv256/p00_int8",
+     "loads": true,
+     "construct_s": 0.3091347000008682,
+     "input": "input",
+     "err": ""
+    },
+    "mv256/p00_int8_dyn_mm": {
+     "key": "mv256/p00_int8_dyn_mm",
+     "loads": true,
+     "construct_s": 0.1435884000020451,
+     "input": "input",
+     "err": ""
+    },
+    "c3_299x299/b05": {
+     "key": "c3_299x299/b05",
+     "loads": true,
+     "construct_s": 0.1668333999987226,
+     "input": "x",
+     "err": ""
+    },
+    "deit224/p00_fp32": {
+     "key": "deit224/p00_fp32",
+     "loads": true,
+     "construct_s": 0.15448720000131289,
+     "input": "input",
+     "err": ""
+    },
+    "deit224/p00_int8": {
+     "key": "deit224/p00_int8",
+     "loads": true,
+     "construct_s": 0.327785399997083,
+     "input": "input",
+     "err": ""
+    },
+    "deit224/p00_int8_dyn_mm": {
+     "key": "deit224/p00_int8_dyn_mm",
+     "loads": true,
+     "construct_s": 0.14943720000155736,
+     "input": "input",
+     "err": ""
+    },
+    "c1_64x64/a05": {
+     "key": "c1_64x64/a05",
+     "loads": true,
+     "construct_s": 0.0641713000004529,
+     "input": "Input3",
+     "err": ""
+    },
+    "mnv2/p00_fp32": {
+     "key": "mnv2/p00_fp32",
+     "loads": true,
+     "construct_s": 0.040156500006560236,
+     "input": "input",
+     "err": ""
+    },
+    "mnv2/p00_int8": {
+     "key": "mnv2/p00_int8",
+     "loads": true,
+     "construct_s": 0.045261900006153155,
+     "input": "input",
+     "err": ""
+    },
+    "mnv2/p00_int8_dyn_conv": {
+     "key": "mnv2/p00_int8_dyn_conv",
+     "loads": false,
+     "construct_s": 0.04792209999868646,
+     "input": "",
+     "err": "[ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/features/features.0/features.0.0/Conv_quant'"
+    },
+    "c3_112x112/c04": {
+     "key": "c3_112x112/c04",
+     "loads": true,
+     "construct_s": 0.0303113999980269,
+     "input": "data",
+     "err": ""
+    },
+    "ae/p00_fp32": {
+     "key": "ae/p00_fp32",
+     "loads": true,
+     "construct_s": 0.00301989999570651,
+     "input": "input",
+     "err": ""
+    },
+    "ae/p00_int8": {
+     "key": "ae/p00_int8",
+     "loads": true,
+     "construct_s": 0.004515599997830577,
+     "input": "input",
+     "err": ""
+    },
+    "c3_240x320/a06": {
+     "key": "c3_240x320/a06",
+     "loads": true,
+     "construct_s": 0.021807300006912556,
+     "input": "input",
+     "err": ""
+    },
+    "c56_56x3/c03": {
+     "key": "c56_56x3/c03",
+     "loads": true,
+     "construct_s": 0.01639150000119116,
+     "input": "Model::input_0",
+     "err": ""
+    }
+   }
+  },
+  "1.24.4": {
+   "env_dir": "ort1244",
+   "files": {
+    "r50/p00_fp32": {
+     "key": "r50/p00_fp32",
+     "loads": true,
+     "construct_s": 0.30451569999422645,
+     "input": "input",
+     "err": ""
+    },
+    "r50/p00_int8": {
+     "key": "r50/p00_int8",
+     "loads": true,
+     "construct_s": 0.08219310000276892,
+     "input": "input",
+     "err": ""
+    },
+    "r50/p00_int8_dyn_conv": {
+     "key": "r50/p00_int8_dyn_conv",
+     "loads": true,
+     "construct_s": 0.07818300000508316,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/a01": {
+     "key": "c3_224x224/a01",
+     "loads": true,
+     "construct_s": 0.05572360000223853,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/a02": {
+     "key": "c3_224x224/a02",
+     "loads": true,
+     "construct_s": 0.03910770000220509,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/a03": {
+     "key": "c3_224x224/a03",
+     "loads": true,
+     "construct_s": 0.09358179999981076,
+     "input": "data",
+     "err": ""
+    },
+    "c3_224x224/b02": {
+     "key": "c3_224x224/b02",
+     "loads": true,
+     "construct_s": 0.20244320000347216,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/b03": {
+     "key": "c3_224x224/b03",
+     "loads": true,
+     "construct_s": 0.41411840000364464,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/b15": {
+     "key": "c3_224x224/b15",
+     "loads": true,
+     "construct_s": 0.014985499998147134,
+     "input": "data_0",
+     "err": ""
+    },
+    "c3_224x224/b16": {
+     "key": "c3_224x224/b16",
+     "loads": true,
+     "construct_s": 0.04266020000068238,
+     "input": "data_0",
+     "err": ""
+    },
+    "c3_224x224/c01": {
+     "key": "c3_224x224/c01",
+     "loads": true,
+     "construct_s": 0.08715389999997569,
+     "input": "EfficientNet::input_0",
+     "err": ""
+    },
+    "c3_224x224/c05": {
+     "key": "c3_224x224/c05",
+     "loads": true,
+     "construct_s": 0.030782899993937463,
+     "input": "pixel_values",
+     "err": ""
+    },
+    "y256/256_p00_fp32": {
+     "key": "y256/256_p00_fp32",
+     "loads": true,
+     "construct_s": 0.06993969999894034,
+     "input": "input",
+     "err": ""
+    },
+    "y256/256_p00_int8": {
+     "key": "y256/256_p00_int8",
+     "loads": true,
+     "construct_s": 0.15492359999916516,
+     "input": "input",
+     "err": ""
+    },
+    "y256/256_p00_int8_dyn_conv": {
+     "key": "y256/256_p00_int8_dyn_conv",
+     "loads": true,
+     "construct_s": 0.1375192999985302,
+     "input": "input",
+     "err": ""
+    },
+    "c224_224x3/a04": {
+     "key": "c224_224x3/a04",
+     "loads": true,
+     "construct_s": 0.10263850000046659,
+     "input": "images:0",
+     "err": ""
+    },
+    "c224_224x3/c02": {
+     "key": "c224_224x3/c02",
+     "loads": true,
+     "construct_s": 0.1068299999969895,
+     "input": "EfficientNet::input_0",
+     "err": ""
+    },
+    "mv64/p00_fp32": {
+     "key": "mv64/p00_fp32",
+     "loads": true,
+     "construct_s": 0.1627673999973922,
+     "input": "input",
+     "err": ""
+    },
+    "mv64/p00_int8": {
+     "key": "mv64/p00_int8",
+     "loads": true,
+     "construct_s": 0.33433749999676365,
+     "input": "input",
+     "err": ""
+    },
+    "mv64/p00_int8_dyn_mm": {
+     "key": "mv64/p00_int8_dyn_mm",
+     "loads": true,
+     "construct_s": 0.16463279999879887,
+     "input": "input",
+     "err": ""
+    },
+    "c3_320x320/b01": {
+     "key": "c3_320x320/b01",
+     "loads": true,
+     "construct_s": 0.21024739999847952,
+     "input": "input",
+     "err": ""
+    },
+    "c3_320x320/b18": {
+     "key": "c3_320x320/b18",
+     "loads": true,
+     "construct_s": 0.03974910000397358,
+     "input": "images",
+     "err": ""
+    },
+    "mv256/p00_fp32": {
+     "key": "mv256/p00_fp32",
+     "loads": true,
+     "construct_s": 0.16225290000147652,
+     "input": "input",
+     "err": ""
+    },
+    "mv256/p00_int8": {
+     "key": "mv256/p00_int8",
+     "loads": true,
+     "construct_s": 0.3349335999955656,
+     "input": "input",
+     "err": ""
+    },
+    "mv256/p00_int8_dyn_mm": {
+     "key": "mv256/p00_int8_dyn_mm",
+     "loads": true,
+     "construct_s": 0.1669132000024547,
+     "input": "input",
+     "err": ""
+    },
+    "c3_299x299/b05": {
+     "key": "c3_299x299/b05",
+     "loads": true,
+     "construct_s": 0.17062299999815878,
+     "input": "x",
+     "err": ""
+    },
+    "deit224/p00_fp32": {
+     "key": "deit224/p00_fp32",
+     "loads": true,
+     "construct_s": 0.17612990000634454,
+     "input": "input",
+     "err": ""
+    },
+    "deit224/p00_int8": {
+     "key": "deit224/p00_int8",
+     "loads": true,
+     "construct_s": 0.3782299000013154,
+     "input": "input",
+     "err": ""
+    },
+    "deit224/p00_int8_dyn_mm": {
+     "key": "deit224/p00_int8_dyn_mm",
+     "loads": true,
+     "construct_s": 0.17171619999862742,
+     "input": "input",
+     "err": ""
+    },
+    "c1_64x64/a05": {
+     "key": "c1_64x64/a05",
+     "loads": true,
+     "construct_s": 0.05889819999720203,
+     "input": "Input3",
+     "err": ""
+    },
+    "mnv2/p00_fp32": {
+     "key": "mnv2/p00_fp32",
+     "loads": true,
+     "construct_s": 0.03490289999899687,
+     "input": "input",
+     "err": ""
+    },
+    "mnv2/p00_int8": {
+     "key": "mnv2/p00_int8",
+     "loads": true,
+     "construct_s": 0.04564589999790769,
+     "input": "input",
+     "err": ""
+    },
+    "mnv2/p00_int8_dyn_conv": {
+     "key": "mnv2/p00_int8_dyn_conv",
+     "loads": true,
+     "construct_s": 0.06545840000035241,
+     "input": "input",
+     "err": ""
+    },
+    "c3_112x112/c04": {
+     "key": "c3_112x112/c04",
+     "loads": true,
+     "construct_s": 0.033312400002614595,
+     "input": "data",
+     "err": ""
+    },
+    "ae/p00_fp32": {
+     "key": "ae/p00_fp32",
+     "loads": true,
+     "construct_s": 0.002392000002146233,
+     "input": "input",
+     "err": ""
+    },
+    "ae/p00_int8": {
+     "key": "ae/p00_int8",
+     "loads": true,
+     "construct_s": 0.005302100005792454,
+     "input": "input",
+     "err": ""
+    },
+    "c3_240x320/a06": {
+     "key": "c3_240x320/a06",
+     "loads": true,
+     "construct_s": 0.020507299996097572,
+     "input": "input",
+     "err": ""
+    },
+    "c56_56x3/c03": {
+     "key": "c56_56x3/c03",
+     "loads": true,
+     "construct_s": 0.017949099994439166,
+     "input": "Model::input_0",
+     "err": ""
+    }
+   }
+  },
+  "1.25.1": {
+   "env_dir": "ort1251",
+   "files": {
+    "r50/p00_fp32": {
+     "key": "r50/p00_fp32",
+     "loads": true,
+     "construct_s": 0.31691980000323383,
+     "input": "input",
+     "err": ""
+    },
+    "r50/p00_int8": {
+     "key": "r50/p00_int8",
+     "loads": true,
+     "construct_s": 0.08513749999838183,
+     "input": "input",
+     "err": ""
+    },
+    "r50/p00_int8_dyn_conv": {
+     "key": "r50/p00_int8_dyn_conv",
+     "loads": true,
+     "construct_s": 0.08100670000567334,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/a01": {
+     "key": "c3_224x224/a01",
+     "loads": true,
+     "construct_s": 0.052106800001638476,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/a02": {
+     "key": "c3_224x224/a02",
+     "loads": true,
+     "construct_s": 0.03954599999997299,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/a03": {
+     "key": "c3_224x224/a03",
+     "loads": true,
+     "construct_s": 0.09558449999894947,
+     "input": "data",
+     "err": ""
+    },
+    "c3_224x224/b02": {
+     "key": "c3_224x224/b02",
+     "loads": true,
+     "construct_s": 0.21172279999882448,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/b03": {
+     "key": "c3_224x224/b03",
+     "loads": true,
+     "construct_s": 0.41117949999897974,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/b15": {
+     "key": "c3_224x224/b15",
+     "loads": true,
+     "construct_s": 0.014266199999838136,
+     "input": "data_0",
+     "err": ""
+    },
+    "c3_224x224/b16": {
+     "key": "c3_224x224/b16",
+     "loads": true,
+     "construct_s": 0.042806500001461245,
+     "input": "data_0",
+     "err": ""
+    },
+    "c3_224x224/c01": {
+     "key": "c3_224x224/c01",
+     "loads": true,
+     "construct_s": 0.09746409999934258,
+     "input": "EfficientNet::input_0",
+     "err": ""
+    },
+    "c3_224x224/c05": {
+     "key": "c3_224x224/c05",
+     "loads": true,
+     "construct_s": 0.032061899997643195,
+     "input": "pixel_values",
+     "err": ""
+    },
+    "y256/256_p00_fp32": {
+     "key": "y256/256_p00_fp32",
+     "loads": true,
+     "construct_s": 0.0669214000008651,
+     "input": "input",
+     "err": ""
+    },
+    "y256/256_p00_int8": {
+     "key": "y256/256_p00_int8",
+     "loads": true,
+     "construct_s": 0.16197480000118958,
+     "input": "input",
+     "err": ""
+    },
+    "y256/256_p00_int8_dyn_conv": {
+     "key": "y256/256_p00_int8_dyn_conv",
+     "loads": true,
+     "construct_s": 0.12816180000663735,
+     "input": "input",
+     "err": ""
+    },
+    "c224_224x3/a04": {
+     "key": "c224_224x3/a04",
+     "loads": true,
+     "construct_s": 0.10482380000030389,
+     "input": "images:0",
+     "err": ""
+    },
+    "c224_224x3/c02": {
+     "key": "c224_224x3/c02",
+     "loads": true,
+     "construct_s": 0.10743340000044554,
+     "input": "EfficientNet::input_0",
+     "err": ""
+    },
+    "mv64/p00_fp32": {
+     "key": "mv64/p00_fp32",
+     "loads": true,
+     "construct_s": 0.15933619999850634,
+     "input": "input",
+     "err": ""
+    },
+    "mv64/p00_int8": {
+     "key": "mv64/p00_int8",
+     "loads": true,
+     "construct_s": 0.35067910000361735,
+     "input": "input",
+     "err": ""
+    },
+    "mv64/p00_int8_dyn_mm": {
+     "key": "mv64/p00_int8_dyn_mm",
+     "loads": true,
+     "construct_s": 0.16359830000146758,
+     "input": "input",
+     "err": ""
+    },
+    "c3_320x320/b01": {
+     "key": "c3_320x320/b01",
+     "loads": true,
+     "construct_s": 0.20655919999990147,
+     "input": "input",
+     "err": ""
+    },
+    "c3_320x320/b18": {
+     "key": "c3_320x320/b18",
+     "loads": true,
+     "construct_s": 0.03945630000089295,
+     "input": "images",
+     "err": ""
+    },
+    "mv256/p00_fp32": {
+     "key": "mv256/p00_fp32",
+     "loads": true,
+     "construct_s": 0.15177099999709753,
+     "input": "input",
+     "err": ""
+    },
+    "mv256/p00_int8": {
+     "key": "mv256/p00_int8",
+     "loads": true,
+     "construct_s": 0.3278327000007266,
+     "input": "input",
+     "err": ""
+    },
+    "mv256/p00_int8_dyn_mm": {
+     "key": "mv256/p00_int8_dyn_mm",
+     "loads": true,
+     "construct_s": 0.16074010000011185,
+     "input": "input",
+     "err": ""
+    },
+    "c3_299x299/b05": {
+     "key": "c3_299x299/b05",
+     "loads": true,
+     "construct_s": 0.17999670000426704,
+     "input": "x",
+     "err": ""
+    },
+    "deit224/p00_fp32": {
+     "key": "deit224/p00_fp32",
+     "loads": true,
+     "construct_s": 0.1844481999942218,
+     "input": "input",
+     "err": ""
+    },
+    "deit224/p00_int8": {
+     "key": "deit224/p00_int8",
+     "loads": true,
+     "construct_s": 0.36994000000413507,
+     "input": "input",
+     "err": ""
+    },
+    "deit224/p00_int8_dyn_mm": {
+     "key": "deit224/p00_int8_dyn_mm",
+     "loads": true,
+     "construct_s": 0.16995889999816427,
+     "input": "input",
+     "err": ""
+    },
+    "c1_64x64/a05": {
+     "key": "c1_64x64/a05",
+     "loads": true,
+     "construct_s": 0.10423009999794886,
+     "input": "Input3",
+     "err": ""
+    },
+    "mnv2/p00_fp32": {
+     "key": "mnv2/p00_fp32",
+     "loads": true,
+     "construct_s": 0.034720499999821186,
+     "input": "input",
+     "err": ""
+    },
+    "mnv2/p00_int8": {
+     "key": "mnv2/p00_int8",
+     "loads": true,
+     "construct_s": 0.042651900002965704,
+     "input": "input",
+     "err": ""
+    },
+    "mnv2/p00_int8_dyn_conv": {
+     "key": "mnv2/p00_int8_dyn_conv",
+     "loads": true,
+     "construct_s": 0.061736700001347344,
+     "input": "input",
+     "err": ""
+    },
+    "c3_112x112/c04": {
+     "key": "c3_112x112/c04",
+     "loads": true,
+     "construct_s": 0.03425419999985024,
+     "input": "data",
+     "err": ""
+    },
+    "ae/p00_fp32": {
+     "key": "ae/p00_fp32",
+     "loads": true,
+     "construct_s": 0.00395619999471819,
+     "input": "input",
+     "err": ""
+    },
+    "ae/p00_int8": {
+     "key": "ae/p00_int8",
+     "loads": true,
+     "construct_s": 0.005296200004522689,
+     "input": "input",
+     "err": ""
+    },
+    "c3_240x320/a06": {
+     "key": "c3_240x320/a06",
+     "loads": true,
+     "construct_s": 0.021613800003251527,
+     "input": "input",
+     "err": ""
+    },
+    "c56_56x3/c03": {
+     "key": "c56_56x3/c03",
+     "loads": true,
+     "construct_s": 0.015170999999099877,
+     "input": "Model::input_0",
+     "err": ""
+    }
+   }
+  },
+  "1.26.0": {
+   "env_dir": "ort1260",
+   "files": {
+    "r50/p00_fp32": {
+     "key": "r50/p00_fp32",
+     "loads": true,
+     "construct_s": 0.3333894000024884,
+     "input": "input",
+     "err": ""
+    },
+    "r50/p00_int8": {
+     "key": "r50/p00_int8",
+     "loads": true,
+     "construct_s": 0.0832626999981585,
+     "input": "input",
+     "err": ""
+    },
+    "r50/p00_int8_dyn_conv": {
+     "key": "r50/p00_int8_dyn_conv",
+     "loads": true,
+     "construct_s": 0.0828068999981042,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/a01": {
+     "key": "c3_224x224/a01",
+     "loads": true,
+     "construct_s": 0.05504490000021178,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/a02": {
+     "key": "c3_224x224/a02",
+     "loads": true,
+     "construct_s": 0.03883800000039628,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/a03": {
+     "key": "c3_224x224/a03",
+     "loads": true,
+     "construct_s": 0.09181079999689246,
+     "input": "data",
+     "err": ""
+    },
+    "c3_224x224/b02": {
+     "key": "c3_224x224/b02",
+     "loads": true,
+     "construct_s": 0.20236350000050152,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/b03": {
+     "key": "c3_224x224/b03",
+     "loads": true,
+     "construct_s": 0.4011391000021831,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/b15": {
+     "key": "c3_224x224/b15",
+     "loads": true,
+     "construct_s": 0.020111999998334795,
+     "input": "data_0",
+     "err": ""
+    },
+    "c3_224x224/b16": {
+     "key": "c3_224x224/b16",
+     "loads": true,
+     "construct_s": 0.042228899998008274,
+     "input": "data_0",
+     "err": ""
+    },
+    "c3_224x224/c01": {
+     "key": "c3_224x224/c01",
+     "loads": true,
+     "construct_s": 0.08918950000224868,
+     "input": "EfficientNet::input_0",
+     "err": ""
+    },
+    "c3_224x224/c05": {
+     "key": "c3_224x224/c05",
+     "loads": true,
+     "construct_s": 0.031026700002257712,
+     "input": "pixel_values",
+     "err": ""
+    },
+    "y256/256_p00_fp32": {
+     "key": "y256/256_p00_fp32",
+     "loads": true,
+     "construct_s": 0.06173789999593282,
+     "input": "input",
+     "err": ""
+    },
+    "y256/256_p00_int8": {
+     "key": "y256/256_p00_int8",
+     "loads": true,
+     "construct_s": 0.1568489999990561,
+     "input": "input",
+     "err": ""
+    },
+    "y256/256_p00_int8_dyn_conv": {
+     "key": "y256/256_p00_int8_dyn_conv",
+     "loads": true,
+     "construct_s": 0.1298227000006591,
+     "input": "input",
+     "err": ""
+    },
+    "c224_224x3/a04": {
+     "key": "c224_224x3/a04",
+     "loads": true,
+     "construct_s": 0.09911180000199238,
+     "input": "images:0",
+     "err": ""
+    },
+    "c224_224x3/c02": {
+     "key": "c224_224x3/c02",
+     "loads": true,
+     "construct_s": 0.11123529999895254,
+     "input": "EfficientNet::input_0",
+     "err": ""
+    },
+    "mv64/p00_fp32": {
+     "key": "mv64/p00_fp32",
+     "loads": true,
+     "construct_s": 0.1524451000004774,
+     "input": "input",
+     "err": ""
+    },
+    "mv64/p00_int8": {
+     "key": "mv64/p00_int8",
+     "loads": true,
+     "construct_s": 0.3352186999982223,
+     "input": "input",
+     "err": ""
+    },
+    "mv64/p00_int8_dyn_mm": {
+     "key": "mv64/p00_int8_dyn_mm",
+     "loads": true,
+     "construct_s": 0.15711259999807226,
+     "input": "input",
+     "err": ""
+    },
+    "c3_320x320/b01": {
+     "key": "c3_320x320/b01",
+     "loads": true,
+     "construct_s": 0.17806510000082199,
+     "input": "input",
+     "err": ""
+    },
+    "c3_320x320/b18": {
+     "key": "c3_320x320/b18",
+     "loads": true,
+     "construct_s": 0.039087999997718725,
+     "input": "images",
+     "err": ""
+    },
+    "mv256/p00_fp32": {
+     "key": "mv256/p00_fp32",
+     "loads": true,
+     "construct_s": 0.15050509999855421,
+     "input": "input",
+     "err": ""
+    },
+    "mv256/p00_int8": {
+     "key": "mv256/p00_int8",
+     "loads": true,
+     "construct_s": 0.3027992000061204,
+     "input": "input",
+     "err": ""
+    },
+    "mv256/p00_int8_dyn_mm": {
+     "key": "mv256/p00_int8_dyn_mm",
+     "loads": true,
+     "construct_s": 0.1738351000021794,
+     "input": "input",
+     "err": ""
+    },
+    "c3_299x299/b05": {
+     "key": "c3_299x299/b05",
+     "loads": true,
+     "construct_s": 0.17903929999738466,
+     "input": "x",
+     "err": ""
+    },
+    "deit224/p00_fp32": {
+     "key": "deit224/p00_fp32",
+     "loads": true,
+     "construct_s": 0.1874662000045646,
+     "input": "input",
+     "err": ""
+    },
+    "deit224/p00_int8": {
+     "key": "deit224/p00_int8",
+     "loads": true,
+     "construct_s": 0.3731372000038391,
+     "input": "input",
+     "err": ""
+    },
+    "deit224/p00_int8_dyn_mm": {
+     "key": "deit224/p00_int8_dyn_mm",
+     "loads": true,
+     "construct_s": 0.17404700000042794,
+     "input": "input",
+     "err": ""
+    },
+    "c1_64x64/a05": {
+     "key": "c1_64x64/a05",
+     "loads": true,
+     "construct_s": 0.05438770000182558,
+     "input": "Input3",
+     "err": ""
+    },
+    "mnv2/p00_fp32": {
+     "key": "mnv2/p00_fp32",
+     "loads": true,
+     "construct_s": 0.03305900000123074,
+     "input": "input",
+     "err": ""
+    },
+    "mnv2/p00_int8": {
+     "key": "mnv2/p00_int8",
+     "loads": true,
+     "construct_s": 0.040672499999345746,
+     "input": "input",
+     "err": ""
+    },
+    "mnv2/p00_int8_dyn_conv": {
+     "key": "mnv2/p00_int8_dyn_conv",
+     "loads": true,
+     "construct_s": 0.06652279999980237,
+     "input": "input",
+     "err": ""
+    },
+    "c3_112x112/c04": {
+     "key": "c3_112x112/c04",
+     "loads": true,
+     "construct_s": 0.03278629999840632,
+     "input": "data",
+     "err": ""
+    },
+    "ae/p00_fp32": {
+     "key": "ae/p00_fp32",
+     "loads": true,
+     "construct_s": 0.002608199996757321,
+     "input": "input",
+     "err": ""
+    },
+    "ae/p00_int8": {
+     "key": "ae/p00_int8",
+     "loads": true,
+     "construct_s": 0.006117899996752385,
+     "input": "input",
+     "err": ""
+    },
+    "c3_240x320/a06": {
+     "key": "c3_240x320/a06",
+     "loads": true,
+     "construct_s": 0.022729600001184735,
+     "input": "input",
+     "err": ""
+    },
+    "c56_56x3/c03": {
+     "key": "c56_56x3/c03",
+     "loads": true,
+     "construct_s": 0.02117310000176076,
+     "input": "Model::input_0",
+     "err": ""
+    }
+   }
+  },
+  "1.27.0": {
+   "env_dir": "ort1270",
+   "files": {
+    "r50/p00_fp32": {
+     "key": "r50/p00_fp32",
+     "loads": true,
+     "construct_s": 0.29142940000019735,
+     "input": "input",
+     "err": ""
+    },
+    "r50/p00_int8": {
+     "key": "r50/p00_int8",
+     "loads": true,
+     "construct_s": 0.08790190000581788,
+     "input": "input",
+     "err": ""
+    },
+    "r50/p00_int8_dyn_conv": {
+     "key": "r50/p00_int8_dyn_conv",
+     "loads": true,
+     "construct_s": 0.08503019999625394,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/a01": {
+     "key": "c3_224x224/a01",
+     "loads": true,
+     "construct_s": 0.054052599996794015,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/a02": {
+     "key": "c3_224x224/a02",
+     "loads": true,
+     "construct_s": 0.08814710000297055,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/a03": {
+     "key": "c3_224x224/a03",
+     "loads": true,
+     "construct_s": 0.09761119999893708,
+     "input": "data",
+     "err": ""
+    },
+    "c3_224x224/b02": {
+     "key": "c3_224x224/b02",
+     "loads": true,
+     "construct_s": 0.1915445000049658,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/b03": {
+     "key": "c3_224x224/b03",
+     "loads": true,
+     "construct_s": 0.40736460000334773,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/b15": {
+     "key": "c3_224x224/b15",
+     "loads": true,
+     "construct_s": 0.018088500000885688,
+     "input": "data_0",
+     "err": ""
+    },
+    "c3_224x224/b16": {
+     "key": "c3_224x224/b16",
+     "loads": true,
+     "construct_s": 0.04358610000053886,
+     "input": "data_0",
+     "err": ""
+    },
+    "c3_224x224/c01": {
+     "key": "c3_224x224/c01",
+     "loads": true,
+     "construct_s": 0.08622589999868069,
+     "input": "EfficientNet::input_0",
+     "err": ""
+    },
+    "c3_224x224/c05": {
+     "key": "c3_224x224/c05",
+     "loads": true,
+     "construct_s": 0.030562999992980622,
+     "input": "pixel_values",
+     "err": ""
+    },
+    "y256/256_p00_fp32": {
+     "key": "y256/256_p00_fp32",
+     "loads": true,
+     "construct_s": 0.056212600000435486,
+     "input": "input",
+     "err": ""
+    },
+    "y256/256_p00_int8": {
+     "key": "y256/256_p00_int8",
+     "loads": true,
+     "construct_s": 0.14599570000427775,
+     "input": "input",
+     "err": ""
+    },
+    "y256/256_p00_int8_dyn_conv": {
+     "key": "y256/256_p00_int8_dyn_conv",
+     "loads": true,
+     "construct_s": 0.1335190000027069,
+     "input": "input",
+     "err": ""
+    },
+    "c224_224x3/a04": {
+     "key": "c224_224x3/a04",
+     "loads": true,
+     "construct_s": 0.09854379999887897,
+     "input": "images:0",
+     "err": ""
+    },
+    "c224_224x3/c02": {
+     "key": "c224_224x3/c02",
+     "loads": true,
+     "construct_s": 0.10811590000230353,
+     "input": "EfficientNet::input_0",
+     "err": ""
+    },
+    "mv64/p00_fp32": {
+     "key": "mv64/p00_fp32",
+     "loads": true,
+     "construct_s": 0.13693120000243653,
+     "input": "input",
+     "err": ""
+    },
+    "mv64/p00_int8": {
+     "key": "mv64/p00_int8",
+     "loads": true,
+     "construct_s": 0.3434263000017381,
+     "input": "input",
+     "err": ""
+    },
+    "mv64/p00_int8_dyn_mm": {
+     "key": "mv64/p00_int8_dyn_mm",
+     "loads": true,
+     "construct_s": 0.1501672000013059,
+     "input": "input",
+     "err": ""
+    },
+    "c3_320x320/b01": {
+     "key": "c3_320x320/b01",
+     "loads": true,
+     "construct_s": 0.19933219999802532,
+     "input": "input",
+     "err": ""
+    },
+    "c3_320x320/b18": {
+     "key": "c3_320x320/b18",
+     "loads": true,
+     "construct_s": 0.038848500000312924,
+     "input": "images",
+     "err": ""
+    },
+    "mv256/p00_fp32": {
+     "key": "mv256/p00_fp32",
+     "loads": true,
+     "construct_s": 0.1554956999971182,
+     "input": "input",
+     "err": ""
+    },
+    "mv256/p00_int8": {
+     "key": "mv256/p00_int8",
+     "loads": true,
+     "construct_s": 0.33600220000516856,
+     "input": "input",
+     "err": ""
+    },
+    "mv256/p00_int8_dyn_mm": {
+     "key": "mv256/p00_int8_dyn_mm",
+     "loads": true,
+     "construct_s": 0.16809899999498157,
+     "input": "input",
+     "err": ""
+    },
+    "c3_299x299/b05": {
+     "key": "c3_299x299/b05",
+     "loads": true,
+     "construct_s": 0.1580543999953079,
+     "input": "x",
+     "err": ""
+    },
+    "deit224/p00_fp32": {
+     "key": "deit224/p00_fp32",
+     "loads": true,
+     "construct_s": 0.1669393999982276,
+     "input": "input",
+     "err": ""
+    },
+    "deit224/p00_int8": {
+     "key": "deit224/p00_int8",
+     "loads": true,
+     "construct_s": 0.3757975999978953,
+     "input": "input",
+     "err": ""
+    },
+    "deit224/p00_int8_dyn_mm": {
+     "key": "deit224/p00_int8_dyn_mm",
+     "loads": true,
+     "construct_s": 0.17125769999984186,
+     "input": "input",
+     "err": ""
+    },
+    "c1_64x64/a05": {
+     "key": "c1_64x64/a05",
+     "loads": true,
+     "construct_s": 0.059535399996093474,
+     "input": "Input3",
+     "err": ""
+    },
+    "mnv2/p00_fp32": {
+     "key": "mnv2/p00_fp32",
+     "loads": true,
+     "construct_s": 0.031918799999402836,
+     "input": "input",
+     "err": ""
+    },
+    "mnv2/p00_int8": {
+     "key": "mnv2/p00_int8",
+     "loads": true,
+     "construct_s": 0.047053000002051704,
+     "input": "input",
+     "err": ""
+    },
+    "mnv2/p00_int8_dyn_conv": {
+     "key": "mnv2/p00_int8_dyn_conv",
+     "loads": true,
+     "construct_s": 0.06887750000169035,
+     "input": "input",
+     "err": ""
+    },
+    "c3_112x112/c04": {
+     "key": "c3_112x112/c04",
+     "loads": true,
+     "construct_s": 0.0324722999939695,
+     "input": "data",
+     "err": ""
+    },
+    "ae/p00_fp32": {
+     "key": "ae/p00_fp32",
+     "loads": true,
+     "construct_s": 0.0032910999943851493,
+     "input": "input",
+     "err": ""
+    },
+    "ae/p00_int8": {
+     "key": "ae/p00_int8",
+     "loads": true,
+     "construct_s": 0.004990300003555603,
+     "input": "input",
+     "err": ""
+    },
+    "c3_240x320/a06": {
+     "key": "c3_240x320/a06",
+     "loads": true,
+     "construct_s": 0.022755999998480547,
+     "input": "input",
+     "err": ""
+    },
+    "c56_56x3/c03": {
+     "key": "c56_56x3/c03",
+     "loads": true,
+     "construct_s": 0.01974989999871468,
+     "input": "Model::input_0",
+     "err": ""
+    }
+   }
+  },
+  "1.28.0": {
+   "env_dir": "ort1280",
+   "files": {
+    "r50/p00_fp32": {
+     "key": "r50/p00_fp32",
+     "loads": true,
+     "construct_s": 0.250247700001637,
+     "input": "input",
+     "err": ""
+    },
+    "r50/p00_int8": {
+     "key": "r50/p00_int8",
+     "loads": true,
+     "construct_s": 0.10989739999786252,
+     "input": "input",
+     "err": ""
+    },
+    "r50/p00_int8_dyn_conv": {
+     "key": "r50/p00_int8_dyn_conv",
+     "loads": true,
+     "construct_s": 0.08776100000250153,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/a01": {
+     "key": "c3_224x224/a01",
+     "loads": true,
+     "construct_s": 0.04636789999494795,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/a02": {
+     "key": "c3_224x224/a02",
+     "loads": true,
+     "construct_s": 0.04128099999797996,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/a03": {
+     "key": "c3_224x224/a03",
+     "loads": true,
+     "construct_s": 0.0919657999984338,
+     "input": "data",
+     "err": ""
+    },
+    "c3_224x224/b02": {
+     "key": "c3_224x224/b02",
+     "loads": true,
+     "construct_s": 0.19527340000058757,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/b03": {
+     "key": "c3_224x224/b03",
+     "loads": true,
+     "construct_s": 0.4059538000001339,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/b15": {
+     "key": "c3_224x224/b15",
+     "loads": true,
+     "construct_s": 0.016335899999830872,
+     "input": "data_0",
+     "err": ""
+    },
+    "c3_224x224/b16": {
+     "key": "c3_224x224/b16",
+     "loads": true,
+     "construct_s": 0.04363369999919087,
+     "input": "data_0",
+     "err": ""
+    },
+    "c3_224x224/c01": {
+     "key": "c3_224x224/c01",
+     "loads": true,
+     "construct_s": 0.09636630000022706,
+     "input": "EfficientNet::input_0",
+     "err": ""
+    },
+    "c3_224x224/c05": {
+     "key": "c3_224x224/c05",
+     "loads": true,
+     "construct_s": 0.03188619999855291,
+     "input": "pixel_values",
+     "err": ""
+    },
+    "y256/256_p00_fp32": {
+     "key": "y256/256_p00_fp32",
+     "loads": true,
+     "construct_s": 0.07177959999535233,
+     "input": "input",
+     "err": ""
+    },
+    "y256/256_p00_int8": {
+     "key": "y256/256_p00_int8",
+     "loads": true,
+     "construct_s": 0.15077029999520164,
+     "input": "input",
+     "err": ""
+    },
+    "y256/256_p00_int8_dyn_conv": {
+     "key": "y256/256_p00_int8_dyn_conv",
+     "loads": true,
+     "construct_s": 0.1180746999962139,
+     "input": "input",
+     "err": ""
+    },
+    "c224_224x3/a04": {
+     "key": "c224_224x3/a04",
+     "loads": true,
+     "construct_s": 0.10043969999969704,
+     "input": "images:0",
+     "err": ""
+    },
+    "c224_224x3/c02": {
+     "key": "c224_224x3/c02",
+     "loads": true,
+     "construct_s": 0.11614890000055311,
+     "input": "EfficientNet::input_0",
+     "err": ""
+    },
+    "mv64/p00_fp32": {
+     "key": "mv64/p00_fp32",
+     "loads": true,
+     "construct_s": 0.15182719999575056,
+     "input": "input",
+     "err": ""
+    },
+    "mv64/p00_int8": {
+     "key": "mv64/p00_int8",
+     "loads": true,
+     "construct_s": 0.34682040000188863,
+     "input": "input",
+     "err": ""
+    },
+    "mv64/p00_int8_dyn_mm": {
+     "key": "mv64/p00_int8_dyn_mm",
+     "loads": true,
+     "construct_s": 0.16224519999377662,
+     "input": "input",
+     "err": ""
+    },
+    "c3_320x320/b01": {
+     "key": "c3_320x320/b01",
+     "loads": true,
+     "construct_s": 0.20153050000226358,
+     "input": "input",
+     "err": ""
+    },
+    "c3_320x320/b18": {
+     "key": "c3_320x320/b18",
+     "loads": true,
+     "construct_s": 0.03361929999664426,
+     "input": "images",
+     "err": ""
+    },
+    "mv256/p00_fp32": {
+     "key": "mv256/p00_fp32",
+     "loads": true,
+     "construct_s": 0.1480530999979237,
+     "input": "input",
+     "err": ""
+    },
+    "mv256/p00_int8": {
+     "key": "mv256/p00_int8",
+     "loads": true,
+     "construct_s": 0.3287385000003269,
+     "input": "input",
+     "err": ""
+    },
+    "mv256/p00_int8_dyn_mm": {
+     "key": "mv256/p00_int8_dyn_mm",
+     "loads": true,
+     "construct_s": 0.1596785000001546,
+     "input": "input",
+     "err": ""
+    },
+    "c3_299x299/b05": {
+     "key": "c3_299x299/b05",
+     "loads": true,
+     "construct_s": 0.18261780000466388,
+     "input": "x",
+     "err": ""
+    },
+    "deit224/p00_fp32": {
+     "key": "deit224/p00_fp32",
+     "loads": true,
+     "construct_s": 0.17086610000114888,
+     "input": "input",
+     "err": ""
+    },
+    "deit224/p00_int8": {
+     "key": "deit224/p00_int8",
+     "loads": true,
+     "construct_s": 0.3688276000029873,
+     "input": "input",
+     "err": ""
+    },
+    "deit224/p00_int8_dyn_mm": {
+     "key": "deit224/p00_int8_dyn_mm",
+     "loads": true,
+     "construct_s": 0.16842110000288812,
+     "input": "input",
+     "err": ""
+    },
+    "c1_64x64/a05": {
+     "key": "c1_64x64/a05",
+     "loads": true,
+     "construct_s": 0.05646030000207247,
+     "input": "Input3",
+     "err": ""
+    },
+    "mnv2/p00_fp32": {
+     "key": "mnv2/p00_fp32",
+     "loads": true,
+     "construct_s": 0.03179110000201035,
+     "input": "input",
+     "err": ""
+    },
+    "mnv2/p00_int8": {
+     "key": "mnv2/p00_int8",
+     "loads": true,
+     "construct_s": 0.04164440000022296,
+     "input": "input",
+     "err": ""
+    },
+    "mnv2/p00_int8_dyn_conv": {
+     "key": "mnv2/p00_int8_dyn_conv",
+     "loads": true,
+     "construct_s": 0.058308400002715643,
+     "input": "input",
+     "err": ""
+    },
+    "c3_112x112/c04": {
+     "key": "c3_112x112/c04",
+     "loads": true,
+     "construct_s": 0.03286819999630097,
+     "input": "data",
+     "err": ""
+    },
+    "ae/p00_fp32": {
+     "key": "ae/p00_fp32",
+     "loads": true,
+     "construct_s": 0.00318429999606451,
+     "input": "input",
+     "err": ""
+    },
+    "ae/p00_int8": {
+     "key": "ae/p00_int8",
+     "loads": true,
+     "construct_s": 0.004935500001010951,
+     "input": "input",
+     "err": ""
+    },
+    "c3_240x320/a06": {
+     "key": "c3_240x320/a06",
+     "loads": true,
+     "construct_s": 0.0231837999963318,
+     "input": "input",
+     "err": ""
+    },
+    "c56_56x3/c03": {
+     "key": "c56_56x3/c03",
+     "loads": true,
+     "construct_s": 0.015831899996555876,
+     "input": "Model::input_0",
+     "err": ""
+    }
+   }
+  },
+  "1.30.0": {
+   "env_dir": "ort1300",
+   "files": {
+    "r50/p00_fp32": {
+     "key": "r50/p00_fp32",
+     "loads": true,
+     "construct_s": 0.257533500000136,
+     "input": "input",
+     "err": ""
+    },
+    "r50/p00_int8": {
+     "key": "r50/p00_int8",
+     "loads": true,
+     "construct_s": 0.0914139999949839,
+     "input": "input",
+     "err": ""
+    },
+    "r50/p00_int8_dyn_conv": {
+     "key": "r50/p00_int8_dyn_conv",
+     "loads": true,
+     "construct_s": 0.07734300000447547,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/a01": {
+     "key": "c3_224x224/a01",
+     "loads": true,
+     "construct_s": 0.05682930000330089,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/a02": {
+     "key": "c3_224x224/a02",
+     "loads": true,
+     "construct_s": 0.04174519999651238,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/a03": {
+     "key": "c3_224x224/a03",
+     "loads": true,
+     "construct_s": 0.09853799999837065,
+     "input": "data",
+     "err": ""
+    },
+    "c3_224x224/b02": {
+     "key": "c3_224x224/b02",
+     "loads": true,
+     "construct_s": 0.2068314999996801,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/b03": {
+     "key": "c3_224x224/b03",
+     "loads": true,
+     "construct_s": 0.40105469999980414,
+     "input": "input",
+     "err": ""
+    },
+    "c3_224x224/b15": {
+     "key": "c3_224x224/b15",
+     "loads": true,
+     "construct_s": 0.017159400005766656,
+     "input": "data_0",
+     "err": ""
+    },
+    "c3_224x224/b16": {
+     "key": "c3_224x224/b16",
+     "loads": true,
+     "construct_s": 0.04476259999501053,
+     "input": "data_0",
+     "err": ""
+    },
+    "c3_224x224/c01": {
+     "key": "c3_224x224/c01",
+     "loads": true,
+     "construct_s": 0.09667600000102539,
+     "input": "EfficientNet::input_0",
+     "err": ""
+    },
+    "c3_224x224/c05": {
+     "key": "c3_224x224/c05",
+     "loads": true,
+     "construct_s": 0.030343799997353926,
+     "input": "pixel_values",
+     "err": ""
+    },
+    "y256/256_p00_fp32": {
+     "key": "y256/256_p00_fp32",
+     "loads": true,
+     "construct_s": 0.056795600001350977,
+     "input": "input",
+     "err": ""
+    },
+    "y256/256_p00_int8": {
+     "key": "y256/256_p00_int8",
+     "loads": true,
+     "construct_s": 0.17190789999585832,
+     "input": "input",
+     "err": ""
+    },
+    "y256/256_p00_int8_dyn_conv": {
+     "key": "y256/256_p00_int8_dyn_conv",
+     "loads": true,
+     "construct_s": 0.11125249999895459,
+     "input": "input",
+     "err": ""
+    },
+    "c224_224x3/a04": {
+     "key": "c224_224x3/a04",
+     "loads": true,
+     "construct_s": 0.1025147000036668,
+     "input": "images:0",
+     "err": ""
+    },
+    "c224_224x3/c02": {
+     "key": "c224_224x3/c02",
+     "loads": true,
+     "construct_s": 0.11466289999953005,
+     "input": "EfficientNet::input_0",
+     "err": ""
+    },
+    "mv64/p00_fp32": {
+     "key": "mv64/p00_fp32",
+     "loads": true,
+     "construct_s": 0.15286130000458797,
+     "input": "input",
+     "err": ""
+    },
+    "mv64/p00_int8": {
+     "key": "mv64/p00_int8",
+     "loads": true,
+     "construct_s": 0.342908599996008,
+     "input": "input",
+     "err": ""
+    },
+    "mv64/p00_int8_dyn_mm": {
+     "key": "mv64/p00_int8_dyn_mm",
+     "loads": true,
+     "construct_s": 0.17913469999621157,
+     "input": "input",
+     "err": ""
+    },
+    "c3_320x320/b01": {
+     "key": "c3_320x320/b01",
+     "loads": true,
+     "construct_s": 0.23878840000543278,
+     "input": "input",
+     "err": ""
+    },
+    "c3_320x320/b18": {
+     "key": "c3_320x320/b18",
+     "loads": true,
+     "construct_s": 0.043483800000103656,
+     "input": "images",
+     "err": ""
+    },
+    "mv256/p00_fp32": {
+     "key": "mv256/p00_fp32",
+     "loads": true,
+     "construct_s": 0.20175690000178292,
+     "input": "input",
+     "err": ""
+    },
+    "mv256/p00_int8": {
+     "key": "mv256/p00_int8",
+     "loads": true,
+     "construct_s": 0.39129549999779556,
+     "input": "input",
+     "err": ""
+    },
+    "mv256/p00_int8_dyn_mm": {
+     "key": "mv256/p00_int8_dyn_mm",
+     "loads": true,
+     "construct_s": 0.17521649999980582,
+     "input": "input",
+     "err": ""
+    },
+    "c3_299x299/b05": {
+     "key": "c3_299x299/b05",
+     "loads": true,
+     "construct_s": 0.21968049999850336,
+     "input": "x",
+     "err": ""
+    },
+    "deit224/p00_fp32": {
+     "key": "deit224/p00_fp32",
+     "loads": true,
+     "construct_s": 0.20576440000149887,
+     "input": "input",
+     "err": ""
+    },
+    "deit224/p00_int8": {
+     "key": "deit224/p00_int8",
+     "loads": true,
+     "construct_s": 0.4595794999986538,
+     "input": "input",
+     "err": ""
+    },
+    "deit224/p00_int8_dyn_mm": {
+     "key": "deit224/p00_int8_dyn_mm",
+     "loads": true,
+     "construct_s": 0.21544290000019828,
+     "input": "input",
+     "err": ""
+    },
+    "c1_64x64/a05": {
+     "key": "c1_64x64/a05",
+     "loads": true,
+     "construct_s": 0.06853029999911087,
+     "input": "Input3",
+     "err": ""
+    },
+    "mnv2/p00_fp32": {
+     "key": "mnv2/p00_fp32",
+     "loads": true,
+     "construct_s": 0.05951009999989765,
+     "input": "input",
+     "err": ""
+    },
+    "mnv2/p00_int8": {
+     "key": "mnv2/p00_int8",
+     "loads": true,
+     "construct_s": 0.05883120000362396,
+     "input": "input",
+     "err": ""
+    },
+    "mnv2/p00_int8_dyn_conv": {
+     "key": "mnv2/p00_int8_dyn_conv",
+     "loads": true,
+     "construct_s": 0.07761999999638647,
+     "input": "input",
+     "err": ""
+    },
+    "c3_112x112/c04": {
+     "key": "c3_112x112/c04",
+     "loads": true,
+     "construct_s": 0.036750999999640044,
+     "input": "data",
+     "err": ""
+    },
+    "ae/p00_fp32": {
+     "key": "ae/p00_fp32",
+     "loads": true,
+     "construct_s": 0.0028265999935683794,
+     "input": "input",
+     "err": ""
+    },
+    "ae/p00_int8": {
+     "key": "ae/p00_int8",
+     "loads": true,
+     "construct_s": 0.0047818000020924956,
+     "input": "input",
+     "err": ""
+    },
+    "c3_240x320/a06": {
+     "key": "c3_240x320/a06",
+     "loads": true,
+     "construct_s": 0.027903100002731662,
+     "input": "input",
+     "err": ""
+    },
+    "c56_56x3/c03": {
+     "key": "c56_56x3/c03",
+     "loads": true,
+     "construct_s": 0.02247470000293106,
+     "input": "Model::input_0",
+     "err": ""
+    }
+   }
+  }
+ },
+ "not_applicable": [
+  [
+   "c3_299x299/b05",
+   "1.16.3"
+  ],
+  [
+   "mnv2/p00_int8_dyn_conv",
+   "1.16.3"
+  ],
+  [
+   "mnv2/p00_int8_dyn_conv",
+   "1.20.1"
+  ],
+  [
+   "mnv2/p00_int8_dyn_conv",
+   "1.21.1"
+  ],
+  [
+   "mnv2/p00_int8_dyn_conv",
+   "1.22.1"
+  ],
+  [
+   "mnv2/p00_int8_dyn_conv",
+   "1.23.2"
+  ],
+  [
+   "r50/p00_int8_dyn_conv",
+   "1.16.3"
+  ],
+  [
+   "r50/p00_int8_dyn_conv",
+   "1.20.1"
+  ],
+  [
+   "r50/p00_int8_dyn_conv",
+   "1.21.1"
+  ],
+  [
+   "r50/p00_int8_dyn_conv",
+   "1.22.1"
+  ],
+  [
+   "r50/p00_int8_dyn_conv",
+   "1.23.2"
+  ],
+  [
+   "y256/256_p00_int8_dyn_conv",
+   "1.16.3"
+  ],
+  [
+   "y256/256_p00_int8_dyn_conv",
+   "1.20.1"
+  ],
+  [
+   "y256/256_p00_int8_dyn_conv",
+   "1.21.1"
+  ],
+  [
+   "y256/256_p00_int8_dyn_conv",
+   "1.22.1"
+  ],
+  [
+   "y256/256_p00_int8_dyn_conv",
+   "1.23.2"
+  ]
+ ],
+ "globally_not_applicable": [],
+ "expected_not_applicable": [
+  [
+   "r50/p00_int8_dyn_conv",
+   "1.16.3"
+  ],
+  [
+   "r50/p00_int8_dyn_conv",
+   "1.20.1"
+  ],
+  [
+   "r50/p00_int8_dyn_conv",
+   "1.21.1"
+  ],
+  [
+   "r50/p00_int8_dyn_conv",
+   "1.22.1"
+  ],
+  [
+   "r50/p00_int8_dyn_conv",
+   "1.23.2"
+  ],
+  [
+   "mnv2/p00_int8_dyn_conv",
+   "1.16.3"
+  ],
+  [
+   "mnv2/p00_int8_dyn_conv",
+   "1.20.1"
+  ],
+  [
+   "mnv2/p00_int8_dyn_conv",
+   "1.21.1"
+  ],
+  [
+   "mnv2/p00_int8_dyn_conv",
+   "1.22.1"
+  ],
+  [
+   "mnv2/p00_int8_dyn_conv",
+   "1.23.2"
+  ],
+  [
+   "y256/256_p00_int8_dyn_conv",
+   "1.16.3"
+  ],
+  [
+   "y256/256_p00_int8_dyn_conv",
+   "1.20.1"
+  ],
+  [
+   "y256/256_p00_int8_dyn_conv",
+   "1.21.1"
+  ],
+  [
+   "y256/256_p00_int8_dyn_conv",
+   "1.22.1"
+  ],
+  [
+   "y256/256_p00_int8_dyn_conv",
+   "1.23.2"
+  ],
+  [
+   "c3_299x299/b05",
+   "1.16.3"
+  ]
+ ],
+ "matches_expected": true
+}

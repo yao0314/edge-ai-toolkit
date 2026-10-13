@@ -1,0 +1,3 @@
+model,run,latency_ms_no_profiler,latency_ms_from_profile,profiler_overhead_x,qdq_share_pct,n_op_types,n_events,nodes_per_iteration,warmup_events_dropped
+p00_int8,classification_deit,7.343900011619553,12.057733333333335,1.6418705747975235,14.330222374575653,26,19260,642,3210
+p00_int8_dyn_mm,classification_deit,5.526000022655353,8.476633333333334,1.533954632388898,0.0,25,11400,380,1900

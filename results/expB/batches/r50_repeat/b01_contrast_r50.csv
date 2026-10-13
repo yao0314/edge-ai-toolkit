@@ -1,0 +1,461 @@
+env_dir,ort,family,variant,threads,rep,spin,batch,pinned_cpus,p50_ms,iters,cpu_ms_per_inf,core_delivery,peak_rss_mb,status,detail
+ort1201,,r50,p00_int8_dyn_conv,4,3,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1221,,r50,p00_int8_dyn_conv,4,3,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1280,1.28.0,r50,p00_int8_dyn_conv,1,4,default,1,0,1508.8046999990183,40,1359.375,0.9009615359767135,111.2421875,OK,
+ort1163,,r50,p00_int8,1,4,default,1,,,0,,,,FAILED,"Error: numpy.core.multiarray failed to import
+
+The above exception was the direct cause of the following exception:
+
+SystemError: <built-in function __import__> returned a result with an exception set"
+ort1221,1.22.1,r50,p00_fp32,4,4,default,1,"0,2,4,6",24.988849996589124,80,95.8984375,0.9594122730046575,256.9765625,OK,
+ort1260,1.26.0,r50,p00_fp32,4,3,default,1,"0,2,4,6",25.96465000169701,78,97.95673076923077,0.9431739958253671,258.62890625,OK,
+ort1260,1.26.0,r50,p00_fp32,1,0,default,1,0,94.26544999951147,40,89.84375,0.9530931003932577,257.2421875,OK,
+ort1280,1.28.0,r50,p00_fp32,1,3,default,1,0,94.24520000175107,40,84.765625,0.8994158323015395,257.88671875,OK,
+ort1244,1.24.4,r50,p00_fp32,1,4,default,1,0,94.1442500006815,40,82.421875,0.8754849605727738,257.33203125,OK,
+ort1163,,r50,p00_int8,1,2,default,1,,,0,,,,FAILED,"Error: numpy.core.multiarray failed to import
+
+The above exception was the direct cause of the following exception:
+
+SystemError: <built-in function __import__> returned a result with an exception set"
+ort1201,,r50,p00_int8_dyn_conv,4,4,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1260,1.26.0,r50,p00_int8,1,2,default,1,0,29.674950001208344,68,25.045955882352942,0.8440100448807188,94.734375,OK,
+ort1232,,r50,p00_int8_dyn_conv,4,1,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1270,1.27.0,r50,p00_int8_dyn_conv,4,1,default,1,"0,2,4,6",428.36795000039274,40,1603.90625,0.9360564031450821,112.484375,OK,
+ort1260,1.26.0,r50,p00_int8,1,0,default,1,0,31.00800000538584,65,30.048076923076923,0.9690427282590884,94.8046875,OK,
+ort1280,1.28.0,r50,p00_int8,4,4,default,1,"0,2,4,6",10.689049999200506,186,40.23857526881721,0.9411167332884325,96.71875,OK,
+ort1251,1.25.1,r50,p00_fp32,1,1,default,1,0,92.93800000159536,40,85.15625,0.9162694484337754,257.51953125,OK,
+ort1244,1.24.4,r50,p00_int8,4,0,default,1,"0,2,4,6",9.70190000225557,203,37.17672413793103,0.9579753483670186,95.65625,OK,
+ort1251,1.25.1,r50,p00_fp32,4,3,default,1,"0,2,4,6",25.588499993318692,79,93.75,0.9159388008722539,259.23046875,OK,
+ort1232,,r50,p00_int8_dyn_conv,1,1,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1201,1.20.1,r50,p00_int8,1,3,default,1,0,29.507299997931113,68,28.033088235294116,0.950039083117047,90.6875,OK,
+ort1221,1.22.1,r50,p00_int8,1,2,default,1,0,29.55004999967059,68,29.41176470588235,0.9953203025446732,96.87890625,OK,
+ort1270,1.27.0,r50,p00_int8_dyn_conv,1,1,default,1,0,1526.1226999973587,40,1408.984375,0.9232444907623998,111.5,OK,
+ort1280,1.28.0,r50,p00_fp32,1,1,default,1,0,93.34369999851333,40,87.109375,0.9332110790700109,258.16015625,OK,
+ort1163,,r50,p00_int8_dyn_conv,1,2,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1211,1.21.1,r50,p00_fp32,1,3,default,1,0,105.13630000059493,40,91.796875,0.8731225561436017,252.31640625,OK,
+ort1163,,r50,p00_fp32,4,0,default,1,,,0,,,,FAILED,"Error: numpy.core.multiarray failed to import
+
+The above exception was the direct cause of the following exception:
+
+SystemError: <built-in function __import__> returned a result with an exception set"
+ort1280,1.28.0,r50,p00_int8_dyn_conv,1,1,default,1,0,1572.8917000051297,40,1358.984375,0.8640037804227513,111.28515625,OK,
+ort1221,1.22.1,r50,p00_int8,1,3,default,1,0,34.048499997879844,59,27.01271186440678,0.7933598210226244,96.45703125,OK,
+ort1251,1.25.1,r50,p00_fp32,4,1,default,1,"0,2,4,6",25.882750003802357,78,100.76121794871794,0.9732468336432123,259.0234375,OK,
+ort1232,1.23.2,r50,p00_fp32,4,4,default,1,"0,2,4,6",25.255100001231767,78,99.9599358974359,0.9895024756639308,258.83984375,OK,
+ort1211,1.21.1,r50,p00_int8,4,4,default,1,"0,2,4,6",9.847600005741697,201,36.38059701492537,0.9235904431971614,93.6953125,OK,
+ort1251,1.25.1,r50,p00_fp32,1,0,default,1,0,100.64494999824092,40,80.859375,0.8034121433953046,257.50390625,OK,
+ort1232,1.23.2,r50,p00_int8,4,4,default,1,"0,2,4,6",9.624199999962002,205,34.984756097560975,0.9087704977478414,94.8203125,OK,
+ort1280,1.28.0,r50,p00_fp32,1,2,default,1,0,101.03094999794848,40,82.03125,0.8119417861721157,257.9609375,OK,
+ort1300,1.30.0,r50,p00_int8_dyn_conv,1,1,default,1,0,1556.8944999977248,40,1339.84375,0.8605873744187278,111.98828125,OK,
+ort1221,1.22.1,r50,p00_fp32,1,2,default,1,0,97.50969999731751,40,84.375,0.8652985292983277,254.703125,OK,
+ort1221,1.22.1,r50,p00_int8,1,0,default,1,0,30.6544000050053,65,26.442307692307693,0.862594201419377,96.58203125,OK,
+ort1221,1.22.1,r50,p00_int8,4,1,default,1,"0,2,4,6",9.897199997794814,199,38.08103015075377,0.9619142322888939,98.45703125,OK,
+ort1270,1.27.0,r50,p00_fp32,1,2,default,1,0,92.97710000100778,40,84.765625,0.9116828229648077,258.2265625,OK,
+ort1300,1.30.0,r50,p00_fp32,1,1,default,1,0,97.51364999829093,40,80.859375,0.8292108335747578,258.20703125,OK,
+ort1163,,r50,p00_int8_dyn_conv,1,4,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1270,1.27.0,r50,p00_fp32,1,4,default,1,0,94.87170000284095,40,78.515625,0.8275979559515517,257.62890625,OK,
+ort1300,1.30.0,r50,p00_fp32,4,3,default,1,"0,2,4,6",25.354100005642977,79,93.55221518987342,0.922456478134225,259.765625,OK,
+ort1232,1.23.2,r50,p00_fp32,1,4,default,1,0,96.84489999926882,40,82.421875,0.8510708875802679,257.76953125,OK,
+ort1280,1.28.0,r50,p00_fp32,4,4,default,1,"0,2,4,6",24.544600004446693,81,93.75,0.9548943554082722,258.74609375,OK,
+ort1280,1.28.0,r50,p00_int8,1,4,default,1,0,30.17214999999851,66,29.356060606060606,0.9729522293261188,94.87109375,OK,
+ort1221,1.22.1,r50,p00_int8,1,1,default,1,0,31.205300001602154,65,30.28846153846154,0.9706191428028719,95.5,OK,
+ort1221,,r50,p00_int8_dyn_conv,4,1,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1300,1.30.0,r50,p00_int8_dyn_conv,1,4,default,1,0,1473.6706000039703,40,1351.5625,0.9171401668706417,111.88671875,OK,
+ort1232,,r50,p00_int8_dyn_conv,4,2,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1251,1.25.1,r50,p00_int8_dyn_conv,1,4,default,1,0,1473.38745000161,40,1368.75,0.928981714890068,110.8125,OK,
+ort1201,,r50,p00_int8_dyn_conv,4,2,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1201,1.20.1,r50,p00_fp32,1,2,default,1,0,94.35169999778736,40,84.375,0.8942605167896145,250.3125,OK,
+ort1251,1.25.1,r50,p00_int8,4,3,default,1,"0,2,4,6",9.56890000088606,207,37.06219806763285,0.968298290926882,95.80859375,OK,
+ort1251,1.25.1,r50,p00_int8,4,1,default,1,"0,2,4,6",9.584049999830313,208,37.71033653846154,0.9836743479825649,95.875,OK,
+ort1251,1.25.1,r50,p00_int8_dyn_conv,1,1,default,1,0,1536.4177500014193,40,1349.609375,0.8784130325224069,111.0546875,OK,
+ort1201,1.20.1,r50,p00_int8,4,2,default,1,"0,2,4,6",9.70440000310191,202,36.9740099009901,0.9525063344764164,92.17578125,OK,
+ort1270,1.27.0,r50,p00_fp32,4,2,default,1,"0,2,4,6",24.51110000401968,81,93.9429012345679,0.9581669245684792,258.984375,OK,
+ort1211,1.21.1,r50,p00_int8,1,2,default,1,0,29.912999998487066,67,28.45149253731343,0.9511413946696234,92.625,OK,
+ort1300,1.30.0,r50,p00_fp32,4,2,default,1,"0,2,4,6",24.916700000176206,81,96.06481481481481,0.9638597287575749,259.69140625,OK,
+ort1232,1.23.2,r50,p00_int8,1,4,default,1,0,29.51300000131596,68,25.735294117647058,0.8719985808457136,93.3515625,OK,
+ort1300,1.30.0,r50,p00_int8,4,1,default,1,"0,2,4,6",11.370749998604879,176,42.43607954545455,0.9330096860510783,96.84375,OK,
+ort1211,,r50,p00_int8_dyn_conv,4,3,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1163,,r50,p00_int8,4,4,default,1,,,0,,,,FAILED,"Error: numpy.core.multiarray failed to import
+
+The above exception was the direct cause of the following exception:
+
+SystemError: <built-in function __import__> returned a result with an exception set"
+ort1260,1.26.0,r50,p00_int8_dyn_conv,4,2,default,1,"0,2,4,6",425.44469999847934,40,1598.828125,0.9395040794994712,111.1640625,OK,
+ort1211,1.21.1,r50,p00_fp32,1,4,default,1,0,93.12874999886844,40,87.890625,0.9437539428057169,251.01953125,OK,
+ort1300,1.30.0,r50,p00_int8,1,1,default,1,0,29.622449997987133,68,28.722426470588236,0.9696168437296694,95.3984375,OK,
+ort1211,1.21.1,r50,p00_fp32,4,4,default,1,"0,2,4,6",25.105900000198744,80,89.453125,0.8907579991086942,252.84375,OK,
+ort1244,1.24.4,r50,p00_int8_dyn_conv,1,4,default,1,0,1560.684100000799,40,1354.296875,0.8677584880882087,111.0078125,OK,
+ort1260,1.26.0,r50,p00_int8,1,4,default,1,0,31.02470000158064,64,27.587890625,0.8892234453063029,94.96875,OK,
+ort1260,1.26.0,r50,p00_int8_dyn_conv,4,3,default,1,"0,2,4,6",431.2441000001854,40,1610.546875,0.9336631359126464,112.578125,OK,
+ort1270,1.27.0,r50,p00_int8_dyn_conv,4,0,default,1,"0,2,4,6",429.25990000003367,40,1634.765625,0.9520838220620373,112.5,OK,
+ort1270,1.27.0,r50,p00_fp32,1,1,default,1,0,93.8372500022524,40,89.0625,0.9491166887122353,257.80078125,OK,
+ort1260,1.26.0,r50,p00_int8,4,4,default,1,"0,2,4,6",9.791099997528363,203,38.639162561576356,0.9865889065408971,97.0703125,OK,
+ort1280,1.28.0,r50,p00_fp32,4,0,default,1,"0,2,4,6",25.35360000183573,79,93.94778481012658,0.9263751972434316,259.09765625,OK,
+ort1201,1.20.1,r50,p00_int8,4,0,default,1,"0,2,4,6",9.799300001759548,201,37.77985074626866,0.9638405482913311,91.5390625,OK,
+ort1300,1.30.0,r50,p00_int8,1,4,default,1,0,33.55995000310941,60,30.729166666666668,0.9156499537043273,95.32421875,OK,
+ort1232,1.23.2,r50,p00_fp32,4,0,default,1,"0,2,4,6",25.28840000013588,79,101.06803797468355,0.9991541376099367,258.9140625,OK,
+ort1211,1.21.1,r50,p00_fp32,4,3,default,1,"0,2,4,6",24.815800003125332,81,92.5925925925926,0.9327987872739482,252.75,OK,
+ort1201,1.20.1,r50,p00_fp32,4,3,default,1,"0,2,4,6",25.054150002688402,80,91.796875,0.9159847269828537,251.6015625,OK,
+ort1244,1.24.4,r50,p00_int8,1,0,default,1,0,29.95359999476932,67,28.21828358208955,0.9420665157783105,94.203125,OK,
+ort1232,1.23.2,r50,p00_int8,1,2,default,1,0,31.21685000223806,64,31.25,1.0010619264198521,93.77734375,OK,
+ort1244,1.24.4,r50,p00_fp32,1,0,default,1,0,102.81649999888032,40,91.40625,0.8890231626343575,257.46484375,OK,
+ort1251,1.25.1,r50,p00_fp32,1,2,default,1,0,100.75344999859226,40,92.1875,0.9149810751025206,257.4921875,OK,
+ort1270,1.27.0,r50,p00_fp32,1,0,default,1,0,98.37935000177822,40,88.28125,0.897355491761272,257.88671875,OK,
+ort1270,1.27.0,r50,p00_int8_dyn_conv,4,3,default,1,"0,2,4,6",427.404199999728,40,1608.984375,0.9411374379340587,112.6328125,OK,
+ort1270,1.27.0,r50,p00_int8_dyn_conv,1,2,default,1,0,1570.7218999996257,40,1399.609375,0.8910612215952,111.40234375,OK,
+ort1201,1.20.1,r50,p00_int8,4,4,default,1,"0,2,4,6",9.890650002489565,200,38.046875,0.9616879323002852,91.546875,OK,
+ort1201,,r50,p00_int8_dyn_conv,4,1,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1300,1.30.0,r50,p00_int8_dyn_conv,4,3,default,1,"0,2,4,6",404.7684500001196,40,1543.359375,0.9532359642899193,113.1953125,OK,
+ort1251,1.25.1,r50,p00_fp32,1,4,default,1,0,100.95380000348086,40,84.765625,0.8396476903006851,257.41015625,OK,
+ort1232,,r50,p00_int8_dyn_conv,1,2,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1260,1.26.0,r50,p00_fp32,1,1,default,1,0,100.87099999873317,40,78.515625,0.7783765899117295,257.7890625,OK,
+ort1163,,r50,p00_fp32,1,0,default,1,,,0,,,,FAILED,"Error: numpy.core.multiarray failed to import
+
+The above exception was the direct cause of the following exception:
+
+SystemError: <built-in function __import__> returned a result with an exception set"
+ort1232,1.23.2,r50,p00_fp32,4,1,default,1,"0,2,4,6",25.330199998279568,79,95.13449367088607,0.9389433727067653,257.83984375,OK,
+ort1211,1.21.1,r50,p00_fp32,4,0,default,1,"0,2,4,6",25.555400003213435,79,93.94778481012658,0.9190600107835645,252.7578125,OK,
+ort1260,1.26.0,r50,p00_int8_dyn_conv,1,1,default,1,0,1576.4075000006414,40,1394.140625,0.8843783254009085,111.46484375,OK,
+ort1260,1.26.0,r50,p00_int8_dyn_conv,1,4,default,1,0,1551.0408000009193,40,1393.359375,0.8983383125699687,111.125,OK,
+ort1221,1.22.1,r50,p00_fp32,4,1,default,1,"0,2,4,6",24.715699997614138,81,94.9074074074074,0.9599910928738518,256.5,OK,
+ort1260,1.26.0,r50,p00_fp32,4,0,default,1,"0,2,4,6",24.75360000244109,81,97.80092592592592,0.9877444686457851,259.12109375,OK,
+ort1232,1.23.2,r50,p00_int8,4,3,default,1,"0,2,4,6",10.021399997640401,197,37.99175126903553,0.9477655636433262,94.91796875,OK,
+ort1280,1.28.0,r50,p00_int8,4,2,default,1,"0,2,4,6",9.82849999491009,202,37.12871287128713,0.9444145314777197,96.26171875,OK,
+ort1300,1.30.0,r50,p00_fp32,1,0,default,1,0,101.51405000215163,40,79.296875,0.7811418714780788,257.984375,OK,
+ort1260,1.26.0,r50,p00_int8,4,0,default,1,"0,2,4,6",9.68039999861503,203,35.714285714285715,0.9223349685807234,96.42578125,OK,
+ort1251,1.25.1,r50,p00_int8_dyn_conv,1,3,default,1,0,1576.1957999966398,40,1353.90625,0.8589708524809457,111.0546875,OK,
+ort1211,,r50,p00_int8_dyn_conv,4,2,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1221,1.22.1,r50,p00_fp32,1,1,default,1,0,99.90430000107153,40,82.421875,0.8250082829179122,255.796875,OK,
+ort1211,1.21.1,r50,p00_fp32,4,2,default,1,"0,2,4,6",25.1127500050643,80,91.6015625,0.9119029425443987,252.77734375,OK,
+ort1300,1.30.0,r50,p00_int8_dyn_conv,4,1,default,1,"0,2,4,6",404.13859999898705,40,1540.234375,0.9527884585906051,112.82421875,OK,
+ort1211,,r50,p00_int8_dyn_conv,1,0,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1232,1.23.2,r50,p00_fp32,1,2,default,1,0,97.30235000097309,40,88.28125,0.907287953467898,256.32421875,OK,
+ort1244,1.24.4,r50,p00_int8,4,1,default,1,"0,2,4,6",9.928600004059263,199,38.709170854271356,0.974688547188055,95.984375,OK,
+ort1201,1.20.1,r50,p00_fp32,1,4,default,1,0,99.67935000167927,40,89.453125,0.8974087912741506,250.12109375,OK,
+ort1251,1.25.1,r50,p00_fp32,1,3,default,1,0,102.24735000156215,40,91.40625,0.8939718241949887,257.98046875,OK,
+ort1300,1.30.0,r50,p00_int8_dyn_conv,1,0,default,1,0,1515.612899998814,40,1353.515625,0.8930483667703403,111.953125,OK,
+ort1300,1.30.0,r50,p00_int8,1,0,default,1,0,29.91489999840269,67,25.419776119402986,0.8497362892993218,95.83984375,OK,
+ort1232,1.23.2,r50,p00_fp32,4,3,default,1,"0,2,4,6",25.483199999143835,79,91.77215189873418,0.900320131516229,257.75390625,OK,
+ort1270,1.27.0,r50,p00_int8,1,2,default,1,0,31.205399998725625,64,27.83203125,0.8918979167431474,95.04296875,OK,
+ort1163,,r50,p00_int8,4,0,default,1,,,0,,,,FAILED,"Error: numpy.core.multiarray failed to import
+
+The above exception was the direct cause of the following exception:
+
+SystemError: <built-in function __import__> returned a result with an exception set"
+ort1280,1.28.0,r50,p00_int8,4,3,default,1,"0,2,4,6",10.28519999817945,195,38.14102564102564,0.9270851720865141,96.140625,OK,
+ort1163,,r50,p00_int8_dyn_conv,1,0,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1300,1.30.0,r50,p00_int8_dyn_conv,4,2,default,1,"0,2,4,6",403.49314999912167,40,1540.625,0.9545546188351361,112.9609375,OK,
+ort1232,1.23.2,r50,p00_fp32,1,0,default,1,0,98.21614999964368,40,81.25,0.8272570244333012,256.3125,OK,
+ort1300,1.30.0,r50,p00_int8,4,4,default,1,"0,2,4,6",10.00354999996489,196,37.786989795918366,0.9443395043772209,96.87109375,OK,
+ort1280,1.28.0,r50,p00_int8_dyn_conv,1,3,default,1,0,1540.5055500013987,40,1354.296875,0.8791249567382412,111.359375,OK,
+ort1221,,r50,p00_int8_dyn_conv,1,1,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1211,,r50,p00_int8_dyn_conv,4,4,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1211,1.21.1,r50,p00_int8,1,4,default,1,0,33.19779999583261,61,28.94467213114754,0.8718852494677667,91.72265625,OK,
+ort1221,1.22.1,r50,p00_int8,4,4,default,1,"0,2,4,6",9.403500000189524,211,36.877962085308056,0.980431809554017,98.4375,OK,
+ort1270,1.27.0,r50,p00_int8,1,3,default,1,0,33.591150000575,60,27.34375,0.8140164894483202,94.99609375,OK,
+ort1251,1.25.1,r50,p00_fp32,4,2,default,1,"0,2,4,6",25.439899996854365,79,91.96993670886076,0.9037961697985527,259.16015625,OK,
+ort1280,1.28.0,r50,p00_int8,1,3,default,1,0,31.898849996650824,64,28.3203125,0.8878160969117523,95.08203125,OK,
+ort1270,1.27.0,r50,p00_fp32,4,3,default,1,"0,2,4,6",25.165449998894474,80,98.828125,0.9817838048230962,258.6875,OK,
+ort1270,1.27.0,r50,p00_int8_dyn_conv,1,3,default,1,0,1611.94500000056,40,1397.65625,0.8670619965318386,111.4375,OK,
+ort1221,,r50,p00_int8_dyn_conv,4,0,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1211,1.21.1,r50,p00_fp32,1,2,default,1,0,101.64015000191284,40,77.734375,0.7647998846768433,251.03125,OK,
+ort1163,,r50,p00_int8,4,2,default,1,,,0,,,,FAILED,"Error: numpy.core.multiarray failed to import
+
+The above exception was the direct cause of the following exception:
+
+SystemError: <built-in function __import__> returned a result with an exception set"
+ort1221,,r50,p00_int8_dyn_conv,1,4,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1201,1.20.1,r50,p00_fp32,4,1,default,1,"0,2,4,6",25.802050000493182,78,94.35096153846153,0.914180864860138,251.703125,OK,
+ort1232,,r50,p00_int8_dyn_conv,1,3,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1163,,r50,p00_int8_dyn_conv,1,3,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1211,,r50,p00_int8_dyn_conv,1,4,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1232,,r50,p00_int8_dyn_conv,1,0,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1270,1.27.0,r50,p00_fp32,4,1,default,1,"0,2,4,6",25.773000001208857,78,93.54967948717949,0.907438787517864,259.88671875,OK,
+ort1260,1.26.0,r50,p00_int8_dyn_conv,1,0,default,1,0,1639.9622999997518,40,1400.0,0.8536781607724835,109.9296875,OK,
+ort1270,1.27.0,r50,p00_int8,1,1,default,1,0,33.09760000411188,61,28.432377049180328,0.8590464881335211,94.91796875,OK,
+ort1260,1.26.0,r50,p00_int8_dyn_conv,4,0,default,1,"0,2,4,6",425.5827000015415,40,1617.578125,0.9502137451746399,112.734375,OK,
+ort1300,1.30.0,r50,p00_int8,1,2,default,1,0,32.16089999477845,63,28.025793650793652,0.8714244208135917,95.640625,OK,
+ort1260,1.26.0,r50,p00_fp32,4,1,default,1,"0,2,4,6",25.55364999716403,78,100.96153846153847,0.9877408753029732,259.15625,OK,
+ort1211,1.21.1,r50,p00_fp32,1,0,default,1,0,98.76509999958216,40,85.15625,0.8622099304345388,250.8359375,OK,
+ort1211,1.21.1,r50,p00_int8,4,2,default,1,"0,2,4,6",9.537099998851772,205,37.728658536585364,0.9889971411940668,93.7890625,OK,
+ort1280,1.28.0,r50,p00_int8_dyn_conv,1,2,default,1,0,1552.8876499993203,40,1360.15625,0.8758883812364632,111.4453125,OK,
+ort1163,,r50,p00_int8,4,3,default,1,,,0,,,,FAILED,"Error: numpy.core.multiarray failed to import
+
+The above exception was the direct cause of the following exception:
+
+SystemError: <built-in function __import__> returned a result with an exception set"
+ort1251,1.25.1,r50,p00_int8,4,0,default,1,"0,2,4,6",9.507999995548744,209,35.58612440191388,0.935689009743738,96.02734375,OK,
+ort1211,1.21.1,r50,p00_int8,1,1,default,1,0,29.674549998162547,68,25.045955882352942,0.844021421854882,93.078125,OK,
+ort1201,,r50,p00_int8_dyn_conv,1,3,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1163,,r50,p00_int8_dyn_conv,4,4,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1251,1.25.1,r50,p00_int8,1,0,default,1,0,31.8256000027759,63,27.77777777777778,0.872812382967012,94.734375,OK,
+ort1260,1.26.0,r50,p00_fp32,4,4,default,1,"0,2,4,6",24.529399997845758,81,96.83641975308642,0.986942401379476,259.0390625,OK,
+ort1163,,r50,p00_int8,1,1,default,1,,,0,,,,FAILED,"Error: numpy.core.multiarray failed to import
+
+The above exception was the direct cause of the following exception:
+
+SystemError: <built-in function __import__> returned a result with an exception set"
+ort1251,1.25.1,r50,p00_int8_dyn_conv,4,0,default,1,"0,2,4,6",406.0392499995942,40,1525.78125,0.9394296548926766,112.35546875,OK,
+ort1163,,r50,p00_fp32,1,2,default,1,,,0,,,,FAILED,"Error: numpy.core.multiarray failed to import
+
+The above exception was the direct cause of the following exception:
+
+SystemError: <built-in function __import__> returned a result with an exception set"
+ort1244,1.24.4,r50,p00_int8_dyn_conv,4,3,default,1,"0,2,4,6",405.06825000193203,40,1535.15625,0.9474676489657471,111.83984375,OK,
+ort1260,1.26.0,r50,p00_int8_dyn_conv,4,4,default,1,"0,2,4,6",426.85509999864735,40,1621.875,0.9498978693268157,112.65625,OK,
+ort1244,1.24.4,r50,p00_int8,1,3,default,1,0,29.975799996464048,67,25.652985074626866,0.8557898397258088,94.77734375,OK,
+ort1300,1.30.0,r50,p00_fp32,1,2,default,1,0,99.41130000152043,40,85.9375,0.8644641001444066,259.15625,OK,
+ort1244,1.24.4,r50,p00_fp32,4,1,default,1,"0,2,4,6",24.669100006576627,81,92.01388888888889,0.9324812099383293,258.796875,OK,
+ort1211,,r50,p00_int8_dyn_conv,4,1,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1163,,r50,p00_fp32,4,3,default,1,,,0,,,,FAILED,"Error: numpy.core.multiarray failed to import
+
+The above exception was the direct cause of the following exception:
+
+SystemError: <built-in function __import__> returned a result with an exception set"
+ort1201,1.20.1,r50,p00_fp32,1,0,default,1,0,94.7468000013032,40,81.640625,0.8616715815085794,250.3984375,OK,
+ort1163,,r50,p00_int8,1,0,default,1,,,0,,,,FAILED,"Error: numpy.core.multiarray failed to import
+
+The above exception was the direct cause of the following exception:
+
+SystemError: <built-in function __import__> returned a result with an exception set"
+ort1221,1.22.1,r50,p00_int8,4,0,default,1,"0,2,4,6",9.509099996648729,208,35.83233173076923,0.9420537102196197,98.08984375,OK,
+ort1163,,r50,p00_int8_dyn_conv,4,2,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1201,1.20.1,r50,p00_fp32,1,3,default,1,0,96.74435000124504,40,83.203125,0.8600308441674291,250.23046875,OK,
+ort1163,,r50,p00_int8,4,1,default,1,,,0,,,,FAILED,"Error: numpy.core.multiarray failed to import
+
+The above exception was the direct cause of the following exception:
+
+SystemError: <built-in function __import__> returned a result with an exception set"
+ort1232,,r50,p00_int8_dyn_conv,4,4,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1244,1.24.4,r50,p00_int8_dyn_conv,1,2,default,1,0,1502.34189999901,40,1357.03125,0.9032772433497956,111.01171875,OK,
+ort1251,1.25.1,r50,p00_int8,1,2,default,1,0,30.074800000875257,67,28.917910447761194,0.961532926134824,94.55859375,OK,
+ort1280,1.28.0,r50,p00_int8,1,1,default,1,0,30.065799997828435,67,29.617537313432837,0.9850906117772361,95.2421875,OK,
+ort1211,,r50,p00_int8_dyn_conv,1,3,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1300,1.30.0,r50,p00_int8_dyn_conv,1,2,default,1,0,1547.8111999946123,40,1354.6875,0.8752278701722248,111.7578125,OK,
+ort1201,,r50,p00_int8_dyn_conv,4,0,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1270,1.27.0,r50,p00_int8_dyn_conv,4,4,default,1,"0,2,4,6",425.0120999968203,40,1600.0,0.9411496755103973,113.01171875,OK,
+ort1300,1.30.0,r50,p00_fp32,4,0,default,1,"0,2,4,6",24.381600000197068,82,93.3689024390244,0.9573705421123894,259.22265625,OK,
+ort1221,,r50,p00_int8_dyn_conv,4,2,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1221,1.22.1,r50,p00_fp32,1,3,default,1,0,97.26325000156066,40,82.421875,0.8474102500037525,255.69921875,OK,
+ort1221,1.22.1,r50,p00_int8,4,3,default,1,"0,2,4,6",9.729299999889918,203,37.94642857142857,0.97505546575442,97.41796875,OK,
+ort1232,,r50,p00_int8_dyn_conv,1,4,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1300,1.30.0,r50,p00_fp32,1,3,default,1,0,97.1547000008286,40,85.15625,0.8765016000180509,257.91796875,OK,
+ort1201,1.20.1,r50,p00_int8,4,3,default,1,"0,2,4,6",9.68760000250768,205,37.957317073170735,0.9795335548367323,92.04296875,OK,
+ort1280,1.28.0,r50,p00_fp32,1,4,default,1,0,94.41790000346373,40,82.8125,0.8770847476692663,257.53515625,OK,
+ort1280,1.28.0,r50,p00_fp32,4,1,default,1,"0,2,4,6",24.694799998542294,81,95.29320987654322,0.9647092695847735,258.8671875,OK,
+ort1251,1.25.1,r50,p00_int8_dyn_conv,1,2,default,1,0,1541.8884000027901,40,1363.28125,0.884163373949459,110.97265625,OK,
+ort1270,1.27.0,r50,p00_int8,4,4,default,1,"0,2,4,6",9.722000002511777,203,36.94581280788177,0.9500569018292647,96.546875,OK,
+ort1221,1.22.1,r50,p00_fp32,4,3,default,1,"0,2,4,6",24.508750000677537,82,92.60670731707317,0.9446290336564808,257.046875,OK,
+ort1221,1.22.1,r50,p00_int8,1,4,default,1,0,29.557300000305986,68,26.19485294117647,0.886239708664367,95.97265625,OK,
+ort1232,1.23.2,r50,p00_int8,1,1,default,1,0,30.05490000214195,67,29.151119402985074,0.9699290099420572,93.30859375,OK,
+ort1270,1.27.0,r50,p00_int8_dyn_conv,4,2,default,1,"0,2,4,6",421.1903999967035,40,1595.3125,0.9469069689221822,112.97265625,OK,
+ort1201,1.20.1,r50,p00_int8,1,2,default,1,0,30.017600001883693,67,26.81902985074627,0.893443508110685,90.3203125,OK,
+ort1251,1.25.1,r50,p00_int8_dyn_conv,4,1,default,1,"0,2,4,6",405.0308999940171,40,1521.875,0.9393573428733958,112.3984375,OK,
+ort1280,1.28.0,r50,p00_int8_dyn_conv,1,0,default,1,0,1555.2543500016327,40,1334.375,0.8579786322401858,111.30859375,OK,
+ort1163,,r50,p00_fp32,4,2,default,1,,,0,,,,FAILED,"Error: numpy.core.multiarray failed to import
+
+The above exception was the direct cause of the following exception:
+
+SystemError: <built-in function __import__> returned a result with an exception set"
+ort1211,1.21.1,r50,p00_int8,1,0,default,1,0,29.949299998406786,67,25.186567164179106,0.8409734840386572,92.09375,OK,
+ort1201,1.20.1,r50,p00_int8,1,4,default,1,0,29.830899999069516,67,27.05223880597015,0.9068529211929228,90.87109375,OK,
+ort1232,,r50,p00_int8_dyn_conv,4,0,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1232,1.23.2,r50,p00_fp32,1,3,default,1,0,94.1903499988257,40,83.984375,0.8916452163204305,258.125,OK,
+ort1211,1.21.1,r50,p00_int8,4,1,default,1,"0,2,4,6",9.55824999982724,208,38.01081730769231,0.9941887193884689,94.75,OK,
+ort1251,1.25.1,r50,p00_int8_dyn_conv,4,4,default,1,"0,2,4,6",405.8844500032137,40,1539.453125,0.9482089822533303,112.359375,OK,
+ort1280,1.28.0,r50,p00_int8_dyn_conv,4,0,default,1,"0,2,4,6",401.2331500016444,40,1532.03125,0.9545766906309469,112.9609375,OK,
+ort1211,,r50,p00_int8_dyn_conv,4,0,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1244,1.24.4,r50,p00_int8,1,1,default,1,0,31.395999998494517,64,30.029296875,0.956468877450629,95.1328125,OK,
+ort1260,1.26.0,r50,p00_int8,1,1,default,1,0,29.902199996286072,67,24.253731343283583,0.8111019037494217,94.90625,OK,
+ort1300,1.30.0,r50,p00_int8_dyn_conv,4,0,default,1,"0,2,4,6",408.9846500028216,40,1550.0,0.9474683218485747,113.5625,OK,
+ort1163,,r50,p00_int8_dyn_conv,4,1,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1270,1.27.0,r50,p00_int8,4,2,default,1,"0,2,4,6",9.442999999009771,210,36.979166666666664,0.9790100251653193,96.171875,OK,
+ort1201,1.20.1,r50,p00_fp32,4,4,default,1,"0,2,4,6",25.85825000278419,78,95.15224358974359,0.9199408658696783,251.59765625,OK,
+ort1270,1.27.0,r50,p00_fp32,1,3,default,1,0,92.38290000212146,40,82.03125,0.8879484190052083,258.5390625,OK,
+ort1270,1.27.0,r50,p00_int8_dyn_conv,1,0,default,1,0,1489.1089999946416,40,1399.609375,0.9398971969177785,111.375,OK,
+ort1232,1.23.2,r50,p00_int8,4,0,default,1,"0,2,4,6",9.44694999998319,210,37.20238095238095,0.9845077234569662,95.66015625,OK,
+ort1163,,r50,p00_fp32,1,1,default,1,,,0,,,,FAILED,"Error: numpy.core.multiarray failed to import
+
+The above exception was the direct cause of the following exception:
+
+SystemError: <built-in function __import__> returned a result with an exception set"
+ort1251,1.25.1,r50,p00_int8,4,2,default,1,"0,2,4,6",9.535700002743397,206,36.862864077669904,0.9664435769546166,96.1328125,OK,
+ort1201,,r50,p00_int8_dyn_conv,1,0,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1251,1.25.1,r50,p00_int8_dyn_conv,4,2,default,1,"0,2,4,6",412.22025000024587,40,1548.828125,0.9393207423695683,112.140625,OK,
+ort1244,1.24.4,r50,p00_int8,4,2,default,1,"0,2,4,6",9.690600003523286,205,38.109756097560975,0.9831629642051348,95.86328125,OK,
+ort1300,1.30.0,r50,p00_fp32,4,4,default,1,"0,2,4,6",25.537000001349952,79,99.88132911392405,0.9778099337103425,259.79296875,OK,
+ort1221,1.22.1,r50,p00_fp32,1,0,default,1,0,93.01524999682442,40,85.9375,0.9239076388327069,255.98046875,OK,
+ort1280,1.28.0,r50,p00_fp32,1,0,default,1,0,92.96109999559121,40,86.71875,0.932849869505769,258.12890625,OK,
+ort1280,1.28.0,r50,p00_int8_dyn_conv,4,4,default,1,"0,2,4,6",409.6139499961282,40,1548.046875,0.9448206506483926,112.7890625,OK,
+ort1260,1.26.0,r50,p00_fp32,1,2,default,1,0,98.8836500000616,40,80.859375,0.8177223939442934,257.6796875,OK,
+ort1211,,r50,p00_int8_dyn_conv,1,2,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1280,1.28.0,r50,p00_fp32,4,2,default,1,"0,2,4,6",24.996799998916686,80,93.9453125,0.9395733904346898,258.96484375,OK,
+ort1201,,r50,p00_int8_dyn_conv,1,4,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1280,1.28.0,r50,p00_int8_dyn_conv,4,3,default,1,"0,2,4,6",410.3735000026063,40,1562.109375,0.9516387967242518,112.671875,OK,
+ort1260,1.26.0,r50,p00_int8_dyn_conv,4,1,default,1,"0,2,4,6",432.7888500010886,40,1620.3125,0.9359717215426903,112.71875,OK,
+ort1244,1.24.4,r50,p00_int8_dyn_conv,1,3,default,1,0,1459.6269000030588,40,1357.03125,0.9297110446492567,109.6640625,OK,
+ort1260,1.26.0,r50,p00_fp32,4,2,default,1,"0,2,4,6",24.876599996787263,80,98.046875,0.9853323506092317,259.05078125,OK,
+ort1244,1.24.4,r50,p00_fp32,4,4,default,1,"0,2,4,6",25.44099999795435,79,97.50791139240506,0.9581768739460461,258.85546875,OK,
+ort1201,,r50,p00_int8_dyn_conv,1,1,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1211,,r50,p00_int8_dyn_conv,1,1,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1163,,r50,p00_fp32,1,4,default,1,,,0,,,,FAILED,"Error: numpy.core.multiarray failed to import
+
+The above exception was the direct cause of the following exception:
+
+SystemError: <built-in function __import__> returned a result with an exception set"
+ort1232,,r50,p00_int8_dyn_conv,4,3,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1201,,r50,p00_int8_dyn_conv,1,2,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1280,1.28.0,r50,p00_int8_dyn_conv,4,1,default,1,"0,2,4,6",410.1756000054593,40,1538.28125,0.9375748155055579,112.9296875,OK,
+ort1244,1.24.4,r50,p00_int8,1,4,default,1,0,29.976500001794193,67,26.119402985074625,0.8713293074078459,94.390625,OK,
+ort1300,1.30.0,r50,p00_int8,4,0,default,1,"0,2,4,6",9.88369999686256,199,38.787688442211056,0.9811024326548675,96.8515625,OK,
+ort1163,,r50,p00_fp32,1,3,default,1,,,0,,,,FAILED,"Error: numpy.core.multiarray failed to import
+
+The above exception was the direct cause of the following exception:
+
+SystemError: <built-in function __import__> returned a result with an exception set"
+ort1244,1.24.4,r50,p00_int8,4,4,default,1,"0,2,4,6",9.982550003769575,198,39.77272727272727,0.9960562996856624,95.64453125,OK,
+ort1221,1.22.1,r50,p00_int8,4,2,default,1,"0,2,4,6",9.972699997888412,197,38.78489847715736,0.9722767777374621,98.015625,OK,
+ort1163,,r50,p00_int8_dyn_conv,4,0,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1251,1.25.1,r50,p00_int8,4,4,default,1,"0,2,4,6",9.563949995936127,208,36.28305288461539,0.9484327317696304,96.12890625,OK,
+ort1280,1.28.0,r50,p00_int8,1,0,default,1,0,30.77810000104364,65,27.64423076923077,0.8981785999880888,95.0625,OK,
+ort1270,1.27.0,r50,p00_int8_dyn_conv,1,4,default,1,0,1535.474450000038,40,1412.109375,0.9196567061079819,111.33203125,OK,
+ort1260,1.26.0,r50,p00_int8,1,3,default,1,0,30.231550001190044,66,28.882575757575758,0.9553785947607323,95.328125,OK,
+ort1260,1.26.0,r50,p00_int8,4,2,default,1,"0,2,4,6",10.964599998260383,179,40.85195530726257,0.9314511088809452,96.9375,OK,
+ort1232,1.23.2,r50,p00_int8,4,1,default,1,"0,2,4,6",9.693500000139466,198,37.563131313131315,0.9687711175682383,95.046875,OK,
+ort1270,1.27.0,r50,p00_int8,4,1,default,1,"0,2,4,6",10.54314999782946,182,40.69368131868132,0.9649317643934454,96.125,OK,
+ort1221,1.22.1,r50,p00_fp32,4,2,default,1,"0,2,4,6",25.86669999800506,76,102.5904605263158,0.9915302351500961,256.96484375,OK,
+ort1232,1.23.2,r50,p00_fp32,1,1,default,1,0,96.90164999847184,40,88.671875,0.915070847621257,257.68359375,OK,
+ort1251,1.25.1,r50,p00_fp32,4,0,default,1,"0,2,4,6",24.407150001934497,82,95.65548780487805,0.9797896087549801,258.8671875,OK,
+ort1244,1.24.4,r50,p00_fp32,4,3,default,1,"0,2,4,6",24.55319999717176,79,94.34335443037975,0.9606014128631604,258.74609375,OK,
+ort1244,1.24.4,r50,p00_fp32,4,0,default,1,"0,2,4,6",26.149000001169043,76,99.30098684210526,0.9493765233628992,258.86328125,OK,
+ort1201,1.20.1,r50,p00_int8,1,1,default,1,0,31.512100002146326,63,30.009920634920636,0.9523300774266591,90.1640625,OK,
+ort1280,1.28.0,r50,p00_int8,4,0,default,1,"0,2,4,6",10.65299999754643,182,41.20879120879121,0.9670701027476369,96.20703125,OK,
+ort1270,1.27.0,r50,p00_fp32,4,0,default,1,"0,2,4,6",25.33479999692645,79,96.71677215189874,0.9543865766024614,259.13671875,OK,
+ort1244,1.24.4,r50,p00_int8_dyn_conv,1,0,default,1,0,1476.5810999997484,40,1370.3125,0.9280306378025789,110.87890625,OK,
+ort1300,1.30.0,r50,p00_int8,1,3,default,1,0,30.36105000137468,66,28.40909090909091,0.935708445781836,95.72265625,OK,
+ort1232,1.23.2,r50,p00_int8,1,3,default,1,0,29.849800001102267,68,28.033088235294116,0.9391382265294553,93.5234375,OK,
+ort1201,1.20.1,r50,p00_int8,1,0,default,1,0,31.97014999750536,62,28.72983870967742,0.89864572771536,91.0703125,OK,
+ort1270,1.27.0,r50,p00_int8,4,0,default,1,"0,2,4,6",10.405499997432344,189,38.607804232804234,0.9275816693655057,96.69140625,OK,
+ort1211,1.21.1,r50,p00_fp32,1,1,default,1,0,97.44974999921396,40,81.640625,0.8377715181481586,252.14453125,OK,
+ort1300,1.30.0,r50,p00_int8,4,3,default,1,"0,2,4,6",9.790149997570552,200,37.65625,0.9615851138477062,96.921875,OK,
+ort1251,1.25.1,r50,p00_int8_dyn_conv,1,0,default,1,0,1479.2454000016733,40,1362.5,0.9210777332810761,111.23828125,OK,
+ort1280,1.28.0,r50,p00_int8_dyn_conv,4,2,default,1,"0,2,4,6",405.586900003982,40,1535.9375,0.9467376165162881,112.7578125,OK,
+ort1280,1.28.0,r50,p00_int8,4,1,default,1,"0,2,4,6",9.988900004827883,195,39.342948717948715,0.9846666975075657,96.01171875,OK,
+ort1270,1.27.0,r50,p00_int8,1,0,default,1,0,32.74950000195531,61,30.225409836065573,0.9229273678761801,95.078125,OK,
+ort1260,1.26.0,r50,p00_int8,4,1,default,1,"0,2,4,6",9.741599998960737,201,38.01305970149254,0.9755342989228639,96.69140625,OK,
+ort1280,1.28.0,r50,p00_int8,1,2,default,1,0,30.58710000186693,66,26.041666666666668,0.8513937792427911,94.98828125,OK,
+ort1244,1.24.4,r50,p00_fp32,1,2,default,1,0,98.77815000072587,40,82.421875,0.8344140379162226,257.4921875,OK,
+ort1211,1.21.1,r50,p00_int8,4,0,default,1,"0,2,4,6",10.271300001477357,189,38.93849206349206,0.9477498480691685,92.88671875,OK,
+ort1300,1.30.0,r50,p00_int8_dyn_conv,4,4,default,1,"0,2,4,6",411.82409999964875,40,1554.296875,0.9435441460330549,113.24609375,OK,
+ort1251,1.25.1,r50,p00_int8,1,3,default,1,0,29.233100001874845,69,28.985507246376812,0.991530396862387,94.98828125,OK,
+ort1201,1.20.1,r50,p00_fp32,1,1,default,1,0,92.50835000057123,40,84.375,0.9120798284639062,250.23828125,OK,
+ort1260,1.26.0,r50,p00_fp32,1,4,default,1,0,101.14234999855398,40,87.109375,0.8612552012213024,257.7578125,OK,
+ort1244,1.24.4,r50,p00_int8,4,3,default,1,"0,2,4,6",10.03570000466425,197,38.62626903553299,0.9622215943476994,96.171875,OK,
+ort1163,,r50,p00_int8_dyn_conv,4,3,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1163,,r50,p00_int8_dyn_conv,1,1,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1221,,r50,p00_int8_dyn_conv,1,0,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1260,1.26.0,r50,p00_int8_dyn_conv,1,2,default,1,0,1551.9770500031882,40,1394.140625,0.898299768670636,111.3046875,OK,
+ort1211,1.21.1,r50,p00_int8,4,3,default,1,"0,2,4,6",9.827000001678243,198,37.326388888888886,0.9495875873235557,93.61328125,OK,
+ort1244,1.24.4,r50,p00_int8_dyn_conv,1,1,default,1,0,1515.8517000018037,40,1349.609375,0.890330746073903,110.7734375,OK,
+ort1251,1.25.1,r50,p00_int8_dyn_conv,4,3,default,1,"0,2,4,6",423.0940499983262,40,1609.375,0.9509558217649047,112.1484375,OK,
+ort1244,1.24.4,r50,p00_fp32,1,3,default,1,0,94.32474999630358,40,87.5,0.9276462434666296,256.89453125,OK,
+ort1221,1.22.1,r50,p00_fp32,1,4,default,1,0,95.18915000080597,40,86.328125,0.9069113969319934,254.65625,OK,
+ort1270,1.27.0,r50,p00_int8,1,4,default,1,0,30.48470000794623,65,29.326923076923077,0.9620210488959589,94.6015625,OK,
+ort1244,1.24.4,r50,p00_int8_dyn_conv,4,4,default,1,"0,2,4,6",448.6512999937986,40,1626.953125,0.9065799681303098,112.14453125,OK,
+ort1232,1.23.2,r50,p00_fp32,4,2,default,1,"0,2,4,6",27.856100001372397,71,103.87323943661971,0.9322306373783673,257.8984375,OK,
+ort1270,1.27.0,r50,p00_fp32,4,4,default,1,"0,2,4,6",24.494299999787472,81,94.7145061728395,0.9666994583807387,258.77734375,OK,
+ort1300,1.30.0,r50,p00_int8_dyn_conv,1,3,default,1,0,1495.428449998144,40,1365.625,0.9131998257768166,111.91015625,OK,
+ort1221,,r50,p00_int8_dyn_conv,1,2,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1251,1.25.1,r50,p00_fp32,4,4,default,1,"0,2,4,6",25.494399989838712,77,101.86688311688312,0.9989143023319252,260.2109375,OK,
+ort1244,1.24.4,r50,p00_int8_dyn_conv,4,2,default,1,"0,2,4,6",411.11205000197515,40,1563.28125,0.9506418323134103,112.53125,OK,
+ort1232,1.23.2,r50,p00_int8,4,2,default,1,"0,2,4,6",10.00200000271434,194,39.706829896907216,0.9924722527027492,94.98828125,OK,
+ort1232,1.23.2,r50,p00_int8,1,0,default,1,0,31.411150004714727,64,29.296875,0.9326903025073141,93.80859375,OK,
+ort1260,1.26.0,r50,p00_fp32,1,3,default,1,0,94.67330000916263,40,86.328125,0.9118529193726745,257.52734375,OK,
+ort1163,,r50,p00_fp32,4,4,default,1,,,0,,,,FAILED,"Error: numpy.core.multiarray failed to import
+
+The above exception was the direct cause of the following exception:
+
+SystemError: <built-in function __import__> returned a result with an exception set"
+ort1244,1.24.4,r50,p00_int8,1,2,default,1,0,32.50270000717137,62,30.241935483870968,0.93044379319867,94.3828125,OK,
+ort1270,1.27.0,r50,p00_int8,4,3,default,1,"0,2,4,6",10.275300010107458,191,38.93979057591623,0.9474124973872418,96.5546875,OK,
+ort1201,1.20.1,r50,p00_int8,4,1,default,1,"0,2,4,6",9.961000003386289,195,39.66346153846154,0.9954688667045919,91.46875,OK,
+ort1244,1.24.4,r50,p00_fp32,1,1,default,1,0,95.69000000192318,40,85.9375,0.8980823492347458,257.6640625,OK,
+ort1201,1.20.1,r50,p00_fp32,4,0,default,1,"0,2,4,6",26.498400009586476,75,98.54166666666667,0.9296944969414823,251.6015625,OK,
+ort1260,1.26.0,r50,p00_int8,4,3,default,1,"0,2,4,6",9.748349999426864,192,39.469401041666664,1.0122072208113986,96.54296875,OK,
+ort1163,,r50,p00_fp32,4,1,default,1,,,0,,,,FAILED,"Error: numpy.core.multiarray failed to import
+
+The above exception was the direct cause of the following exception:
+
+SystemError: <built-in function __import__> returned a result with an exception set"
+ort1260,1.26.0,r50,p00_int8_dyn_conv,1,3,default,1,0,1535.9660500034806,40,1404.6875,0.9145303048832472,111.26171875,OK,
+ort1221,,r50,p00_int8_dyn_conv,1,3,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1163,,r50,p00_int8,1,3,default,1,,,0,,,,FAILED,"Error: numpy.core.multiarray failed to import
+
+The above exception was the direct cause of the following exception:
+
+SystemError: <built-in function __import__> returned a result with an exception set"
+ort1211,1.21.1,r50,p00_int8,1,3,default,1,0,29.286399992997758,69,28.985507246376812,0.9897258540929275,93.28515625,OK,
+ort1251,1.25.1,r50,p00_int8,1,4,default,1,0,29.570300001068972,68,27.803308823529413,0.9402443946298927,94.21484375,OK,
+ort1221,,r50,p00_int8_dyn_conv,4,4,default,1,,,0,,,,FAILED,"timizers)
+onnxruntime.capi.onnxruntime_pybind11_state.NotImplemented: [ONNXRuntimeError] : 9 : NOT_IMPLEMENTED : Could not find an implementation for ConvInteger(10) node with name '/conv1/Conv_quant'"
+ort1244,1.24.4,r50,p00_int8_dyn_conv,4,0,default,1,"0,2,4,6",454.196350001439,40,1637.5,0.9013172386759669,112.28515625,OK,
+ort1211,1.21.1,r50,p00_fp32,4,1,default,1,"0,2,4,6",26.463200003490783,74,103.2516891891892,0.9754270947539335,252.8125,OK,
+ort1300,1.30.0,r50,p00_fp32,4,1,default,1,"0,2,4,6",27.863349998369813,72,103.29861111111111,0.9268323004695662,259.80859375,OK,
+ort1244,1.24.4,r50,p00_fp32,4,2,default,1,"0,2,4,6",25.892000005114824,77,100.44642857142857,0.9698596917154519,259.00390625,OK,
+ort1251,1.25.1,r50,p00_int8,1,1,default,1,0,31.677499995566905,63,26.28968253968254,0.8299165825384466,94.6328125,OK,
+ort1300,1.30.0,r50,p00_int8,4,2,default,1,"0,2,4,6",10.461800004122779,183,40.89822404371585,0.9773228322946029,95.734375,OK,
+ort1280,1.28.0,r50,p00_fp32,4,3,default,1,"0,2,4,6",25.461800003540702,77,98.82305194805195,0.9703070082860371,260.03515625,OK,
+ort1244,1.24.4,r50,p00_int8_dyn_conv,4,1,default,1,"0,2,4,6",440.8190500034834,40,1612.890625,0.914712411468637,112.20703125,OK,
+ort1221,1.22.1,r50,p00_fp32,4,0,default,1,"0,2,4,6",25.526999997964595,76,100.12335526315789,0.9805632787944262,256.43359375,OK,
+ort1300,1.30.0,r50,p00_fp32,1,4,default,1,0,94.68365000066115,40,86.71875,0.9158788238454524,258.5625,OK,
+ort1201,1.20.1,r50,p00_fp32,4,2,default,1,"0,2,4,6",26.876200005062856,75,98.54166666666667,0.9166257380889383,251.59375,OK,

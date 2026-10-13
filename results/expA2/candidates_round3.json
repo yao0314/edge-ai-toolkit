@@ -1,0 +1,541 @@
+{
+ "note": "Round-3 candidate list for Experiment A2 (Arm 1, PUBLISHED-INT8), assembled 2026-09-23 by the A2 top-up agent under results/paper/a2_design_registered.md sections 1-2. It ADDS to results/expA/candidates.json (17) and results/expA2/candidates_round2.json (19); it replaces neither. Reason for the round: the admitted pool stood at 13, below the registered minimum of 18 (section 4). NO A2 CHECKER OUTPUT EXISTED WHEN THIS FILE WAS WRITTEN: results/expA2 held only pool.json, manifest.json, candidates_round2.json and stage_records/, with no predictions.json, no selftest.json and no results/paper/a2_predictions_frozen.md - so D13's rule that no candidate may be added after the first A2 checker output is not breached, and nothing here was chosen with a flag in hand.",
+ "collected_utc": "2026-09-23T06:30:00Z",
+ "collector": "A2 top-up agent (round 3 of the one registered fetch round, 2.1)",
+ "pool_dir": "D:\\sec_models",
+ "verification_policy": "Every candidate in this list was PRE-SCREENED FROM THE FILE before being written down: the collector fetched each URL once, anonymously, into a scratch directory, read the graph with a_pool.check_static(exp='A2') - the same code the admission stage runs - recorded the sha256, byte count, opset, node count, Q/DQ counts and static/dynamic activation-site counts, and deleted the file. No candidate is listed on the strength of its name, its model card or a quantize_config.json: 12 of the 21 files pre-screened were rejected on the graph alone, and they are listed under known_rejections_no_download. The pipeline fetches each URL again and ITS sha256, byte count and rule verdicts are the record; where the two disagree the pipeline governs. Licence states in this file are the collector's reading and are informational only - stage_licence_a2 re-derives every state from the publisher's hub metadata before the fetch (VA15).",
+ "candidates": [
+  {
+   "id": "c01",
+   "publisher": "AMD",
+   "repository": "amd/efficientnet-es",
+   "repo_url": "https://huggingface.co/amd/efficientnet-es",
+   "name": "EfficientNet_int (EfficientNet-ES / EdgeTPU-Small)",
+   "family": "efficientnet_es",
+   "family_new_to_pool": false,
+   "arch": "CNN (EfficientNet-EdgeTPU-Small: fused MBConv, no squeeze-excite)",
+   "url": "https://huggingface.co/amd/efficientnet-es/resolve/main/EfficientNet_int.onnx",
+   "file_path": "EfficientNet_int.onnx",
+   "head_status": "HTTP 200",
+   "head_bytes": 21760409,
+   "head_checked_utc": "2026-09-23T06:25Z",
+   "licence_state": "DECLARED",
+   "licence": "apache-2.0",
+   "licence_stated_where": "model card YAML front matter 'license: apache-2.0' (hub metadata cardData.license); no LICENSE file in the repository root",
+   "licence_url": "https://huggingface.co/amd/efficientnet-es",
+   "base_model_named_by_repo": "EfficientNet-ES (EdgeTPU-Small), AMD's own re-export; the card names the architecture and the paper, not an upstream checkpoint repository",
+   "base_model_url": null,
+   "base_model_licence_stated": null,
+   "export_tooling": "AMD Ryzen AI ONNX quantizer (Vitis AI / vai_q_onnx); the card says 'We develop a modified version that could be supported by AMD Ryzen AI'",
+   "export_tooling_version": null,
+   "quantization_mode_as_published": "file name 'EfficientNet_int.onnx'; the card calls it the quantized model and gives INT8 accuracy. The card does not state QDQ vs QOperator. MEASURED from the file before this list was written: QDQ, 328 8-bit Q/DQ nodes, 64 static 8-bit activation sites, 0 run-time sites -> static.",
+   "repo_revision": "2e9787f9954e869670141960b72d6be51e24201e",
+   "repo_last_modified": "2024-01-09T08:32:48.000Z",
+   "input_stated": "MEASURED from the file: 1 graph input, float32, dims [symbolic batch, 3, 224, 224]",
+   "source_of_record": "model card (licence, tooling); the .onnx file itself (shapes, quantization)",
+   "technical_risk": "none known. A2 satisfied (batch symbolic, C,H,W fixed); A3 satisfied (static); A4/A5 passed on the pre-screened file.",
+   "serves_need": [
+    "1 AMD has zero admitted models and six rejections; this is an AMD file that is genuinely static QDQ",
+    "2 new export toolchain in the admitted set (Vitis AI / Ryzen AI)",
+    "3 second member of the EfficientNet family (a04 is EfficientNet-Lite4)"
+   ],
+   "expect": "a static QDQ CNN from a publisher whose other six files carry no Q/DQ at all",
+   "unverified": [
+    "nothing beyond what the pipeline re-measures: the sha256 recorded below came from an anonymous pre-screen GET, and the pipeline's own fetch governs"
+   ],
+   "prescreen": {
+    "fetched_utc": "2026-09-23T06:10Z",
+    "bytes": 21760409,
+    "sha256": "def183c935215f146c675fbf97889bfe36ff1856dfb75412a679c3f5b020cfaa",
+    "graph": "opset 15, 1105 nodes, QDQ, n_qdq_8bit=328, static_activation_sites=64, dynamic_activation_sites=0, A1-A5 pass"
+   }
+  },
+  {
+   "id": "c02",
+   "publisher": "AMD",
+   "repository": "amd/mobilenet_v2_1.0_224",
+   "repo_url": "https://huggingface.co/amd/mobilenet_v2_1.0_224",
+   "name": "mobilenetv2_int8 (MobileNetV2 1.0 224, TF-Slim checkpoint)",
+   "family": "mobilenet_v2",
+   "family_new_to_pool": false,
+   "arch": "CNN (MobileNetV2, inverted residuals), NHWC input",
+   "url": "https://huggingface.co/amd/mobilenet_v2_1.0_224/resolve/main/mobilenetv2_int8.onnx",
+   "file_path": "mobilenetv2_int8.onnx",
+   "head_status": "HTTP 200",
+   "head_bytes": 24459648,
+   "head_checked_utc": "2026-09-23T06:25Z",
+   "licence_state": "DECLARED",
+   "licence": "apache-2.0",
+   "licence_stated_where": "model card YAML front matter 'license: apache-2.0'; no LICENSE file in the repository root",
+   "licence_url": "https://huggingface.co/amd/mobilenet_v2_1.0_224",
+   "base_model_named_by_repo": "TensorFlow-Slim mobilenet_v2_1.0_224 (the card links github.com/tensorflow/models/tree/master/research/slim/nets/mobilenet as the first release)",
+   "base_model_url": "https://github.com/tensorflow/models/tree/master/research/slim/nets/mobilenet",
+   "base_model_licence_stated": null,
+   "export_tooling": "AMD Ryzen AI ONNX quantizer (Vitis AI / vai_q_onnx)",
+   "export_tooling_version": null,
+   "quantization_mode_as_published": "file name 'mobilenetv2_int8.onnx'; the card's eval script calls it 'the quantized model'. MEASURED: QDQ, 342 8-bit Q/DQ, 65 static activation sites, 0 run-time sites -> static.",
+   "repo_revision": "b8b1ada261e7d6e6b4eaf9da2c3d77b23f4fdbd1",
+   "repo_last_modified": "2024-01-12T03:53:51.000Z",
+   "input_stated": "MEASURED: 1 graph input, float32, dims [symbolic batch, 224, 224, 3] (NHWC, like a04 efficientnet-lite4, which is already admitted at family dir c224_224x3)",
+   "source_of_record": "model card; the .onnx file itself",
+   "technical_risk": "the MobileNetV2 family already holds one admitted row (a02, the ONNX Model Zoo QDQ export of a different checkpoint), so A9a's cap of 2 leaves exactly one slot, which this candidate and c09 share.",
+   "serves_need": [
+    "1 second AMD row, different architecture from c01",
+    "2 a TensorFlow-Slim MobileNetV2 checkpoint, different from the zoo's (a02)"
+   ],
+   "expect": "static QDQ NHWC CNN",
+   "unverified": [
+    "nothing beyond what the pipeline re-measures"
+   ],
+   "prescreen": {
+    "fetched_utc": "2026-09-23T06:10Z",
+    "bytes": 24459648,
+    "sha256": "1a11f43a2fa14473fefff49a2d323e2ccaf915b4c6e96557f1aaa92d67c2b13a",
+    "graph": "opset 15, 1219 nodes, QDQ, n_qdq_8bit=342, static_activation_sites=65, A1-A5 pass"
+   }
+  },
+  {
+   "id": "c03",
+   "publisher": "AMD",
+   "repository": "amd/sesr",
+   "repo_url": "https://huggingface.co/amd/sesr",
+   "name": "SESR_int8 (SESR-S super-resolution, x2)",
+   "family": "sesr",
+   "family_new_to_pool": true,
+   "arch": "CNN (collapsible linear blocks, single-image super-resolution), NHWC input",
+   "url": "https://huggingface.co/amd/sesr/resolve/main/SESR_int8.onnx",
+   "file_path": "SESR_int8.onnx",
+   "head_status": "HTTP 200",
+   "head_bytes": 111182,
+   "head_checked_utc": "2026-09-23T06:25Z",
+   "licence_state": "DECLARED",
+   "licence": "apache-2.0",
+   "licence_stated_where": "model card YAML front matter 'license: apache-2.0'; no LICENSE file in the repository root",
+   "licence_url": "https://huggingface.co/amd/sesr",
+   "base_model_named_by_repo": "SESR (ARM-software/sesr), 'Collapsible Linear Blocks for Super-Efficient Super Resolution'; AMD's own re-export",
+   "base_model_url": "https://github.com/ARM-software/sesr",
+   "base_model_licence_stated": null,
+   "export_tooling": "AMD Ryzen AI ONNX quantizer (Vitis AI / vai_q_onnx)",
+   "export_tooling_version": null,
+   "quantization_mode_as_published": "file name 'SESR_int8.onnx'; the card reports 'SESR-S (INT8)' PSNR. MEASURED: QDQ, 66 8-bit Q/DQ, 21 static activation sites, 0 run-time sites -> static.",
+   "repo_revision": "85c8ade5fe02eea4dd44bdaa3c90691c4d4edee1",
+   "repo_last_modified": "2026-01-22T15:24:44.000Z",
+   "input_stated": "MEASURED: 1 graph input, float32, dims [symbolic batch, 56, 56, 3] (NHWC)",
+   "source_of_record": "model card; the .onnx file itself",
+   "technical_risk": "none known; 111 KB and a 56x56 input, so A8 has a wide margin. It is a super-resolution model, the first non-classification, non-detection task in the pool.",
+   "serves_need": [
+    "1 new architecture family (sesr)",
+    "2 third AMD row",
+    "3 a task class the pool does not have"
+   ],
+   "expect": "static QDQ CNN, very fast",
+   "unverified": [
+    "nothing beyond what the pipeline re-measures"
+   ],
+   "prescreen": {
+    "fetched_utc": "2026-09-23T06:20Z",
+    "bytes": 111182,
+    "sha256": "d76ccb210397bca910c224172a54a12c0b0cc5bcb8573b317f0df758c265b093",
+    "graph": "opset 15, 244 nodes, QDQ, n_qdq_8bit=66, static_activation_sites=21, A1-A5 pass"
+   }
+  },
+  {
+   "id": "c04",
+   "publisher": "OpenCV",
+   "repository": "opencv/facial_expression_recognition",
+   "repo_url": "https://huggingface.co/opencv/facial_expression_recognition",
+   "name": "facial_expression_recognition_mobilefacenet_2022july_int8 (Progressive Teacher)",
+   "family": "mobilefacenet",
+   "family_new_to_pool": true,
+   "arch": "CNN (MobileFaceNet backbone, 7-class facial expression)",
+   "url": "https://huggingface.co/opencv/facial_expression_recognition/resolve/main/facial_expression_recognition_mobilefacenet_2022july_int8.onnx",
+   "file_path": "facial_expression_recognition_mobilefacenet_2022july_int8.onnx",
+   "head_status": "HTTP 200",
+   "head_bytes": 1364007,
+   "head_checked_utc": "2026-09-23T06:25Z",
+   "licence_state": "SILENT",
+   "licence": null,
+   "licence_stated_where": "the hub metadata licence field is empty and there is no licence file in the repository root (root holds .gitattributes, .gitignore, CMakeLists.txt, README.md, demo.cpp, demo.py, facial_fer_model.py, yunet.py and the three .onnx files) -> L1 SILENT. RECORDED FOR THE READER, NOT RELIED ON: the README body ends with a '## License' section reading 'All files in this directory are licensed under [Apache 2.0 License](./LICENSE)', and that ./LICENSE link does not resolve in this repository. The collector did not upgrade the state on the strength of a prose sentence with a dead link; both readings are admissible under L2 and only the DECLARED/SILENT subtotal changes.",
+   "licence_url": null,
+   "base_model_named_by_repo": "Progressive Teacher (Jiang et al.), MobileFaceNet backbone; the OpenCV Zoo entry names the paper and the contributor, not an upstream checkpoint repository",
+   "base_model_url": "https://github.com/opencv/opencv_zoo/tree/main/models/facial_expression_recognition",
+   "base_model_licence_stated": null,
+   "export_tooling": "OpenCV Zoo quantization tooling (tools/quantize); the card documents the sibling '_int8bq' file as block-quantized with block_size=64 and this '_int8' file as the ordinary int8 one",
+   "export_tooling_version": null,
+   "quantization_mode_as_published": "file name '..._int8.onnx'. MEASURED: QDQ+QOperator, 70 8-bit Q/DQ + 63 QLinear*, 98 static 8-bit activation sites, 0 run-time sites -> static.",
+   "repo_revision": "b473270576eabddaacffd08adb4bed27b3fc54e6",
+   "repo_last_modified": "2025-06-20T13:32:17.000Z",
+   "input_stated": "MEASURED: 1 graph input, float32, dims [1, 3, 112, 112]",
+   "source_of_record": "hub metadata and the repository's own file list (licence state); the .onnx file itself (shapes, quantization)",
+   "technical_risk": "none known; 1.4 MB at 112x112, so A8 has a wide margin.",
+   "serves_need": [
+    "1 new publisher (OpenCV)",
+    "2 new architecture family (mobilefacenet)",
+    "3 only the second SILENT row in the admitted set, which the D/S split needs"
+   ],
+   "expect": "static mixed QDQ/QOperator CNN, very fast",
+   "unverified": [
+    "whether the OpenCV Zoo's own quantization script emitted QDQ or QOperator per node: the file shows both, and the counts are what the pool records"
+   ],
+   "prescreen": {
+    "fetched_utc": "2026-09-23T06:10Z",
+    "bytes": 1364007,
+    "sha256": "f0d7093aff10e2638c734c5f18a6a7eabd2b9239b20bdb9b8090865a6f69a1ed",
+    "graph": "opset 11, 168 nodes, QDQ+QOperator, n_qdq_8bit=70, n_qlinear=63, static_activation_sites=98, A1-A5 pass"
+   }
+  },
+  {
+   "id": "c05",
+   "publisher": "mohitsha",
+   "repository": "mohitsha/timm-resnet18-onnx-quantized-ryzen",
+   "repo_url": "https://huggingface.co/mohitsha/timm-resnet18-onnx-quantized-ryzen",
+   "name": "timm ResNet-18 quantized with the Ryzen AI ONNX quantizer",
+   "family": "resnet18",
+   "family_new_to_pool": false,
+   "arch": "CNN (ResNet-18, basic residual blocks)",
+   "url": "https://huggingface.co/mohitsha/timm-resnet18-onnx-quantized-ryzen/resolve/main/model_quantized.onnx",
+   "file_path": "model_quantized.onnx",
+   "head_status": "HTTP 200",
+   "head_bytes": 11731625,
+   "head_checked_utc": "2026-09-23T06:25Z",
+   "licence_state": "DECLARED",
+   "licence": "apache-2.0",
+   "licence_stated_where": "model card YAML front matter 'license: apache-2.0'; no licence file in the repository root",
+   "licence_url": "https://huggingface.co/mohitsha/timm-resnet18-onnx-quantized-ryzen",
+   "base_model_named_by_repo": "timm/resnet18.a1_in1k (named in the repository's own quantize.py: model_id = 'timm/resnet18.a1_in1k')",
+   "base_model_url": "https://huggingface.co/timm/resnet18.a1_in1k",
+   "base_model_licence_stated": null,
+   "export_tooling": "optimum.exporters.onnx main_export(opset=13, batch_size=1, no_dynamic_axes=True) then optimum.amd.ryzenai RyzenAIOnnxQuantizer (Vitis AI / vai_q_onnx), from the repository's own quantize.py",
+   "export_tooling_version": "optimum 1.17.0.dev0 (stated in the sibling repository's ryzenai_config.json)",
+   "quantization_mode_as_published": "the repository publishes quantize.py; its sibling repository's ryzenai_config.json states format QDQ, activations QUInt8 symmetric, weights QInt8 symmetric, calibration MinMSE. MEASURED here: QDQ, 108 8-bit Q/DQ, 33 static 8-bit activation sites, 0 run-time sites -> static.",
+   "repo_revision": "13306ed0103c7b6eff0687b72228278a795c2b55",
+   "repo_last_modified": "2024-03-21T06:04:31.000Z",
+   "input_stated": "MEASURED: 1 graph input, float32, dims [1, 3, 224, 224]",
+   "source_of_record": "the repository's quantize.py and ryzenai_config.json; the .onnx file itself",
+   "technical_risk": "ResNet-18 and ResNet-50 are ONE architecture family under a2_design_registered.md 2.3 (depth variants of one architecture), so this candidate and c06 compete for the single slot the family has left beside a03.",
+   "serves_need": [
+    "1 new publisher",
+    "2 a second file from the Ryzen AI / Vitis AI quantizer, which A11's export-tooling census needs",
+    "3 a second member of the ResNet family, from a different checkpoint"
+   ],
+   "expect": "static QDQ CNN, fast",
+   "unverified": [
+    "nothing beyond what the pipeline re-measures"
+   ],
+   "prescreen": {
+    "fetched_utc": "2026-09-23T06:10Z",
+    "bytes": 11731625,
+    "sha256": "0723876d0a12903d84705a98c29851774fc947448b43b730db84f9ae15976415",
+    "graph": "opset 13, 159 nodes, QDQ, n_qdq_8bit=108, static_activation_sites=33, A1-A5 pass"
+   }
+  },
+  {
+   "id": "c06",
+   "publisher": "mohitsha",
+   "repository": "mohitsha/transformers-resnet18-onnx-quantized-ryzen",
+   "repo_url": "https://huggingface.co/mohitsha/transformers-resnet18-onnx-quantized-ryzen",
+   "name": "microsoft/resnet-18 quantized with the Ryzen AI ONNX quantizer",
+   "family": "resnet18",
+   "family_new_to_pool": false,
+   "arch": "CNN (ResNet-18, basic residual blocks)",
+   "url": "https://huggingface.co/mohitsha/transformers-resnet18-onnx-quantized-ryzen/resolve/main/model_quantized.onnx",
+   "file_path": "model_quantized.onnx",
+   "head_status": "HTTP 200",
+   "head_bytes": 11747730,
+   "head_checked_utc": "2026-09-23T06:25Z",
+   "licence_state": "DECLARED",
+   "licence": "apache-2.0",
+   "licence_stated_where": "model card YAML front matter 'license: apache-2.0'; no licence file in the repository root",
+   "licence_url": "https://huggingface.co/mohitsha/transformers-resnet18-onnx-quantized-ryzen",
+   "base_model_named_by_repo": "microsoft/resnet-18 (named in the repository's own quantize.py and in config.json '_name_or_path')",
+   "base_model_url": "https://huggingface.co/microsoft/resnet-18",
+   "base_model_licence_stated": null,
+   "export_tooling": "optimum.exporters.onnx main_export(opset=13, batch_size=1, height=224, width=224, no_dynamic_axes=True) then optimum.amd.ryzenai RyzenAIOnnxQuantizer (Vitis AI / vai_q_onnx), from the repository's own quantize.py",
+   "export_tooling_version": "optimum 1.17.0.dev0, transformers 4.36.2 (ryzenai_config.json)",
+   "quantization_mode_as_published": "ryzenai_config.json in this repository states format QDQ, activations QUInt8 symmetric, weights QInt8 symmetric, calibration MinMSE, enable_dpu true. MEASURED: QDQ, 108 8-bit Q/DQ, 33 static activation sites, 0 run-time sites -> static.",
+   "repo_revision": "8d7f736deaa44fee9ba90e28b59a0bfa0138115c",
+   "repo_last_modified": "2024-03-21T06:05:07.000Z",
+   "input_stated": "MEASURED: 1 graph input, float32, dims [1, 3, 224, 224]",
+   "source_of_record": "the repository's quantize.py, ryzenai_config.json and config.json; the .onnx file itself",
+   "technical_risk": "same family slot as c05; at most one of the two can be admitted, and A9b decides which on the registered key, not by the collector's preference.",
+   "serves_need": [
+    "1 the same architecture from a different base checkpoint and a different exporter front end",
+    "2 insurance for the ResNet slot if c05 fails a rule"
+   ],
+   "expect": "static QDQ CNN, fast",
+   "unverified": [
+    "nothing beyond what the pipeline re-measures"
+   ],
+   "prescreen": {
+    "fetched_utc": "2026-09-23T06:10Z",
+    "bytes": 11747730,
+    "sha256": "f72514837015bc26db44a086d418cedfa1ca298a4f933303ea19e9339952b037",
+    "graph": "opset 13, 159 nodes, QDQ, n_qdq_8bit=108, static_activation_sites=33, A1-A5 pass"
+   }
+  },
+  {
+   "id": "c07",
+   "publisher": "Evintkoo",
+   "repository": "Evintkoo/yolov8n-int8-onnx",
+   "repo_url": "https://huggingface.co/Evintkoo/yolov8n-int8-onnx",
+   "name": "yolov8n-int8",
+   "family": "yolov8",
+   "family_new_to_pool": true,
+   "arch": "CNN detector (YOLOv8-nano, C2f backbone, anchor-free head)",
+   "url": "https://huggingface.co/Evintkoo/yolov8n-int8-onnx/resolve/main/yolov8n-int8.onnx",
+   "file_path": "yolov8n-int8.onnx",
+   "head_status": "HTTP 200",
+   "head_bytes": 3598301,
+   "head_checked_utc": "2026-09-23T06:25Z",
+   "licence_state": "SILENT",
+   "licence": null,
+   "licence_stated_where": "the hub metadata licence field is empty and the repository root holds only .gitattributes and the .onnx file - no README, no licence file -> L1 SILENT",
+   "licence_url": null,
+   "base_model_named_by_repo": null,
+   "base_model_url": null,
+   "base_model_licence_stated": "not stated by this repository. The collector did not write in the licence of any upstream YOLOv8 release, because P1 bars inferring a SILENT file's terms from a base model.",
+   "export_tooling": "not stated in this repository (there is no README). MEASURED from the file: a static QDQ graph, which transformers.js and quantize_dynamic exports never produce.",
+   "export_tooling_version": null,
+   "quantization_mode_as_published": "file name 'yolov8n-int8.onnx' only. MEASURED: QDQ, 548 8-bit Q/DQ, 241 static 8-bit activation sites, 0 run-time sites -> static.",
+   "repo_revision": "4bee8e451995558b2b3e2fbed78e0ed1500b511f",
+   "repo_last_modified": "2026-09-14T15:17:01.000Z",
+   "input_stated": "MEASURED: 1 graph input, float32, dims [1, 3, 640, 640]",
+   "source_of_record": "the .onnx file itself; the repository states nothing else",
+   "technical_risk": "A8: 640x640 detection at four threads may exceed the 60 ms screening cap. Two Thefalley detectors already failed A8 (328 ms and 147 ms), so this candidate is put up in the knowledge that it may be rejected there; it is not needed to reach the pool minimum.",
+   "serves_need": [
+    "1 new publisher",
+    "2 new architecture family (yolov8)",
+    "3 a third SILENT row"
+   ],
+   "expect": "static QDQ detector; the A8 screen decides it",
+   "unverified": [
+    "the base checkpoint: the repository names none, so this row is counted in the REPORTED-ONLY anonymous-re-export tally"
+   ],
+   "prescreen": {
+    "fetched_utc": "2026-09-23T06:10Z",
+    "bytes": 3598301,
+    "sha256": "24ed10702df7a27742dfea0e335568f1d91cf4d1ee9b842e1b11315eeb65c7a5",
+    "graph": "opset 20, 844 nodes, QDQ, n_qdq_8bit=548, static_activation_sites=241, A1-A5 pass"
+   }
+  },
+  {
+   "id": "c08",
+   "publisher": "haidangung",
+   "repository": "haidangung/depth-anything-v2-small-int8",
+   "repo_url": "https://huggingface.co/haidangung/depth-anything-v2-small-int8",
+   "name": "depth_anything_v2_small_int8",
+   "family": "depth_anything_v2",
+   "family_new_to_pool": true,
+   "arch": "vision transformer hybrid (DINOv2 ViT-S/14 encoder + DPT convolutional decoder), monocular depth",
+   "url": "https://huggingface.co/haidangung/depth-anything-v2-small-int8/resolve/main/depth_anything_v2_small_int8.onnx",
+   "file_path": "depth_anything_v2_small_int8.onnx",
+   "head_status": "HTTP 200",
+   "head_bytes": 25946145,
+   "head_checked_utc": "2026-09-23T06:25Z",
+   "licence_state": "SILENT",
+   "licence": null,
+   "licence_stated_where": "the hub metadata licence field is empty and the repository root holds only .gitattributes and the .onnx file - no README, no licence file -> L1 SILENT",
+   "licence_url": null,
+   "base_model_named_by_repo": null,
+   "base_model_url": null,
+   "base_model_licence_stated": "not stated by this repository (P1).",
+   "export_tooling": "not stated in this repository. MEASURED from the file: static QDQ.",
+   "export_tooling_version": null,
+   "quantization_mode_as_published": "file name 'depth_anything_v2_small_int8.onnx' only. MEASURED: QDQ, 1075 8-bit Q/DQ, 446 static 8-bit activation sites, 0 run-time sites -> static.",
+   "repo_revision": "f3448243aed0157e4dca5b9147ca43d1b6dc8f77",
+   "repo_last_modified": "2026-03-28T23:05:01.000Z",
+   "input_stated": "MEASURED: 1 graph input, float32, dims [1, 3, 308, 308] - FIXED, unlike a12",
+   "source_of_record": "the .onnx file itself",
+   "technical_risk": "A8: a ViT encoder at 308x308 (22x22 patches) may exceed the 60 ms cap; b03 (xcit) screened at 47.9 ms, so this is the class that comes closest to the cap. NOT the file a2_design_registered.md 2.3 excludes: that exclusion is onnx-community/depth-anything-v2-small (a12), whose H and W are free dimensions and which would need a_check.py --free-dim. This file states 308x308 in the file itself, so the input shape is the publisher's and not ours, and A2 is satisfied as written.",
+   "serves_need": [
+    "1 new publisher",
+    "2 a vision transformer hybrid, the class the pool most lacks",
+    "3 new architecture family",
+    "4 a fourth SILENT row"
+   ],
+   "expect": "static QDQ transformer hybrid; the A8 screen decides it",
+   "unverified": [
+    "the base checkpoint: the repository names none (anonymous re-export tally)"
+   ],
+   "prescreen": {
+    "fetched_utc": "2026-09-23T06:10Z",
+    "bytes": 25946145,
+    "sha256": "a3c0c4abfa4fbd3422cb8c171054120b9085e02f6543bb88b4220b280e134293",
+    "graph": "opset 18, 1589 nodes, QDQ, n_qdq_8bit=1075, static_activation_sites=446, A1-A5 pass"
+   }
+  },
+  {
+   "id": "c09",
+   "publisher": "ketiswp",
+   "repository": "ketiswp/stm32ai-MobileNetV2-0.5-ImageNet-PyTorch-224-int8-onnx",
+   "repo_url": "https://huggingface.co/ketiswp/stm32ai-MobileNetV2-0.5-ImageNet-PyTorch-224-int8-onnx",
+   "name": "STM32AI MobileNetV2 0.5 ImageNet PyTorch 224 INT8",
+   "family": "mobilenet_v2",
+   "family_new_to_pool": false,
+   "arch": "CNN (MobileNetV2, width multiplier 0.5)",
+   "url": "https://huggingface.co/ketiswp/stm32ai-MobileNetV2-0.5-ImageNet-PyTorch-224-int8-onnx/resolve/main/model.onnx",
+   "file_path": "model.onnx",
+   "head_status": "HTTP 200",
+   "head_bytes": 2236917,
+   "head_checked_utc": "2026-09-23T06:25Z",
+   "licence_state": "DECLARED",
+   "licence": "apache-2.0",
+   "licence_stated_where": "model card YAML front matter 'license: apache-2.0'",
+   "licence_url": "https://huggingface.co/ketiswp/stm32ai-MobileNetV2-0.5-ImageNet-PyTorch-224-int8-onnx",
+   "base_model_named_by_repo": "STM32AI MobileNetV2 0.5 ImageNet PyTorch 224 (the card's title; it states 'Original format: ONNX' and 'Original model; no duplicate source file')",
+   "base_model_url": null,
+   "base_model_licence_stated": null,
+   "export_tooling": "not named by this repository beyond the card line 'Quantization: Static INT8 quantization, QDQ format'; ketiswp re-publishes an upstream file rather than re-quantizing it",
+   "export_tooling_version": null,
+   "quantization_mode_as_published": "card: 'Quantization: Static INT8 quantization, QDQ format'. MEASURED: QDQ, 185 8-bit Q/DQ, 66 static 8-bit activation sites, 0 run-time sites -> static.",
+   "repo_revision": "369ee747d209e6076116ce832bfad711fc9e89df",
+   "repo_last_modified": "2026-08-19T07:02:14.000Z",
+   "input_stated": "MEASURED: 1 graph input, float32, dims [symbolic batch, 3, 224, 224]",
+   "source_of_record": "model card; the .onnx file itself",
+   "technical_risk": "competes with c02 for the single remaining MobileNetV2 slot (A9a cap of 2, a02 holds the first). Included as insurance: if c02 fails a rule the slot is still filled.",
+   "serves_need": [
+    "1 insurance for the MobileNetV2 slot",
+    "2 a second ketiswp row whose base checkpoint is NOT an ONNX Model Zoo re-publication"
+   ],
+   "expect": "static QDQ CNN, fast",
+   "unverified": [
+    "nothing beyond what the pipeline re-measures"
+   ],
+   "prescreen": {
+    "fetched_utc": "2026-09-23T06:10Z",
+    "bytes": 2236917,
+    "sha256": "4f4650e17bb9a65ec3c3f0f042200691e25a852b47a0ed40679cc3aeae11d1d9",
+    "graph": "opset 20, 303 nodes, QDQ, n_qdq_8bit=185, static_activation_sites=66, A1-A5 pass"
+   }
+  },
+  {
+   "id": "c10",
+   "publisher": "Embedl",
+   "repository": "embedl/mobilevit-small-quantized",
+   "repo_url": "https://huggingface.co/embedl/mobilevit-small-quantized",
+   "name": "embedl_mobilevit_small_int8 (MobileViT-S, Embedl static INT8)",
+   "family": "mobilevit",
+   "family_new_to_pool": true,
+   "arch": "conv-attention hybrid (MobileViT-S) - the positive control's own architecture family (A12 home_architecture)",
+   "url": "https://huggingface.co/embedl/mobilevit-small-quantized/resolve/main/embedl_mobilevit_small_int8.onnx",
+   "file_path": "embedl_mobilevit_small_int8.onnx",
+   "head_status": "HTTP 401 on an anonymous HEAD; the hub lists the repository with gated='auto'",
+   "head_bytes": 22518832,
+   "head_checked_utc": "2026-09-23T06:25Z",
+   "licence_state": "DECLARED",
+   "licence": "other",
+   "licence_stated_where": "hub metadata cardData.license = 'other'",
+   "licence_url": "https://huggingface.co/embedl/mobilevit-small-quantized",
+   "base_model_named_by_repo": "apple/mobilevit-small (cardData.base_model)",
+   "base_model_url": "https://huggingface.co/apple/mobilevit-small",
+   "base_model_licence_stated": null,
+   "export_tooling": "Embedl's own toolchain, as the card names it; NOT verified from the file, which cannot be obtained without accepting the gate",
+   "export_tooling_version": null,
+   "quantization_mode_as_published": "the card calls it INT8; NOT MEASURED - the file was never fetched",
+   "repo_revision": "838fa723e655419a7c06b7f2ea968bd8eb1832f1",
+   "repo_last_modified": "2026-07-27T10:47:54.000Z",
+   "input_stated": "not verified (the file was never fetched)",
+   "source_of_record": "hub metadata and the repository's file listing only",
+   "technical_risk": "EXPECTED TO BE REJECTED AT L4, and put up for exactly that reason: it is the only statically published INT8 MobileViT the search found, i.e. the one file that would have given Arm 1 a home_architecture row, and it sits behind a consent gate. The hub reports gated='auto' and an anonymous HEAD of the file returns HTTP 401. L4 forbids accepting terms on anyone's behalf, so the pipeline must record it as not admitted. Its 22.5 MB is inside A7 and the repository is otherwise ordinary; nothing but the gate blocks it.",
+   "serves_need": [
+    "1 it records, in the artefact rather than in prose, that the missing home_architecture row is missing because of a consent wall and not because no such file exists"
+   ],
+   "expect": "rejected at L4 (gated repository)",
+   "unverified": [
+    "everything about the file's graph: it was never downloaded (L4), so no quantization, shape or node count is recorded for it"
+   ],
+   "prescreen": {
+    "fetched_utc": null,
+    "bytes": null,
+    "sha256": null,
+    "graph": "not fetched: anonymous HEAD returns HTTP 401 (gated); L4 forbids accepting the gate"
+   }
+  }
+ ],
+ "known_rejections_no_download": [
+  {
+   "name": "onnxmodelzoo/* (densenet-12-int8, googlenet-12-int8, mnist-12-int8, caffenet-12-int8, fcn-resnet50-12-int8, ResNet101-DUC-12-int8, arcfaceresnet100-11-int8, zfnet512-12-int8, vgg16-12-int8 and the -qdq siblings)",
+   "url": "https://huggingface.co/onnxmodelzoo",
+   "bytes": null,
+   "rule": "NOT PUT UP, by the collector's decision, recorded here so a reader can overturn it. These repositories are a Hugging Face mirror of the ONNX Model Zoo: the files are the same Intel Neural Compressor artefacts as github.com/onnx/models, and several are byte-identical to files already in this pool (onnxmodelzoo/squeezenet1.0-12-int8 is 1,293,388 B, the size of the admitted b15; efficientnet-lite4-11-qdq, emotion-ferplus-12-int8 and version-RFB-320-int8 match a04, a05 and a06 byte for byte). Admitting them under the publisher name 'onnxmodelzoo' would take the ONNX Model Zoo past A9a's per-publisher cap of 6, which onnx/models has already reached, and would add nothing to A11's export-tooling census. Independently, results/expA2/candidates_round2.json already records onnxmodelzoo/googlenet-12-qdq as L1 INDETERMINATE (metadata says apache-2.0 while the card body carries SPDX BSD-3-Clause and a dead LICENSE link), and stage_licence_a2 reads only the metadata, so these rows would be recorded DECLARED in contradiction of that finding."
+  },
+  {
+   "name": "opencv/* (face_detection_yunet, face_recognition_sface, human_segmentation_pphumanseg, image_classification_mobilenet, image_classification_ppresnet, object_detection_nanodet, object_detection_yolox, object_tracking_vittrack, palm/person/pose/handpose mediapipe, license_plate_detection_yunet, person_reid_youtureid, text_recognition_crnn)",
+   "url": "https://huggingface.co/opencv",
+   "bytes": null,
+   "rule": "L1 INDETERMINATE -> L2 / abort 6'. Each of these repositories carries a LICENSE file in its root and states no licence identifier in the hub metadata, which is exactly L1's 'no identifier in the metadata but a licence file in the root: the terms cannot be resolved to an identifier'. Only opencv/facial_expression_recognition has no licence file in its root, which is why c04 is the single OpenCV candidate. Several of these ship a '_int8.onnx' from the zoo's own static quantization tooling and are well inside A7, so this is a licence-state rejection and not a technical one."
+  },
+  {
+   "name": "qualcomm/* (Mobile-VIT, LeViT, Swin-Tiny, EfficientViT-b2/l2, RepViT, EfficientFormer, SqueezeNet-1.1, Shufflenet-v2 and ~240 more)",
+   "url": "https://huggingface.co/qualcomm/Mobile-VIT",
+   "bytes": null,
+   "rule": "No ONNX file is published in the repository: each holds only LICENSE, README.md and release_assets.json, and that file points at .zip archives on qaihub-public-assets.s3.us-west-2.amazonaws.com. A zip is not a .onnx at a URL, so A 1.1's one-GET-per-URL fetch does not apply to it; and for Mobile-VIT the only quantized precision offered is w8a16 - 16-bit activations - which fails A3's static 8-bit ACTIVATION test by construction."
+  },
+  {
+   "name": "AMD-PAVS-AI/* (dinov2, segformer, mobilenetv3, efficientnetv2, unet, mobilesam, yolo26_*, yolov12, padim, hrnetv2, resnet-50, deeplabv3)",
+   "url": "https://huggingface.co/AMD-PAVS-AI",
+   "bytes": null,
+   "rule": "No quantized ONNX file is published: of the twelve vision repositories checked, nine hold no .onnx at all and the three that do hold FP32 files (deeplabv3_r18_cityscapes_fp32.onnx, mobile_sam_e2e.onnx, yolo12m.onnx at 81 MB)."
+  },
+  {
+   "name": "amd/inception_v4, amd/resnet50, amd/ese_vovnet39b, amd/HRNet, amd/yolov8m, amd/yolov3",
+   "url": "https://huggingface.co/amd",
+   "bytes": null,
+   "rule": "A7 (> 60 MB): 171,239,074 / 102,274,800 / 102,032,283 / 263,764,409 / 103,874,987 / 247,866,449 bytes respectively."
+  },
+  {
+   "name": "amd/PAN (PAN_int8.onnx) and amd/rcan (RCAN_int8_NHWC.onnx)",
+   "url": "https://huggingface.co/amd/PAN",
+   "bytes": 1263653,
+   "rule": "A5, decided from the pre-screened file: both are static QDQ (594 and 76 8-bit Q/DQ nodes) and both fail A5 because a graph output ('2377_transpose', '274_transpose') is still not static after the batch dimension is pinned."
+  },
+  {
+   "name": "Arm/rtdetr-l-onnx-raspberry (rtdetr-l_onnx_optimized.onnx)",
+   "url": "https://huggingface.co/Arm/rtdetr-l-onnx-raspberry/resolve/main/rtdetr-l_onnx_optimized.onnx",
+   "bytes": 40288673,
+   "rule": "Already in the pool as b06, where the round-2 fetch failed. The collector re-fetched it successfully in the pre-screen and read the graph: it fails A5 exactly as CoreEpoch's rtdetrv2 (b04) does - runtime-K TopK '/model.28/TopK' and a non-static output - so b06 is left in the candidate list and re-fetched by this round, and its recorded rejection becomes A5 (a file fact) instead of 'download failed' (a network fact)."
+  },
+  {
+   "name": "embedl/dinov3-quantized-tensorrt, embedl/rf-detr-base-quantized-tensorrt",
+   "url": "https://huggingface.co/embedl",
+   "bytes": null,
+   "rule": "L4 (gated='auto'), and independently A7 for rf-detr-base (108,105,767 B) and external .onnx.data weights for dinov3."
+  },
+  {
+   "name": "PRE-SCREENED AND REJECTED FROM THE GRAPH: acrkaan/LiveNova_MobileNetV2_ONNX_int8, vlad-m-dev/mobilenetv2_doc_photo_quant, magnuskarlsen/int8_onnx_yolo, KabirAcharya/waterspy-sieve-ft1-int8, Sentrix-Code/wakeup-dinov2-small-int8, Frooodle/ffdetr-int8, omkar334/int8_rfdetr",
+   "url": "https://huggingface.co/Sentrix-Code/wakeup-dinov2-small-int8",
+   "bytes": null,
+   "rule": "A3, decided from the file: every one of them is a QOperator graph whose activation quantization is computed at run time (0 static 8-bit activation sites against 98 to 264 run-time sites), i.e. quantize_dynamic output. Their Transposes never execute in 8 bits, which is the trivial negative A3 exists to exclude."
+  },
+  {
+   "name": "PRE-SCREENED AND REJECTED ON SHAPE: projectsidewalk/quantized_crosswalk_dinov2_tiny_onnx, hungql102/yolo_onnx_int8 (best_s), ketiswp/mlcommons-ResNet8-CIFAR10-int8-onnx",
+   "url": "https://huggingface.co/projectsidewalk/quantized_crosswalk_dinov2_tiny_onnx",
+   "bytes": null,
+   "rule": "A2: free spatial dimensions ('height', 'width') for the first two - and the first is dynamically quantized as well - and an INT8 graph input of shape [batch, 32, 32, 3] for the third, which is not a float32 tensor."
+  },
+  {
+   "name": "PRE-SCREENED AND REJECTED: EclipseAidge/Test_PTQ (ConvNet.onnx, MiniResNet.onnx)",
+   "url": "https://huggingface.co/EclipseAidge/Test_PTQ",
+   "bytes": 357060,
+   "rule": "A3: despite the repository name, the published files carry no quantization at all (0 Q/DQ, 0 QLinear*, 0 activation sites of either kind) - they are the FP32 inputs to the PTQ test, not its output."
+  },
+  {
+   "name": "nielsr/vit-base-patch16-224-r3al-int8, Propanito/flowers-plant-vit-int8, fxmarty/20220911-h13m59s08_vit_beans_quantization, TheGuy444/insyprenet-onnx-int8, stefanj0/docling-layout-heron-int8-onnx, jordandelbar/rf-detr-s-int8, anakhiu/birefnet-onnx-int8, anakhiu/ram-plus-onnx-int8, mahan-ym/bioclip-2-quantized, xrds/isnet-general-onnx-int8, IamTheStormThatIsApproaching/joytag-onnx-Q8_0-quantized, kingfang008/mobileclip2-s2-int8",
+   "url": "https://huggingface.co",
+   "bytes": null,
+   "rule": "A7 (> 60 MB) in every case except xrds/isnet-general-onnx-int8 (44 MB), whose own convert_weight_only_qdq.py marks it weight-only - no activation is quantized - and kingfang008/mobileclip2-s2-int8, whose weights are external .onnx.data files of 121 MB and 139 MB."
+  },
+  {
+   "name": "Thefalley/yolov4-leaky-416-int8-qop (yolov4-leaky-416_int8_qop.onnx, yolov4_int8_qop.onnx)",
+   "url": "https://huggingface.co/Thefalley/yolov4-leaky-416-int8-qop",
+   "bytes": null,
+   "rule": "NOT PUT UP: the two Thefalley detectors already screened (b17 yolov4-tiny-416 at 328.3 ms and b19 yolox-nano at 147.0 ms) both failed A8's 60 ms cap, and these two files are the same QOperator export of a strictly larger network at the same or a larger input size. The collector judged the screening session certain to fail and did not spend it; because that is a prediction about latency it is recorded here and not in the pool's rule counts."
+  }
+ ],
+ "collector_notes": [
+  "SEARCH ACTUALLY PERFORMED, so a reader can see what was not searched: the Hugging Face model API by author for CoreEpoch, Thefalley, Arm, ketiswp, onnx, amd, AMD-PAVS-AI, opencv, onnxmodelzoo, qualcomm, FasterAI-Labs, mohitsha, Evintkoo, haidangung, fxmarty and deepghs; by name substring for int8, quantized, qdq, u8s8, ptq, w8a8, static-int8, int8-qop, int8-imagenet, kenosis, vit-int8, swin-int8, deit-int8, yolo11, yolov8, rtmdet, nanodet, mobileone, fastvit, levit and poolformer, with and without the onnx tag; by pipeline tag over image-classification, object-detection, image-segmentation, keypoint-detection, depth-estimation and image-feature-extraction; and the hub's full-text search for quantize_static, vai_q_onnx and QuantFormat.QDQ. GitHub releases and vendor model zoos outside Hugging Face were NOT put up, for a mechanical reason: stage_licence_a2 can read a licence state only from the Hugging Face model API or from an onnx/models README, so any other host resolves to INDETERMINATE and is dropped by L2 before it is fetched. The OpenCV Zoo on GitHub is the largest source this excludes.",
+  "WHY SO FEW TRANSFORMERS: of everything this search reached, exactly four statically quantized vision-transformer or hybrid files under 60 MB with fixed C,H,W exist on the hub - CoreEpoch's three (already admitted as b01-b03) and haidangung's Depth-Anything-V2-Small (c08) - plus one behind a gate (c10). Every other quantized transformer export the search returned was transformers.js/quantize_dynamic output (dynamic activations), gated, over 60 MB, or shape-free. That is a fact about what is published, and it is the same fact A2 section 4 predicted would bind.",
+  "THE AMD QUESTION, ANSWERED FROM THE REPOSITORIES: the six AMD candidates rejected at A3 in round 2 (b07-b12) cannot be rescued by choosing a different file, because each of those six repositories publishes exactly one INT8 ONNX file - amd/squeezenet additionally has SqueezeNet_fp32.onnx, which fails A3 by construction, and no other file in any of the six is an .onnx. What is NOT true is that the rejection is a property of AMD's toolchain: three other AMD repositories (efficientnet-es, mobilenet_v2_1.0_224, sesr) publish genuine static QDQ graphs with 328, 342 and 66 8-bit Q/DQ nodes, and they are c01-c03 here. The six rejected files carry no quantization operators of any kind in the published graph while their siblings from the same publisher do.",
+  "PAIR-REPLICATE HYGIENE: ketiswp/onnx-model-zoo-MobileNetV2 and ketiswp/onnx-model-zoo-ShuffleNetV2 were pre-screened, both are static (66 and 76 static activation sites) and both would pass A1-A5 - but each is a second quantization variant of a base checkpoint already admitted (a02 mobilenetv2-12-qdq, a01 shufflenet-v2-12-qdq), and base_checkpoint_key cannot see that across two publishers, so A10 would score them as two independent matrix rows instead of one row and one PAIR-REPLICATE. They were dropped for that reason alone, and for no other. c09 is the ketiswp candidate whose base checkpoint (STM32AI MobileNetV2 0.5) is genuinely absent from the pool."
+ ]
+}

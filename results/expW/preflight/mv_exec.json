@@ -1,0 +1,4213 @@
+{
+ "experiment": "A",
+ "implements": "a_design_registered.md sections 2.1, 2.2, 2.3",
+ "written_utc": "2026-09-23T20:09:06+00:00",
+ "versions": [
+  "1.23.2",
+  "1.24.4"
+ ],
+ "threads": 4,
+ "a_check_sha256": "c333fca2e6f465d2344839f34ee8c245bc3106aa26b05f60b650f40cce527a18",
+ "transpose_probe_sha256": "fde66c9c550c7c55f681b6d78622e2bb37abc681fbcea1df80742a0e64fe0310",
+ "dispatch_us": 0.52,
+ "floor_rel": 0.07,
+ "manifest": null,
+ "manifest_ambiguous_keys": [],
+ "models_without_screen_ms": [],
+ "models": [
+  {
+   "model": "mobilevit_r64/p00_int8",
+   "path": "results/mobilevit_r64/models/p00_int8.onnx",
+   "sha256": "911de4ee3257966074fe54952cf7ad5ed546798fe138fa8997efce9b11b1f629",
+   "SC-A": {
+    "checker": "SC-A",
+    "role": "SECONDARY",
+    "section": "2.2",
+    "ok": true,
+    "model_path": "results/mobilevit_r64/models/p00_int8.onnx",
+    "sha256": "911de4ee3257966074fe54952cf7ad5ed546798fe138fa8997efce9b11b1f629",
+    "onnxruntime": "1.24.4",
+    "dump": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\mv_exec\\opt_1.24.4_mobilevit_r64_p00_int8_98bba3de.onnx",
+    "profile": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\mv_exec\\profiles\\mobilevit_r64_p00_int8_98bba3de\\prof_2026-09-24_04-09-04.json",
+    "profile_iterations": 3,
+    "intra_op_num_threads": 1,
+    "free_dim_overrides": {},
+    "inputs": [
+     [
+      "input",
+      "tensor(float)",
+      [
+       "batch",
+       "3",
+       "64",
+       "64"
+      ]
+     ]
+    ],
+    "n_transposes_optimized_graph": 56,
+    "duplicate_transpose_names_in_graph": [],
+    "n_transposes_executed": 56,
+    "n_scored": 56,
+    "n_unjoined": 0,
+    "n_executed_not_in_graph": 0,
+    "n_in_graph_not_executed": 0,
+    "n_kernel_events": 168,
+    "executed_dtypes": [
+     "uint8"
+    ],
+    "dtype_or_shape_varied_between_iterations": {},
+    "unknown_dtypes": [],
+    "n_flagged": 4,
+    "sig_a": true,
+    "dispatches": {
+     "1.23.2": 32,
+     "1.24.4": 864
+    },
+    "added_dispatches": 832,
+    "unjoined": [],
+    "flagged_nodes": [
+     {
+      "name": "/stages/stages.2/stages.2.1/Transpose",
+      "node_index": 49,
+      "shape": [
+       256,
+       2,
+       4,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "loops": 256,
+      "M": 2,
+      "N": 4,
+      "added_dispatches": 256
+     },
+     {
+      "name": "/stages/stages.2/stages.2.1/Transpose_3",
+      "node_index": 186,
+      "shape": [
+       256,
+       4,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "loops": 256,
+      "M": 4,
+      "N": 2,
+      "added_dispatches": 256
+     },
+     {
+      "name": "/stages/stages.3/stages.3.1/Transpose",
+      "node_index": 220,
+      "shape": [
+       160,
+       2,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "loops": 160,
+      "M": 2,
+      "N": 2,
+      "added_dispatches": 160
+     },
+     {
+      "name": "/stages/stages.3/stages.3.1/Transpose_3",
+      "node_index": 463,
+      "shape": [
+       160,
+       2,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "loops": 160,
+      "M": 2,
+      "N": 2,
+      "added_dispatches": 160
+     }
+    ],
+    "nodes": [
+     {
+      "node_index": 1,
+      "name": "Transpose_token_191",
+      "shape": [
+       1,
+       3,
+       64,
+       64
+      ],
+      "perm": [
+       0,
+       2,
+       3,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 1,
+      "M": 3,
+      "N": 4096,
+      "moved_block_bytes": 1,
+      "kind": "in",
+      "reshape_copy": false,
+      "single_axis": [
+       "in",
+       1,
+       3
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> in loops=1 M=3 N=4096",
+      "path_1.24.4": "MlasTranspose<8-bit> in loops=1 M=3 N=4096",
+      "dispatches_1.23.2": 1,
+      "dispatches_1.24.4": 1,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 47,
+      "name": "Transpose_token_258",
+      "shape": [
+       1,
+       8,
+       8,
+       64
+      ],
+      "perm": [
+       0,
+       3,
+       1,
+       2
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 1,
+      "M": 64,
+      "N": 64,
+      "moved_block_bytes": 1,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       3,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> out loops=1 M=64 N=64",
+      "path_1.24.4": "MlasTranspose<8-bit> out loops=1 M=64 N=64",
+      "dispatches_1.23.2": 1,
+      "dispatches_1.24.4": 1,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 49,
+      "name": "/stages/stages.2/stages.2.1/Transpose",
+      "shape": [
+       256,
+       2,
+       4,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 256,
+      "M": 2,
+      "N": 4,
+      "moved_block_bytes": 2,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 16-bit loops=256",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=256 M=2 N=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 256,
+      "added_dispatches": 256,
+      "flagged": true
+     },
+     {
+      "node_index": 60,
+      "name": "/stages/stages.2/stages.2.1/Transpose_1",
+      "shape": [
+       1,
+       64,
+       16,
+       4
+      ],
+      "perm": [
+       0,
+       3,
+       2,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": null,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": null,
+      "kind": null,
+      "reshape_copy": false,
+      "single_axis": null,
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 84,
+      "name": "Transpose_token_357",
+      "shape": [
+       4,
+       16,
+       4,
+       16
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 16,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 128-bit loops=4",
+      "path_1.24.4": "scalar out 128-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 86,
+      "name": "Transpose_token_355",
+      "shape": [
+       4,
+       16,
+       4,
+       16
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 16,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 128-bit loops=4",
+      "path_1.24.4": "scalar out 128-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 98,
+      "name": "/stages/stages.2/stages.2.1/transformer/transformer.0/attn/Transpose_1",
+      "shape": [
+       4,
+       16,
+       4,
+       16
+      ],
+      "perm": [
+       0,
+       2,
+       3,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": 16,
+      "N": 64,
+      "moved_block_bytes": 1,
+      "kind": "in",
+      "reshape_copy": false,
+      "single_axis": [
+       "in",
+       1,
+       3
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> in loops=4 M=16 N=64",
+      "path_1.24.4": "MlasTranspose<8-bit> in loops=4 M=16 N=64",
+      "dispatches_1.23.2": 4,
+      "dispatches_1.24.4": 4,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 103,
+      "name": "/stages/stages.2/stages.2.1/transformer/transformer.0/attn/Transpose_2",
+      "shape": [
+       4,
+       4,
+       16,
+       16
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 16,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 128-bit loops=4",
+      "path_1.24.4": "scalar out 128-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 140,
+      "name": "Transpose_token_361",
+      "shape": [
+       4,
+       16,
+       4,
+       16
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 16,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 128-bit loops=4",
+      "path_1.24.4": "scalar out 128-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 142,
+      "name": "Transpose_token_359",
+      "shape": [
+       4,
+       16,
+       4,
+       16
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 16,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 128-bit loops=4",
+      "path_1.24.4": "scalar out 128-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 154,
+      "name": "/stages/stages.2/stages.2.1/transformer/transformer.1/attn/Transpose_1",
+      "shape": [
+       4,
+       16,
+       4,
+       16
+      ],
+      "perm": [
+       0,
+       2,
+       3,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": 16,
+      "N": 64,
+      "moved_block_bytes": 1,
+      "kind": "in",
+      "reshape_copy": false,
+      "single_axis": [
+       "in",
+       1,
+       3
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> in loops=4 M=16 N=64",
+      "path_1.24.4": "MlasTranspose<8-bit> in loops=4 M=16 N=64",
+      "dispatches_1.23.2": 4,
+      "dispatches_1.24.4": 4,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 159,
+      "name": "/stages/stages.2/stages.2.1/transformer/transformer.1/attn/Transpose_2",
+      "shape": [
+       4,
+       4,
+       16,
+       16
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 16,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 128-bit loops=4",
+      "path_1.24.4": "scalar out 128-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 184,
+      "name": "/stages/stages.2/stages.2.1/Transpose_2",
+      "shape": [
+       1,
+       4,
+       16,
+       64
+      ],
+      "perm": [
+       0,
+       3,
+       2,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": null,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": null,
+      "kind": null,
+      "reshape_copy": false,
+      "single_axis": null,
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 186,
+      "name": "/stages/stages.2/stages.2.1/Transpose_3",
+      "shape": [
+       256,
+       4,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 256,
+      "M": 4,
+      "N": 2,
+      "moved_block_bytes": 2,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 16-bit loops=256",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=256 M=4 N=2",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 256,
+      "added_dispatches": 256,
+      "flagged": true
+     },
+     {
+      "node_index": 189,
+      "name": "Transpose_token_261",
+      "shape": [
+       1,
+       64,
+       8,
+       8
+      ],
+      "perm": [
+       0,
+       2,
+       3,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 1,
+      "M": 64,
+      "N": 64,
+      "moved_block_bytes": 1,
+      "kind": "in",
+      "reshape_copy": false,
+      "single_axis": [
+       "in",
+       1,
+       3
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> in loops=1 M=64 N=64",
+      "path_1.24.4": "MlasTranspose<8-bit> in loops=1 M=64 N=64",
+      "dispatches_1.23.2": 1,
+      "dispatches_1.24.4": 1,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 208,
+      "name": "Transpose_token_285",
+      "shape": [
+       1,
+       4,
+       4,
+       80
+      ],
+      "perm": [
+       0,
+       3,
+       1,
+       2
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 1,
+      "M": 16,
+      "N": 80,
+      "moved_block_bytes": 1,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       3,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> out loops=1 M=16 N=80",
+      "path_1.24.4": "MlasTranspose<8-bit> out loops=1 M=16 N=80",
+      "dispatches_1.23.2": 1,
+      "dispatches_1.24.4": 1,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 220,
+      "name": "/stages/stages.3/stages.3.1/Transpose",
+      "shape": [
+       160,
+       2,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 160,
+      "M": 2,
+      "N": 2,
+      "moved_block_bytes": 2,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 16-bit loops=160",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=160 M=2 N=2",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 160,
+      "added_dispatches": 160,
+      "flagged": true
+     },
+     {
+      "node_index": 225,
+      "name": "/stages/stages.3/stages.3.1/Transpose_1",
+      "shape": [
+       1,
+       80,
+       4,
+       4
+      ],
+      "perm": [
+       0,
+       3,
+       2,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": null,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": null,
+      "kind": null,
+      "reshape_copy": false,
+      "single_axis": null,
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 249,
+      "name": "Transpose_token_376",
+      "shape": [
+       4,
+       4,
+       4,
+       20
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 20,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 160-bit loops=4",
+      "path_1.24.4": "scalar out 160-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 251,
+      "name": "Transpose_token_374",
+      "shape": [
+       4,
+       4,
+       4,
+       20
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 20,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 160-bit loops=4",
+      "path_1.24.4": "scalar out 160-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 263,
+      "name": "/stages/stages.3/stages.3.1/transformer/transformer.0/attn/Transpose_1",
+      "shape": [
+       4,
+       4,
+       4,
+       20
+      ],
+      "perm": [
+       0,
+       2,
+       3,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": 4,
+      "N": 80,
+      "moved_block_bytes": 1,
+      "kind": "in",
+      "reshape_copy": false,
+      "single_axis": [
+       "in",
+       1,
+       3
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> in loops=4 M=4 N=80",
+      "path_1.24.4": "MlasTranspose<8-bit> in loops=4 M=4 N=80",
+      "dispatches_1.23.2": 4,
+      "dispatches_1.24.4": 4,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 268,
+      "name": "/stages/stages.3/stages.3.1/transformer/transformer.0/attn/Transpose_2",
+      "shape": [
+       4,
+       4,
+       4,
+       20
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 20,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 160-bit loops=4",
+      "path_1.24.4": "scalar out 160-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 305,
+      "name": "Transpose_token_380",
+      "shape": [
+       4,
+       4,
+       4,
+       20
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 20,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 160-bit loops=4",
+      "path_1.24.4": "scalar out 160-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 307,
+      "name": "Transpose_token_378",
+      "shape": [
+       4,
+       4,
+       4,
+       20
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 20,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 160-bit loops=4",
+      "path_1.24.4": "scalar out 160-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 319,
+      "name": "/stages/stages.3/stages.3.1/transformer/transformer.1/attn/Transpose_1",
+      "shape": [
+       4,
+       4,
+       4,
+       20
+      ],
+      "perm": [
+       0,
+       2,
+       3,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": 4,
+      "N": 80,
+      "moved_block_bytes": 1,
+      "kind": "in",
+      "reshape_copy": false,
+      "single_axis": [
+       "in",
+       1,
+       3
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> in loops=4 M=4 N=80",
+      "path_1.24.4": "MlasTranspose<8-bit> in loops=4 M=4 N=80",
+      "dispatches_1.23.2": 4,
+      "dispatches_1.24.4": 4,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 324,
+      "name": "/stages/stages.3/stages.3.1/transformer/transformer.1/attn/Transpose_2",
+      "shape": [
+       4,
+       4,
+       4,
+       20
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 20,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 160-bit loops=4",
+      "path_1.24.4": "scalar out 160-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 361,
+      "name": "Transpose_token_384",
+      "shape": [
+       4,
+       4,
+       4,
+       20
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 20,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 160-bit loops=4",
+      "path_1.24.4": "scalar out 160-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 363,
+      "name": "Transpose_token_382",
+      "shape": [
+       4,
+       4,
+       4,
+       20
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 20,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 160-bit loops=4",
+      "path_1.24.4": "scalar out 160-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 375,
+      "name": "/stages/stages.3/stages.3.1/transformer/transformer.2/attn/Transpose_1",
+      "shape": [
+       4,
+       4,
+       4,
+       20
+      ],
+      "perm": [
+       0,
+       2,
+       3,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": 4,
+      "N": 80,
+      "moved_block_bytes": 1,
+      "kind": "in",
+      "reshape_copy": false,
+      "single_axis": [
+       "in",
+       1,
+       3
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> in loops=4 M=4 N=80",
+      "path_1.24.4": "MlasTranspose<8-bit> in loops=4 M=4 N=80",
+      "dispatches_1.23.2": 4,
+      "dispatches_1.24.4": 4,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 380,
+      "name": "/stages/stages.3/stages.3.1/transformer/transformer.2/attn/Transpose_2",
+      "shape": [
+       4,
+       4,
+       4,
+       20
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 20,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 160-bit loops=4",
+      "path_1.24.4": "scalar out 160-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 417,
+      "name": "Transpose_token_388",
+      "shape": [
+       4,
+       4,
+       4,
+       20
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 20,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 160-bit loops=4",
+      "path_1.24.4": "scalar out 160-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 419,
+      "name": "Transpose_token_386",
+      "shape": [
+       4,
+       4,
+       4,
+       20
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 20,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 160-bit loops=4",
+      "path_1.24.4": "scalar out 160-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 431,
+      "name": "/stages/stages.3/stages.3.1/transformer/transformer.3/attn/Transpose_1",
+      "shape": [
+       4,
+       4,
+       4,
+       20
+      ],
+      "perm": [
+       0,
+       2,
+       3,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": 4,
+      "N": 80,
+      "moved_block_bytes": 1,
+      "kind": "in",
+      "reshape_copy": false,
+      "single_axis": [
+       "in",
+       1,
+       3
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> in loops=4 M=4 N=80",
+      "path_1.24.4": "MlasTranspose<8-bit> in loops=4 M=4 N=80",
+      "dispatches_1.23.2": 4,
+      "dispatches_1.24.4": 4,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 436,
+      "name": "/stages/stages.3/stages.3.1/transformer/transformer.3/attn/Transpose_2",
+      "shape": [
+       4,
+       4,
+       4,
+       20
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 20,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 160-bit loops=4",
+      "path_1.24.4": "scalar out 160-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 461,
+      "name": "/stages/stages.3/stages.3.1/Transpose_2",
+      "shape": [
+       1,
+       4,
+       4,
+       80
+      ],
+      "perm": [
+       0,
+       3,
+       2,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": null,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": null,
+      "kind": null,
+      "reshape_copy": false,
+      "single_axis": null,
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 463,
+      "name": "/stages/stages.3/stages.3.1/Transpose_3",
+      "shape": [
+       160,
+       2,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 160,
+      "M": 2,
+      "N": 2,
+      "moved_block_bytes": 2,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 16-bit loops=160",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=160 M=2 N=2",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 160,
+      "added_dispatches": 160,
+      "flagged": true
+     },
+     {
+      "node_index": 465,
+      "name": "Transpose_token_288",
+      "shape": [
+       1,
+       80,
+       4,
+       4
+      ],
+      "perm": [
+       0,
+       2,
+       3,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 1,
+      "M": 80,
+      "N": 16,
+      "moved_block_bytes": 1,
+      "kind": "in",
+      "reshape_copy": false,
+      "single_axis": [
+       "in",
+       1,
+       3
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> in loops=1 M=80 N=16",
+      "path_1.24.4": "MlasTranspose<8-bit> in loops=1 M=80 N=16",
+      "dispatches_1.23.2": 1,
+      "dispatches_1.24.4": 1,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 484,
+      "name": "Transpose_token_312",
+      "shape": [
+       1,
+       2,
+       2,
+       96
+      ],
+      "perm": [
+       0,
+       3,
+       1,
+       2
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 1,
+      "M": 4,
+      "N": 96,
+      "moved_block_bytes": 1,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       3,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> out loops=1 M=4 N=96",
+      "path_1.24.4": "MlasTranspose<8-bit> out loops=1 M=4 N=96",
+      "dispatches_1.23.2": 1,
+      "dispatches_1.24.4": 1,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 486,
+      "name": "/stages/stages.4/stages.4.1/Transpose",
+      "shape": [
+       96,
+       2,
+       1,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": null,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": null,
+      "kind": null,
+      "reshape_copy": true,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "reshape-copy",
+      "path_1.24.4": "reshape-copy",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 497,
+      "name": "/stages/stages.4/stages.4.1/Transpose_1",
+      "shape": [
+       1,
+       96,
+       1,
+       4
+      ],
+      "perm": [
+       0,
+       3,
+       2,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": null,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": null,
+      "kind": null,
+      "reshape_copy": false,
+      "single_axis": null,
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 521,
+      "name": "Transpose_token_403",
+      "shape": [
+       4,
+       1,
+       4,
+       24
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": null,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": null,
+      "kind": null,
+      "reshape_copy": true,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "reshape-copy",
+      "path_1.24.4": "reshape-copy",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 523,
+      "name": "Transpose_token_401",
+      "shape": [
+       4,
+       1,
+       4,
+       24
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": null,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": null,
+      "kind": null,
+      "reshape_copy": true,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "reshape-copy",
+      "path_1.24.4": "reshape-copy",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 535,
+      "name": "/stages/stages.4/stages.4.1/transformer/transformer.0/attn/Transpose_1",
+      "shape": [
+       4,
+       1,
+       4,
+       24
+      ],
+      "perm": [
+       0,
+       2,
+       3,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": null,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": null,
+      "kind": null,
+      "reshape_copy": true,
+      "single_axis": [
+       "in",
+       1,
+       3
+      ],
+      "path_1.23.2": "reshape-copy",
+      "path_1.24.4": "reshape-copy",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 540,
+      "name": "/stages/stages.4/stages.4.1/transformer/transformer.0/attn/Transpose_2",
+      "shape": [
+       4,
+       4,
+       1,
+       24
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": null,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": null,
+      "kind": null,
+      "reshape_copy": true,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "reshape-copy",
+      "path_1.24.4": "reshape-copy",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 577,
+      "name": "Transpose_token_407",
+      "shape": [
+       4,
+       1,
+       4,
+       24
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": null,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": null,
+      "kind": null,
+      "reshape_copy": true,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "reshape-copy",
+      "path_1.24.4": "reshape-copy",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 579,
+      "name": "Transpose_token_405",
+      "shape": [
+       4,
+       1,
+       4,
+       24
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": null,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": null,
+      "kind": null,
+      "reshape_copy": true,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "reshape-copy",
+      "path_1.24.4": "reshape-copy",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 591,
+      "name": "/stages/stages.4/stages.4.1/transformer/transformer.1/attn/Transpose_1",
+      "shape": [
+       4,
+       1,
+       4,
+       24
+      ],
+      "perm": [
+       0,
+       2,
+       3,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": null,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": null,
+      "kind": null,
+      "reshape_copy": true,
+      "single_axis": [
+       "in",
+       1,
+       3
+      ],
+      "path_1.23.2": "reshape-copy",
+      "path_1.24.4": "reshape-copy",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 596,
+      "name": "/stages/stages.4/stages.4.1/transformer/transformer.1/attn/Transpose_2",
+      "shape": [
+       4,
+       4,
+       1,
+       24
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": null,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": null,
+      "kind": null,
+      "reshape_copy": true,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "reshape-copy",
+      "path_1.24.4": "reshape-copy",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 633,
+      "name": "Transpose_token_411",
+      "shape": [
+       4,
+       1,
+       4,
+       24
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": null,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": null,
+      "kind": null,
+      "reshape_copy": true,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "reshape-copy",
+      "path_1.24.4": "reshape-copy",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 635,
+      "name": "Transpose_token_409",
+      "shape": [
+       4,
+       1,
+       4,
+       24
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": null,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": null,
+      "kind": null,
+      "reshape_copy": true,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "reshape-copy",
+      "path_1.24.4": "reshape-copy",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 647,
+      "name": "/stages/stages.4/stages.4.1/transformer/transformer.2/attn/Transpose_1",
+      "shape": [
+       4,
+       1,
+       4,
+       24
+      ],
+      "perm": [
+       0,
+       2,
+       3,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": null,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": null,
+      "kind": null,
+      "reshape_copy": true,
+      "single_axis": [
+       "in",
+       1,
+       3
+      ],
+      "path_1.23.2": "reshape-copy",
+      "path_1.24.4": "reshape-copy",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 652,
+      "name": "/stages/stages.4/stages.4.1/transformer/transformer.2/attn/Transpose_2",
+      "shape": [
+       4,
+       4,
+       1,
+       24
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": null,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": null,
+      "kind": null,
+      "reshape_copy": true,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "reshape-copy",
+      "path_1.24.4": "reshape-copy",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 677,
+      "name": "/stages/stages.4/stages.4.1/Transpose_2",
+      "shape": [
+       1,
+       4,
+       1,
+       96
+      ],
+      "perm": [
+       0,
+       3,
+       2,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": null,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": null,
+      "kind": null,
+      "reshape_copy": false,
+      "single_axis": null,
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 679,
+      "name": "/stages/stages.4/stages.4.1/Transpose_3",
+      "shape": [
+       96,
+       1,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": null,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": null,
+      "kind": null,
+      "reshape_copy": true,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "reshape-copy",
+      "path_1.24.4": "reshape-copy",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 682,
+      "name": "Transpose_token_315",
+      "shape": [
+       1,
+       96,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       3,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 1,
+      "M": 96,
+      "N": 4,
+      "moved_block_bytes": 1,
+      "kind": "in",
+      "reshape_copy": false,
+      "single_axis": [
+       "in",
+       1,
+       3
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> in loops=1 M=96 N=4",
+      "path_1.24.4": "MlasTranspose<8-bit> in loops=1 M=96 N=4",
+      "dispatches_1.23.2": 1,
+      "dispatches_1.24.4": 1,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 691,
+      "name": "Transpose_token_324",
+      "shape": [
+       1,
+       2,
+       2,
+       320
+      ],
+      "perm": [
+       0,
+       3,
+       1,
+       2
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 1,
+      "M": 4,
+      "N": 320,
+      "moved_block_bytes": 1,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       3,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> out loops=1 M=4 N=320",
+      "path_1.24.4": "MlasTranspose<8-bit> out loops=1 M=4 N=320",
+      "dispatches_1.23.2": 1,
+      "dispatches_1.24.4": 1,
+      "added_dispatches": 0,
+      "flagged": false
+     }
+    ]
+   }
+  },
+  {
+   "model": "mobilevit_r256/p00_int8",
+   "path": "results/mobilevit_r256/models/p00_int8.onnx",
+   "sha256": "ae5d630c76ccc5d40983777666afc619250cfed3ae072ac9492ed354c68d32cd",
+   "SC-A": {
+    "checker": "SC-A",
+    "role": "SECONDARY",
+    "section": "2.2",
+    "ok": true,
+    "model_path": "results/mobilevit_r256/models/p00_int8.onnx",
+    "sha256": "ae5d630c76ccc5d40983777666afc619250cfed3ae072ac9492ed354c68d32cd",
+    "onnxruntime": "1.24.4",
+    "dump": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\mv_exec\\opt_1.24.4_mobilevit_r256_p00_int8_e0378fd3.onnx",
+    "profile": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\mv_exec\\profiles\\mobilevit_r256_p00_int8_e0378fd3\\prof_2026-09-24_04-09-05.json",
+    "profile_iterations": 3,
+    "intra_op_num_threads": 1,
+    "free_dim_overrides": {},
+    "inputs": [
+     [
+      "input",
+      "tensor(float)",
+      [
+       "batch",
+       "3",
+       "256",
+       "256"
+      ]
+     ]
+    ],
+    "n_transposes_optimized_graph": 56,
+    "duplicate_transpose_names_in_graph": [],
+    "n_transposes_executed": 56,
+    "n_scored": 56,
+    "n_unjoined": 0,
+    "n_executed_not_in_graph": 0,
+    "n_in_graph_not_executed": 0,
+    "n_kernel_events": 168,
+    "executed_dtypes": [
+     "uint8"
+    ],
+    "dtype_or_shape_varied_between_iterations": {},
+    "unknown_dtypes": [],
+    "n_flagged": 6,
+    "sig_a": true,
+    "dispatches": {
+     "1.23.2": 44,
+     "1.24.4": 4140
+    },
+    "added_dispatches": 4096,
+    "unjoined": [],
+    "flagged_nodes": [
+     {
+      "name": "/stages/stages.2/stages.2.1/Transpose",
+      "node_index": 49,
+      "shape": [
+       1024,
+       2,
+       16,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "loops": 1024,
+      "M": 2,
+      "N": 16,
+      "added_dispatches": 1024
+     },
+     {
+      "name": "/stages/stages.2/stages.2.1/Transpose_3",
+      "node_index": 186,
+      "shape": [
+       1024,
+       16,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "loops": 1024,
+      "M": 16,
+      "N": 2,
+      "added_dispatches": 1024
+     },
+     {
+      "name": "/stages/stages.3/stages.3.1/Transpose",
+      "node_index": 210,
+      "shape": [
+       640,
+       2,
+       8,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "loops": 640,
+      "M": 2,
+      "N": 8,
+      "added_dispatches": 640
+     },
+     {
+      "name": "/stages/stages.3/stages.3.1/Transpose_3",
+      "node_index": 459,
+      "shape": [
+       640,
+       8,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "loops": 640,
+      "M": 8,
+      "N": 2,
+      "added_dispatches": 640
+     },
+     {
+      "name": "/stages/stages.4/stages.4.1/Transpose",
+      "node_index": 483,
+      "shape": [
+       384,
+       2,
+       4,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "loops": 384,
+      "M": 2,
+      "N": 4,
+      "added_dispatches": 384
+     },
+     {
+      "name": "/stages/stages.4/stages.4.1/Transpose_3",
+      "node_index": 676,
+      "shape": [
+       384,
+       4,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "loops": 384,
+      "M": 4,
+      "N": 2,
+      "added_dispatches": 384
+     }
+    ],
+    "nodes": [
+     {
+      "node_index": 1,
+      "name": "Transpose_token_191",
+      "shape": [
+       1,
+       3,
+       256,
+       256
+      ],
+      "perm": [
+       0,
+       2,
+       3,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 1,
+      "M": 3,
+      "N": 65536,
+      "moved_block_bytes": 1,
+      "kind": "in",
+      "reshape_copy": false,
+      "single_axis": [
+       "in",
+       1,
+       3
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> in loops=1 M=3 N=65536",
+      "path_1.24.4": "MlasTranspose<8-bit> in loops=1 M=3 N=65536",
+      "dispatches_1.23.2": 1,
+      "dispatches_1.24.4": 1,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 47,
+      "name": "Transpose_token_258",
+      "shape": [
+       1,
+       32,
+       32,
+       64
+      ],
+      "perm": [
+       0,
+       3,
+       1,
+       2
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 1,
+      "M": 1024,
+      "N": 64,
+      "moved_block_bytes": 1,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       3,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> out loops=1 M=1024 N=64",
+      "path_1.24.4": "MlasTranspose<8-bit> out loops=1 M=1024 N=64",
+      "dispatches_1.23.2": 1,
+      "dispatches_1.24.4": 1,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 49,
+      "name": "/stages/stages.2/stages.2.1/Transpose",
+      "shape": [
+       1024,
+       2,
+       16,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 1024,
+      "M": 2,
+      "N": 16,
+      "moved_block_bytes": 2,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 16-bit loops=1024",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=1024 M=2 N=16",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 1024,
+      "added_dispatches": 1024,
+      "flagged": true
+     },
+     {
+      "node_index": 60,
+      "name": "/stages/stages.2/stages.2.1/Transpose_1",
+      "shape": [
+       1,
+       64,
+       256,
+       4
+      ],
+      "perm": [
+       0,
+       3,
+       2,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": null,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": null,
+      "kind": null,
+      "reshape_copy": false,
+      "single_axis": null,
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 84,
+      "name": "Transpose_token_357",
+      "shape": [
+       4,
+       256,
+       4,
+       16
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 16,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 128-bit loops=4",
+      "path_1.24.4": "scalar out 128-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 86,
+      "name": "Transpose_token_355",
+      "shape": [
+       4,
+       256,
+       4,
+       16
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 16,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 128-bit loops=4",
+      "path_1.24.4": "scalar out 128-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 98,
+      "name": "/stages/stages.2/stages.2.1/transformer/transformer.0/attn/Transpose_1",
+      "shape": [
+       4,
+       256,
+       4,
+       16
+      ],
+      "perm": [
+       0,
+       2,
+       3,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": 256,
+      "N": 64,
+      "moved_block_bytes": 1,
+      "kind": "in",
+      "reshape_copy": false,
+      "single_axis": [
+       "in",
+       1,
+       3
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> in loops=4 M=256 N=64",
+      "path_1.24.4": "MlasTranspose<8-bit> in loops=4 M=256 N=64",
+      "dispatches_1.23.2": 4,
+      "dispatches_1.24.4": 4,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 103,
+      "name": "/stages/stages.2/stages.2.1/transformer/transformer.0/attn/Transpose_2",
+      "shape": [
+       4,
+       4,
+       256,
+       16
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 16,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 128-bit loops=4",
+      "path_1.24.4": "scalar out 128-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 140,
+      "name": "Transpose_token_361",
+      "shape": [
+       4,
+       256,
+       4,
+       16
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 16,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 128-bit loops=4",
+      "path_1.24.4": "scalar out 128-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 142,
+      "name": "Transpose_token_359",
+      "shape": [
+       4,
+       256,
+       4,
+       16
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 16,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 128-bit loops=4",
+      "path_1.24.4": "scalar out 128-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 154,
+      "name": "/stages/stages.2/stages.2.1/transformer/transformer.1/attn/Transpose_1",
+      "shape": [
+       4,
+       256,
+       4,
+       16
+      ],
+      "perm": [
+       0,
+       2,
+       3,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": 256,
+      "N": 64,
+      "moved_block_bytes": 1,
+      "kind": "in",
+      "reshape_copy": false,
+      "single_axis": [
+       "in",
+       1,
+       3
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> in loops=4 M=256 N=64",
+      "path_1.24.4": "MlasTranspose<8-bit> in loops=4 M=256 N=64",
+      "dispatches_1.23.2": 4,
+      "dispatches_1.24.4": 4,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 159,
+      "name": "/stages/stages.2/stages.2.1/transformer/transformer.1/attn/Transpose_2",
+      "shape": [
+       4,
+       4,
+       256,
+       16
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 16,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 128-bit loops=4",
+      "path_1.24.4": "scalar out 128-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 184,
+      "name": "/stages/stages.2/stages.2.1/Transpose_2",
+      "shape": [
+       1,
+       4,
+       256,
+       64
+      ],
+      "perm": [
+       0,
+       3,
+       2,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": null,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": null,
+      "kind": null,
+      "reshape_copy": false,
+      "single_axis": null,
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 186,
+      "name": "/stages/stages.2/stages.2.1/Transpose_3",
+      "shape": [
+       1024,
+       16,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 1024,
+      "M": 16,
+      "N": 2,
+      "moved_block_bytes": 2,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 16-bit loops=1024",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=1024 M=16 N=2",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 1024,
+      "added_dispatches": 1024,
+      "flagged": true
+     },
+     {
+      "node_index": 189,
+      "name": "Transpose_token_261",
+      "shape": [
+       1,
+       64,
+       32,
+       32
+      ],
+      "perm": [
+       0,
+       2,
+       3,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 1,
+      "M": 64,
+      "N": 1024,
+      "moved_block_bytes": 1,
+      "kind": "in",
+      "reshape_copy": false,
+      "single_axis": [
+       "in",
+       1,
+       3
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> in loops=1 M=64 N=1024",
+      "path_1.24.4": "MlasTranspose<8-bit> in loops=1 M=64 N=1024",
+      "dispatches_1.23.2": 1,
+      "dispatches_1.24.4": 1,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 208,
+      "name": "Transpose_token_285",
+      "shape": [
+       1,
+       16,
+       16,
+       80
+      ],
+      "perm": [
+       0,
+       3,
+       1,
+       2
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 1,
+      "M": 256,
+      "N": 80,
+      "moved_block_bytes": 1,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       3,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> out loops=1 M=256 N=80",
+      "path_1.24.4": "MlasTranspose<8-bit> out loops=1 M=256 N=80",
+      "dispatches_1.23.2": 1,
+      "dispatches_1.24.4": 1,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 210,
+      "name": "/stages/stages.3/stages.3.1/Transpose",
+      "shape": [
+       640,
+       2,
+       8,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 640,
+      "M": 2,
+      "N": 8,
+      "moved_block_bytes": 2,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 16-bit loops=640",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=640 M=2 N=8",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 640,
+      "added_dispatches": 640,
+      "flagged": true
+     },
+     {
+      "node_index": 221,
+      "name": "/stages/stages.3/stages.3.1/Transpose_1",
+      "shape": [
+       1,
+       80,
+       64,
+       4
+      ],
+      "perm": [
+       0,
+       3,
+       2,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": null,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": null,
+      "kind": null,
+      "reshape_copy": false,
+      "single_axis": null,
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 245,
+      "name": "Transpose_token_376",
+      "shape": [
+       4,
+       64,
+       4,
+       20
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 20,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 160-bit loops=4",
+      "path_1.24.4": "scalar out 160-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 247,
+      "name": "Transpose_token_374",
+      "shape": [
+       4,
+       64,
+       4,
+       20
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 20,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 160-bit loops=4",
+      "path_1.24.4": "scalar out 160-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 259,
+      "name": "/stages/stages.3/stages.3.1/transformer/transformer.0/attn/Transpose_1",
+      "shape": [
+       4,
+       64,
+       4,
+       20
+      ],
+      "perm": [
+       0,
+       2,
+       3,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": 64,
+      "N": 80,
+      "moved_block_bytes": 1,
+      "kind": "in",
+      "reshape_copy": false,
+      "single_axis": [
+       "in",
+       1,
+       3
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> in loops=4 M=64 N=80",
+      "path_1.24.4": "MlasTranspose<8-bit> in loops=4 M=64 N=80",
+      "dispatches_1.23.2": 4,
+      "dispatches_1.24.4": 4,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 264,
+      "name": "/stages/stages.3/stages.3.1/transformer/transformer.0/attn/Transpose_2",
+      "shape": [
+       4,
+       4,
+       64,
+       20
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 20,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 160-bit loops=4",
+      "path_1.24.4": "scalar out 160-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 301,
+      "name": "Transpose_token_380",
+      "shape": [
+       4,
+       64,
+       4,
+       20
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 20,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 160-bit loops=4",
+      "path_1.24.4": "scalar out 160-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 303,
+      "name": "Transpose_token_378",
+      "shape": [
+       4,
+       64,
+       4,
+       20
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 20,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 160-bit loops=4",
+      "path_1.24.4": "scalar out 160-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 315,
+      "name": "/stages/stages.3/stages.3.1/transformer/transformer.1/attn/Transpose_1",
+      "shape": [
+       4,
+       64,
+       4,
+       20
+      ],
+      "perm": [
+       0,
+       2,
+       3,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": 64,
+      "N": 80,
+      "moved_block_bytes": 1,
+      "kind": "in",
+      "reshape_copy": false,
+      "single_axis": [
+       "in",
+       1,
+       3
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> in loops=4 M=64 N=80",
+      "path_1.24.4": "MlasTranspose<8-bit> in loops=4 M=64 N=80",
+      "dispatches_1.23.2": 4,
+      "dispatches_1.24.4": 4,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 320,
+      "name": "/stages/stages.3/stages.3.1/transformer/transformer.1/attn/Transpose_2",
+      "shape": [
+       4,
+       4,
+       64,
+       20
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 20,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 160-bit loops=4",
+      "path_1.24.4": "scalar out 160-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 357,
+      "name": "Transpose_token_384",
+      "shape": [
+       4,
+       64,
+       4,
+       20
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 20,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 160-bit loops=4",
+      "path_1.24.4": "scalar out 160-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 359,
+      "name": "Transpose_token_382",
+      "shape": [
+       4,
+       64,
+       4,
+       20
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 20,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 160-bit loops=4",
+      "path_1.24.4": "scalar out 160-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 371,
+      "name": "/stages/stages.3/stages.3.1/transformer/transformer.2/attn/Transpose_1",
+      "shape": [
+       4,
+       64,
+       4,
+       20
+      ],
+      "perm": [
+       0,
+       2,
+       3,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": 64,
+      "N": 80,
+      "moved_block_bytes": 1,
+      "kind": "in",
+      "reshape_copy": false,
+      "single_axis": [
+       "in",
+       1,
+       3
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> in loops=4 M=64 N=80",
+      "path_1.24.4": "MlasTranspose<8-bit> in loops=4 M=64 N=80",
+      "dispatches_1.23.2": 4,
+      "dispatches_1.24.4": 4,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 376,
+      "name": "/stages/stages.3/stages.3.1/transformer/transformer.2/attn/Transpose_2",
+      "shape": [
+       4,
+       4,
+       64,
+       20
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 20,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 160-bit loops=4",
+      "path_1.24.4": "scalar out 160-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 413,
+      "name": "Transpose_token_388",
+      "shape": [
+       4,
+       64,
+       4,
+       20
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 20,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 160-bit loops=4",
+      "path_1.24.4": "scalar out 160-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 415,
+      "name": "Transpose_token_386",
+      "shape": [
+       4,
+       64,
+       4,
+       20
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 20,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 160-bit loops=4",
+      "path_1.24.4": "scalar out 160-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 427,
+      "name": "/stages/stages.3/stages.3.1/transformer/transformer.3/attn/Transpose_1",
+      "shape": [
+       4,
+       64,
+       4,
+       20
+      ],
+      "perm": [
+       0,
+       2,
+       3,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": 64,
+      "N": 80,
+      "moved_block_bytes": 1,
+      "kind": "in",
+      "reshape_copy": false,
+      "single_axis": [
+       "in",
+       1,
+       3
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> in loops=4 M=64 N=80",
+      "path_1.24.4": "MlasTranspose<8-bit> in loops=4 M=64 N=80",
+      "dispatches_1.23.2": 4,
+      "dispatches_1.24.4": 4,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 432,
+      "name": "/stages/stages.3/stages.3.1/transformer/transformer.3/attn/Transpose_2",
+      "shape": [
+       4,
+       4,
+       64,
+       20
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 20,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 160-bit loops=4",
+      "path_1.24.4": "scalar out 160-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 457,
+      "name": "/stages/stages.3/stages.3.1/Transpose_2",
+      "shape": [
+       1,
+       4,
+       64,
+       80
+      ],
+      "perm": [
+       0,
+       3,
+       2,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": null,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": null,
+      "kind": null,
+      "reshape_copy": false,
+      "single_axis": null,
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 459,
+      "name": "/stages/stages.3/stages.3.1/Transpose_3",
+      "shape": [
+       640,
+       8,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 640,
+      "M": 8,
+      "N": 2,
+      "moved_block_bytes": 2,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 16-bit loops=640",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=640 M=8 N=2",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 640,
+      "added_dispatches": 640,
+      "flagged": true
+     },
+     {
+      "node_index": 462,
+      "name": "Transpose_token_288",
+      "shape": [
+       1,
+       80,
+       16,
+       16
+      ],
+      "perm": [
+       0,
+       2,
+       3,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 1,
+      "M": 80,
+      "N": 256,
+      "moved_block_bytes": 1,
+      "kind": "in",
+      "reshape_copy": false,
+      "single_axis": [
+       "in",
+       1,
+       3
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> in loops=1 M=80 N=256",
+      "path_1.24.4": "MlasTranspose<8-bit> in loops=1 M=80 N=256",
+      "dispatches_1.23.2": 1,
+      "dispatches_1.24.4": 1,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 481,
+      "name": "Transpose_token_312",
+      "shape": [
+       1,
+       8,
+       8,
+       96
+      ],
+      "perm": [
+       0,
+       3,
+       1,
+       2
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 1,
+      "M": 64,
+      "N": 96,
+      "moved_block_bytes": 1,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       3,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> out loops=1 M=64 N=96",
+      "path_1.24.4": "MlasTranspose<8-bit> out loops=1 M=64 N=96",
+      "dispatches_1.23.2": 1,
+      "dispatches_1.24.4": 1,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 483,
+      "name": "/stages/stages.4/stages.4.1/Transpose",
+      "shape": [
+       384,
+       2,
+       4,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 384,
+      "M": 2,
+      "N": 4,
+      "moved_block_bytes": 2,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 16-bit loops=384",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=384 M=2 N=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 384,
+      "added_dispatches": 384,
+      "flagged": true
+     },
+     {
+      "node_index": 494,
+      "name": "/stages/stages.4/stages.4.1/Transpose_1",
+      "shape": [
+       1,
+       96,
+       16,
+       4
+      ],
+      "perm": [
+       0,
+       3,
+       2,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": null,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": null,
+      "kind": null,
+      "reshape_copy": false,
+      "single_axis": null,
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 518,
+      "name": "Transpose_token_403",
+      "shape": [
+       4,
+       16,
+       4,
+       24
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 24,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 192-bit loops=4",
+      "path_1.24.4": "scalar out 192-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 520,
+      "name": "Transpose_token_401",
+      "shape": [
+       4,
+       16,
+       4,
+       24
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 24,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 192-bit loops=4",
+      "path_1.24.4": "scalar out 192-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 532,
+      "name": "/stages/stages.4/stages.4.1/transformer/transformer.0/attn/Transpose_1",
+      "shape": [
+       4,
+       16,
+       4,
+       24
+      ],
+      "perm": [
+       0,
+       2,
+       3,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": 16,
+      "N": 96,
+      "moved_block_bytes": 1,
+      "kind": "in",
+      "reshape_copy": false,
+      "single_axis": [
+       "in",
+       1,
+       3
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> in loops=4 M=16 N=96",
+      "path_1.24.4": "MlasTranspose<8-bit> in loops=4 M=16 N=96",
+      "dispatches_1.23.2": 4,
+      "dispatches_1.24.4": 4,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 537,
+      "name": "/stages/stages.4/stages.4.1/transformer/transformer.0/attn/Transpose_2",
+      "shape": [
+       4,
+       4,
+       16,
+       24
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 24,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 192-bit loops=4",
+      "path_1.24.4": "scalar out 192-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 574,
+      "name": "Transpose_token_407",
+      "shape": [
+       4,
+       16,
+       4,
+       24
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 24,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 192-bit loops=4",
+      "path_1.24.4": "scalar out 192-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 576,
+      "name": "Transpose_token_405",
+      "shape": [
+       4,
+       16,
+       4,
+       24
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 24,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 192-bit loops=4",
+      "path_1.24.4": "scalar out 192-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 588,
+      "name": "/stages/stages.4/stages.4.1/transformer/transformer.1/attn/Transpose_1",
+      "shape": [
+       4,
+       16,
+       4,
+       24
+      ],
+      "perm": [
+       0,
+       2,
+       3,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": 16,
+      "N": 96,
+      "moved_block_bytes": 1,
+      "kind": "in",
+      "reshape_copy": false,
+      "single_axis": [
+       "in",
+       1,
+       3
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> in loops=4 M=16 N=96",
+      "path_1.24.4": "MlasTranspose<8-bit> in loops=4 M=16 N=96",
+      "dispatches_1.23.2": 4,
+      "dispatches_1.24.4": 4,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 593,
+      "name": "/stages/stages.4/stages.4.1/transformer/transformer.1/attn/Transpose_2",
+      "shape": [
+       4,
+       4,
+       16,
+       24
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 24,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 192-bit loops=4",
+      "path_1.24.4": "scalar out 192-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 630,
+      "name": "Transpose_token_411",
+      "shape": [
+       4,
+       16,
+       4,
+       24
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 24,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 192-bit loops=4",
+      "path_1.24.4": "scalar out 192-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 632,
+      "name": "Transpose_token_409",
+      "shape": [
+       4,
+       16,
+       4,
+       24
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 24,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 192-bit loops=4",
+      "path_1.24.4": "scalar out 192-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 644,
+      "name": "/stages/stages.4/stages.4.1/transformer/transformer.2/attn/Transpose_1",
+      "shape": [
+       4,
+       16,
+       4,
+       24
+      ],
+      "perm": [
+       0,
+       2,
+       3,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": 16,
+      "N": 96,
+      "moved_block_bytes": 1,
+      "kind": "in",
+      "reshape_copy": false,
+      "single_axis": [
+       "in",
+       1,
+       3
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> in loops=4 M=16 N=96",
+      "path_1.24.4": "MlasTranspose<8-bit> in loops=4 M=16 N=96",
+      "dispatches_1.23.2": 4,
+      "dispatches_1.24.4": 4,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 649,
+      "name": "/stages/stages.4/stages.4.1/transformer/transformer.2/attn/Transpose_2",
+      "shape": [
+       4,
+       4,
+       16,
+       24
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 4,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 24,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 192-bit loops=4",
+      "path_1.24.4": "scalar out 192-bit loops=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 674,
+      "name": "/stages/stages.4/stages.4.1/Transpose_2",
+      "shape": [
+       1,
+       4,
+       16,
+       96
+      ],
+      "perm": [
+       0,
+       3,
+       2,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": null,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": null,
+      "kind": null,
+      "reshape_copy": false,
+      "single_axis": null,
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 676,
+      "name": "/stages/stages.4/stages.4.1/Transpose_3",
+      "shape": [
+       384,
+       4,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 384,
+      "M": 4,
+      "N": 2,
+      "moved_block_bytes": 2,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 16-bit loops=384",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=384 M=4 N=2",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 384,
+      "added_dispatches": 384,
+      "flagged": true
+     },
+     {
+      "node_index": 679,
+      "name": "Transpose_token_315",
+      "shape": [
+       1,
+       96,
+       8,
+       8
+      ],
+      "perm": [
+       0,
+       2,
+       3,
+       1
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 1,
+      "M": 96,
+      "N": 64,
+      "moved_block_bytes": 1,
+      "kind": "in",
+      "reshape_copy": false,
+      "single_axis": [
+       "in",
+       1,
+       3
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> in loops=1 M=96 N=64",
+      "path_1.24.4": "MlasTranspose<8-bit> in loops=1 M=96 N=64",
+      "dispatches_1.23.2": 1,
+      "dispatches_1.24.4": 1,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 688,
+      "name": "Transpose_token_324",
+      "shape": [
+       1,
+       8,
+       8,
+       320
+      ],
+      "perm": [
+       0,
+       3,
+       1,
+       2
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 1,
+      "M": 64,
+      "N": 320,
+      "moved_block_bytes": 1,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       3,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> out loops=1 M=64 N=320",
+      "path_1.24.4": "MlasTranspose<8-bit> out loops=1 M=64 N=320",
+      "dispatches_1.23.2": 1,
+      "dispatches_1.24.4": 1,
+      "added_dispatches": 0,
+      "flagged": false
+     }
+    ]
+   }
+  }
+ ]
+}

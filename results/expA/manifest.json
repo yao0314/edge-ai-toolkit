@@ -1,0 +1,330 @@
+{
+ "experiment": "A",
+ "artefact": 2,
+ "artefact_name": "results/expA/manifest.json",
+ "written_utc": "2026-09-23T03:51:28Z",
+ "registration": "results/paper/a_design_registered.md",
+ "registration_sha256": "d62b6c0398cc8fd827c004c28148544668db6976544b673f1f66ef552b102444",
+ "built_by": "scripts/paper/a_pool.py",
+ "built_by_sha256": "23937c226c1b706b3d8f82813ee3facb42d941e7a18803c19c8ee16ce4029cc7",
+ "pool_json_sha256": "643a5e892570400ca654c6458abe85e36570e98189fef4918df11c2f6c146267",
+ "pool_dir": "D:/sec_models",
+ "selection_rule": "section 1.3",
+ "selection_note": "all 6 admitted models are measured: section 1.3's selection only has to drop models when the admitted set exceeds 25 or |F| > 12, and neither can apply to a set this size (|F| <= 6 <= 12).",
+ "stratum_note": "null: the strata F / U / U-near are defined from the checker's flag, which is artefact 3 (results/expA/predictions.json, scripts/paper/a_check.py) and by section 3 is written after this file. Section 3 lists 'stratum' as a field of artefact 2; it can only be filled in by the checker step, and it is left null here rather than guessed.",
+ "screen_protocol": "1.24.4, 4 threads, 3 warmup + 20 runs, median (section 4.1)",
+ "screen_ms_is_not_a_result": "section 4.1: screening latency may never be quoted as a latency, a baseline or a speed-up.",
+ "measured_set": [
+  {
+   "id": "a01",
+   "name": "shufflenet-v2-12-qdq",
+   "publisher": "onnx/models",
+   "url": "https://github.com/onnx/models/raw/main/validated/vision/classification/shufflenet/model/shufflenet-v2-12-qdq.onnx",
+   "licence": "BSD-3-Clause",
+   "licence_metadata_url": "https://raw.githubusercontent.com/onnx/models/main/validated/vision/classification/shufflenet/README.md",
+   "sha256": "7c536d02e2f6af9569e5f3c7a4d8282060072119524c93c8da71e63876b4722b",
+   "bytes": 2415805,
+   "stratum": null,
+   "screen_ms": 2.766150000752532,
+   "screen_core_delivery": 1.1297290454783155,
+   "input_shape": [
+    1,
+    3,
+    224,
+    224
+   ],
+   "opset": 12,
+   "quantization_format": "QDQ",
+   "architecture_family": "shufflenet_v2",
+   "architecture": "CNN (channel shuffle: Reshape+Transpose)",
+   "harness_family": "c3_224x224",
+   "harness_family_dir": "D:/sec_models/c3_224x224",
+   "variant": "a01",
+   "path": "D:/sec_models/c3_224x224/a01.onnx"
+  },
+  {
+   "id": "a02",
+   "name": "mobilenetv2-12-qdq",
+   "publisher": "onnx/models",
+   "url": "https://github.com/onnx/models/raw/main/validated/vision/classification/mobilenet/model/mobilenetv2-12-qdq.onnx",
+   "licence": "Apache-2.0",
+   "licence_metadata_url": "https://raw.githubusercontent.com/onnx/models/main/validated/vision/classification/mobilenet/README.md",
+   "sha256": "41a36090dafe98f4ad8f9b7fe0b218c56ac3c031e547f0367c30655d2702bffe",
+   "bytes": 3593903,
+   "stratum": null,
+   "screen_ms": 2.010350000091421,
+   "screen_core_delivery": 1.165841768793204,
+   "input_shape": [
+    1,
+    3,
+    224,
+    224
+   ],
+   "opset": 12,
+   "quantization_format": "QDQ",
+   "architecture_family": "mobilenet_v2",
+   "architecture": "CNN",
+   "harness_family": "c3_224x224",
+   "harness_family_dir": "D:/sec_models/c3_224x224",
+   "variant": "a02",
+   "path": "D:/sec_models/c3_224x224/a02.onnx"
+  },
+  {
+   "id": "a03",
+   "name": "resnet50-v1-12-qdq",
+   "publisher": "onnx/models",
+   "url": "https://github.com/onnx/models/raw/main/validated/vision/classification/resnet/model/resnet50-v1-12-qdq.onnx",
+   "licence": "Apache-2.0",
+   "licence_metadata_url": "https://raw.githubusercontent.com/onnx/models/main/validated/vision/classification/resnet/README.md",
+   "sha256": "e6429d274805654c79ba68dc886c1efd4eff95393e747c35d3fdab579febd8a0",
+   "bytes": 25753167,
+   "stratum": null,
+   "screen_ms": 12.721349999992526,
+   "screen_core_delivery": 0.9518938634663078,
+   "input_shape": [
+    1,
+    3,
+    224,
+    224
+   ],
+   "opset": 12,
+   "quantization_format": "QDQ",
+   "architecture_family": "resnet50",
+   "architecture": "CNN",
+   "harness_family": "c3_224x224",
+   "harness_family_dir": "D:/sec_models/c3_224x224",
+   "variant": "a03",
+   "path": "D:/sec_models/c3_224x224/a03.onnx"
+  },
+  {
+   "id": "a04",
+   "name": "efficientnet-lite4-11-qdq",
+   "publisher": "onnx/models",
+   "url": "https://github.com/onnx/models/raw/main/validated/vision/classification/efficientnet-lite4/model/efficientnet-lite4-11-qdq.onnx",
+   "licence": "MIT",
+   "licence_metadata_url": "https://raw.githubusercontent.com/onnx/models/main/validated/vision/classification/efficientnet-lite4/README.md",
+   "sha256": "6837d0b19625d4aff8266d7197a7f3775afd82a8c40f9fd0283d52db4955566f",
+   "bytes": 13469992,
+   "stratum": null,
+   "screen_ms": 6.234749999748601,
+   "screen_core_delivery": 0.9084666586837303,
+   "input_shape": [
+    1,
+    224,
+    224,
+    3
+   ],
+   "opset": 11,
+   "quantization_format": "QDQ",
+   "architecture_family": "efficientnet_lite4",
+   "architecture": "CNN, NHWC",
+   "harness_family": "c224_224x3",
+   "harness_family_dir": "D:/sec_models/c224_224x3",
+   "variant": "a04",
+   "path": "D:/sec_models/c224_224x3/a04.onnx"
+  },
+  {
+   "id": "a05",
+   "name": "emotion-ferplus-12-int8",
+   "publisher": "onnx/models",
+   "url": "https://github.com/onnx/models/raw/main/validated/vision/body_analysis/emotion_ferplus/model/emotion-ferplus-12-int8.onnx",
+   "licence": "MIT",
+   "licence_metadata_url": "https://raw.githubusercontent.com/onnx/models/main/validated/vision/body_analysis/emotion_ferplus/README.md",
+   "sha256": "3e47195d79e9593294df9e81a6d296a1e10969b68a717284081c29493a0ff5f1",
+   "bytes": 19300656,
+   "stratum": null,
+   "screen_ms": 5.58525000087684,
+   "screen_core_delivery": 0.9791414885889529,
+   "input_shape": [
+    1,
+    1,
+    64,
+    64
+   ],
+   "opset": 12,
+   "quantization_format": "QDQ+QOperator",
+   "architecture_family": "emotion_ferplus",
+   "architecture": "CNN, 64 px grayscale",
+   "harness_family": "c1_64x64",
+   "harness_family_dir": "D:/sec_models/c1_64x64",
+   "variant": "a05",
+   "path": "D:/sec_models/c1_64x64/a05.onnx"
+  },
+  {
+   "id": "a06",
+   "name": "version-RFB-320-int8",
+   "publisher": "onnx/models",
+   "url": "https://github.com/onnx/models/raw/main/validated/vision/body_analysis/ultraface/models/version-RFB-320-int8.onnx",
+   "licence": "MIT",
+   "licence_metadata_url": "https://raw.githubusercontent.com/onnx/models/main/validated/vision/body_analysis/ultraface/README.md",
+   "sha256": "093a9a55ff05fd71ace744593fd0c81eab8306d6d8c38b0892c5b3cff7f08265",
+   "bytes": 458144,
+   "stratum": null,
+   "screen_ms": 2.0168999990346492,
+   "screen_core_delivery": 1.1620556304833116,
+   "input_shape": [
+    1,
+    3,
+    240,
+    320
+   ],
+   "opset": 12,
+   "quantization_format": "QDQ+QOperator",
+   "architecture_family": "ultraface",
+   "architecture": "face detector, tiny",
+   "harness_family": "c3_240x320",
+   "harness_family_dir": "D:/sec_models/c3_240x320",
+   "variant": "a06",
+   "path": "D:/sec_models/c3_240x320/a06.onnx"
+  }
+ ],
+ "harness": {
+  "script": "scripts/paper/ort_version_bisect.py",
+  "families_arg": "c1_64x64=D:/sec_models/c1_64x64:1,64,64;c224_224x3=D:/sec_models/c224_224x3:224,224,3;c3_224x224=D:/sec_models/c3_224x224:3,224,224;c3_240x320=D:/sec_models/c3_240x320:3,240,320;mobilevit=results/classification_mobilevit/models:3,64,64;deit=results/classification_deit/models:3,32,32;cls=results/classification/models:3,32,32",
+  "variants_arg": "a01,a02,a03,a04,a05,a06,p00_int8",
+  "controls": {
+   "mobilevit": "results/classification_mobilevit/models:3,64,64",
+   "deit": "results/classification_deit/models:3,32,32",
+   "cls": "results/classification/models:3,32,32"
+  }
+ },
+ "counts": {
+  "measured": 6,
+  "architecture_families": 6,
+  "publishers": 1,
+  "harness_families": 4,
+  "minimums_section_1_3": {
+   "|F|>=5": null,
+   "|U|>=8": null,
+   "|U-near|>=4": null,
+   "architecture_families>=8": false
+  }
+ },
+ "quiet_machine_checks": [
+  {
+   "utc": "2026-09-23T03:46:41Z",
+   "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+   "samples_pct": [
+    36.0,
+    0.0,
+    26.0,
+    0.0,
+    11.0
+   ],
+   "mean_pct": 14.6,
+   "max_pct": 36.0,
+   "battery_status": 2,
+   "on_ac": true,
+   "quiet": true,
+   "attempt": 1,
+   "for_candidate": "a01"
+  },
+  {
+   "utc": "2026-09-23T03:46:50Z",
+   "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+   "samples_pct": [
+    6.0,
+    22.0,
+    13.0,
+    14.0,
+    0.0
+   ],
+   "mean_pct": 11.0,
+   "max_pct": 22.0,
+   "battery_status": 2,
+   "on_ac": true,
+   "quiet": true,
+   "attempt": 1,
+   "for_candidate": "a02"
+  },
+  {
+   "utc": "2026-09-23T03:46:59Z",
+   "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+   "samples_pct": [
+    11.0,
+    11.0,
+    12.0,
+    0.0,
+    27.0
+   ],
+   "mean_pct": 12.2,
+   "max_pct": 27.0,
+   "battery_status": 2,
+   "on_ac": true,
+   "quiet": true,
+   "attempt": 1,
+   "for_candidate": "a03"
+  },
+  {
+   "utc": "2026-09-23T03:47:07Z",
+   "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+   "samples_pct": [
+    6.0,
+    15.0,
+    12.0,
+    0.0,
+    6.0
+   ],
+   "mean_pct": 7.8,
+   "max_pct": 15.0,
+   "battery_status": 2,
+   "on_ac": true,
+   "quiet": true,
+   "attempt": 1,
+   "for_candidate": "a04"
+  },
+  {
+   "utc": "2026-09-23T03:47:16Z",
+   "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+   "samples_pct": [
+    13.0,
+    0.0,
+    12.0,
+    24.0,
+    6.0
+   ],
+   "mean_pct": 11.0,
+   "max_pct": 24.0,
+   "battery_status": 2,
+   "on_ac": true,
+   "quiet": true,
+   "attempt": 1,
+   "for_candidate": "a05"
+  },
+  {
+   "utc": "2026-09-23T03:47:25Z",
+   "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+   "samples_pct": [
+    19.0,
+    28.0,
+    16.0,
+    12.0,
+    6.0
+   ],
+   "mean_pct": 16.2,
+   "max_pct": 28.0,
+   "battery_status": 2,
+   "on_ac": true,
+   "quiet": false,
+   "attempt": 1
+  },
+  {
+   "utc": "2026-09-23T03:48:32Z",
+   "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+   "samples_pct": [
+    14.0,
+    14.0,
+    5.0,
+    0.0,
+    17.0
+   ],
+   "mean_pct": 10.0,
+   "max_pct": 17.0,
+   "battery_status": 2,
+   "on_ac": true,
+   "quiet": true,
+   "attempt": 2,
+   "for_candidate": "a06"
+  }
+ ]
+}

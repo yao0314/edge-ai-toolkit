@@ -1,0 +1,25 @@
+{
+ "finished_utc": "2026-09-23T17:37:44.826701+00:00",
+ "elapsed_h": 0.99,
+ "batches_complete": [
+  "r50"
+ ],
+ "batches_already_complete": [
+  "c3_224x224",
+  "y256",
+  "c224_224x3",
+  "mv64",
+  "c3_320x320",
+  "mv256",
+  "c3_299x299",
+  "deit224",
+  "c1_64x64",
+  "mnv2",
+  "c3_112x112",
+  "ae",
+  "c3_240x320",
+  "c56_56x3"
+ ],
+ "batches_failed": [],
+ "batches_unstarted": []
+}

@@ -1,0 +1,1247 @@
+{
+ "a01": {
+  "id": "a01",
+  "url": "https://github.com/onnx/models/raw/main/validated/vision/classification/shufflenet/model/shufflenet-v2-12-qdq.onnx",
+  "head_bytes_candidate_list": 2415805,
+  "licence_state": "DECLARED",
+  "licence_state_recorded_utc": "2026-09-23T05:11:58Z",
+  "downloaded": false,
+  "carried_over_from_A": true,
+  "path": "D:\\sec_models\\c3_224x224\\a01.onnx",
+  "bytes": 2415805,
+  "sha256": "7c536d02e2f6af9569e5f3c7a4d8282060072119524c93c8da71e63876b4722b",
+  "head_bytes": null,
+  "head_match": true,
+  "fetched_utc": null,
+  "resolved_utc": null,
+  "carried_over_note": "sha256 matches results/expA/pool.json; re-used without a second HTTP GET (A2 2.1, L6)",
+  "reused_from_prior_round": true
+ },
+ "a02": {
+  "id": "a02",
+  "url": "https://github.com/onnx/models/raw/main/validated/vision/classification/mobilenet/model/mobilenetv2-12-qdq.onnx",
+  "head_bytes_candidate_list": 3593903,
+  "licence_state": "DECLARED",
+  "licence_state_recorded_utc": "2026-09-23T05:11:59Z",
+  "downloaded": false,
+  "carried_over_from_A": true,
+  "path": "D:\\sec_models\\c3_224x224\\a02.onnx",
+  "bytes": 3593903,
+  "sha256": "41a36090dafe98f4ad8f9b7fe0b218c56ac3c031e547f0367c30655d2702bffe",
+  "head_bytes": null,
+  "head_match": true,
+  "fetched_utc": null,
+  "resolved_utc": null,
+  "carried_over_note": "sha256 matches results/expA/pool.json; re-used without a second HTTP GET (A2 2.1, L6)",
+  "reused_from_prior_round": true
+ },
+ "a03": {
+  "id": "a03",
+  "url": "https://github.com/onnx/models/raw/main/validated/vision/classification/resnet/model/resnet50-v1-12-qdq.onnx",
+  "head_bytes_candidate_list": 25753167,
+  "licence_state": "DECLARED",
+  "licence_state_recorded_utc": "2026-09-23T05:12:00Z",
+  "downloaded": false,
+  "carried_over_from_A": true,
+  "path": "D:\\sec_models\\c3_224x224\\a03.onnx",
+  "bytes": 25753167,
+  "sha256": "e6429d274805654c79ba68dc886c1efd4eff95393e747c35d3fdab579febd8a0",
+  "head_bytes": null,
+  "head_match": true,
+  "fetched_utc": null,
+  "resolved_utc": null,
+  "carried_over_note": "sha256 matches results/expA/pool.json; re-used without a second HTTP GET (A2 2.1, L6)",
+  "reused_from_prior_round": true
+ },
+ "a04": {
+  "id": "a04",
+  "url": "https://github.com/onnx/models/raw/main/validated/vision/classification/efficientnet-lite4/model/efficientnet-lite4-11-qdq.onnx",
+  "head_bytes_candidate_list": 13469992,
+  "licence_state": "DECLARED",
+  "licence_state_recorded_utc": "2026-09-23T05:12:00Z",
+  "downloaded": false,
+  "carried_over_from_A": true,
+  "path": "D:\\sec_models\\c224_224x3\\a04.onnx",
+  "bytes": 13469992,
+  "sha256": "6837d0b19625d4aff8266d7197a7f3775afd82a8c40f9fd0283d52db4955566f",
+  "head_bytes": null,
+  "head_match": true,
+  "fetched_utc": null,
+  "resolved_utc": null,
+  "carried_over_note": "sha256 matches results/expA/pool.json; re-used without a second HTTP GET (A2 2.1, L6)",
+  "reused_from_prior_round": true
+ },
+ "a05": {
+  "id": "a05",
+  "url": "https://github.com/onnx/models/raw/main/validated/vision/body_analysis/emotion_ferplus/model/emotion-ferplus-12-int8.onnx",
+  "head_bytes_candidate_list": 19300656,
+  "licence_state": "DECLARED",
+  "licence_state_recorded_utc": "2026-09-23T05:12:01Z",
+  "downloaded": false,
+  "carried_over_from_A": true,
+  "path": "D:\\sec_models\\c1_64x64\\a05.onnx",
+  "bytes": 19300656,
+  "sha256": "3e47195d79e9593294df9e81a6d296a1e10969b68a717284081c29493a0ff5f1",
+  "head_bytes": null,
+  "head_match": true,
+  "fetched_utc": null,
+  "resolved_utc": null,
+  "carried_over_note": "sha256 matches results/expA/pool.json; re-used without a second HTTP GET (A2 2.1, L6)",
+  "reused_from_prior_round": true
+ },
+ "a06": {
+  "id": "a06",
+  "url": "https://github.com/onnx/models/raw/main/validated/vision/body_analysis/ultraface/models/version-RFB-320-int8.onnx",
+  "head_bytes_candidate_list": 458144,
+  "licence_state": "DECLARED",
+  "licence_state_recorded_utc": "2026-09-23T05:12:01Z",
+  "downloaded": false,
+  "carried_over_from_A": true,
+  "path": "D:\\sec_models\\c3_240x320\\a06.onnx",
+  "bytes": 458144,
+  "sha256": "093a9a55ff05fd71ace744593fd0c81eab8306d6d8c38b0892c5b3cff7f08265",
+  "head_bytes": null,
+  "head_match": true,
+  "fetched_utc": null,
+  "resolved_utc": null,
+  "carried_over_note": "sha256 matches results/expA/pool.json; re-used without a second HTTP GET (A2 2.1, L6)",
+  "reused_from_prior_round": true
+ },
+ "a07": {
+  "id": "a07",
+  "url": "https://huggingface.co/Xenova/mobilevit-small/resolve/main/onnx/model_uint8.onnx",
+  "head_bytes_candidate_list": 6063282,
+  "licence_state": "SILENT",
+  "licence_state_recorded_utc": "2026-09-23T05:12:02Z",
+  "head_bytes": 6063282,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T05:12:36Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": false,
+    "error": "curl: (18) end of response with 5932210 bytes missing",
+    "utc": "2026-09-23T05:12:42Z"
+   },
+   {
+    "attempt": 2,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T05:12:52Z",
+    "bytes": 6063282,
+    "sha256": "363865a989b563df81f63188db8f207ca6af054b1f207602d5ecc831c31805d4",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 6063282,
+  "sha256": "363865a989b563df81f63188db8f207ca6af054b1f207602d5ecc831c31805d4",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T05:12:52Z",
+  "path": "D:\\sec_models\\_staging\\a07.onnx",
+  "reused_from_prior_round": true
+ },
+ "a08": {
+  "id": "a08",
+  "url": "https://huggingface.co/Xenova/mobilevit-small/resolve/main/onnx/model_quantized.onnx",
+  "head_bytes_candidate_list": 6303767,
+  "licence_state": "SILENT",
+  "licence_state_recorded_utc": "2026-09-23T05:12:03Z",
+  "head_bytes": 6303767,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T05:12:53Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T05:12:57Z",
+    "bytes": 6303767,
+    "sha256": "a23d400ab0892bff1edf875b2ff40a99b6e83ee975c0339bbc9cc9cb437c3d8a",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 6303767,
+  "sha256": "a23d400ab0892bff1edf875b2ff40a99b6e83ee975c0339bbc9cc9cb437c3d8a",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T05:12:57Z",
+  "path": "D:\\sec_models\\_staging\\a08.onnx",
+  "reused_from_prior_round": true
+ },
+ "a09": {
+  "id": "a09",
+  "url": "https://huggingface.co/Xenova/mobilevit-xx-small/resolve/main/onnx/model_quantized.onnx",
+  "head_bytes_candidate_list": 1915849,
+  "licence_state": "SILENT",
+  "licence_state_recorded_utc": "2026-09-23T05:12:03Z",
+  "head_bytes": 1915849,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T05:12:58Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T05:13:03Z",
+    "bytes": 1915849,
+    "sha256": "ab5eff9a7cd288e0850182b1a085a324bc2d8bd9ec4e6b98438871af422d39e3",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 1915849,
+  "sha256": "ab5eff9a7cd288e0850182b1a085a324bc2d8bd9ec4e6b98438871af422d39e3",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T05:13:03Z",
+  "path": "D:\\sec_models\\_staging\\a09.onnx",
+  "reused_from_prior_round": true
+ },
+ "a10": {
+  "id": "a10",
+  "url": "https://huggingface.co/Xenova/deit-tiny-distilled-patch16-224/resolve/main/onnx/model_uint8.onnx",
+  "head_bytes_candidate_list": 6421154,
+  "licence_state": "SILENT",
+  "licence_state_recorded_utc": "2026-09-23T05:12:04Z",
+  "head_bytes": 6421154,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T05:13:04Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T05:13:09Z",
+    "bytes": 6421154,
+    "sha256": "63db37d143bed075ce4c061f044506e0792891fd320c70ad56814707cfd7c422",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 6421154,
+  "sha256": "63db37d143bed075ce4c061f044506e0792891fd320c70ad56814707cfd7c422",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T05:13:09Z",
+  "path": "D:\\sec_models\\_staging\\a10.onnx",
+  "reused_from_prior_round": true
+ },
+ "a11": {
+  "id": "a11",
+  "url": "https://huggingface.co/onnx-community/dinov2-small/resolve/main/onnx/model_uint8.onnx",
+  "head_bytes_candidate_list": 24446700,
+  "licence_state": "SILENT",
+  "licence_state_recorded_utc": "2026-09-23T05:12:04Z",
+  "head_bytes": 24446700,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T05:13:10Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T05:13:26Z",
+    "bytes": 24446700,
+    "sha256": "c179f8f7f592449c4c1bca4cd124a7538021428c5ffb89afde9503935b197efb",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 24446700,
+  "sha256": "c179f8f7f592449c4c1bca4cd124a7538021428c5ffb89afde9503935b197efb",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T05:13:26Z",
+  "path": "D:\\sec_models\\_staging\\a11.onnx",
+  "reused_from_prior_round": true
+ },
+ "a12": {
+  "id": "a12",
+  "url": "https://huggingface.co/onnx-community/depth-anything-v2-small/resolve/main/onnx/model_uint8.onnx",
+  "head_bytes_candidate_list": 27258801,
+  "licence_state": "DECLARED",
+  "licence_state_recorded_utc": "2026-09-23T05:12:05Z",
+  "head_bytes": 27258801,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T05:13:28Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T05:13:35Z",
+    "bytes": 27258801,
+    "sha256": "fcf51f1b230362b28690bb9d1809bf0431f29cad20534e3f589bd7285547f20d",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 27258801,
+  "sha256": "fcf51f1b230362b28690bb9d1809bf0431f29cad20534e3f589bd7285547f20d",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T05:13:35Z",
+  "path": "D:\\sec_models\\_staging\\a12.onnx",
+  "reused_from_prior_round": true
+ },
+ "a13": {
+  "id": "a13",
+  "url": "https://huggingface.co/Xenova/yolos-tiny/resolve/main/onnx/model_quantized.onnx",
+  "head_bytes_candidate_list": 9661148,
+  "licence_state": "SILENT",
+  "licence_state_recorded_utc": "2026-09-23T05:12:05Z",
+  "head_bytes": 9661148,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T05:13:36Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T05:13:46Z",
+    "bytes": 9661148,
+    "sha256": "82b5c1de8aaaffd763c67d67b09b742a1c53628acfee3077af3fa59233e86b6b",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 9661148,
+  "sha256": "82b5c1de8aaaffd763c67d67b09b742a1c53628acfee3077af3fa59233e86b6b",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T05:13:46Z",
+  "path": "D:\\sec_models\\_staging\\a13.onnx",
+  "reused_from_prior_round": true
+ },
+ "a14": {
+  "id": "a14",
+  "url": "https://huggingface.co/Xenova/detr-resnet-50/resolve/main/onnx/model_uint8.onnx",
+  "head_bytes_candidate_list": 42680347,
+  "licence_state": "SILENT",
+  "licence_state_recorded_utc": "2026-09-23T05:12:05Z",
+  "head_bytes": 42680347,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T05:13:47Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T05:14:12Z",
+    "bytes": 42680347,
+    "sha256": "5392e8cd0df04c8c33a87d96ca9ad0c9ef2dca9a14d7d75e853823e525261fb3",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 42680347,
+  "sha256": "5392e8cd0df04c8c33a87d96ca9ad0c9ef2dca9a14d7d75e853823e525261fb3",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T05:14:12Z",
+  "path": "D:\\sec_models\\_staging\\a14.onnx",
+  "reused_from_prior_round": true
+ },
+ "a15": {
+  "id": "a15",
+  "url": "https://huggingface.co/Xenova/swin-tiny-patch4-window7-224/resolve/main/onnx/model_quantized.onnx",
+  "head_bytes_candidate_list": 32321076,
+  "licence_state": "SILENT",
+  "licence_state_recorded_utc": "2026-09-23T05:12:06Z",
+  "head_bytes": 32321076,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T05:14:13Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T05:14:41Z",
+    "bytes": 32321076,
+    "sha256": "c08bade3c3ac9672b930c7690df7614591a4a29f99737bc3a48907c6bdc5fae8",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 32321076,
+  "sha256": "c08bade3c3ac9672b930c7690df7614591a4a29f99737bc3a48907c6bdc5fae8",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T05:14:41Z",
+  "path": "D:\\sec_models\\_staging\\a15.onnx",
+  "reused_from_prior_round": true
+ },
+ "a16": {
+  "id": "a16",
+  "url": "https://huggingface.co/ketiswp/mediapipe-EfficientDet-Lite0-COCO2017-int8-uint8-onnx/resolve/main/model.onnx",
+  "head_bytes_candidate_list": 4137050,
+  "licence_state": "DECLARED",
+  "licence_state_recorded_utc": "2026-09-23T05:12:07Z",
+  "head_bytes": 4137050,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T05:14:42Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T05:14:46Z",
+    "bytes": 4137050,
+    "sha256": "53e1fd77017f6f029fc4f0a176b926ec944d51d8312bf33c7995b970608fccb2",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 4137050,
+  "sha256": "53e1fd77017f6f029fc4f0a176b926ec944d51d8312bf33c7995b970608fccb2",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T05:14:46Z",
+  "path": "D:\\sec_models\\_staging\\a16.onnx",
+  "reused_from_prior_round": true
+ },
+ "a17": {
+  "id": "a17",
+  "url": "https://huggingface.co/Xenova/mobilevit-xx-small/resolve/main/onnx/model_uint8.onnx",
+  "head_bytes_candidate_list": null,
+  "licence_state": "SILENT",
+  "licence_state_recorded_utc": "2026-09-23T05:12:08Z",
+  "head_bytes": 1711622,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T05:14:48Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T05:14:52Z",
+    "bytes": 1711622,
+    "sha256": "c2ee4f8deba3afca4aaee9a31975ba3f793ac92129d6786a15403867561e17aa",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 1711622,
+  "sha256": "c2ee4f8deba3afca4aaee9a31975ba3f793ac92129d6786a15403867561e17aa",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T05:14:52Z",
+  "path": "D:\\sec_models\\_staging\\a17.onnx",
+  "reused_from_prior_round": true
+ },
+ "b01": {
+  "id": "b01",
+  "url": "https://huggingface.co/CoreEpoch/edgenext-small-int8-imagenet/resolve/main/edgenext_s_320_int8_kenosis.onnx",
+  "head_bytes_candidate_list": 7160419,
+  "licence_state": "DECLARED",
+  "licence_state_recorded_utc": "2026-09-23T05:12:08Z",
+  "head_bytes": 7160419,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T05:14:53Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T05:15:02Z",
+    "bytes": 7160419,
+    "sha256": "d1538e0f392836832e7bbc0c80285396491444b2614e07bc04ee26d38de7b88c",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 7160419,
+  "sha256": "d1538e0f392836832e7bbc0c80285396491444b2614e07bc04ee26d38de7b88c",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T05:15:02Z",
+  "path": "D:\\sec_models\\_staging\\b01.onnx",
+  "reused_from_prior_round": true
+ },
+ "b02": {
+  "id": "b02",
+  "url": "https://huggingface.co/CoreEpoch/tinyvit-5m-int8-imagenet/resolve/main/tinyvit_5m_224_int8_kenosis.onnx",
+  "head_bytes_candidate_list": 9228567,
+  "licence_state": "DECLARED",
+  "licence_state_recorded_utc": "2026-09-23T05:12:08Z",
+  "head_bytes": 9228567,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T05:15:03Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T05:15:18Z",
+    "bytes": 9228567,
+    "sha256": "eda9007c0449f118f02b1e8c4ba6b43bec51a7d7ab677566d42929eb3da02874",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 9228567,
+  "sha256": "eda9007c0449f118f02b1e8c4ba6b43bec51a7d7ab677566d42929eb3da02874",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T05:15:18Z",
+  "path": "D:\\sec_models\\_staging\\b02.onnx",
+  "reused_from_prior_round": true
+ },
+ "b03": {
+  "id": "b03",
+  "url": "https://huggingface.co/CoreEpoch/xcit-tiny12-p8-int8-imagenet/resolve/main/xcit_tiny12_p8_224_int8_kenosis.onnx",
+  "head_bytes_candidate_list": 8589884,
+  "licence_state": "DECLARED",
+  "licence_state_recorded_utc": "2026-09-23T05:12:09Z",
+  "head_bytes": 8589884,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T05:15:19Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T05:15:44Z",
+    "bytes": 8589884,
+    "sha256": "1d655ead9b9a9438f58e46b151cc78fa304d420a56f904d692b43089837ce194",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 8589884,
+  "sha256": "1d655ead9b9a9438f58e46b151cc78fa304d420a56f904d692b43089837ce194",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T05:15:44Z",
+  "path": "D:\\sec_models\\_staging\\b03.onnx",
+  "reused_from_prior_round": true
+ },
+ "b04": {
+  "id": "b04",
+  "url": "https://huggingface.co/CoreEpoch/rtdetrv2-s-int8-onnx/resolve/main/rtdetrv2_s_640_int8_kenosis.onnx",
+  "head_bytes_candidate_list": 32666936,
+  "licence_state": "DECLARED",
+  "licence_state_recorded_utc": "2026-09-23T05:12:09Z",
+  "head_bytes": 32666936,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T05:15:47Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T05:16:22Z",
+    "bytes": 32666936,
+    "sha256": "2fbea12f3a66da22be0c0404f78d378f0d6f4c2f8107a5444ee00c6ab717974d",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 32666936,
+  "sha256": "2fbea12f3a66da22be0c0404f78d378f0d6f4c2f8107a5444ee00c6ab717974d",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T05:16:22Z",
+  "path": "D:\\sec_models\\_staging\\b04.onnx",
+  "reused_from_prior_round": true
+ },
+ "b05": {
+  "id": "b05",
+  "url": "https://huggingface.co/Arm/inception-v3-int8-mlas-onnx-raspberrypi5/resolve/main/inception_v3_raspberry_onnx_optimized.onnx",
+  "head_bytes_candidate_list": 24865194,
+  "licence_state": "DECLARED",
+  "licence_state_recorded_utc": "2026-09-23T05:12:10Z",
+  "head_bytes": 24865194,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T05:16:26Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T05:16:45Z",
+    "bytes": 24865194,
+    "sha256": "a70e6a824c413ab9a1242ce08e6327fc71e78a1a3351e4416607451914c33472",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 24865194,
+  "sha256": "a70e6a824c413ab9a1242ce08e6327fc71e78a1a3351e4416607451914c33472",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T05:16:45Z",
+  "path": "D:\\sec_models\\_staging\\b05.onnx",
+  "reused_from_prior_round": true
+ },
+ "b06": {
+  "id": "b06",
+  "url": "https://huggingface.co/Arm/rtdetr-l-onnx-raspberry/resolve/main/rtdetr-l_onnx_optimized.onnx",
+  "head_bytes_candidate_list": 40288673,
+  "licence_state": "DECLARED",
+  "licence_state_recorded_utc": "2026-09-23T05:12:10Z",
+  "head_bytes": 40288673,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T06:34:42Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T06:34:48Z",
+    "bytes": 40288673,
+    "sha256": "76c7bcf93ae6fb167f21af8d9242cd0bad56b1986419527c2017f59b7c46e6c7",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 40288673,
+  "sha256": "76c7bcf93ae6fb167f21af8d9242cd0bad56b1986419527c2017f59b7c46e6c7",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T06:34:48Z",
+  "path": "D:\\sec_models\\_staging\\b06.onnx"
+ },
+ "b07": {
+  "id": "b07",
+  "url": "https://huggingface.co/amd/mnasnet_b1/resolve/main/mnasnet_b1_int.onnx",
+  "head_bytes_candidate_list": 17571818,
+  "licence_state": "DECLARED",
+  "licence_state_recorded_utc": "2026-09-23T05:12:11Z",
+  "head_bytes": 17571818,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T05:17:34Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T05:17:38Z",
+    "bytes": 17571818,
+    "sha256": "573e80009e1d0c21858d507ee6702ea73d092f9bf8be09ac7d901f0259e4bc1f",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 17571818,
+  "sha256": "573e80009e1d0c21858d507ee6702ea73d092f9bf8be09ac7d901f0259e4bc1f",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T05:17:38Z",
+  "path": "D:\\sec_models\\_staging\\b07.onnx",
+  "reused_from_prior_round": true
+ },
+ "b08": {
+  "id": "b08",
+  "url": "https://huggingface.co/amd/squeezenet/resolve/main/SqueezeNet_int8.onnx",
+  "head_bytes_candidate_list": 5008442,
+  "licence_state": "DECLARED",
+  "licence_state_recorded_utc": "2026-09-23T05:12:11Z",
+  "head_bytes": 5008442,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T05:17:38Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T05:17:44Z",
+    "bytes": 5008442,
+    "sha256": "54c81613ca567e51a68ca37f2f728f3b52549f45116a13e3c63c2e0efd82bf12",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 5008442,
+  "sha256": "54c81613ca567e51a68ca37f2f728f3b52549f45116a13e3c63c2e0efd82bf12",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T05:17:44Z",
+  "path": "D:\\sec_models\\_staging\\b08.onnx",
+  "reused_from_prior_round": true
+ },
+ "b09": {
+  "id": "b09",
+  "url": "https://huggingface.co/amd/retinaface/resolve/main/weights/RetinaFace_int.onnx",
+  "head_bytes_candidate_list": 1767506,
+  "licence_state": "DECLARED",
+  "licence_state_recorded_utc": "2026-09-23T05:12:12Z",
+  "head_bytes": 1767506,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T05:17:45Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T05:17:47Z",
+    "bytes": 1767506,
+    "sha256": "3b29de703b4641cb995754bc6294bd58b0fa5d859c838e9484c86d00251f8a08",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 1767506,
+  "sha256": "3b29de703b4641cb995754bc6294bd58b0fa5d859c838e9484c86d00251f8a08",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T05:17:47Z",
+  "path": "D:\\sec_models\\_staging\\b09.onnx",
+  "reused_from_prior_round": true
+ },
+ "b10": {
+  "id": "b10",
+  "url": "https://huggingface.co/amd/movenet/resolve/main/movenet_int8.onnx",
+  "head_bytes_candidate_list": 7682252,
+  "licence_state": "DECLARED",
+  "licence_state_recorded_utc": "2026-09-23T05:12:12Z",
+  "head_bytes": 7682252,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T05:17:47Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T05:17:53Z",
+    "bytes": 7682252,
+    "sha256": "6c25f4697721f9dd7a5127f94d9ddbaf68e060acbd79c58d9bd7e4cc91443678",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 7682252,
+  "sha256": "6c25f4697721f9dd7a5127f94d9ddbaf68e060acbd79c58d9bd7e4cc91443678",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T05:17:53Z",
+  "path": "D:\\sec_models\\_staging\\b10.onnx",
+  "reused_from_prior_round": true
+ },
+ "b11": {
+  "id": "b11",
+  "url": "https://huggingface.co/amd/yolox-s/resolve/main/yolox-s-int8.onnx",
+  "head_bytes_candidate_list": 35989077,
+  "licence_state": "DECLARED",
+  "licence_state_recorded_utc": "2026-09-23T05:12:12Z",
+  "head_bytes": 35989077,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T05:17:54Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T05:18:01Z",
+    "bytes": 35989077,
+    "sha256": "f779442685eb8e050df39318149aa16afd3fdd05644ea7ec4da4aae672e6977a",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 35989077,
+  "sha256": "f779442685eb8e050df39318149aa16afd3fdd05644ea7ec4da4aae672e6977a",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T05:18:01Z",
+  "path": "D:\\sec_models\\_staging\\b11.onnx",
+  "reused_from_prior_round": true
+ },
+ "b12": {
+  "id": "b12",
+  "url": "https://huggingface.co/amd/SemanticFPN/resolve/main/FPN_int_NHWC.onnx",
+  "head_bytes_candidate_list": 45595686,
+  "licence_state": "DECLARED",
+  "licence_state_recorded_utc": "2026-09-23T05:12:13Z",
+  "head_bytes": 45595686,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T05:18:02Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T05:18:09Z",
+    "bytes": 45595686,
+    "sha256": "d1cca42fe8ac3429c55aa1a28a3ecdf08cd279b6193e6487d9b18fa28cfc2c7e",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 45595686,
+  "sha256": "d1cca42fe8ac3429c55aa1a28a3ecdf08cd279b6193e6487d9b18fa28cfc2c7e",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T05:18:09Z",
+  "path": "D:\\sec_models\\_staging\\b12.onnx",
+  "reused_from_prior_round": true
+ },
+ "b13": {
+  "id": "b13",
+  "url": "https://huggingface.co/ketiswp/tensorflow-MobileNetV1-0.5-ImageNet-224-uint8-onnx/resolve/main/model.onnx",
+  "head_bytes_candidate_list": 1397443,
+  "licence_state": "DECLARED",
+  "licence_state_recorded_utc": "2026-09-23T05:12:13Z",
+  "head_bytes": 1397443,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T05:18:10Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T05:18:14Z",
+    "bytes": 1397443,
+    "sha256": "0620b05777c4abd1614058d10b7a18f08aa95a9264cb5d4fed61ec70edceaf2c",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 1397443,
+  "sha256": "0620b05777c4abd1614058d10b7a18f08aa95a9264cb5d4fed61ec70edceaf2c",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T05:18:14Z",
+  "path": "D:\\sec_models\\_staging\\b13.onnx",
+  "reused_from_prior_round": true
+ },
+ "b14": {
+  "id": "b14",
+  "url": "https://huggingface.co/ketiswp/google-coral-DeepLabV3-MobileNetV2-1.0-PascalVOC-uint8-onnx/resolve/main/model.onnx",
+  "head_bytes_candidate_list": 2313950,
+  "licence_state": "DECLARED",
+  "licence_state_recorded_utc": "2026-09-23T05:12:14Z",
+  "head_bytes": 2313950,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T05:18:15Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T05:18:17Z",
+    "bytes": 2313950,
+    "sha256": "cdf2dcbdd37e19612ab3d26b286b1b0ec6db841fb7f8c7e4ba436abc2ac22f19",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 2313950,
+  "sha256": "cdf2dcbdd37e19612ab3d26b286b1b0ec6db841fb7f8c7e4ba436abc2ac22f19",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T05:18:17Z",
+  "path": "D:\\sec_models\\_staging\\b14.onnx",
+  "reused_from_prior_round": true
+ },
+ "b15": {
+  "id": "b15",
+  "url": "https://huggingface.co/ketiswp/onnx-model-zoo-SqueezeNet1.0-ImageNet-opset12-int8-uint8-onnx/resolve/main/model.onnx",
+  "head_bytes_candidate_list": 1293388,
+  "licence_state": "DECLARED",
+  "licence_state_recorded_utc": "2026-09-23T05:12:14Z",
+  "head_bytes": 1293388,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T05:18:18Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T05:18:21Z",
+    "bytes": 1293388,
+    "sha256": "3da17dfad1b7ba23c93fac6dbf49f6db78cd42f7519e915a2e27d37c5c0a972b",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 1293388,
+  "sha256": "3da17dfad1b7ba23c93fac6dbf49f6db78cd42f7519e915a2e27d37c5c0a972b",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T05:18:21Z",
+  "path": "D:\\sec_models\\_staging\\b15.onnx",
+  "reused_from_prior_round": true
+ },
+ "b16": {
+  "id": "b16",
+  "url": "https://huggingface.co/onnx/Inception-1-int8/resolve/main/inception-v1-12-int8.onnx",
+  "head_bytes_candidate_list": 10191535,
+  "licence_state": "SILENT",
+  "licence_state_recorded_utc": "2026-09-23T05:12:15Z",
+  "head_bytes": 10191535,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T05:18:21Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T05:18:24Z",
+    "bytes": 10191535,
+    "sha256": "7d25f0bfa7a92e9a67d8049facd4454911ca4388a303fc61ee14664b1010c717",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 10191535,
+  "sha256": "7d25f0bfa7a92e9a67d8049facd4454911ca4388a303fc61ee14664b1010c717",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T05:18:24Z",
+  "path": "D:\\sec_models\\_staging\\b16.onnx",
+  "reused_from_prior_round": true
+ },
+ "b17": {
+  "id": "b17",
+  "url": "https://huggingface.co/Thefalley/yolov4-tiny-416-int8-qop/resolve/main/yolov4-tiny-416_int8_qop.onnx",
+  "head_bytes_candidate_list": 6113440,
+  "licence_state": "DECLARED",
+  "licence_state_recorded_utc": "2026-09-23T05:12:15Z",
+  "head_bytes": 6113440,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T05:18:25Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T05:18:27Z",
+    "bytes": 6113440,
+    "sha256": "c30c8f0a33b3a0edc13a2ca21726a288228e1448b3c38940f9da0c7d8cee4760",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 6113440,
+  "sha256": "c30c8f0a33b3a0edc13a2ca21726a288228e1448b3c38940f9da0c7d8cee4760",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T05:18:27Z",
+  "path": "D:\\sec_models\\_staging\\b17.onnx",
+  "reused_from_prior_round": true
+ },
+ "b18": {
+  "id": "b18",
+  "url": "https://huggingface.co/Thefalley/yolo-fastest-1.1-320-int8-qop/resolve/main/yolo-fastest-1.1-320_int8_qop.onnx",
+  "head_bytes_candidate_list": 488222,
+  "licence_state": "DECLARED",
+  "licence_state_recorded_utc": "2026-09-23T05:12:15Z",
+  "head_bytes": 488222,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T05:18:28Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T05:18:31Z",
+    "bytes": 488222,
+    "sha256": "c410f847a75bcfe976fdca2620b9a426fb1d689ab5083d7862395e8d3b2e0e34",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 488222,
+  "sha256": "c410f847a75bcfe976fdca2620b9a426fb1d689ab5083d7862395e8d3b2e0e34",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T05:18:31Z",
+  "path": "D:\\sec_models\\_staging\\b18.onnx",
+  "reused_from_prior_round": true
+ },
+ "b19": {
+  "id": "b19",
+  "url": "https://huggingface.co/Thefalley/yolox-nano-relu-mit/resolve/main/yolox_nano_relu_int8_qop.onnx",
+  "head_bytes_candidate_list": 2422851,
+  "licence_state": "DECLARED",
+  "licence_state_recorded_utc": "2026-09-23T05:12:16Z",
+  "head_bytes": 2422851,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T05:18:31Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T05:18:33Z",
+    "bytes": 2422851,
+    "sha256": "a7ab0df875359dbe4e86ef09e13ce8487fa9a21f1691f727a8e0c324ae7299b4",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 2422851,
+  "sha256": "a7ab0df875359dbe4e86ef09e13ce8487fa9a21f1691f727a8e0c324ae7299b4",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T05:18:33Z",
+  "path": "D:\\sec_models\\_staging\\b19.onnx",
+  "reused_from_prior_round": true
+ },
+ "c01": {
+  "id": "c01",
+  "url": "https://huggingface.co/amd/efficientnet-es/resolve/main/EfficientNet_int.onnx",
+  "head_bytes_candidate_list": 21760409,
+  "licence_state": "DECLARED",
+  "licence_state_recorded_utc": "2026-09-23T06:34:30Z",
+  "head_bytes": 21760409,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T06:34:49Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T06:34:52Z",
+    "bytes": 21760409,
+    "sha256": "def183c935215f146c675fbf97889bfe36ff1856dfb75412a679c3f5b020cfaa",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 21760409,
+  "sha256": "def183c935215f146c675fbf97889bfe36ff1856dfb75412a679c3f5b020cfaa",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T06:34:52Z",
+  "path": "D:\\sec_models\\_staging\\c01.onnx"
+ },
+ "c02": {
+  "id": "c02",
+  "url": "https://huggingface.co/amd/mobilenet_v2_1.0_224/resolve/main/mobilenetv2_int8.onnx",
+  "head_bytes_candidate_list": 24459648,
+  "licence_state": "DECLARED",
+  "licence_state_recorded_utc": "2026-09-23T06:34:30Z",
+  "head_bytes": 24459648,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T06:34:53Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T06:34:57Z",
+    "bytes": 24459648,
+    "sha256": "1a11f43a2fa14473fefff49a2d323e2ccaf915b4c6e96557f1aaa92d67c2b13a",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 24459648,
+  "sha256": "1a11f43a2fa14473fefff49a2d323e2ccaf915b4c6e96557f1aaa92d67c2b13a",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T06:34:57Z",
+  "path": "D:\\sec_models\\_staging\\c02.onnx"
+ },
+ "c03": {
+  "id": "c03",
+  "url": "https://huggingface.co/amd/sesr/resolve/main/SESR_int8.onnx",
+  "head_bytes_candidate_list": 111182,
+  "licence_state": "DECLARED",
+  "licence_state_recorded_utc": "2026-09-23T06:34:31Z",
+  "head_bytes": 111182,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T06:34:58Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T06:34:59Z",
+    "bytes": 111182,
+    "sha256": "d76ccb210397bca910c224172a54a12c0b0cc5bcb8573b317f0df758c265b093",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 111182,
+  "sha256": "d76ccb210397bca910c224172a54a12c0b0cc5bcb8573b317f0df758c265b093",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T06:34:59Z",
+  "path": "D:\\sec_models\\_staging\\c03.onnx"
+ },
+ "c04": {
+  "id": "c04",
+  "url": "https://huggingface.co/opencv/facial_expression_recognition/resolve/main/facial_expression_recognition_mobilefacenet_2022july_int8.onnx",
+  "head_bytes_candidate_list": 1364007,
+  "licence_state": "SILENT",
+  "licence_state_recorded_utc": "2026-09-23T06:34:31Z",
+  "head_bytes": 1364007,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T06:35:00Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T06:35:03Z",
+    "bytes": 1364007,
+    "sha256": "f0d7093aff10e2638c734c5f18a6a7eabd2b9239b20bdb9b8090865a6f69a1ed",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 1364007,
+  "sha256": "f0d7093aff10e2638c734c5f18a6a7eabd2b9239b20bdb9b8090865a6f69a1ed",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T06:35:03Z",
+  "path": "D:\\sec_models\\_staging\\c04.onnx"
+ },
+ "c05": {
+  "id": "c05",
+  "url": "https://huggingface.co/mohitsha/timm-resnet18-onnx-quantized-ryzen/resolve/main/model_quantized.onnx",
+  "head_bytes_candidate_list": 11731625,
+  "licence_state": "DECLARED",
+  "licence_state_recorded_utc": "2026-09-23T06:34:31Z",
+  "head_bytes": 11731625,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T06:35:04Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T06:35:07Z",
+    "bytes": 11731625,
+    "sha256": "0723876d0a12903d84705a98c29851774fc947448b43b730db84f9ae15976415",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 11731625,
+  "sha256": "0723876d0a12903d84705a98c29851774fc947448b43b730db84f9ae15976415",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T06:35:07Z",
+  "path": "D:\\sec_models\\_staging\\c05.onnx"
+ },
+ "c06": {
+  "id": "c06",
+  "url": "https://huggingface.co/mohitsha/transformers-resnet18-onnx-quantized-ryzen/resolve/main/model_quantized.onnx",
+  "head_bytes_candidate_list": 11747730,
+  "licence_state": "DECLARED",
+  "licence_state_recorded_utc": "2026-09-23T06:34:31Z",
+  "head_bytes": 11747730,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T06:35:08Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T06:35:10Z",
+    "bytes": 11747730,
+    "sha256": "f72514837015bc26db44a086d418cedfa1ca298a4f933303ea19e9339952b037",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 11747730,
+  "sha256": "f72514837015bc26db44a086d418cedfa1ca298a4f933303ea19e9339952b037",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T06:35:10Z",
+  "path": "D:\\sec_models\\_staging\\c06.onnx"
+ },
+ "c07": {
+  "id": "c07",
+  "url": "https://huggingface.co/Evintkoo/yolov8n-int8-onnx/resolve/main/yolov8n-int8.onnx",
+  "head_bytes_candidate_list": 3598301,
+  "licence_state": "SILENT",
+  "licence_state_recorded_utc": "2026-09-23T06:34:32Z",
+  "head_bytes": 3598301,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T06:35:11Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T06:35:14Z",
+    "bytes": 3598301,
+    "sha256": "24ed10702df7a27742dfea0e335568f1d91cf4d1ee9b842e1b11315eeb65c7a5",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 3598301,
+  "sha256": "24ed10702df7a27742dfea0e335568f1d91cf4d1ee9b842e1b11315eeb65c7a5",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T06:35:14Z",
+  "path": "D:\\sec_models\\_staging\\c07.onnx"
+ },
+ "c08": {
+  "id": "c08",
+  "url": "https://huggingface.co/haidangung/depth-anything-v2-small-int8/resolve/main/depth_anything_v2_small_int8.onnx",
+  "head_bytes_candidate_list": 25946145,
+  "licence_state": "SILENT",
+  "licence_state_recorded_utc": "2026-09-23T06:34:32Z",
+  "head_bytes": 25946145,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T06:35:15Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T06:35:19Z",
+    "bytes": 25946145,
+    "sha256": "a3c0c4abfa4fbd3422cb8c171054120b9085e02f6543bb88b4220b280e134293",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 25946145,
+  "sha256": "a3c0c4abfa4fbd3422cb8c171054120b9085e02f6543bb88b4220b280e134293",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T06:35:19Z",
+  "path": "D:\\sec_models\\_staging\\c08.onnx"
+ },
+ "c09": {
+  "id": "c09",
+  "url": "https://huggingface.co/ketiswp/stm32ai-MobileNetV2-0.5-ImageNet-PyTorch-224-int8-onnx/resolve/main/model.onnx",
+  "head_bytes_candidate_list": 2236917,
+  "licence_state": "DECLARED",
+  "licence_state_recorded_utc": "2026-09-23T06:34:32Z",
+  "head_bytes": 2236917,
+  "head_error": null,
+  "resolved_utc": "2026-09-23T06:35:20Z",
+  "carried_over_from_A": false,
+  "attempts": [
+   {
+    "attempt": 1,
+    "curl_ok": true,
+    "error": null,
+    "utc": "2026-09-23T06:35:22Z",
+    "bytes": 2236917,
+    "sha256": "4f4650e17bb9a65ec3c3f0f042200691e25a852b47a0ed40679cc3aeae11d1d9",
+    "head_match": true
+   }
+  ],
+  "downloaded": true,
+  "bytes": 2236917,
+  "sha256": "4f4650e17bb9a65ec3c3f0f042200691e25a852b47a0ed40679cc3aeae11d1d9",
+  "head_match": true,
+  "fetched_utc": "2026-09-23T06:35:22Z",
+  "path": "D:\\sec_models\\_staging\\c09.onnx"
+ },
+ "c10": {
+  "id": "c10",
+  "url": "https://huggingface.co/embedl/mobilevit-small-quantized/resolve/main/embedl_mobilevit_small_int8.onnx",
+  "head_bytes_candidate_list": 22518832,
+  "licence_state": "DECLARED",
+  "licence_state_recorded_utc": "2026-09-23T06:34:33Z",
+  "downloaded": false,
+  "carried_over_from_A": false,
+  "skip_reason": "gated repository (L4): gated=auto"
+ }
+}

@@ -1,0 +1,13 @@
+# The missing control. The per-layer allocator removed 56.0% of parameters for -2.68 pt, and uniform
+# 0.25 removed 42.7% for -2.40 pt - two different points on a steeply non-linear curve, so comparing
+# them says nothing about the allocator. (Uniform at 3 epochs: 42.7% -> -5.29 pt, 73.7% -> -17.71 pt,
+# i.e. 1.7x the removal for 3.3x the loss.)
+#
+# Uniform 0.35 should land near 56% of parameters by interpolation, which makes it the like-for-like
+# comparison the claim actually needs.
+extends: classification_prune_long.yaml
+name: classification_prune_u35
+adapter_args:
+  eval_every: 4
+sweep:
+  prune_ratios: [0.0, 0.35]

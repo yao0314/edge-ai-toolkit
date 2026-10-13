@@ -1,0 +1,6 @@
+strategy,ratio,epochs,recovery_lr_mult,recovery_lr,metric,baseline,after,drop_pt,fits_budget,seconds
+classification_prune_global,0.25,20,1.0,,top1,0.9235,0.9027,-2.080000000000004,False,1129.1
+classification_prune_global,0.25,20,2.0,0.02,top1,0.9235,0.9059,-1.759999999999995,True,363.6
+classification_prune_global,0.25,20,5.0,0.05,top1,0.9235,0.9124,-1.1099999999999999,True,300.6
+classification_prune_global,0.25,20,10.0,0.1,top1,0.9235,0.9125,-1.100000000000001,True,277.5
+classification_prune_global,0.25,20,20.0,0.2,top1,0.9235,0.9142,-0.9299999999999975,True,257.5

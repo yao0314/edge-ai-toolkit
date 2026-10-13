@@ -1,0 +1,884 @@
+{
+ "generated_utc": "2026-09-23T07:18:09+00:00",
+ "script": "C:\\Users\\User\\Desktop\\SEC\\edge-ai-toolkit\\scripts\\paper\\a_analyse.py",
+ "script_sha256": "352df44fdf82db3d1e05ecbccfbdb49e3b299f1669222125a5abc3fdf11a2d43",
+ "registration": {
+  "path": "C:\\Users\\User\\Desktop\\SEC\\edge-ai-toolkit\\results\\paper\\a_design_registered.md",
+  "sha256": "d62b6c0398cc8fd827c004c28148544668db6976544b673f1f66ef552b102444"
+ },
+ "csv": [
+  "C:\\Users\\User\\Desktop\\SEC\\edge-ai-toolkit\\results\\paper\\a2_thirdparty_exploratory.csv"
+ ],
+ "provenance": {
+  "files": [
+   {
+    "csv": "C:\\Users\\User\\Desktop\\SEC\\edge-ai-toolkit\\results\\paper\\a2_thirdparty_exploratory.csv",
+    "rows": 420
+   }
+  ],
+  "replaced_cells": [],
+  "foreign_rows": {
+   "other_release": 0,
+   "other_thread_count": 0,
+   "non_default_spin": 0,
+   "other_batch": 0
+  },
+  "invalid_sessions": {
+   "p50_nan": 0,
+   "core_delivery_nan": 0,
+   "iters_below_40": 0
+  },
+  "valid_rows": 420,
+  "raw_rows": 420
+ },
+ "gate": 0.95,
+ "registered": {
+  "STEP_RATIO": 1.07,
+  "FLOOR_REL": 0.07,
+  "GATE": 0.95,
+  "MIN_SESSIONS": 5,
+  "MIN_ITERS": 40,
+  "H_CONFIRM": 0.8,
+  "H_PARTIAL": 0.6,
+  "H_REFUTE": 0.4,
+  "M_CONFIRM": 0.1,
+  "M_REFUTE": 0.3,
+  "P_SIG": 0.05,
+  "MIN_F": 5,
+  "MIN_U": 8,
+  "MIN_UNEAR": 4,
+  "MIN_FAMILIES": 8,
+  "MAX_INDET_SHARE": 0.2,
+  "MAX_EXCLUDED": 3,
+  "MAX_DROPPED": 3,
+  "DISPATCH_US": 0.52,
+  "MAG_BAND": [
+   0.5,
+   2.0
+  ],
+  "rule": "a_design_registered.md sections 4.4, 5 and 6"
+ },
+ "resolutions": {
+  "R1": "section 5.3 bands read top to bottom; a REFUTED condition met under PARTIAL is reported, not applied",
+  "R2": "a section 6 gating failure outranks INCONCLUSIVE-SPARSE",
+  "R3": "section 1.3 sizes counted over the models entering the matrix; frozen strata reported beside",
+  "R4": "VA7 completeness is judged on section 4.4 valid sessions, not on gate survivors",
+  "R5": "VA3 negative controls must be NOT-STEPPED; INDETERMINATE fails VA3",
+  "R6": "FAILED-TO-RUN models count inside VA7's dropped total",
+  "R7": "a cell with more than 5 sessions is a gating failure (use --replace-cell)",
+  "R8": "section 5.4's class-(ii) cap is post-hoc; --fn-class-ii records it separately"
+ },
+ "frozen": {
+  "paths": {
+   "pool": "C:\\Users\\User\\Desktop\\SEC\\edge-ai-toolkit\\results\\expA\\pool.json",
+   "manifest": "C:\\Users\\User\\Desktop\\SEC\\edge-ai-toolkit\\results\\expA\\manifest.json",
+   "predictions": "C:\\Users\\User\\Desktop\\SEC\\edge-ai-toolkit\\results\\expA\\predictions.json",
+   "selftest": "C:\\Users\\User\\Desktop\\SEC\\edge-ai-toolkit\\results\\expA\\selftest.json",
+   "precondition": "C:\\Users\\User\\Desktop\\SEC\\edge-ai-toolkit\\results\\expA\\precondition.json",
+   "findings": "C:\\Users\\User\\Desktop\\SEC\\edge-ai-toolkit\\results\\paper\\FINDINGS.md"
+  },
+  "sha256": {
+   "pool": "643a5e892570400ca654c6458abe85e36570e98189fef4918df11c2f6c146267",
+   "manifest": "5fac9a9fd0827673fcb681ea169e325ece62d1bc0345689d90d10351fda68d3e",
+   "predictions": null,
+   "selftest": "1c421ee4fe1379b325755db37b0c62a70634ce998060318832df714bcea08c7a"
+  },
+  "seal": {
+   "findings": "C:\\Users\\User\\Desktop\\SEC\\edge-ai-toolkit\\results\\paper\\FINDINGS.md",
+   "digest_in_findings": {
+    "pool": false,
+    "manifest": false,
+    "predictions": false,
+    "selftest": false
+   },
+   "seal_utc": null,
+   "compared_against": "mtime of the timing CSV (no timestamp in precondition.json)",
+   "run_start_utc": "2026-09-23T07:18:09.264364+00:00"
+  },
+  "selftest": {
+   "recorded": true,
+   "ok": true,
+   "reproduces_4_flagged": true,
+   "reproduces_832_added": true,
+   "declared_ok": true,
+   "n_checks": 59,
+   "n_failed_checks": 0
+  },
+  "precondition": {
+   "recorded": false,
+   "ok": false
+  },
+  "predictions_meta": {
+   "ort_versions": null,
+   "a_check_sha256": null
+  },
+  "prediction_class_derived_from_rule": [],
+  "prediction_rule_mismatch": []
+ },
+ "per_model": {},
+ "controls": {
+  "mobilevit|p00_int8": {
+   "kind": "positive",
+   "status": "STEPPED",
+   "ratio_4t": 1.3284699803970483,
+   "disjoint": true,
+   "ratio_1t": 1.0178626121059675,
+   "pure": true,
+   "n_valid_sessions": {
+    "1.23.2|4T": 5,
+    "1.24.4|4T": 5,
+    "1.23.2|1T": 5,
+    "1.24.4|1T": 5
+   },
+   "below_gate": {
+    "1.23.2|4T": 0,
+    "1.24.4|4T": 0,
+    "1.23.2|1T": 0,
+    "1.24.4|1T": 0
+   },
+   "cells": {
+    "1.23.2|4T": {
+     "n": 5,
+     "median": 1.5490000005229376,
+     "min": 1.5342499973485246,
+     "max": 1.5759500001877311,
+     "p50s": [
+      1.5342499973485246,
+      1.5479499998036772,
+      1.5490000005229376,
+      1.560400000016671,
+      1.5759500001877311
+     ],
+     "cd_min": 0.985689608349615,
+     "cd_max": 1.0769366259461874,
+     "below_gate": 0
+    },
+    "1.24.4|4T": {
+     "n": 5,
+     "median": 2.0578000003297348,
+     "min": 1.986949999263743,
+     "max": 2.0773999985976843,
+     "p50s": [
+      1.986949999263743,
+      2.043799999228213,
+      2.0578000003297348,
+      2.05890000142972,
+      2.0773999985976843
+     ],
+     "cd_min": 1.0068061529428285,
+     "cd_max": 1.046400473508888,
+     "below_gate": 0
+    },
+    "1.23.2|1T": {
+     "n": 5,
+     "median": 1.4695499994559214,
+     "min": 1.460600000427803,
+     "max": 1.4721000006829854,
+     "p50s": [
+      1.460600000427803,
+      1.467000001866836,
+      1.4695499994559214,
+      1.4706500005559064,
+      1.4721000006829854
+     ],
+     "cd_min": 0.976959803433084,
+     "cd_max": 1.0541549438438709,
+     "below_gate": 0
+    },
+    "1.24.4|1T": {
+     "n": 5,
+     "median": 1.495800001066527,
+     "min": 1.4842999989923555,
+     "max": 1.5093999973032624,
+     "p50s": [
+      1.4842999989923555,
+      1.4876999994157811,
+      1.495800001066527,
+      1.4980999985709786,
+      1.5093999973032624
+     ],
+     "cd_min": 0.9801994318110524,
+     "cd_max": 1.0347977286410903,
+     "below_gate": 0
+    }
+   }
+  },
+  "deit|p00_int8": {
+   "kind": "negative",
+   "status": "NOT-STEPPED",
+   "ratio_4t": 0.9551483769291598,
+   "disjoint": false,
+   "ratio_1t": 1.0116946728286544,
+   "pure": true,
+   "n_valid_sessions": {
+    "1.23.2|4T": 5,
+    "1.24.4|4T": 5,
+    "1.23.2|1T": 5,
+    "1.24.4|1T": 5
+   },
+   "below_gate": {
+    "1.23.2|4T": 0,
+    "1.24.4|4T": 0,
+    "1.23.2|1T": 1,
+    "1.24.4|1T": 2
+   },
+   "cells": {
+    "1.23.2|4T": {
+     "n": 5,
+     "median": 5.021000000851927,
+     "min": 4.95490000139398,
+     "max": 5.3026999994472135,
+     "p50s": [
+      4.95490000139398,
+      5.001499999707448,
+      5.021000000851927,
+      5.038499999500345,
+      5.3026999994472135
+     ],
+     "cd_min": 0.974665236379314,
+     "cd_max": 1.007470900562287,
+     "below_gate": 0
+    },
+    "1.24.4|4T": {
+     "n": 5,
+     "median": 4.795800001375028,
+     "min": 4.687099997681798,
+     "max": 4.986800000551739,
+     "p50s": [
+      4.687099997681798,
+      4.703199998402852,
+      4.795800001375028,
+      4.811300001165364,
+      4.986800000551739
+     ],
+     "cd_min": 0.9722589746410422,
+     "cd_max": 0.9996894245066016,
+     "below_gate": 0
+    },
+    "1.23.2|1T": {
+     "n": 5,
+     "median": 6.635499998083105,
+     "min": 6.480250000095111,
+     "max": 6.99469999926805,
+     "p50s": [
+      6.480250000095111,
+      6.634899997152388,
+      6.635499998083105,
+      6.679500002064742,
+      6.99469999926805
+     ],
+     "cd_min": 0.9371781307733108,
+     "cd_max": 0.9755730468345076,
+     "below_gate": 1
+    },
+    "1.24.4|1T": {
+     "n": 5,
+     "median": 6.713099999615224,
+     "min": 6.571750000148313,
+     "max": 7.320600001548883,
+     "p50s": [
+      6.571750000148313,
+      6.626100001085433,
+      6.713099999615224,
+      7.156499999837251,
+      7.320600001548883
+     ],
+     "cd_min": 0.8683631344634465,
+     "cd_max": 0.976233562409175,
+     "below_gate": 2
+    }
+   }
+  },
+  "cls|p00_int8": {
+   "kind": "negative",
+   "status": "NOT-STEPPED",
+   "ratio_4t": 0.9877682890778765,
+   "disjoint": false,
+   "ratio_1t": 0.9960353242564155,
+   "pure": true,
+   "n_valid_sessions": {
+    "1.23.2|4T": 5,
+    "1.24.4|4T": 5,
+    "1.23.2|1T": 5,
+    "1.24.4|1T": 5
+   },
+   "below_gate": {
+    "1.23.2|4T": 0,
+    "1.24.4|4T": 0,
+    "1.23.2|1T": 0,
+    "1.24.4|1T": 0
+   },
+   "cells": {
+    "1.23.2|4T": {
+     "n": 5,
+     "median": 0.4332999997131992,
+     "min": 0.432449998697848,
+     "max": 0.4384999992907978,
+     "p50s": [
+      0.432449998697848,
+      0.4329999974288512,
+      0.4332999997131992,
+      0.4375999997137114,
+      0.4384999992907978
+     ],
+     "cd_min": 1.0410879175258765,
+     "cd_max": 1.0661905994060608,
+     "below_gate": 0
+    },
+    "1.24.4|4T": {
+     "n": 5,
+     "median": 0.4279999993741512,
+     "min": 0.4265999996277969,
+     "max": 0.4331500003900146,
+     "p50s": [
+      0.4265999996277969,
+      0.4270999997970648,
+      0.4279999993741512,
+      0.4286000003048684,
+      0.4331500003900146
+     ],
+     "cd_min": 1.011041109601032,
+     "cd_max": 1.0827889755310125,
+     "below_gate": 0
+    },
+    "1.23.2|1T": {
+     "n": 5,
+     "median": 0.5548999979509972,
+     "min": 0.5547999971895479,
+     "max": 0.5590000000665896,
+     "p50s": [
+      0.5547999971895479,
+      0.5548000008275267,
+      0.5548999979509972,
+      0.5567000007431488,
+      0.5590000000665896
+     ],
+     "cd_min": 0.9922478701879917,
+     "cd_max": 1.0292512457870024,
+     "below_gate": 0
+    },
+    "1.24.4|1T": {
+     "n": 5,
+     "median": 0.5526999993890058,
+     "min": 0.5520499998965533,
+     "max": 0.559599997359328,
+     "p50s": [
+      0.5520499998965533,
+      0.5522999999811873,
+      0.5526999993890058,
+      0.553300000319723,
+      0.559599997359328
+     ],
+     "cd_min": 0.994986541447938,
+     "cd_max": 1.0938973531347165,
+     "below_gate": 0
+    }
+   }
+  }
+ },
+ "dispositions": {
+  "scored": [],
+  "excluded": [],
+  "dropped": [],
+  "failed_to_run": [],
+  "oversized_cell": [],
+  "n_measured_models_in_manifest": 0
+ },
+ "strata_frozen": {
+  "F": [],
+  "U": [],
+  "U_near": [],
+  "SIG_SMALL": []
+ },
+ "arms": {
+  "ungated": {
+   "band": "INCONCLUSIVE-SPARSE",
+   "H": null,
+   "M": null,
+   "fisher_p": null,
+   "flagged_scored": 0,
+   "cleared_scored": 0,
+   "refuted_condition_also_met": false,
+   "counts": {
+    "TP": 0,
+    "IMPURE": 0,
+    "FP": 0,
+    "FN": 0,
+    "FN-IMPURE": 0,
+    "TN": 0
+   },
+   "sizes": {
+    "F": 0,
+    "U": 0,
+    "U_near": 0,
+    "arch_families": 0,
+    "arch_families_list": [],
+    "arch_family_unknown": []
+   },
+   "sizes_ok": false,
+   "sparse_because": [
+    "|F| = 0 < 5",
+    "|U| = 0 < 8",
+    "|U-near| = 0 < 4",
+    "0 architecture families < 8"
+   ],
+   "indeterminate": [],
+   "indeterminate_share": null,
+   "n_statused": 0,
+   "in_matrix": 0,
+   "F_models": [],
+   "U_models": [],
+   "U_near_models": []
+  },
+  "gated": {
+   "band": "INCONCLUSIVE-SPARSE",
+   "H": null,
+   "M": null,
+   "fisher_p": null,
+   "flagged_scored": 0,
+   "cleared_scored": 0,
+   "refuted_condition_also_met": false,
+   "counts": {
+    "TP": 0,
+    "IMPURE": 0,
+    "FP": 0,
+    "FN": 0,
+    "FN-IMPURE": 0,
+    "TN": 0
+   },
+   "sizes": {
+    "F": 0,
+    "U": 0,
+    "U_near": 0,
+    "arch_families": 0,
+    "arch_families_list": [],
+    "arch_family_unknown": []
+   },
+   "sizes_ok": false,
+   "sparse_because": [
+    "|F| = 0 < 5",
+    "|U| = 0 < 8",
+    "|U-near| = 0 < 4",
+    "0 architecture families < 8"
+   ],
+   "indeterminate": [],
+   "indeterminate_share": null,
+   "n_statused": 0,
+   "in_matrix": 0,
+   "F_models": [],
+   "U_models": [],
+   "U_near_models": []
+  }
+ },
+ "validity": {
+  "VA1_seal": {
+   "ok": false,
+   "artefacts_present": {
+    "pool": true,
+    "manifest": true,
+    "predictions": false,
+    "selftest": true
+   },
+   "digest_in_findings": {
+    "pool": false,
+    "manifest": false,
+    "predictions": false,
+    "selftest": false
+   },
+   "seal_utc": null,
+   "run_start_utc": "2026-09-23T07:18:09.264364+00:00",
+   "compared_against": "mtime of the timing CSV (no timestamp in precondition.json)",
+   "seal_before_first_row": null,
+   "model_sha256_match": true,
+   "sha256_problems": []
+  },
+  "VA2_checker_selftest": {
+   "ok": true,
+   "recorded": true,
+   "reproduces_4_flagged": true,
+   "reproduces_832_added": true,
+   "declared_ok": true,
+   "n_checks": 59,
+   "n_failed_checks": 0
+  },
+  "VA3_controls": {
+   "ok": true,
+   "why_not": [],
+   "controls": {
+    "mobilevit|p00_int8": {
+     "kind": "positive",
+     "status": "STEPPED",
+     "ratio_4t": 1.3284699803970483,
+     "disjoint": true,
+     "ratio_1t": 1.0178626121059675,
+     "pure": true,
+     "n_valid_sessions": {
+      "1.23.2|4T": 5,
+      "1.24.4|4T": 5,
+      "1.23.2|1T": 5,
+      "1.24.4|1T": 5
+     },
+     "below_gate": {
+      "1.23.2|4T": 0,
+      "1.24.4|4T": 0,
+      "1.23.2|1T": 0,
+      "1.24.4|1T": 0
+     },
+     "cells": {
+      "1.23.2|4T": {
+       "n": 5,
+       "median": 1.5490000005229376,
+       "min": 1.5342499973485246,
+       "max": 1.5759500001877311,
+       "p50s": [
+        1.5342499973485246,
+        1.5479499998036772,
+        1.5490000005229376,
+        1.560400000016671,
+        1.5759500001877311
+       ],
+       "cd_min": 0.985689608349615,
+       "cd_max": 1.0769366259461874,
+       "below_gate": 0
+      },
+      "1.24.4|4T": {
+       "n": 5,
+       "median": 2.0578000003297348,
+       "min": 1.986949999263743,
+       "max": 2.0773999985976843,
+       "p50s": [
+        1.986949999263743,
+        2.043799999228213,
+        2.0578000003297348,
+        2.05890000142972,
+        2.0773999985976843
+       ],
+       "cd_min": 1.0068061529428285,
+       "cd_max": 1.046400473508888,
+       "below_gate": 0
+      },
+      "1.23.2|1T": {
+       "n": 5,
+       "median": 1.4695499994559214,
+       "min": 1.460600000427803,
+       "max": 1.4721000006829854,
+       "p50s": [
+        1.460600000427803,
+        1.467000001866836,
+        1.4695499994559214,
+        1.4706500005559064,
+        1.4721000006829854
+       ],
+       "cd_min": 0.976959803433084,
+       "cd_max": 1.0541549438438709,
+       "below_gate": 0
+      },
+      "1.24.4|1T": {
+       "n": 5,
+       "median": 1.495800001066527,
+       "min": 1.4842999989923555,
+       "max": 1.5093999973032624,
+       "p50s": [
+        1.4842999989923555,
+        1.4876999994157811,
+        1.495800001066527,
+        1.4980999985709786,
+        1.5093999973032624
+       ],
+       "cd_min": 0.9801994318110524,
+       "cd_max": 1.0347977286410903,
+       "below_gate": 0
+      }
+     }
+    },
+    "deit|p00_int8": {
+     "kind": "negative",
+     "status": "NOT-STEPPED",
+     "ratio_4t": 0.9551483769291598,
+     "disjoint": false,
+     "ratio_1t": 1.0116946728286544,
+     "pure": true,
+     "n_valid_sessions": {
+      "1.23.2|4T": 5,
+      "1.24.4|4T": 5,
+      "1.23.2|1T": 5,
+      "1.24.4|1T": 5
+     },
+     "below_gate": {
+      "1.23.2|4T": 0,
+      "1.24.4|4T": 0,
+      "1.23.2|1T": 1,
+      "1.24.4|1T": 2
+     },
+     "cells": {
+      "1.23.2|4T": {
+       "n": 5,
+       "median": 5.021000000851927,
+       "min": 4.95490000139398,
+       "max": 5.3026999994472135,
+       "p50s": [
+        4.95490000139398,
+        5.001499999707448,
+        5.021000000851927,
+        5.038499999500345,
+        5.3026999994472135
+       ],
+       "cd_min": 0.974665236379314,
+       "cd_max": 1.007470900562287,
+       "below_gate": 0
+      },
+      "1.24.4|4T": {
+       "n": 5,
+       "median": 4.795800001375028,
+       "min": 4.687099997681798,
+       "max": 4.986800000551739,
+       "p50s": [
+        4.687099997681798,
+        4.703199998402852,
+        4.795800001375028,
+        4.811300001165364,
+        4.986800000551739
+       ],
+       "cd_min": 0.9722589746410422,
+       "cd_max": 0.9996894245066016,
+       "below_gate": 0
+      },
+      "1.23.2|1T": {
+       "n": 5,
+       "median": 6.635499998083105,
+       "min": 6.480250000095111,
+       "max": 6.99469999926805,
+       "p50s": [
+        6.480250000095111,
+        6.634899997152388,
+        6.635499998083105,
+        6.679500002064742,
+        6.99469999926805
+       ],
+       "cd_min": 0.9371781307733108,
+       "cd_max": 0.9755730468345076,
+       "below_gate": 1
+      },
+      "1.24.4|1T": {
+       "n": 5,
+       "median": 6.713099999615224,
+       "min": 6.571750000148313,
+       "max": 7.320600001548883,
+       "p50s": [
+        6.571750000148313,
+        6.626100001085433,
+        6.713099999615224,
+        7.156499999837251,
+        7.320600001548883
+       ],
+       "cd_min": 0.8683631344634465,
+       "cd_max": 0.976233562409175,
+       "below_gate": 2
+      }
+     }
+    },
+    "cls|p00_int8": {
+     "kind": "negative",
+     "status": "NOT-STEPPED",
+     "ratio_4t": 0.9877682890778765,
+     "disjoint": false,
+     "ratio_1t": 0.9960353242564155,
+     "pure": true,
+     "n_valid_sessions": {
+      "1.23.2|4T": 5,
+      "1.24.4|4T": 5,
+      "1.23.2|1T": 5,
+      "1.24.4|1T": 5
+     },
+     "below_gate": {
+      "1.23.2|4T": 0,
+      "1.24.4|4T": 0,
+      "1.23.2|1T": 0,
+      "1.24.4|1T": 0
+     },
+     "cells": {
+      "1.23.2|4T": {
+       "n": 5,
+       "median": 0.4332999997131992,
+       "min": 0.432449998697848,
+       "max": 0.4384999992907978,
+       "p50s": [
+        0.432449998697848,
+        0.4329999974288512,
+        0.4332999997131992,
+        0.4375999997137114,
+        0.4384999992907978
+       ],
+       "cd_min": 1.0410879175258765,
+       "cd_max": 1.0661905994060608,
+       "below_gate": 0
+      },
+      "1.24.4|4T": {
+       "n": 5,
+       "median": 0.4279999993741512,
+       "min": 0.4265999996277969,
+       "max": 0.4331500003900146,
+       "p50s": [
+        0.4265999996277969,
+        0.4270999997970648,
+        0.4279999993741512,
+        0.4286000003048684,
+        0.4331500003900146
+       ],
+       "cd_min": 1.011041109601032,
+       "cd_max": 1.0827889755310125,
+       "below_gate": 0
+      },
+      "1.23.2|1T": {
+       "n": 5,
+       "median": 0.5548999979509972,
+       "min": 0.5547999971895479,
+       "max": 0.5590000000665896,
+       "p50s": [
+        0.5547999971895479,
+        0.5548000008275267,
+        0.5548999979509972,
+        0.5567000007431488,
+        0.5590000000665896
+       ],
+       "cd_min": 0.9922478701879917,
+       "cd_max": 1.0292512457870024,
+       "below_gate": 0
+      },
+      "1.24.4|1T": {
+       "n": 5,
+       "median": 0.5526999993890058,
+       "min": 0.5520499998965533,
+       "max": 0.559599997359328,
+       "p50s": [
+        0.5520499998965533,
+        0.5522999999811873,
+        0.5526999993890058,
+        0.553300000319723,
+        0.559599997359328
+       ],
+       "cd_min": 0.994986541447938,
+       "cd_max": 1.0938973531347165,
+       "below_gate": 0
+      }
+     }
+    }
+   }
+  },
+  "VA4_quiet_machine": {
+   "ok": false,
+   "recorded": false
+  },
+  "VA5_core_delivery": {
+   "ok": true,
+   "excluded": [],
+   "n_excluded": 0,
+   "max_allowed": 3,
+   "one_thread_cells_are_REPORTED_not_gated": true
+  },
+  "VA6_gated_equals_ungated": {
+   "ok": true,
+   "ungated_band": "INCONCLUSIVE-SPARSE",
+   "gated_band": "INCONCLUSIVE-SPARSE"
+  },
+  "VA7_completeness": {
+   "ok": true,
+   "dropped": [],
+   "failed_to_run": [],
+   "n_dropped_total": 0,
+   "max_allowed": 3,
+   "nan_reached_a_comparison": false
+  },
+  "VA8_no_reselection": {
+   "ok": false,
+   "rows_not_in_manifest": [
+    "c1_64x64|a05",
+    "c224_224x3|a04",
+    "c224_224x3|c02",
+    "c3_112x112|c04",
+    "c3_224x224|a01",
+    "c3_224x224|a02",
+    "c3_224x224|a03",
+    "c3_224x224|b02",
+    "c3_224x224|b03",
+    "c3_224x224|b15",
+    "c3_224x224|b16",
+    "c3_224x224|c01",
+    "c3_224x224|c05",
+    "c3_240x320|a06",
+    "c3_299x299|b05",
+    "c3_320x320|b01",
+    "c3_320x320|b18",
+    "c56_56x3|c03"
+   ],
+   "note": "the freeze itself is VA1; this checks only that the CSV contains no model the frozen manifest does not name"
+  },
+  "VA9_one_measurement_no_orphans": {
+   "ok": null,
+   "note": "runner-side condition; not checkable from the CSV"
+  },
+  "VA10_reported_not_gating": {
+   "ok": null,
+   "note": "see per_model, controls and indeterminate"
+  },
+  "indeterminate_within_20pct": {
+   "ok": true,
+   "share": null,
+   "models": []
+  }
+ },
+ "magnitude_ratios_REPORTED": {},
+ "sc_a_vs_sc_b_disagreement_REPORTED": [],
+ "final": {
+  "verdict": "INCONCLUSIVE",
+  "N_measured": 0,
+  "N_in_matrix": 0,
+  "k_flagged_in_matrix": 0,
+  "counts": {
+   "TP": 0,
+   "IMPURE": 0,
+   "FP": 0,
+   "FN": 0,
+   "FN-IMPURE": 0,
+   "TN": 0
+  },
+  "H": null,
+  "M": null,
+  "fisher_p": null,
+  "sizes": {
+   "F": 0,
+   "U": 0,
+   "U_near": 0,
+   "arch_families": 0,
+   "arch_families_list": [],
+   "arch_family_unknown": []
+  },
+  "ungated_band": "INCONCLUSIVE-SPARSE",
+  "gated_band": "INCONCLUSIVE-SPARSE",
+  "inconclusive_because": [
+   "VA1 the seal does not hold (no digest in FINDINGS.md for ['pool', 'manifest', 'predictions', 'selftest'])",
+   "VA4 the quiet-machine record precondition.json is absent",
+   "VA8 the CSV names models the frozen manifest does not: c1_64x64|a05, c224_224x3|a04, c224_224x3|c02, c3_112x112|c04, c3_224x224|a01, c3_224x224|a02, c3_224x224|a03, c3_224x224|b02, c3_224x224|b03, c3_224x224|b15, c3_224x224|b16, c3_224x224|c01, c3_224x224|c05, c3_240x320|a06, c3_299x299|b05, c3_320x320|b01, c3_320x320|b18, c56_56x3|c03",
+   "VA1: predictions.json is missing (C:\\Users\\User\\Desktop\\SEC\\edge-ai-toolkit\\results\\expA\\predictions.json)",
+   "VA1: manifest model harness has no harness family / variant stem",
+   "VA1: manifest model counts has no harness family / variant stem"
+  ],
+  "sparse_because": [
+   "|F| = 0 < 5",
+   "|U| = 0 < 8",
+   "|U-near| = 0 < 4",
+   "0 architecture families < 8"
+  ],
+  "refuted_condition_also_met": false,
+  "indeterminate": [],
+  "fn_total": 0,
+  "fn_models": [],
+  "any_fn_bars_safety_claim": false,
+  "fn_class_ii_cap": {
+   "rule": "section 5.4: three or more FNs of class (ii) cap the verdict at PARTIAL; the class comes from the post-verdict diagnostic",
+   "fn_class_ii_given": null,
+   "verdict_after_fn_class_ii_cap": null
+  },
+  "paper_wording_key": "A_INCONCLUSIVE"
+ }
+}

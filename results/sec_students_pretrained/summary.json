@@ -1,0 +1,287 @@
+{
+  "produced_by": "edge-ai-toolkit 0.5.0 by \u694a\u5143\u84c1 (Price Yang)",
+  "author": "\u694a\u5143\u84c1 (Price Yang)",
+  "toolkit": "edge-ai-toolkit",
+  "toolkit_version": "0.5.0",
+  "copyright": "Copyright (c) 2026 \u694a\u5143\u84c1 (Price Yang)",
+  "n_variants": 12,
+  "n_failed": 0,
+  "n_skipped": 0,
+  "n_ineligible": 7,
+  "plots": [
+    "E:\\SEC\\edge-ai-toolkit\\results\\sec_students_pretrained\\pareto_size_bytes.png",
+    "E:\\SEC\\edge-ai-toolkit\\results\\sec_students_pretrained\\pareto_latency_p50_ms.png",
+    "E:\\SEC\\edge-ai-toolkit\\results\\sec_students_pretrained\\pareto_peak_rss_mb.png"
+  ],
+  "best_by_score": "mobilenet_v3_small_p00_fp32",
+  "candidates": [
+    {
+      "variant": "mobilenet_v3_small_p00_fp32",
+      "accuracy": 0.9773248407643312,
+      "metric_name": "top1",
+      "size_bytes": 6122294,
+      "latency_p50_ms": 3.209750051610172,
+      "peak_rss_mb": 11.05859375,
+      "score": 0.9548592123437551,
+      "why": "top-3 score; Pareto latency_p50_ms"
+    },
+    {
+      "variant": "mobilenet_v2_p00_int8",
+      "accuracy": 0.9859872611464968,
+      "metric_name": "top1",
+      "size_bytes": 2621370,
+      "latency_p50_ms": 4.5940501149743795,
+      "peak_rss_mb": 10.50390625,
+      "score": 0.953338430150585,
+      "why": "top-3 score; Pareto size_bytes; Pareto latency_p50_ms; Pareto peak_rss_mb"
+    },
+    {
+      "variant": "mobilenet_v2_p00_fp32",
+      "accuracy": 0.9857324840764332,
+      "metric_name": "top1",
+      "size_bytes": 8919753,
+      "latency_p50_ms": 6.6312000853940845,
+      "peak_rss_mb": 22.7109375,
+      "score": 0.9368655535054414,
+      "why": "top-3 score"
+    },
+    {
+      "variant": "p00_int8",
+      "accuracy": 0.9961783439490446,
+      "metric_name": "top1",
+      "size_bytes": 24036313,
+      "latency_p50_ms": 20.994700025767088,
+      "peak_rss_mb": 36.29296875,
+      "score": 0.6081169622476588,
+      "why": "Pareto size_bytes; Pareto latency_p50_ms; Pareto peak_rss_mb"
+    },
+    {
+      "variant": "p00_fp32",
+      "accuracy": 0.9964331210191084,
+      "metric_name": "top1",
+      "size_bytes": 94032583,
+      "latency_p50_ms": 56.01170007139444,
+      "peak_rss_mb": 202.72265625,
+      "score": 0.3848167539267016,
+      "why": "Pareto size_bytes; Pareto latency_p50_ms; Pareto peak_rss_mb"
+    }
+  ],
+  "ineligible": [
+    {
+      "variant": "mobilenet_v3_small_p00_int8",
+      "accuracy": 0.6932484076433121,
+      "ineligible_reason": "accuracy 0.6932 is 0.3032 below p00_fp32 (30.4% relative; budget 0.0299)"
+    },
+    {
+      "variant": "shufflenet_v2_x1_0_p00_fp32",
+      "accuracy": 0.9628025477707006,
+      "ineligible_reason": "accuracy 0.9628 is 0.0336 below p00_fp32 (3.4% relative; budget 0.0299)"
+    },
+    {
+      "variant": "shufflenet_v2_x1_0_p00_int8",
+      "accuracy": 0.9620382165605096,
+      "ineligible_reason": "accuracy 0.9620 is 0.0344 below p00_fp32 (3.5% relative; budget 0.0299)"
+    },
+    {
+      "variant": "mnasnet0_5_p00_fp32",
+      "accuracy": 0.954140127388535,
+      "ineligible_reason": "accuracy 0.9541 is 0.0423 below p00_fp32 (4.2% relative; budget 0.0299)"
+    },
+    {
+      "variant": "mnasnet0_5_p00_int8",
+      "accuracy": 0.9523566878980892,
+      "ineligible_reason": "accuracy 0.9524 is 0.0441 below p00_fp32 (4.4% relative; budget 0.0299)"
+    },
+    {
+      "variant": "shufflenet_v2_x0_5_p00_fp32",
+      "accuracy": 0.8965605095541401,
+      "ineligible_reason": "accuracy 0.8966 is 0.0999 below p00_fp32 (10.0% relative; budget 0.0299)"
+    },
+    {
+      "variant": "shufflenet_v2_x0_5_p00_int8",
+      "accuracy": 0.9001273885350318,
+      "ineligible_reason": "accuracy 0.9001 is 0.0963 below p00_fp32 (9.7% relative; budget 0.0299)"
+    }
+  ],
+  "adapter": {
+    "task": "classification",
+    "quick": false,
+    "dataset": "imagefolder",
+    "arch": "resnet50",
+    "img_size": 224,
+    "n_train": 9469,
+    "n_val": 3925,
+    "num_classes": 10
+  },
+  "env": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "machine": "AMD64",
+    "cpu": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "physical_cores": 10,
+    "core_classes": "class 1: 6 cores, class 0: 4 cores",
+    "logical_cores": 16,
+    "ram_gb": 15.6,
+    "python": "3.11.9",
+    "torch": "2.14.0+cu126",
+    "onnxruntime": "1.30.0",
+    "torch_train_device": "cuda",
+    "cuda_device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "note": "latency/RAM/CPU measured on this machine's CPU: relative comparisons only"
+  },
+  "config": {
+    "task": "classification",
+    "adapter": "adapters.classification:ClassificationAdapter",
+    "seed": 0,
+    "adapter_args": {
+      "dataset": "imagefolder",
+      "img_size": 224,
+      "arch": "resnet50",
+      "pretrained": true,
+      "train_epochs": 3,
+      "lr": 0.01,
+      "finetune_lr": 0.002,
+      "batch_size": 48,
+      "num_workers": 4,
+      "data_root": "data/imagenette",
+      "calib_size": 256
+    },
+    "target_runtime": "onnx",
+    "export": {
+      "opset": 17,
+      "atol": 0.001,
+      "rtol": 0.001
+    },
+    "measure": {
+      "threads": [
+        1,
+        4
+      ],
+      "primary_threads": 4,
+      "repeats": 3,
+      "warmup": 10,
+      "runs": 100,
+      "spinning": true,
+      "energy": {
+        "provider": "none"
+      }
+    },
+    "prune": {
+      "importance": "l2",
+      "round_to": 8,
+      "global_pruning": false,
+      "iterative_steps": 1,
+      "bn_recalibrate": true,
+      "bn_recal_batches": 32
+    },
+    "quantize": {
+      "method": "static",
+      "per_channel": true,
+      "activation_type": "uint8",
+      "weight_type": "int8",
+      "calibrate_method": "auto",
+      "calib_batches": 16,
+      "auto_keep_fp32": "rules",
+      "keep_fp32": []
+    },
+    "sweep": {
+      "prune_ratios": [
+        0.0
+      ],
+      "precisions": [
+        "fp32",
+        "int8"
+      ],
+      "finetune_epochs": 1,
+      "finetune_mode": "plain",
+      "pareto_x": [
+        "size_bytes",
+        "latency_p50_ms",
+        "peak_rss_mb"
+      ],
+      "students": [
+        {
+          "arch": "mobilenet_v2",
+          "pretrained": true
+        },
+        {
+          "arch": "mobilenet_v3_small",
+          "pretrained": true
+        },
+        {
+          "arch": "shufflenet_v2_x1_0",
+          "pretrained": true
+        },
+        {
+          "arch": "mnasnet0_5",
+          "pretrained": true
+        },
+        {
+          "arch": "shufflenet_v2_x0_5",
+          "pretrained": true
+        }
+      ]
+    },
+    "aihub": {
+      "devices": [
+        "Dragonwing RB3 Gen 2 Vision Kit",
+        "Dragonwing Q-6690 MTP",
+        "QCS8550 (Proxy)"
+      ],
+      "also_profile": [
+        "Samsung Galaxy A14 5G"
+      ],
+      "compile_options": "--target_runtime onnx --compute_unit cpu",
+      "device_rationale": "The Arduino UNO Q (Qualcomm Dragonwing QRB2210, 4x Cortex-A53 @ 2.0 GHz) is not in the AI Hub catalogue, so the packet's instruction to use the closest available low-power profile applies. We profile on the RB3 Gen 2 Vision Kit (QCS6490): an embedded Dragonwing board, profiled CPU-only. Its cores are newer and faster than an A53, so absolute latency on the real board will be higher; the comparison between baseline and submission is what these numbers support. We deliberately did NOT pick \"Arduino VENTUNO Q\", which the catalogue does list: it is a Dragonwing IQ8 rated up to 40 dense TOPS, a different class of device, and choosing it for the matching brand name would understate both latency and energy.\n"
+    },
+    "score": {
+      "max_accuracy_drop": null,
+      "max_accuracy_drop_rel": 0.03,
+      "min_accuracy": null,
+      "normalize": "minmax",
+      "weights": {
+        "accuracy": 0.294,
+        "compression": 0.235,
+        "resource": 0.235,
+        "energy": 0.235
+      },
+      "groups": {
+        "accuracy": {
+          "cols": [
+            "accuracy"
+          ],
+          "higher_is_better": true
+        },
+        "compression": {
+          "cols": [
+            "size_bytes",
+            "params"
+          ],
+          "agg": "min"
+        },
+        "resource": {
+          "cols": [
+            "peak_rss_mb",
+            "cpu_ms_per_inf",
+            "latency_p50_ms"
+          ]
+        },
+        "energy": {
+          "cols": [
+            "energy_j"
+          ]
+        }
+      }
+    },
+    "distill": {
+      "student": {
+        "width_mult": 0.5
+      },
+      "epochs": 8,
+      "temperature": 4.0,
+      "alpha": 0.7,
+      "lr": 0.01,
+      "optimizer": "sgd"
+    },
+    "name": "sec_students_pretrained"
+  }
+}

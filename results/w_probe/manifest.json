@@ -1,0 +1,343 @@
+{
+ "experiment": "W",
+ "protocol": "results/paper/w_design_registered.md",
+ "perm": [
+  0,
+  2,
+  1,
+  3
+ ],
+ "branches": 4,
+ "input_shape": [
+  1,
+  3,
+  64,
+  64
+ ],
+ "bytes_moved_per_node": 8192,
+ "files": [
+  {
+   "family": "main",
+   "variant": "m_u8_w1",
+   "path": "results\\w_probe\\main\\m_u8_w1.onnx",
+   "dtype": "u8",
+   "dims": [
+    256,
+    2,
+    16,
+    1
+   ],
+   "has_transpose": true,
+   "width_bytes": 1,
+   "bytes_per_node": 8192,
+   "sha256": "c1d92705220f27eb169a59ffe02b50482a2f9f0a97edfd9e4f4e1f3e2f50188e",
+   "size_bytes": 1982
+  },
+  {
+   "family": "main",
+   "variant": "m_u8_w2",
+   "path": "results\\w_probe\\main\\m_u8_w2.onnx",
+   "dtype": "u8",
+   "dims": [
+    256,
+    2,
+    8,
+    2
+   ],
+   "has_transpose": true,
+   "width_bytes": 2,
+   "bytes_per_node": 8192,
+   "sha256": "7dcf28e6b02121071bbe416f27ad2a7a9fe85d884be683e13c560adb4a2b9ace",
+   "size_bytes": 1981
+  },
+  {
+   "family": "main",
+   "variant": "m_u8_w4",
+   "path": "results\\w_probe\\main\\m_u8_w4.onnx",
+   "dtype": "u8",
+   "dims": [
+    256,
+    2,
+    4,
+    4
+   ],
+   "has_transpose": true,
+   "width_bytes": 4,
+   "bytes_per_node": 8192,
+   "sha256": "cfaf953cc9d0ec3858d204ace234a3f2bedbd9a875354f2736edeebedf2504f2",
+   "size_bytes": 1981
+  },
+  {
+   "family": "main",
+   "variant": "m_u8_w8",
+   "path": "results\\w_probe\\main\\m_u8_w8.onnx",
+   "dtype": "u8",
+   "dims": [
+    256,
+    2,
+    2,
+    8
+   ],
+   "has_transpose": true,
+   "width_bytes": 8,
+   "bytes_per_node": 8192,
+   "sha256": "befb80a038d3c29d25bac789ce60d2b3bb210deb2a3f43e1025d0dd3de587c7e",
+   "size_bytes": 1981
+  },
+  {
+   "family": "main",
+   "variant": "m_f16_w2",
+   "path": "results\\w_probe\\main\\m_f16_w2.onnx",
+   "dtype": "f16",
+   "dims": [
+    256,
+    2,
+    8,
+    1
+   ],
+   "has_transpose": true,
+   "width_bytes": 2,
+   "bytes_per_node": 8192,
+   "sha256": "71f6b6eaf8478bdc055aae7672c140edecb7d40e4601a9b51aa8c9b0142fd9df",
+   "size_bytes": 1940
+  },
+  {
+   "family": "main",
+   "variant": "m_f16_w4",
+   "path": "results\\w_probe\\main\\m_f16_w4.onnx",
+   "dtype": "f16",
+   "dims": [
+    256,
+    2,
+    4,
+    2
+   ],
+   "has_transpose": true,
+   "width_bytes": 4,
+   "bytes_per_node": 8192,
+   "sha256": "b78d07566c72be1e806632836e4a0723ea032e3ee3b94dbb230046643b471ef3",
+   "size_bytes": 1940
+  },
+  {
+   "family": "main",
+   "variant": "m_f16_w8",
+   "path": "results\\w_probe\\main\\m_f16_w8.onnx",
+   "dtype": "f16",
+   "dims": [
+    256,
+    2,
+    2,
+    4
+   ],
+   "has_transpose": true,
+   "width_bytes": 8,
+   "bytes_per_node": 8192,
+   "sha256": "bbdbd0fb53c01b5d04910624963d35eb8ef33254a3f54f60bc30bbba9828f4fc",
+   "size_bytes": 1940
+  },
+  {
+   "family": "main",
+   "variant": "m_f32_w4",
+   "path": "results\\w_probe\\main\\m_f32_w4.onnx",
+   "dtype": "f32",
+   "dims": [
+    256,
+    2,
+    4,
+    1
+   ],
+   "has_transpose": true,
+   "width_bytes": 4,
+   "bytes_per_node": 8192,
+   "sha256": "929a1b541a9dfa68271344cf1b7c9c1247def0624aa28877f7e8a476cfae1dd1",
+   "size_bytes": 1855
+  },
+  {
+   "family": "main",
+   "variant": "m_f32_w8",
+   "path": "results\\w_probe\\main\\m_f32_w8.onnx",
+   "dtype": "f32",
+   "dims": [
+    256,
+    2,
+    2,
+    2
+   ],
+   "has_transpose": true,
+   "width_bytes": 8,
+   "bytes_per_node": 8192,
+   "sha256": "39754e101b522ad6ef9935fed53a1edff530485d5751def879a10b58a72bf627",
+   "size_bytes": 1855
+  },
+  {
+   "family": "main",
+   "variant": "ctrl_u8",
+   "path": "results\\w_probe\\main\\ctrl_u8.onnx",
+   "dtype": "u8",
+   "dims": [
+    256,
+    2,
+    8,
+    2
+   ],
+   "has_transpose": false,
+   "width_bytes": 2,
+   "bytes_per_node": 8192,
+   "sha256": "708414b257fc1709812a7adc2ae3e31d4fd208befd7c04f8e7734a8a6aa93d0f",
+   "size_bytes": 1749
+  },
+  {
+   "family": "main",
+   "variant": "ctrl_f16",
+   "path": "results\\w_probe\\main\\ctrl_f16.onnx",
+   "dtype": "f16",
+   "dims": [
+    256,
+    2,
+    8,
+    1
+   ],
+   "has_transpose": false,
+   "width_bytes": 2,
+   "bytes_per_node": 8192,
+   "sha256": "16b4c1e360f4b379931d41acf49f1f6525267f31c822e3e6a758d1dde9d1a6d7",
+   "size_bytes": 1704
+  },
+  {
+   "family": "main",
+   "variant": "ctrl_f32",
+   "path": "results\\w_probe\\main\\ctrl_f32.onnx",
+   "dtype": "f32",
+   "dims": [
+    256,
+    2,
+    4,
+    1
+   ],
+   "has_transpose": false,
+   "width_bytes": 4,
+   "bytes_per_node": 8192,
+   "sha256": "c8f68e50089172f829e92c327eb6aad6969c9703a6f41bd50ae70ed49de1e8a7",
+   "size_bytes": 1619
+  },
+  {
+   "family": "dose",
+   "variant": "d_u8_w1_L64",
+   "path": "results\\w_probe\\dose\\d_u8_w1_L64.onnx",
+   "dtype": "u8",
+   "dims": [
+    64,
+    2,
+    64,
+    1
+   ],
+   "has_transpose": true,
+   "width_bytes": 1,
+   "bytes_per_node": 8192,
+   "sha256": "4ca04647eca3ad9caa380b88c1d5d141f90cc7a8dfb990e598964995a856755b",
+   "size_bytes": 2005
+  },
+  {
+   "family": "dose",
+   "variant": "d_u8_w1_L256",
+   "path": "results\\w_probe\\dose\\d_u8_w1_L256.onnx",
+   "dtype": "u8",
+   "dims": [
+    256,
+    2,
+    16,
+    1
+   ],
+   "has_transpose": true,
+   "width_bytes": 1,
+   "bytes_per_node": 8192,
+   "sha256": "71a48151d82503ee87c4c09b2d49fecb30fac81455f75fd5b0e1fad5a395b626",
+   "size_bytes": 2012
+  },
+  {
+   "family": "dose",
+   "variant": "d_u8_w1_L1024",
+   "path": "results\\w_probe\\dose\\d_u8_w1_L1024.onnx",
+   "dtype": "u8",
+   "dims": [
+    1024,
+    2,
+    4,
+    1
+   ],
+   "has_transpose": true,
+   "width_bytes": 1,
+   "bytes_per_node": 8192,
+   "sha256": "dfc920eec699182716775eb438160d4c16180e3785314da004d6a35b84aebae1",
+   "size_bytes": 2018
+  },
+  {
+   "family": "dose",
+   "variant": "d_u8_w2_L64",
+   "path": "results\\w_probe\\dose\\d_u8_w2_L64.onnx",
+   "dtype": "u8",
+   "dims": [
+    64,
+    2,
+    32,
+    2
+   ],
+   "has_transpose": true,
+   "width_bytes": 2,
+   "bytes_per_node": 8192,
+   "sha256": "edbfa1de5737bf68146da3ad4f777035af16cf6fe87ac8414956155ca1199891",
+   "size_bytes": 2005
+  },
+  {
+   "family": "dose",
+   "variant": "d_u8_w2_L256",
+   "path": "results\\w_probe\\dose\\d_u8_w2_L256.onnx",
+   "dtype": "u8",
+   "dims": [
+    256,
+    2,
+    8,
+    2
+   ],
+   "has_transpose": true,
+   "width_bytes": 2,
+   "bytes_per_node": 8192,
+   "sha256": "b7b95e0851bf2433e26bb8d1891a9b05511f15cef438224d3d183befefc67d83",
+   "size_bytes": 2011
+  },
+  {
+   "family": "dose",
+   "variant": "d_u8_w2_L1024",
+   "path": "results\\w_probe\\dose\\d_u8_w2_L1024.onnx",
+   "dtype": "u8",
+   "dims": [
+    1024,
+    2,
+    2,
+    2
+   ],
+   "has_transpose": true,
+   "width_bytes": 2,
+   "bytes_per_node": 8192,
+   "sha256": "3ae8a245d39964b3eceb78bae2a38a34e02dbd9284f0d92fc0456c55619c6eda",
+   "size_bytes": 2018
+  },
+  {
+   "family": "dose",
+   "variant": "d_ctrl_u8",
+   "path": "results\\w_probe\\dose\\d_ctrl_u8.onnx",
+   "dtype": "u8",
+   "dims": [
+    256,
+    2,
+    8,
+    2
+   ],
+   "has_transpose": false,
+   "width_bytes": 2,
+   "bytes_per_node": 8192,
+   "sha256": "59fcdee79f12114dcc81679bd3f1ef0e909d8fcded60a87fd411bd300b057336",
+   "size_bytes": 1753
+  }
+ ]
+}

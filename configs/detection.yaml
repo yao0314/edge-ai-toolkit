@@ -1,0 +1,115 @@
+# Object detection: YOLOv8n (COCO-pretrained, ultralytics) on coco128, metric = COCO mAP@[.5:.95].
+# On-site: point adapter_args.data_root/images/labels (+ val_*) at a YOLO-format dataset, set nc,
+# and either weights: <given .pt> or model_cfg: yolov8n.yaml / yolo11n.yaml.
+task: detection
+adapter: adapters.detection:DetectionAdapter
+seed: 0
+
+# Deployment target: decides quantizer + measuring runtime + RSS baseline together.
+# onnx (implemented) | tflite (reserved until the organisers confirm the submission format)
+target_runtime: onnx
+
+adapter_args:
+  weights: weights/detection/yolov8n.pt
+  img_size: 320
+  batch_size: 16
+  # Validation on 500 UNSEEN COCO val2017 images (scripts/fetch_coco_val.py --n 500). coco128 is part of
+  # COCO train2017, so validating on it measures images the pretrained detector already saw, and 64 images
+  # give +-0.01 mAP - larger than the INT8 effect. Training/fine-tuning still uses the 128 coco128 images.
+  val_images: ../coco_val500/images/val
+  val_labels: ../coco_val500/labels/val
+  val_fraction: 0.0        # ignored when val_images is set
+  finetune_lr: 2.0e-5      # 2e-4 degraded even the unpruned model on 64 images
+  prune_protect_layers: [0, 1, 2, 3, 4]   # thin 16/32-channel early blocks: never pruned
+  bn_recal_img_size: 640   # BN re-calibration after pruning at the pretraining resolution
+
+export:
+  opset: 17
+  atol: 1.0e-2             # decoded boxes are in pixels (0..320): absolute tolerance scaled up
+  rtol: 1.0e-3
+
+measure:
+  threads: [1, 4]
+  primary_threads: 4      # the un-suffixed columns (and therefore the SCORE and the
+                          # winner) come from this thread count - 4 matches the UNO Q's 4 cores
+  repeats: 3              # median of 3 probe runs; spread reported in *_sd columns
+  warmup: 5
+  runs: 50
+  energy:
+    provider: none
+
+prune:
+  importance: l2
+  round_to: null           # the official Torch-Pruning YOLOv8 recipe does not round either
+  global_pruning: false
+  bn_recalibrate: true     # uses the adapter's 640 px BN loader
+
+quantize:
+  method: static
+  per_channel: true
+  activation_type: uint8
+  weight_type: int8
+  # auto: try the candidates in quantize.calib_auto_methods and keep the one with the best label-free
+  # per-channel SQNR. Nearly free (the SQNR probe already runs for every INT8 variant) and it matters:
+  # the 25%-pruned ResNet50 scored 1.5 dB / top-1 0.468 with minmax and 13.6 dB / 0.894 - lossless vs
+  # its FP32 - with percentile 99.99. Pin a fixed method (minmax | entropy | percentile) to reproduce.
+  calibrate_method: auto
+  calib_batches: 8
+  # auto_keep_fp32 "rules" (default) keeps the post-conv output tail (DFL, box decode, final concat of
+  # pixel boxes with 0..1 scores) in FP32. Without it one shared INT8 scale crushed every score < 0.77
+  # to 0 (mAP 0.407 -> 0.161 at 320 px).
+  auto_keep_fp32: rules
+
+sweep:
+  # YOLO pruning is OFF **for this dataset**, not in general: coco128 leaves only 64 training images, and
+  # recovery after channel pruning needs real retraining (the official Torch-Pruning YOLOv8 recipe uses
+  # ~160 epochs on full COCO). Measured here with every fix applied: 10% -> mAP 0.17, 20% -> 0.05.
+  # ON SITE WITH A REAL TRAINING SET, TURN THIS BACK ON (e.g. [0.0, 0.1, 0.2]) and give it enough
+  # fine-tune epochs - pruning is the only lever that cuts MACs, which INT8 does not.
+  prune_ratios: [0.0]
+  precisions:
+    - fp32
+    - int8
+    - {name: int8_pct, calibrate_method: percentile}
+  # Input resolution is the second compression lever for detectors (MACs scale with the square) and INT8
+  # does not touch MACs at all. Each entry reruns the whole prune x precision grid with its own adapter.
+  adapter_variants: [{img_size: 320}, {img_size: 256}, {img_size: 192}]
+  finetune_epochs: 3
+  finetune_mode: plain     # KD is not implemented for detection
+  pareto_x: [size_bytes, latency_p50_ms, peak_rss_mb]
+
+aihub:
+  devices: ["chipset:qualcomm-snapdragon-429", "Dragonwing RB3 Gen 2 Vision Kit", "QCS8550 (Proxy)"]
+  compile_options: "--target_runtime onnx --compute_unit cpu"
+
+score:
+  # HARD CONSTRAINT before ranking. The baseline mAP is ~0.41, so an absolute budget sized for a 0.92
+  # top-1 would be ~5% relative here. Tighter absolute budget AND a relative cap; the stricter one wins.
+  max_accuracy_drop: 0.01
+  max_accuracy_drop_rel: 0.025   # 2.5% of the baseline mAP
+  min_accuracy: null
+  # OFFICIAL WEIGHTS / FORMULA UNKNOWN - equal weights by default.
+  normalize: minmax
+  weights: {accuracy: 0.25, compression: 0.25, resource: 0.25, energy: 0.25}
+  groups:
+    accuracy:    {cols: [accuracy], higher_is_better: true}
+    compression: {cols: [size_bytes]}
+    resource:    {cols: [peak_rss_mb, cpu_ms_per_inf, latency_p50_ms]}
+    energy:      {cols: [energy_j]}
+
+quick:
+  adapter_args:
+    val_images: null       # quick mode stays on the coco128 split (no 500-image download needed)
+    val_labels: null
+    val_fraction: 0.5
+    img_size: 256
+  measure:
+    threads: [1]
+    warmup: 2
+    runs: 10
+    min_time_s: 0.5
+  quantize:
+    calib_batches: 2
+  sweep:
+    adapter_variants: [{img_size: 256}]
+    finetune_epochs: 1

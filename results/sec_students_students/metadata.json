@@ -1,0 +1,27 @@
+{
+  "produced_by": "edge-ai-toolkit 0.5.0 by \u694a\u5143\u84c1 (Price Yang)",
+  "author": "\u694a\u5143\u84c1 (Price Yang)",
+  "toolkit": "edge-ai-toolkit",
+  "toolkit_version": "0.5.0",
+  "copyright": "Copyright (c) 2026 \u694a\u5143\u84c1 (Price Yang)",
+  "teacher": {
+    "accuracy": 0.9964331210191083,
+    "params": 23528522,
+    "size_bytes": 94032583
+  },
+  "kd_epochs": 8,
+  "students": [
+    "mobilenet_v2_w10_fp32",
+    "mobilenet_v2_w10_int8",
+    "mobilenet_v2_w075_fp32",
+    "mobilenet_v2_w075_int8",
+    "mobilenet_v2_w05_fp32",
+    "mobilenet_v2_w05_int8",
+    "mobilenet_v2_w035_fp32",
+    "mobilenet_v2_w035_int8",
+    "shufflenet_v2_x1_0_fp32",
+    "shufflenet_v2_x1_0_int8",
+    "shufflenet_v2_x0_5_fp32",
+    "shufflenet_v2_x0_5_int8"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+ "experiment": "A2-EXPLORATORY",
+ "frozen_utc": "2026-09-23T06:48:52.793265+00:00",
+ "predictions_sha256": "4547ad0c0bc5a96221b75ebf81be8147fa62090e15bbf0737acbea175fef60c4",
+ "manifest_sha256": "5503fa56601ed26d57161a262fd8f9cec383d3ef67d8e84876e82e1ab6628bfe",
+ "a_check_sha256": "c333fca2e6f465d2344839f34ee8c245bc3106aa26b05f60b650f40cce527a18",
+ "n_models": 18,
+ "n_predict_step": 0,
+ "predict_step_ids": [],
+ "note": "Pool minimum (18) not reached: 13 admitted. This run is EXPLORATORY: it produces numbers, not a verdict, and may not be quoted as A2's result."
+}

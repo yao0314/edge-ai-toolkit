@@ -1,0 +1,3577 @@
+{
+ "experiment": "A",
+ "implements": "a_design_registered.md sections 2.1, 2.2, 2.3",
+ "written_utc": "2026-09-23T18:04:03+00:00",
+ "versions": [
+  "1.23.2",
+  "1.24.4"
+ ],
+ "threads": 4,
+ "a_check_sha256": "c333fca2e6f465d2344839f34ee8c245bc3106aa26b05f60b650f40cce527a18",
+ "transpose_probe_sha256": "fde66c9c550c7c55f681b6d78622e2bb37abc681fbcea1df80742a0e64fe0310",
+ "dispatch_us": 0.52,
+ "floor_rel": 0.07,
+ "manifest": null,
+ "manifest_ambiguous_keys": [],
+ "models_without_screen_ms": [],
+ "models": [
+  {
+   "model": "w_probe/ctrl_f16",
+   "path": "results/w_probe/main/ctrl_f16.onnx",
+   "sha256": "16b4c1e360f4b379931d41acf49f1f6525267f31c822e3e6a758d1dde9d1a6d7",
+   "SC-A": {
+    "checker": "SC-A",
+    "role": "SECONDARY",
+    "section": "2.2",
+    "ok": true,
+    "model_path": "results/w_probe/main/ctrl_f16.onnx",
+    "sha256": "16b4c1e360f4b379931d41acf49f1f6525267f31c822e3e6a758d1dde9d1a6d7",
+    "onnxruntime": "1.24.4",
+    "dump": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\opt_1.24.4_w_probe_ctrl_f16_5131104e.onnx",
+    "profile": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\profiles\\w_probe_ctrl_f16_5131104e\\prof_2026-09-24_02-03-52.json",
+    "profile_iterations": 3,
+    "intra_op_num_threads": 1,
+    "free_dim_overrides": {},
+    "inputs": [
+     [
+      "x",
+      "tensor(float)",
+      [
+       "1",
+       "3",
+       "64",
+       "64"
+      ]
+     ]
+    ],
+    "n_transposes_optimized_graph": 0,
+    "duplicate_transpose_names_in_graph": [],
+    "n_transposes_executed": 0,
+    "n_scored": 0,
+    "n_unjoined": 0,
+    "n_executed_not_in_graph": 0,
+    "n_in_graph_not_executed": 0,
+    "n_kernel_events": 0,
+    "executed_dtypes": [],
+    "dtype_or_shape_varied_between_iterations": {},
+    "unknown_dtypes": [],
+    "n_flagged": 0,
+    "sig_a": false,
+    "dispatches": {
+     "1.23.2": 0,
+     "1.24.4": 0
+    },
+    "added_dispatches": 0,
+    "unjoined": [],
+    "flagged_nodes": [],
+    "nodes": []
+   }
+  },
+  {
+   "model": "w_probe/ctrl_f32",
+   "path": "results/w_probe/main/ctrl_f32.onnx",
+   "sha256": "c8f68e50089172f829e92c327eb6aad6969c9703a6f41bd50ae70ed49de1e8a7",
+   "SC-A": {
+    "checker": "SC-A",
+    "role": "SECONDARY",
+    "section": "2.2",
+    "ok": true,
+    "model_path": "results/w_probe/main/ctrl_f32.onnx",
+    "sha256": "c8f68e50089172f829e92c327eb6aad6969c9703a6f41bd50ae70ed49de1e8a7",
+    "onnxruntime": "1.24.4",
+    "dump": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\opt_1.24.4_w_probe_ctrl_f32_321c41b8.onnx",
+    "profile": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\profiles\\w_probe_ctrl_f32_321c41b8\\prof_2026-09-24_02-03-53.json",
+    "profile_iterations": 3,
+    "intra_op_num_threads": 1,
+    "free_dim_overrides": {},
+    "inputs": [
+     [
+      "x",
+      "tensor(float)",
+      [
+       "1",
+       "3",
+       "64",
+       "64"
+      ]
+     ]
+    ],
+    "n_transposes_optimized_graph": 0,
+    "duplicate_transpose_names_in_graph": [],
+    "n_transposes_executed": 0,
+    "n_scored": 0,
+    "n_unjoined": 0,
+    "n_executed_not_in_graph": 0,
+    "n_in_graph_not_executed": 0,
+    "n_kernel_events": 0,
+    "executed_dtypes": [],
+    "dtype_or_shape_varied_between_iterations": {},
+    "unknown_dtypes": [],
+    "n_flagged": 0,
+    "sig_a": false,
+    "dispatches": {
+     "1.23.2": 0,
+     "1.24.4": 0
+    },
+    "added_dispatches": 0,
+    "unjoined": [],
+    "flagged_nodes": [],
+    "nodes": []
+   }
+  },
+  {
+   "model": "w_probe/ctrl_u8",
+   "path": "results/w_probe/main/ctrl_u8.onnx",
+   "sha256": "708414b257fc1709812a7adc2ae3e31d4fd208befd7c04f8e7734a8a6aa93d0f",
+   "SC-A": {
+    "checker": "SC-A",
+    "role": "SECONDARY",
+    "section": "2.2",
+    "ok": true,
+    "model_path": "results/w_probe/main/ctrl_u8.onnx",
+    "sha256": "708414b257fc1709812a7adc2ae3e31d4fd208befd7c04f8e7734a8a6aa93d0f",
+    "onnxruntime": "1.24.4",
+    "dump": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\opt_1.24.4_w_probe_ctrl_u8_bfc4c7f3.onnx",
+    "profile": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\profiles\\w_probe_ctrl_u8_bfc4c7f3\\prof_2026-09-24_02-03-53.json",
+    "profile_iterations": 3,
+    "intra_op_num_threads": 1,
+    "free_dim_overrides": {},
+    "inputs": [
+     [
+      "x",
+      "tensor(float)",
+      [
+       "1",
+       "3",
+       "64",
+       "64"
+      ]
+     ]
+    ],
+    "n_transposes_optimized_graph": 0,
+    "duplicate_transpose_names_in_graph": [],
+    "n_transposes_executed": 0,
+    "n_scored": 0,
+    "n_unjoined": 0,
+    "n_executed_not_in_graph": 0,
+    "n_in_graph_not_executed": 0,
+    "n_kernel_events": 0,
+    "executed_dtypes": [],
+    "dtype_or_shape_varied_between_iterations": {},
+    "unknown_dtypes": [],
+    "n_flagged": 0,
+    "sig_a": false,
+    "dispatches": {
+     "1.23.2": 0,
+     "1.24.4": 0
+    },
+    "added_dispatches": 0,
+    "unjoined": [],
+    "flagged_nodes": [],
+    "nodes": []
+   }
+  },
+  {
+   "model": "w_probe/m_f16_w2",
+   "path": "results/w_probe/main/m_f16_w2.onnx",
+   "sha256": "71f6b6eaf8478bdc055aae7672c140edecb7d40e4601a9b51aa8c9b0142fd9df",
+   "SC-A": {
+    "checker": "SC-A",
+    "role": "SECONDARY",
+    "section": "2.2",
+    "ok": true,
+    "model_path": "results/w_probe/main/m_f16_w2.onnx",
+    "sha256": "71f6b6eaf8478bdc055aae7672c140edecb7d40e4601a9b51aa8c9b0142fd9df",
+    "onnxruntime": "1.24.4",
+    "dump": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\opt_1.24.4_w_probe_m_f16_w2_9415f5c3.onnx",
+    "profile": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\profiles\\w_probe_m_f16_w2_9415f5c3\\prof_2026-09-24_02-03-54.json",
+    "profile_iterations": 3,
+    "intra_op_num_threads": 1,
+    "free_dim_overrides": {},
+    "inputs": [
+     [
+      "x",
+      "tensor(float)",
+      [
+       "1",
+       "3",
+       "64",
+       "64"
+      ]
+     ]
+    ],
+    "n_transposes_optimized_graph": 4,
+    "duplicate_transpose_names_in_graph": [],
+    "n_transposes_executed": 4,
+    "n_scored": 4,
+    "n_unjoined": 0,
+    "n_executed_not_in_graph": 0,
+    "n_in_graph_not_executed": 0,
+    "n_kernel_events": 12,
+    "executed_dtypes": [
+     "float16"
+    ],
+    "dtype_or_shape_varied_between_iterations": {},
+    "unknown_dtypes": [],
+    "n_flagged": 4,
+    "sig_a": true,
+    "dispatches": {
+     "1.23.2": 0,
+     "1.24.4": 1024
+    },
+    "added_dispatches": 1024,
+    "unjoined": [],
+    "flagged_nodes": [
+     {
+      "name": "T3|m_f16_w2",
+      "node_index": 4,
+      "shape": [
+       256,
+       2,
+       8,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "float16",
+      "loops": 256,
+      "M": 2,
+      "N": 8,
+      "added_dispatches": 256
+     },
+     {
+      "name": "T2|m_f16_w2",
+      "node_index": 8,
+      "shape": [
+       256,
+       2,
+       8,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "float16",
+      "loops": 256,
+      "M": 2,
+      "N": 8,
+      "added_dispatches": 256
+     },
+     {
+      "name": "T1|m_f16_w2",
+      "node_index": 12,
+      "shape": [
+       256,
+       2,
+       8,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "float16",
+      "loops": 256,
+      "M": 2,
+      "N": 8,
+      "added_dispatches": 256
+     },
+     {
+      "name": "T0|m_f16_w2",
+      "node_index": 16,
+      "shape": [
+       256,
+       2,
+       8,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "float16",
+      "loops": 256,
+      "M": 2,
+      "N": 8,
+      "added_dispatches": 256
+     }
+    ],
+    "nodes": [
+     {
+      "node_index": 4,
+      "name": "T3|m_f16_w2",
+      "shape": [
+       256,
+       2,
+       8,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "float16",
+      "elem_bytes": 2,
+      "loops": 256,
+      "M": 2,
+      "N": 8,
+      "moved_block_bytes": 2,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 16-bit loops=256",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=256 M=2 N=8",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 256,
+      "added_dispatches": 256,
+      "flagged": true
+     },
+     {
+      "node_index": 8,
+      "name": "T2|m_f16_w2",
+      "shape": [
+       256,
+       2,
+       8,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "float16",
+      "elem_bytes": 2,
+      "loops": 256,
+      "M": 2,
+      "N": 8,
+      "moved_block_bytes": 2,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 16-bit loops=256",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=256 M=2 N=8",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 256,
+      "added_dispatches": 256,
+      "flagged": true
+     },
+     {
+      "node_index": 12,
+      "name": "T1|m_f16_w2",
+      "shape": [
+       256,
+       2,
+       8,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "float16",
+      "elem_bytes": 2,
+      "loops": 256,
+      "M": 2,
+      "N": 8,
+      "moved_block_bytes": 2,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 16-bit loops=256",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=256 M=2 N=8",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 256,
+      "added_dispatches": 256,
+      "flagged": true
+     },
+     {
+      "node_index": 16,
+      "name": "T0|m_f16_w2",
+      "shape": [
+       256,
+       2,
+       8,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "float16",
+      "elem_bytes": 2,
+      "loops": 256,
+      "M": 2,
+      "N": 8,
+      "moved_block_bytes": 2,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 16-bit loops=256",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=256 M=2 N=8",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 256,
+      "added_dispatches": 256,
+      "flagged": true
+     }
+    ]
+   }
+  },
+  {
+   "model": "w_probe/m_f16_w4",
+   "path": "results/w_probe/main/m_f16_w4.onnx",
+   "sha256": "b78d07566c72be1e806632836e4a0723ea032e3ee3b94dbb230046643b471ef3",
+   "SC-A": {
+    "checker": "SC-A",
+    "role": "SECONDARY",
+    "section": "2.2",
+    "ok": true,
+    "model_path": "results/w_probe/main/m_f16_w4.onnx",
+    "sha256": "b78d07566c72be1e806632836e4a0723ea032e3ee3b94dbb230046643b471ef3",
+    "onnxruntime": "1.24.4",
+    "dump": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\opt_1.24.4_w_probe_m_f16_w4_3b0d65b0.onnx",
+    "profile": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\profiles\\w_probe_m_f16_w4_3b0d65b0\\prof_2026-09-24_02-03-55.json",
+    "profile_iterations": 3,
+    "intra_op_num_threads": 1,
+    "free_dim_overrides": {},
+    "inputs": [
+     [
+      "x",
+      "tensor(float)",
+      [
+       "1",
+       "3",
+       "64",
+       "64"
+      ]
+     ]
+    ],
+    "n_transposes_optimized_graph": 4,
+    "duplicate_transpose_names_in_graph": [],
+    "n_transposes_executed": 4,
+    "n_scored": 4,
+    "n_unjoined": 0,
+    "n_executed_not_in_graph": 0,
+    "n_in_graph_not_executed": 0,
+    "n_kernel_events": 12,
+    "executed_dtypes": [
+     "float16"
+    ],
+    "dtype_or_shape_varied_between_iterations": {},
+    "unknown_dtypes": [],
+    "n_flagged": 0,
+    "sig_a": false,
+    "dispatches": {
+     "1.23.2": 1024,
+     "1.24.4": 1024
+    },
+    "added_dispatches": 0,
+    "unjoined": [],
+    "flagged_nodes": [],
+    "nodes": [
+     {
+      "node_index": 4,
+      "name": "T3|m_f16_w4",
+      "shape": [
+       256,
+       2,
+       4,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "float16",
+      "elem_bytes": 2,
+      "loops": 256,
+      "M": 2,
+      "N": 4,
+      "moved_block_bytes": 4,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<32-bit> out loops=256 M=2 N=4",
+      "path_1.24.4": "MlasTranspose<32-bit> out loops=256 M=2 N=4",
+      "dispatches_1.23.2": 256,
+      "dispatches_1.24.4": 256,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 8,
+      "name": "T2|m_f16_w4",
+      "shape": [
+       256,
+       2,
+       4,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "float16",
+      "elem_bytes": 2,
+      "loops": 256,
+      "M": 2,
+      "N": 4,
+      "moved_block_bytes": 4,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<32-bit> out loops=256 M=2 N=4",
+      "path_1.24.4": "MlasTranspose<32-bit> out loops=256 M=2 N=4",
+      "dispatches_1.23.2": 256,
+      "dispatches_1.24.4": 256,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 12,
+      "name": "T1|m_f16_w4",
+      "shape": [
+       256,
+       2,
+       4,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "float16",
+      "elem_bytes": 2,
+      "loops": 256,
+      "M": 2,
+      "N": 4,
+      "moved_block_bytes": 4,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<32-bit> out loops=256 M=2 N=4",
+      "path_1.24.4": "MlasTranspose<32-bit> out loops=256 M=2 N=4",
+      "dispatches_1.23.2": 256,
+      "dispatches_1.24.4": 256,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 16,
+      "name": "T0|m_f16_w4",
+      "shape": [
+       256,
+       2,
+       4,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "float16",
+      "elem_bytes": 2,
+      "loops": 256,
+      "M": 2,
+      "N": 4,
+      "moved_block_bytes": 4,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<32-bit> out loops=256 M=2 N=4",
+      "path_1.24.4": "MlasTranspose<32-bit> out loops=256 M=2 N=4",
+      "dispatches_1.23.2": 256,
+      "dispatches_1.24.4": 256,
+      "added_dispatches": 0,
+      "flagged": false
+     }
+    ]
+   }
+  },
+  {
+   "model": "w_probe/m_f16_w8",
+   "path": "results/w_probe/main/m_f16_w8.onnx",
+   "sha256": "bbdbd0fb53c01b5d04910624963d35eb8ef33254a3f54f60bc30bbba9828f4fc",
+   "SC-A": {
+    "checker": "SC-A",
+    "role": "SECONDARY",
+    "section": "2.2",
+    "ok": true,
+    "model_path": "results/w_probe/main/m_f16_w8.onnx",
+    "sha256": "bbdbd0fb53c01b5d04910624963d35eb8ef33254a3f54f60bc30bbba9828f4fc",
+    "onnxruntime": "1.24.4",
+    "dump": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\opt_1.24.4_w_probe_m_f16_w8_4750cff3.onnx",
+    "profile": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\profiles\\w_probe_m_f16_w8_4750cff3\\prof_2026-09-24_02-03-55.json",
+    "profile_iterations": 3,
+    "intra_op_num_threads": 1,
+    "free_dim_overrides": {},
+    "inputs": [
+     [
+      "x",
+      "tensor(float)",
+      [
+       "1",
+       "3",
+       "64",
+       "64"
+      ]
+     ]
+    ],
+    "n_transposes_optimized_graph": 4,
+    "duplicate_transpose_names_in_graph": [],
+    "n_transposes_executed": 4,
+    "n_scored": 4,
+    "n_unjoined": 0,
+    "n_executed_not_in_graph": 0,
+    "n_in_graph_not_executed": 0,
+    "n_kernel_events": 12,
+    "executed_dtypes": [
+     "float16"
+    ],
+    "dtype_or_shape_varied_between_iterations": {},
+    "unknown_dtypes": [],
+    "n_flagged": 0,
+    "sig_a": false,
+    "dispatches": {
+     "1.23.2": 0,
+     "1.24.4": 0
+    },
+    "added_dispatches": 0,
+    "unjoined": [],
+    "flagged_nodes": [],
+    "nodes": [
+     {
+      "node_index": 4,
+      "name": "T3|m_f16_w8",
+      "shape": [
+       256,
+       2,
+       2,
+       4
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "float16",
+      "elem_bytes": 2,
+      "loops": 256,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 8,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 64-bit loops=256",
+      "path_1.24.4": "scalar out 64-bit loops=256",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 8,
+      "name": "T2|m_f16_w8",
+      "shape": [
+       256,
+       2,
+       2,
+       4
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "float16",
+      "elem_bytes": 2,
+      "loops": 256,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 8,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 64-bit loops=256",
+      "path_1.24.4": "scalar out 64-bit loops=256",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 12,
+      "name": "T1|m_f16_w8",
+      "shape": [
+       256,
+       2,
+       2,
+       4
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "float16",
+      "elem_bytes": 2,
+      "loops": 256,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 8,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 64-bit loops=256",
+      "path_1.24.4": "scalar out 64-bit loops=256",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 16,
+      "name": "T0|m_f16_w8",
+      "shape": [
+       256,
+       2,
+       2,
+       4
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "float16",
+      "elem_bytes": 2,
+      "loops": 256,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 8,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 64-bit loops=256",
+      "path_1.24.4": "scalar out 64-bit loops=256",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     }
+    ]
+   }
+  },
+  {
+   "model": "w_probe/m_f32_w4",
+   "path": "results/w_probe/main/m_f32_w4.onnx",
+   "sha256": "929a1b541a9dfa68271344cf1b7c9c1247def0624aa28877f7e8a476cfae1dd1",
+   "SC-A": {
+    "checker": "SC-A",
+    "role": "SECONDARY",
+    "section": "2.2",
+    "ok": true,
+    "model_path": "results/w_probe/main/m_f32_w4.onnx",
+    "sha256": "929a1b541a9dfa68271344cf1b7c9c1247def0624aa28877f7e8a476cfae1dd1",
+    "onnxruntime": "1.24.4",
+    "dump": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\opt_1.24.4_w_probe_m_f32_w4_1e236eec.onnx",
+    "profile": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\profiles\\w_probe_m_f32_w4_1e236eec\\prof_2026-09-24_02-03-56.json",
+    "profile_iterations": 3,
+    "intra_op_num_threads": 1,
+    "free_dim_overrides": {},
+    "inputs": [
+     [
+      "x",
+      "tensor(float)",
+      [
+       "1",
+       "3",
+       "64",
+       "64"
+      ]
+     ]
+    ],
+    "n_transposes_optimized_graph": 4,
+    "duplicate_transpose_names_in_graph": [],
+    "n_transposes_executed": 4,
+    "n_scored": 4,
+    "n_unjoined": 0,
+    "n_executed_not_in_graph": 0,
+    "n_in_graph_not_executed": 0,
+    "n_kernel_events": 12,
+    "executed_dtypes": [
+     "float"
+    ],
+    "dtype_or_shape_varied_between_iterations": {},
+    "unknown_dtypes": [],
+    "n_flagged": 0,
+    "sig_a": false,
+    "dispatches": {
+     "1.23.2": 1024,
+     "1.24.4": 1024
+    },
+    "added_dispatches": 0,
+    "unjoined": [],
+    "flagged_nodes": [],
+    "nodes": [
+     {
+      "node_index": 3,
+      "name": "T3|m_f32_w4",
+      "shape": [
+       256,
+       2,
+       4,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "float",
+      "elem_bytes": 4,
+      "loops": 256,
+      "M": 2,
+      "N": 4,
+      "moved_block_bytes": 4,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<32-bit> out loops=256 M=2 N=4",
+      "path_1.24.4": "MlasTranspose<32-bit> out loops=256 M=2 N=4",
+      "dispatches_1.23.2": 256,
+      "dispatches_1.24.4": 256,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 7,
+      "name": "T2|m_f32_w4",
+      "shape": [
+       256,
+       2,
+       4,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "float",
+      "elem_bytes": 4,
+      "loops": 256,
+      "M": 2,
+      "N": 4,
+      "moved_block_bytes": 4,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<32-bit> out loops=256 M=2 N=4",
+      "path_1.24.4": "MlasTranspose<32-bit> out loops=256 M=2 N=4",
+      "dispatches_1.23.2": 256,
+      "dispatches_1.24.4": 256,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 11,
+      "name": "T1|m_f32_w4",
+      "shape": [
+       256,
+       2,
+       4,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "float",
+      "elem_bytes": 4,
+      "loops": 256,
+      "M": 2,
+      "N": 4,
+      "moved_block_bytes": 4,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<32-bit> out loops=256 M=2 N=4",
+      "path_1.24.4": "MlasTranspose<32-bit> out loops=256 M=2 N=4",
+      "dispatches_1.23.2": 256,
+      "dispatches_1.24.4": 256,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 15,
+      "name": "T0|m_f32_w4",
+      "shape": [
+       256,
+       2,
+       4,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "float",
+      "elem_bytes": 4,
+      "loops": 256,
+      "M": 2,
+      "N": 4,
+      "moved_block_bytes": 4,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<32-bit> out loops=256 M=2 N=4",
+      "path_1.24.4": "MlasTranspose<32-bit> out loops=256 M=2 N=4",
+      "dispatches_1.23.2": 256,
+      "dispatches_1.24.4": 256,
+      "added_dispatches": 0,
+      "flagged": false
+     }
+    ]
+   }
+  },
+  {
+   "model": "w_probe/m_f32_w8",
+   "path": "results/w_probe/main/m_f32_w8.onnx",
+   "sha256": "39754e101b522ad6ef9935fed53a1edff530485d5751def879a10b58a72bf627",
+   "SC-A": {
+    "checker": "SC-A",
+    "role": "SECONDARY",
+    "section": "2.2",
+    "ok": true,
+    "model_path": "results/w_probe/main/m_f32_w8.onnx",
+    "sha256": "39754e101b522ad6ef9935fed53a1edff530485d5751def879a10b58a72bf627",
+    "onnxruntime": "1.24.4",
+    "dump": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\opt_1.24.4_w_probe_m_f32_w8_712f6cca.onnx",
+    "profile": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\profiles\\w_probe_m_f32_w8_712f6cca\\prof_2026-09-24_02-03-56.json",
+    "profile_iterations": 3,
+    "intra_op_num_threads": 1,
+    "free_dim_overrides": {},
+    "inputs": [
+     [
+      "x",
+      "tensor(float)",
+      [
+       "1",
+       "3",
+       "64",
+       "64"
+      ]
+     ]
+    ],
+    "n_transposes_optimized_graph": 4,
+    "duplicate_transpose_names_in_graph": [],
+    "n_transposes_executed": 4,
+    "n_scored": 4,
+    "n_unjoined": 0,
+    "n_executed_not_in_graph": 0,
+    "n_in_graph_not_executed": 0,
+    "n_kernel_events": 12,
+    "executed_dtypes": [
+     "float"
+    ],
+    "dtype_or_shape_varied_between_iterations": {},
+    "unknown_dtypes": [],
+    "n_flagged": 0,
+    "sig_a": false,
+    "dispatches": {
+     "1.23.2": 0,
+     "1.24.4": 0
+    },
+    "added_dispatches": 0,
+    "unjoined": [],
+    "flagged_nodes": [],
+    "nodes": [
+     {
+      "node_index": 3,
+      "name": "T3|m_f32_w8",
+      "shape": [
+       256,
+       2,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "float",
+      "elem_bytes": 4,
+      "loops": 256,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 8,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 64-bit loops=256",
+      "path_1.24.4": "scalar out 64-bit loops=256",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 7,
+      "name": "T2|m_f32_w8",
+      "shape": [
+       256,
+       2,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "float",
+      "elem_bytes": 4,
+      "loops": 256,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 8,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 64-bit loops=256",
+      "path_1.24.4": "scalar out 64-bit loops=256",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 11,
+      "name": "T1|m_f32_w8",
+      "shape": [
+       256,
+       2,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "float",
+      "elem_bytes": 4,
+      "loops": 256,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 8,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 64-bit loops=256",
+      "path_1.24.4": "scalar out 64-bit loops=256",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 15,
+      "name": "T0|m_f32_w8",
+      "shape": [
+       256,
+       2,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "float",
+      "elem_bytes": 4,
+      "loops": 256,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 8,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 64-bit loops=256",
+      "path_1.24.4": "scalar out 64-bit loops=256",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     }
+    ]
+   }
+  },
+  {
+   "model": "w_probe/m_u8_w1",
+   "path": "results/w_probe/main/m_u8_w1.onnx",
+   "sha256": "c1d92705220f27eb169a59ffe02b50482a2f9f0a97edfd9e4f4e1f3e2f50188e",
+   "SC-A": {
+    "checker": "SC-A",
+    "role": "SECONDARY",
+    "section": "2.2",
+    "ok": true,
+    "model_path": "results/w_probe/main/m_u8_w1.onnx",
+    "sha256": "c1d92705220f27eb169a59ffe02b50482a2f9f0a97edfd9e4f4e1f3e2f50188e",
+    "onnxruntime": "1.24.4",
+    "dump": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\opt_1.24.4_w_probe_m_u8_w1_a1e66621.onnx",
+    "profile": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\profiles\\w_probe_m_u8_w1_a1e66621\\prof_2026-09-24_02-03-57.json",
+    "profile_iterations": 3,
+    "intra_op_num_threads": 1,
+    "free_dim_overrides": {},
+    "inputs": [
+     [
+      "x",
+      "tensor(float)",
+      [
+       "1",
+       "3",
+       "64",
+       "64"
+      ]
+     ]
+    ],
+    "n_transposes_optimized_graph": 4,
+    "duplicate_transpose_names_in_graph": [],
+    "n_transposes_executed": 4,
+    "n_scored": 4,
+    "n_unjoined": 0,
+    "n_executed_not_in_graph": 0,
+    "n_in_graph_not_executed": 0,
+    "n_kernel_events": 12,
+    "executed_dtypes": [
+     "uint8"
+    ],
+    "dtype_or_shape_varied_between_iterations": {},
+    "unknown_dtypes": [],
+    "n_flagged": 0,
+    "sig_a": false,
+    "dispatches": {
+     "1.23.2": 1024,
+     "1.24.4": 1024
+    },
+    "added_dispatches": 0,
+    "unjoined": [],
+    "flagged_nodes": [],
+    "nodes": [
+     {
+      "node_index": 4,
+      "name": "T3|m_u8_w1",
+      "shape": [
+       256,
+       2,
+       16,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 256,
+      "M": 2,
+      "N": 16,
+      "moved_block_bytes": 1,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> out loops=256 M=2 N=16",
+      "path_1.24.4": "MlasTranspose<8-bit> out loops=256 M=2 N=16",
+      "dispatches_1.23.2": 256,
+      "dispatches_1.24.4": 256,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 8,
+      "name": "T2|m_u8_w1",
+      "shape": [
+       256,
+       2,
+       16,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 256,
+      "M": 2,
+      "N": 16,
+      "moved_block_bytes": 1,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> out loops=256 M=2 N=16",
+      "path_1.24.4": "MlasTranspose<8-bit> out loops=256 M=2 N=16",
+      "dispatches_1.23.2": 256,
+      "dispatches_1.24.4": 256,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 12,
+      "name": "T1|m_u8_w1",
+      "shape": [
+       256,
+       2,
+       16,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 256,
+      "M": 2,
+      "N": 16,
+      "moved_block_bytes": 1,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> out loops=256 M=2 N=16",
+      "path_1.24.4": "MlasTranspose<8-bit> out loops=256 M=2 N=16",
+      "dispatches_1.23.2": 256,
+      "dispatches_1.24.4": 256,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 16,
+      "name": "T0|m_u8_w1",
+      "shape": [
+       256,
+       2,
+       16,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 256,
+      "M": 2,
+      "N": 16,
+      "moved_block_bytes": 1,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> out loops=256 M=2 N=16",
+      "path_1.24.4": "MlasTranspose<8-bit> out loops=256 M=2 N=16",
+      "dispatches_1.23.2": 256,
+      "dispatches_1.24.4": 256,
+      "added_dispatches": 0,
+      "flagged": false
+     }
+    ]
+   }
+  },
+  {
+   "model": "w_probe/m_u8_w2",
+   "path": "results/w_probe/main/m_u8_w2.onnx",
+   "sha256": "7dcf28e6b02121071bbe416f27ad2a7a9fe85d884be683e13c560adb4a2b9ace",
+   "SC-A": {
+    "checker": "SC-A",
+    "role": "SECONDARY",
+    "section": "2.2",
+    "ok": true,
+    "model_path": "results/w_probe/main/m_u8_w2.onnx",
+    "sha256": "7dcf28e6b02121071bbe416f27ad2a7a9fe85d884be683e13c560adb4a2b9ace",
+    "onnxruntime": "1.24.4",
+    "dump": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\opt_1.24.4_w_probe_m_u8_w2_af66b91d.onnx",
+    "profile": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\profiles\\w_probe_m_u8_w2_af66b91d\\prof_2026-09-24_02-03-57.json",
+    "profile_iterations": 3,
+    "intra_op_num_threads": 1,
+    "free_dim_overrides": {},
+    "inputs": [
+     [
+      "x",
+      "tensor(float)",
+      [
+       "1",
+       "3",
+       "64",
+       "64"
+      ]
+     ]
+    ],
+    "n_transposes_optimized_graph": 4,
+    "duplicate_transpose_names_in_graph": [],
+    "n_transposes_executed": 4,
+    "n_scored": 4,
+    "n_unjoined": 0,
+    "n_executed_not_in_graph": 0,
+    "n_in_graph_not_executed": 0,
+    "n_kernel_events": 12,
+    "executed_dtypes": [
+     "uint8"
+    ],
+    "dtype_or_shape_varied_between_iterations": {},
+    "unknown_dtypes": [],
+    "n_flagged": 4,
+    "sig_a": true,
+    "dispatches": {
+     "1.23.2": 0,
+     "1.24.4": 1024
+    },
+    "added_dispatches": 1024,
+    "unjoined": [],
+    "flagged_nodes": [
+     {
+      "name": "T3|m_u8_w2",
+      "node_index": 4,
+      "shape": [
+       256,
+       2,
+       8,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "loops": 256,
+      "M": 2,
+      "N": 8,
+      "added_dispatches": 256
+     },
+     {
+      "name": "T2|m_u8_w2",
+      "node_index": 8,
+      "shape": [
+       256,
+       2,
+       8,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "loops": 256,
+      "M": 2,
+      "N": 8,
+      "added_dispatches": 256
+     },
+     {
+      "name": "T1|m_u8_w2",
+      "node_index": 12,
+      "shape": [
+       256,
+       2,
+       8,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "loops": 256,
+      "M": 2,
+      "N": 8,
+      "added_dispatches": 256
+     },
+     {
+      "name": "T0|m_u8_w2",
+      "node_index": 16,
+      "shape": [
+       256,
+       2,
+       8,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "loops": 256,
+      "M": 2,
+      "N": 8,
+      "added_dispatches": 256
+     }
+    ],
+    "nodes": [
+     {
+      "node_index": 4,
+      "name": "T3|m_u8_w2",
+      "shape": [
+       256,
+       2,
+       8,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 256,
+      "M": 2,
+      "N": 8,
+      "moved_block_bytes": 2,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 16-bit loops=256",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=256 M=2 N=8",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 256,
+      "added_dispatches": 256,
+      "flagged": true
+     },
+     {
+      "node_index": 8,
+      "name": "T2|m_u8_w2",
+      "shape": [
+       256,
+       2,
+       8,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 256,
+      "M": 2,
+      "N": 8,
+      "moved_block_bytes": 2,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 16-bit loops=256",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=256 M=2 N=8",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 256,
+      "added_dispatches": 256,
+      "flagged": true
+     },
+     {
+      "node_index": 12,
+      "name": "T1|m_u8_w2",
+      "shape": [
+       256,
+       2,
+       8,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 256,
+      "M": 2,
+      "N": 8,
+      "moved_block_bytes": 2,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 16-bit loops=256",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=256 M=2 N=8",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 256,
+      "added_dispatches": 256,
+      "flagged": true
+     },
+     {
+      "node_index": 16,
+      "name": "T0|m_u8_w2",
+      "shape": [
+       256,
+       2,
+       8,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 256,
+      "M": 2,
+      "N": 8,
+      "moved_block_bytes": 2,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 16-bit loops=256",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=256 M=2 N=8",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 256,
+      "added_dispatches": 256,
+      "flagged": true
+     }
+    ]
+   }
+  },
+  {
+   "model": "w_probe/m_u8_w4",
+   "path": "results/w_probe/main/m_u8_w4.onnx",
+   "sha256": "cfaf953cc9d0ec3858d204ace234a3f2bedbd9a875354f2736edeebedf2504f2",
+   "SC-A": {
+    "checker": "SC-A",
+    "role": "SECONDARY",
+    "section": "2.2",
+    "ok": true,
+    "model_path": "results/w_probe/main/m_u8_w4.onnx",
+    "sha256": "cfaf953cc9d0ec3858d204ace234a3f2bedbd9a875354f2736edeebedf2504f2",
+    "onnxruntime": "1.24.4",
+    "dump": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\opt_1.24.4_w_probe_m_u8_w4_01369fc2.onnx",
+    "profile": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\profiles\\w_probe_m_u8_w4_01369fc2\\prof_2026-09-24_02-03-58.json",
+    "profile_iterations": 3,
+    "intra_op_num_threads": 1,
+    "free_dim_overrides": {},
+    "inputs": [
+     [
+      "x",
+      "tensor(float)",
+      [
+       "1",
+       "3",
+       "64",
+       "64"
+      ]
+     ]
+    ],
+    "n_transposes_optimized_graph": 4,
+    "duplicate_transpose_names_in_graph": [],
+    "n_transposes_executed": 4,
+    "n_scored": 4,
+    "n_unjoined": 0,
+    "n_executed_not_in_graph": 0,
+    "n_in_graph_not_executed": 0,
+    "n_kernel_events": 12,
+    "executed_dtypes": [
+     "uint8"
+    ],
+    "dtype_or_shape_varied_between_iterations": {},
+    "unknown_dtypes": [],
+    "n_flagged": 0,
+    "sig_a": false,
+    "dispatches": {
+     "1.23.2": 1024,
+     "1.24.4": 1024
+    },
+    "added_dispatches": 0,
+    "unjoined": [],
+    "flagged_nodes": [],
+    "nodes": [
+     {
+      "node_index": 4,
+      "name": "T3|m_u8_w4",
+      "shape": [
+       256,
+       2,
+       4,
+       4
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 256,
+      "M": 2,
+      "N": 4,
+      "moved_block_bytes": 4,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<32-bit> out loops=256 M=2 N=4",
+      "path_1.24.4": "MlasTranspose<32-bit> out loops=256 M=2 N=4",
+      "dispatches_1.23.2": 256,
+      "dispatches_1.24.4": 256,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 8,
+      "name": "T2|m_u8_w4",
+      "shape": [
+       256,
+       2,
+       4,
+       4
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 256,
+      "M": 2,
+      "N": 4,
+      "moved_block_bytes": 4,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<32-bit> out loops=256 M=2 N=4",
+      "path_1.24.4": "MlasTranspose<32-bit> out loops=256 M=2 N=4",
+      "dispatches_1.23.2": 256,
+      "dispatches_1.24.4": 256,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 12,
+      "name": "T1|m_u8_w4",
+      "shape": [
+       256,
+       2,
+       4,
+       4
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 256,
+      "M": 2,
+      "N": 4,
+      "moved_block_bytes": 4,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<32-bit> out loops=256 M=2 N=4",
+      "path_1.24.4": "MlasTranspose<32-bit> out loops=256 M=2 N=4",
+      "dispatches_1.23.2": 256,
+      "dispatches_1.24.4": 256,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 16,
+      "name": "T0|m_u8_w4",
+      "shape": [
+       256,
+       2,
+       4,
+       4
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 256,
+      "M": 2,
+      "N": 4,
+      "moved_block_bytes": 4,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<32-bit> out loops=256 M=2 N=4",
+      "path_1.24.4": "MlasTranspose<32-bit> out loops=256 M=2 N=4",
+      "dispatches_1.23.2": 256,
+      "dispatches_1.24.4": 256,
+      "added_dispatches": 0,
+      "flagged": false
+     }
+    ]
+   }
+  },
+  {
+   "model": "w_probe/m_u8_w8",
+   "path": "results/w_probe/main/m_u8_w8.onnx",
+   "sha256": "befb80a038d3c29d25bac789ce60d2b3bb210deb2a3f43e1025d0dd3de587c7e",
+   "SC-A": {
+    "checker": "SC-A",
+    "role": "SECONDARY",
+    "section": "2.2",
+    "ok": true,
+    "model_path": "results/w_probe/main/m_u8_w8.onnx",
+    "sha256": "befb80a038d3c29d25bac789ce60d2b3bb210deb2a3f43e1025d0dd3de587c7e",
+    "onnxruntime": "1.24.4",
+    "dump": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\opt_1.24.4_w_probe_m_u8_w8_19a67751.onnx",
+    "profile": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\profiles\\w_probe_m_u8_w8_19a67751\\prof_2026-09-24_02-03-59.json",
+    "profile_iterations": 3,
+    "intra_op_num_threads": 1,
+    "free_dim_overrides": {},
+    "inputs": [
+     [
+      "x",
+      "tensor(float)",
+      [
+       "1",
+       "3",
+       "64",
+       "64"
+      ]
+     ]
+    ],
+    "n_transposes_optimized_graph": 4,
+    "duplicate_transpose_names_in_graph": [],
+    "n_transposes_executed": 4,
+    "n_scored": 4,
+    "n_unjoined": 0,
+    "n_executed_not_in_graph": 0,
+    "n_in_graph_not_executed": 0,
+    "n_kernel_events": 12,
+    "executed_dtypes": [
+     "uint8"
+    ],
+    "dtype_or_shape_varied_between_iterations": {},
+    "unknown_dtypes": [],
+    "n_flagged": 0,
+    "sig_a": false,
+    "dispatches": {
+     "1.23.2": 0,
+     "1.24.4": 0
+    },
+    "added_dispatches": 0,
+    "unjoined": [],
+    "flagged_nodes": [],
+    "nodes": [
+     {
+      "node_index": 4,
+      "name": "T3|m_u8_w8",
+      "shape": [
+       256,
+       2,
+       2,
+       8
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 256,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 8,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 64-bit loops=256",
+      "path_1.24.4": "scalar out 64-bit loops=256",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 8,
+      "name": "T2|m_u8_w8",
+      "shape": [
+       256,
+       2,
+       2,
+       8
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 256,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 8,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 64-bit loops=256",
+      "path_1.24.4": "scalar out 64-bit loops=256",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 12,
+      "name": "T1|m_u8_w8",
+      "shape": [
+       256,
+       2,
+       2,
+       8
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 256,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 8,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 64-bit loops=256",
+      "path_1.24.4": "scalar out 64-bit loops=256",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 16,
+      "name": "T0|m_u8_w8",
+      "shape": [
+       256,
+       2,
+       2,
+       8
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 256,
+      "M": null,
+      "N": null,
+      "moved_block_bytes": 8,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 64-bit loops=256",
+      "path_1.24.4": "scalar out 64-bit loops=256",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "added_dispatches": 0,
+      "flagged": false
+     }
+    ]
+   }
+  },
+  {
+   "model": "w_probe/d_ctrl_u8",
+   "path": "results/w_probe/dose/d_ctrl_u8.onnx",
+   "sha256": "59fcdee79f12114dcc81679bd3f1ef0e909d8fcded60a87fd411bd300b057336",
+   "SC-A": {
+    "checker": "SC-A",
+    "role": "SECONDARY",
+    "section": "2.2",
+    "ok": true,
+    "model_path": "results/w_probe/dose/d_ctrl_u8.onnx",
+    "sha256": "59fcdee79f12114dcc81679bd3f1ef0e909d8fcded60a87fd411bd300b057336",
+    "onnxruntime": "1.24.4",
+    "dump": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\opt_1.24.4_w_probe_d_ctrl_u8_2081df83.onnx",
+    "profile": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\profiles\\w_probe_d_ctrl_u8_2081df83\\prof_2026-09-24_02-03-59.json",
+    "profile_iterations": 3,
+    "intra_op_num_threads": 1,
+    "free_dim_overrides": {},
+    "inputs": [
+     [
+      "x",
+      "tensor(float)",
+      [
+       "1",
+       "3",
+       "64",
+       "64"
+      ]
+     ]
+    ],
+    "n_transposes_optimized_graph": 0,
+    "duplicate_transpose_names_in_graph": [],
+    "n_transposes_executed": 0,
+    "n_scored": 0,
+    "n_unjoined": 0,
+    "n_executed_not_in_graph": 0,
+    "n_in_graph_not_executed": 0,
+    "n_kernel_events": 0,
+    "executed_dtypes": [],
+    "dtype_or_shape_varied_between_iterations": {},
+    "unknown_dtypes": [],
+    "n_flagged": 0,
+    "sig_a": false,
+    "dispatches": {
+     "1.23.2": 0,
+     "1.24.4": 0
+    },
+    "added_dispatches": 0,
+    "unjoined": [],
+    "flagged_nodes": [],
+    "nodes": []
+   }
+  },
+  {
+   "model": "w_probe/d_u8_w1_L1024",
+   "path": "results/w_probe/dose/d_u8_w1_L1024.onnx",
+   "sha256": "dfc920eec699182716775eb438160d4c16180e3785314da004d6a35b84aebae1",
+   "SC-A": {
+    "checker": "SC-A",
+    "role": "SECONDARY",
+    "section": "2.2",
+    "ok": true,
+    "model_path": "results/w_probe/dose/d_u8_w1_L1024.onnx",
+    "sha256": "dfc920eec699182716775eb438160d4c16180e3785314da004d6a35b84aebae1",
+    "onnxruntime": "1.24.4",
+    "dump": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\opt_1.24.4_w_probe_d_u8_w1_L1024_b638cdff.onnx",
+    "profile": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\profiles\\w_probe_d_u8_w1_L1024_b638cdff\\prof_2026-09-24_02-04-00.json",
+    "profile_iterations": 3,
+    "intra_op_num_threads": 1,
+    "free_dim_overrides": {},
+    "inputs": [
+     [
+      "x",
+      "tensor(float)",
+      [
+       "1",
+       "3",
+       "64",
+       "64"
+      ]
+     ]
+    ],
+    "n_transposes_optimized_graph": 4,
+    "duplicate_transpose_names_in_graph": [],
+    "n_transposes_executed": 4,
+    "n_scored": 4,
+    "n_unjoined": 0,
+    "n_executed_not_in_graph": 0,
+    "n_in_graph_not_executed": 0,
+    "n_kernel_events": 12,
+    "executed_dtypes": [
+     "uint8"
+    ],
+    "dtype_or_shape_varied_between_iterations": {},
+    "unknown_dtypes": [],
+    "n_flagged": 0,
+    "sig_a": false,
+    "dispatches": {
+     "1.23.2": 4096,
+     "1.24.4": 4096
+    },
+    "added_dispatches": 0,
+    "unjoined": [],
+    "flagged_nodes": [],
+    "nodes": [
+     {
+      "node_index": 4,
+      "name": "T3|d_u8_w1_L1024",
+      "shape": [
+       1024,
+       2,
+       4,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 1024,
+      "M": 2,
+      "N": 4,
+      "moved_block_bytes": 1,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> out loops=1024 M=2 N=4",
+      "path_1.24.4": "MlasTranspose<8-bit> out loops=1024 M=2 N=4",
+      "dispatches_1.23.2": 1024,
+      "dispatches_1.24.4": 1024,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 8,
+      "name": "T2|d_u8_w1_L1024",
+      "shape": [
+       1024,
+       2,
+       4,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 1024,
+      "M": 2,
+      "N": 4,
+      "moved_block_bytes": 1,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> out loops=1024 M=2 N=4",
+      "path_1.24.4": "MlasTranspose<8-bit> out loops=1024 M=2 N=4",
+      "dispatches_1.23.2": 1024,
+      "dispatches_1.24.4": 1024,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 12,
+      "name": "T1|d_u8_w1_L1024",
+      "shape": [
+       1024,
+       2,
+       4,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 1024,
+      "M": 2,
+      "N": 4,
+      "moved_block_bytes": 1,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> out loops=1024 M=2 N=4",
+      "path_1.24.4": "MlasTranspose<8-bit> out loops=1024 M=2 N=4",
+      "dispatches_1.23.2": 1024,
+      "dispatches_1.24.4": 1024,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 16,
+      "name": "T0|d_u8_w1_L1024",
+      "shape": [
+       1024,
+       2,
+       4,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 1024,
+      "M": 2,
+      "N": 4,
+      "moved_block_bytes": 1,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> out loops=1024 M=2 N=4",
+      "path_1.24.4": "MlasTranspose<8-bit> out loops=1024 M=2 N=4",
+      "dispatches_1.23.2": 1024,
+      "dispatches_1.24.4": 1024,
+      "added_dispatches": 0,
+      "flagged": false
+     }
+    ]
+   }
+  },
+  {
+   "model": "w_probe/d_u8_w1_L256",
+   "path": "results/w_probe/dose/d_u8_w1_L256.onnx",
+   "sha256": "71a48151d82503ee87c4c09b2d49fecb30fac81455f75fd5b0e1fad5a395b626",
+   "SC-A": {
+    "checker": "SC-A",
+    "role": "SECONDARY",
+    "section": "2.2",
+    "ok": true,
+    "model_path": "results/w_probe/dose/d_u8_w1_L256.onnx",
+    "sha256": "71a48151d82503ee87c4c09b2d49fecb30fac81455f75fd5b0e1fad5a395b626",
+    "onnxruntime": "1.24.4",
+    "dump": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\opt_1.24.4_w_probe_d_u8_w1_L256_781e0b0b.onnx",
+    "profile": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\profiles\\w_probe_d_u8_w1_L256_781e0b0b\\prof_2026-09-24_02-04-00.json",
+    "profile_iterations": 3,
+    "intra_op_num_threads": 1,
+    "free_dim_overrides": {},
+    "inputs": [
+     [
+      "x",
+      "tensor(float)",
+      [
+       "1",
+       "3",
+       "64",
+       "64"
+      ]
+     ]
+    ],
+    "n_transposes_optimized_graph": 4,
+    "duplicate_transpose_names_in_graph": [],
+    "n_transposes_executed": 4,
+    "n_scored": 4,
+    "n_unjoined": 0,
+    "n_executed_not_in_graph": 0,
+    "n_in_graph_not_executed": 0,
+    "n_kernel_events": 12,
+    "executed_dtypes": [
+     "uint8"
+    ],
+    "dtype_or_shape_varied_between_iterations": {},
+    "unknown_dtypes": [],
+    "n_flagged": 0,
+    "sig_a": false,
+    "dispatches": {
+     "1.23.2": 1024,
+     "1.24.4": 1024
+    },
+    "added_dispatches": 0,
+    "unjoined": [],
+    "flagged_nodes": [],
+    "nodes": [
+     {
+      "node_index": 4,
+      "name": "T3|d_u8_w1_L256",
+      "shape": [
+       256,
+       2,
+       16,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 256,
+      "M": 2,
+      "N": 16,
+      "moved_block_bytes": 1,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> out loops=256 M=2 N=16",
+      "path_1.24.4": "MlasTranspose<8-bit> out loops=256 M=2 N=16",
+      "dispatches_1.23.2": 256,
+      "dispatches_1.24.4": 256,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 8,
+      "name": "T2|d_u8_w1_L256",
+      "shape": [
+       256,
+       2,
+       16,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 256,
+      "M": 2,
+      "N": 16,
+      "moved_block_bytes": 1,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> out loops=256 M=2 N=16",
+      "path_1.24.4": "MlasTranspose<8-bit> out loops=256 M=2 N=16",
+      "dispatches_1.23.2": 256,
+      "dispatches_1.24.4": 256,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 12,
+      "name": "T1|d_u8_w1_L256",
+      "shape": [
+       256,
+       2,
+       16,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 256,
+      "M": 2,
+      "N": 16,
+      "moved_block_bytes": 1,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> out loops=256 M=2 N=16",
+      "path_1.24.4": "MlasTranspose<8-bit> out loops=256 M=2 N=16",
+      "dispatches_1.23.2": 256,
+      "dispatches_1.24.4": 256,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 16,
+      "name": "T0|d_u8_w1_L256",
+      "shape": [
+       256,
+       2,
+       16,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 256,
+      "M": 2,
+      "N": 16,
+      "moved_block_bytes": 1,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> out loops=256 M=2 N=16",
+      "path_1.24.4": "MlasTranspose<8-bit> out loops=256 M=2 N=16",
+      "dispatches_1.23.2": 256,
+      "dispatches_1.24.4": 256,
+      "added_dispatches": 0,
+      "flagged": false
+     }
+    ]
+   }
+  },
+  {
+   "model": "w_probe/d_u8_w1_L64",
+   "path": "results/w_probe/dose/d_u8_w1_L64.onnx",
+   "sha256": "4ca04647eca3ad9caa380b88c1d5d141f90cc7a8dfb990e598964995a856755b",
+   "SC-A": {
+    "checker": "SC-A",
+    "role": "SECONDARY",
+    "section": "2.2",
+    "ok": true,
+    "model_path": "results/w_probe/dose/d_u8_w1_L64.onnx",
+    "sha256": "4ca04647eca3ad9caa380b88c1d5d141f90cc7a8dfb990e598964995a856755b",
+    "onnxruntime": "1.24.4",
+    "dump": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\opt_1.24.4_w_probe_d_u8_w1_L64_e2f32bc3.onnx",
+    "profile": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\profiles\\w_probe_d_u8_w1_L64_e2f32bc3\\prof_2026-09-24_02-04-01.json",
+    "profile_iterations": 3,
+    "intra_op_num_threads": 1,
+    "free_dim_overrides": {},
+    "inputs": [
+     [
+      "x",
+      "tensor(float)",
+      [
+       "1",
+       "3",
+       "64",
+       "64"
+      ]
+     ]
+    ],
+    "n_transposes_optimized_graph": 4,
+    "duplicate_transpose_names_in_graph": [],
+    "n_transposes_executed": 4,
+    "n_scored": 4,
+    "n_unjoined": 0,
+    "n_executed_not_in_graph": 0,
+    "n_in_graph_not_executed": 0,
+    "n_kernel_events": 12,
+    "executed_dtypes": [
+     "uint8"
+    ],
+    "dtype_or_shape_varied_between_iterations": {},
+    "unknown_dtypes": [],
+    "n_flagged": 0,
+    "sig_a": false,
+    "dispatches": {
+     "1.23.2": 256,
+     "1.24.4": 256
+    },
+    "added_dispatches": 0,
+    "unjoined": [],
+    "flagged_nodes": [],
+    "nodes": [
+     {
+      "node_index": 4,
+      "name": "T3|d_u8_w1_L64",
+      "shape": [
+       64,
+       2,
+       64,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 64,
+      "M": 2,
+      "N": 64,
+      "moved_block_bytes": 1,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> out loops=64 M=2 N=64",
+      "path_1.24.4": "MlasTranspose<8-bit> out loops=64 M=2 N=64",
+      "dispatches_1.23.2": 64,
+      "dispatches_1.24.4": 64,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 8,
+      "name": "T2|d_u8_w1_L64",
+      "shape": [
+       64,
+       2,
+       64,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 64,
+      "M": 2,
+      "N": 64,
+      "moved_block_bytes": 1,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> out loops=64 M=2 N=64",
+      "path_1.24.4": "MlasTranspose<8-bit> out loops=64 M=2 N=64",
+      "dispatches_1.23.2": 64,
+      "dispatches_1.24.4": 64,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 12,
+      "name": "T1|d_u8_w1_L64",
+      "shape": [
+       64,
+       2,
+       64,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 64,
+      "M": 2,
+      "N": 64,
+      "moved_block_bytes": 1,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> out loops=64 M=2 N=64",
+      "path_1.24.4": "MlasTranspose<8-bit> out loops=64 M=2 N=64",
+      "dispatches_1.23.2": 64,
+      "dispatches_1.24.4": 64,
+      "added_dispatches": 0,
+      "flagged": false
+     },
+     {
+      "node_index": 16,
+      "name": "T0|d_u8_w1_L64",
+      "shape": [
+       64,
+       2,
+       64,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 64,
+      "M": 2,
+      "N": 64,
+      "moved_block_bytes": 1,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "MlasTranspose<8-bit> out loops=64 M=2 N=64",
+      "path_1.24.4": "MlasTranspose<8-bit> out loops=64 M=2 N=64",
+      "dispatches_1.23.2": 64,
+      "dispatches_1.24.4": 64,
+      "added_dispatches": 0,
+      "flagged": false
+     }
+    ]
+   }
+  },
+  {
+   "model": "w_probe/d_u8_w2_L1024",
+   "path": "results/w_probe/dose/d_u8_w2_L1024.onnx",
+   "sha256": "3ae8a245d39964b3eceb78bae2a38a34e02dbd9284f0d92fc0456c55619c6eda",
+   "SC-A": {
+    "checker": "SC-A",
+    "role": "SECONDARY",
+    "section": "2.2",
+    "ok": true,
+    "model_path": "results/w_probe/dose/d_u8_w2_L1024.onnx",
+    "sha256": "3ae8a245d39964b3eceb78bae2a38a34e02dbd9284f0d92fc0456c55619c6eda",
+    "onnxruntime": "1.24.4",
+    "dump": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\opt_1.24.4_w_probe_d_u8_w2_L1024_13393088.onnx",
+    "profile": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\profiles\\w_probe_d_u8_w2_L1024_13393088\\prof_2026-09-24_02-04-01.json",
+    "profile_iterations": 3,
+    "intra_op_num_threads": 1,
+    "free_dim_overrides": {},
+    "inputs": [
+     [
+      "x",
+      "tensor(float)",
+      [
+       "1",
+       "3",
+       "64",
+       "64"
+      ]
+     ]
+    ],
+    "n_transposes_optimized_graph": 4,
+    "duplicate_transpose_names_in_graph": [],
+    "n_transposes_executed": 4,
+    "n_scored": 4,
+    "n_unjoined": 0,
+    "n_executed_not_in_graph": 0,
+    "n_in_graph_not_executed": 0,
+    "n_kernel_events": 12,
+    "executed_dtypes": [
+     "uint8"
+    ],
+    "dtype_or_shape_varied_between_iterations": {},
+    "unknown_dtypes": [],
+    "n_flagged": 4,
+    "sig_a": true,
+    "dispatches": {
+     "1.23.2": 0,
+     "1.24.4": 4096
+    },
+    "added_dispatches": 4096,
+    "unjoined": [],
+    "flagged_nodes": [
+     {
+      "name": "T3|d_u8_w2_L1024",
+      "node_index": 4,
+      "shape": [
+       1024,
+       2,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "loops": 1024,
+      "M": 2,
+      "N": 2,
+      "added_dispatches": 1024
+     },
+     {
+      "name": "T2|d_u8_w2_L1024",
+      "node_index": 8,
+      "shape": [
+       1024,
+       2,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "loops": 1024,
+      "M": 2,
+      "N": 2,
+      "added_dispatches": 1024
+     },
+     {
+      "name": "T1|d_u8_w2_L1024",
+      "node_index": 12,
+      "shape": [
+       1024,
+       2,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "loops": 1024,
+      "M": 2,
+      "N": 2,
+      "added_dispatches": 1024
+     },
+     {
+      "name": "T0|d_u8_w2_L1024",
+      "node_index": 16,
+      "shape": [
+       1024,
+       2,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "loops": 1024,
+      "M": 2,
+      "N": 2,
+      "added_dispatches": 1024
+     }
+    ],
+    "nodes": [
+     {
+      "node_index": 4,
+      "name": "T3|d_u8_w2_L1024",
+      "shape": [
+       1024,
+       2,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 1024,
+      "M": 2,
+      "N": 2,
+      "moved_block_bytes": 2,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 16-bit loops=1024",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=1024 M=2 N=2",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 1024,
+      "added_dispatches": 1024,
+      "flagged": true
+     },
+     {
+      "node_index": 8,
+      "name": "T2|d_u8_w2_L1024",
+      "shape": [
+       1024,
+       2,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 1024,
+      "M": 2,
+      "N": 2,
+      "moved_block_bytes": 2,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 16-bit loops=1024",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=1024 M=2 N=2",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 1024,
+      "added_dispatches": 1024,
+      "flagged": true
+     },
+     {
+      "node_index": 12,
+      "name": "T1|d_u8_w2_L1024",
+      "shape": [
+       1024,
+       2,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 1024,
+      "M": 2,
+      "N": 2,
+      "moved_block_bytes": 2,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 16-bit loops=1024",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=1024 M=2 N=2",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 1024,
+      "added_dispatches": 1024,
+      "flagged": true
+     },
+     {
+      "node_index": 16,
+      "name": "T0|d_u8_w2_L1024",
+      "shape": [
+       1024,
+       2,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 1024,
+      "M": 2,
+      "N": 2,
+      "moved_block_bytes": 2,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 16-bit loops=1024",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=1024 M=2 N=2",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 1024,
+      "added_dispatches": 1024,
+      "flagged": true
+     }
+    ]
+   }
+  },
+  {
+   "model": "w_probe/d_u8_w2_L256",
+   "path": "results/w_probe/dose/d_u8_w2_L256.onnx",
+   "sha256": "b7b95e0851bf2433e26bb8d1891a9b05511f15cef438224d3d183befefc67d83",
+   "SC-A": {
+    "checker": "SC-A",
+    "role": "SECONDARY",
+    "section": "2.2",
+    "ok": true,
+    "model_path": "results/w_probe/dose/d_u8_w2_L256.onnx",
+    "sha256": "b7b95e0851bf2433e26bb8d1891a9b05511f15cef438224d3d183befefc67d83",
+    "onnxruntime": "1.24.4",
+    "dump": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\opt_1.24.4_w_probe_d_u8_w2_L256_3cca9e5a.onnx",
+    "profile": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\profiles\\w_probe_d_u8_w2_L256_3cca9e5a\\prof_2026-09-24_02-04-02.json",
+    "profile_iterations": 3,
+    "intra_op_num_threads": 1,
+    "free_dim_overrides": {},
+    "inputs": [
+     [
+      "x",
+      "tensor(float)",
+      [
+       "1",
+       "3",
+       "64",
+       "64"
+      ]
+     ]
+    ],
+    "n_transposes_optimized_graph": 4,
+    "duplicate_transpose_names_in_graph": [],
+    "n_transposes_executed": 4,
+    "n_scored": 4,
+    "n_unjoined": 0,
+    "n_executed_not_in_graph": 0,
+    "n_in_graph_not_executed": 0,
+    "n_kernel_events": 12,
+    "executed_dtypes": [
+     "uint8"
+    ],
+    "dtype_or_shape_varied_between_iterations": {},
+    "unknown_dtypes": [],
+    "n_flagged": 4,
+    "sig_a": true,
+    "dispatches": {
+     "1.23.2": 0,
+     "1.24.4": 1024
+    },
+    "added_dispatches": 1024,
+    "unjoined": [],
+    "flagged_nodes": [
+     {
+      "name": "T3|d_u8_w2_L256",
+      "node_index": 4,
+      "shape": [
+       256,
+       2,
+       8,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "loops": 256,
+      "M": 2,
+      "N": 8,
+      "added_dispatches": 256
+     },
+     {
+      "name": "T2|d_u8_w2_L256",
+      "node_index": 8,
+      "shape": [
+       256,
+       2,
+       8,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "loops": 256,
+      "M": 2,
+      "N": 8,
+      "added_dispatches": 256
+     },
+     {
+      "name": "T1|d_u8_w2_L256",
+      "node_index": 12,
+      "shape": [
+       256,
+       2,
+       8,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "loops": 256,
+      "M": 2,
+      "N": 8,
+      "added_dispatches": 256
+     },
+     {
+      "name": "T0|d_u8_w2_L256",
+      "node_index": 16,
+      "shape": [
+       256,
+       2,
+       8,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "loops": 256,
+      "M": 2,
+      "N": 8,
+      "added_dispatches": 256
+     }
+    ],
+    "nodes": [
+     {
+      "node_index": 4,
+      "name": "T3|d_u8_w2_L256",
+      "shape": [
+       256,
+       2,
+       8,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 256,
+      "M": 2,
+      "N": 8,
+      "moved_block_bytes": 2,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 16-bit loops=256",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=256 M=2 N=8",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 256,
+      "added_dispatches": 256,
+      "flagged": true
+     },
+     {
+      "node_index": 8,
+      "name": "T2|d_u8_w2_L256",
+      "shape": [
+       256,
+       2,
+       8,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 256,
+      "M": 2,
+      "N": 8,
+      "moved_block_bytes": 2,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 16-bit loops=256",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=256 M=2 N=8",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 256,
+      "added_dispatches": 256,
+      "flagged": true
+     },
+     {
+      "node_index": 12,
+      "name": "T1|d_u8_w2_L256",
+      "shape": [
+       256,
+       2,
+       8,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 256,
+      "M": 2,
+      "N": 8,
+      "moved_block_bytes": 2,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 16-bit loops=256",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=256 M=2 N=8",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 256,
+      "added_dispatches": 256,
+      "flagged": true
+     },
+     {
+      "node_index": 16,
+      "name": "T0|d_u8_w2_L256",
+      "shape": [
+       256,
+       2,
+       8,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 256,
+      "M": 2,
+      "N": 8,
+      "moved_block_bytes": 2,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 16-bit loops=256",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=256 M=2 N=8",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 256,
+      "added_dispatches": 256,
+      "flagged": true
+     }
+    ]
+   }
+  },
+  {
+   "model": "w_probe/d_u8_w2_L64",
+   "path": "results/w_probe/dose/d_u8_w2_L64.onnx",
+   "sha256": "edbfa1de5737bf68146da3ad4f777035af16cf6fe87ac8414956155ca1199891",
+   "SC-A": {
+    "checker": "SC-A",
+    "role": "SECONDARY",
+    "section": "2.2",
+    "ok": true,
+    "model_path": "results/w_probe/dose/d_u8_w2_L64.onnx",
+    "sha256": "edbfa1de5737bf68146da3ad4f777035af16cf6fe87ac8414956155ca1199891",
+    "onnxruntime": "1.24.4",
+    "dump": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\opt_1.24.4_w_probe_d_u8_w2_L64_6a8f6f1b.onnx",
+    "profile": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-Desktop-SEC\\103ae351-d709-4d02-91fc-0b8da660fe58\\scratchpad\\w_exec\\exec_1244\\profiles\\w_probe_d_u8_w2_L64_6a8f6f1b\\prof_2026-09-24_02-04-03.json",
+    "profile_iterations": 3,
+    "intra_op_num_threads": 1,
+    "free_dim_overrides": {},
+    "inputs": [
+     [
+      "x",
+      "tensor(float)",
+      [
+       "1",
+       "3",
+       "64",
+       "64"
+      ]
+     ]
+    ],
+    "n_transposes_optimized_graph": 4,
+    "duplicate_transpose_names_in_graph": [],
+    "n_transposes_executed": 4,
+    "n_scored": 4,
+    "n_unjoined": 0,
+    "n_executed_not_in_graph": 0,
+    "n_in_graph_not_executed": 0,
+    "n_kernel_events": 12,
+    "executed_dtypes": [
+     "uint8"
+    ],
+    "dtype_or_shape_varied_between_iterations": {},
+    "unknown_dtypes": [],
+    "n_flagged": 4,
+    "sig_a": true,
+    "dispatches": {
+     "1.23.2": 0,
+     "1.24.4": 256
+    },
+    "added_dispatches": 256,
+    "unjoined": [],
+    "flagged_nodes": [
+     {
+      "name": "T3|d_u8_w2_L64",
+      "node_index": 4,
+      "shape": [
+       64,
+       2,
+       32,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "loops": 64,
+      "M": 2,
+      "N": 32,
+      "added_dispatches": 64
+     },
+     {
+      "name": "T2|d_u8_w2_L64",
+      "node_index": 8,
+      "shape": [
+       64,
+       2,
+       32,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "loops": 64,
+      "M": 2,
+      "N": 32,
+      "added_dispatches": 64
+     },
+     {
+      "name": "T1|d_u8_w2_L64",
+      "node_index": 12,
+      "shape": [
+       64,
+       2,
+       32,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "loops": 64,
+      "M": 2,
+      "N": 32,
+      "added_dispatches": 64
+     },
+     {
+      "name": "T0|d_u8_w2_L64",
+      "node_index": 16,
+      "shape": [
+       64,
+       2,
+       32,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "loops": 64,
+      "M": 2,
+      "N": 32,
+      "added_dispatches": 64
+     }
+    ],
+    "nodes": [
+     {
+      "node_index": 4,
+      "name": "T3|d_u8_w2_L64",
+      "shape": [
+       64,
+       2,
+       32,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 64,
+      "M": 2,
+      "N": 32,
+      "moved_block_bytes": 2,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 16-bit loops=64",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=64 M=2 N=32",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 64,
+      "added_dispatches": 64,
+      "flagged": true
+     },
+     {
+      "node_index": 8,
+      "name": "T2|d_u8_w2_L64",
+      "shape": [
+       64,
+       2,
+       32,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 64,
+      "M": 2,
+      "N": 32,
+      "moved_block_bytes": 2,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 16-bit loops=64",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=64 M=2 N=32",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 64,
+      "added_dispatches": 64,
+      "flagged": true
+     },
+     {
+      "node_index": 12,
+      "name": "T1|d_u8_w2_L64",
+      "shape": [
+       64,
+       2,
+       32,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 64,
+      "M": 2,
+      "N": 32,
+      "moved_block_bytes": 2,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 16-bit loops=64",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=64 M=2 N=32",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 64,
+      "added_dispatches": 64,
+      "flagged": true
+     },
+     {
+      "node_index": 16,
+      "name": "T0|d_u8_w2_L64",
+      "shape": [
+       64,
+       2,
+       32,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "uint8",
+      "elem_bytes": 1,
+      "loops": 64,
+      "M": 2,
+      "N": 32,
+      "moved_block_bytes": 2,
+      "kind": "out",
+      "reshape_copy": false,
+      "single_axis": [
+       "out",
+       2,
+       1
+      ],
+      "path_1.23.2": "scalar out 16-bit loops=64",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=64 M=2 N=32",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 64,
+      "added_dispatches": 64,
+      "flagged": true
+     }
+    ]
+   }
+  }
+ ]
+}

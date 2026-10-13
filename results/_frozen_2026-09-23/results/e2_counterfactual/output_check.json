@@ -1,0 +1,62 @@
+{
+ "1.23.2|disabled|p00_int8_e2": {
+  "bit_identical": true,
+  "max_abs_diff": 0.0,
+  "argmax_identical": true
+ },
+ "1.23.2|disabled|p00_int8_sham": {
+  "bit_identical": true,
+  "max_abs_diff": 0.0,
+  "argmax_identical": true
+ },
+ "1.23.2|disabled|p00_int8_plac": {
+  "bit_identical": true,
+  "max_abs_diff": 0.0,
+  "argmax_identical": true
+ },
+ "1.23.2|all|p00_int8_e2": {
+  "bit_identical": true,
+  "max_abs_diff": 0.0,
+  "argmax_identical": true
+ },
+ "1.23.2|all|p00_int8_sham": {
+  "bit_identical": true,
+  "max_abs_diff": 0.0,
+  "argmax_identical": true
+ },
+ "1.23.2|all|p00_int8_plac": {
+  "bit_identical": true,
+  "max_abs_diff": 0.0,
+  "argmax_identical": true
+ },
+ "1.24.4|disabled|p00_int8_e2": {
+  "bit_identical": true,
+  "max_abs_diff": 0.0,
+  "argmax_identical": true
+ },
+ "1.24.4|disabled|p00_int8_sham": {
+  "bit_identical": true,
+  "max_abs_diff": 0.0,
+  "argmax_identical": true
+ },
+ "1.24.4|disabled|p00_int8_plac": {
+  "bit_identical": true,
+  "max_abs_diff": 0.0,
+  "argmax_identical": true
+ },
+ "1.24.4|all|p00_int8_e2": {
+  "bit_identical": true,
+  "max_abs_diff": 0.0,
+  "argmax_identical": true
+ },
+ "1.24.4|all|p00_int8_sham": {
+  "bit_identical": true,
+  "max_abs_diff": 0.0,
+  "argmax_identical": true
+ },
+ "1.24.4|all|p00_int8_plac": {
+  "bit_identical": true,
+  "max_abs_diff": 0.0,
+  "argmax_identical": true
+ }
+}

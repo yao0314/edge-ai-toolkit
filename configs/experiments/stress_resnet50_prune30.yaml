@@ -1,0 +1,7 @@
+# 12 epochs took 25%-pruned ResNet50 from -9.53 to -3.18 pt. The budget is 2.0, so 1.18 pt short.
+# 30 epochs tests whether the remaining gap is just more of the same. Prize: p25_int8 at 6.88x
+# against the current 3.91x winner.
+extends: stress_resnet50_prune.yaml
+name: stress_resnet50_prune30
+sweep:
+  finetune_epochs: 30

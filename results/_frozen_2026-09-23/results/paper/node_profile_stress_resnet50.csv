@@ -1,0 +1,10 @@
+model,run,op_type,calls,dur_us,share_pct,is_qdq
+p00_int8,stress_resnet50,QLinearConv,1590,903724.0,95.2045046326291,False
+p00_int8,stress_resnet50,QLinearAdd,480,36237.0,3.8174549247033167,False
+p00_int8,stress_resnet50,NhwcMaxPool,30,2841.0,0.29929048875685416,False
+p00_int8,stress_resnet50,QuantizeLinear,30,2358.0,0.24840794526176066,True
+p00_int8,stress_resnet50,Transpose,60,1823.0,0.19204736395767164,False
+p00_int8,stress_resnet50,QLinearGlobalAveragePool,30,937.0,0.09871002744286249,False
+p00_int8,stress_resnet50,QGemm,30,684.0,0.0720572665644802,False
+p00_int8,stress_resnet50,DequantizeLinear,30,445.0,0.046879362019289016,True
+p00_int8,stress_resnet50,Flatten,30,196.0,0.020647988664675612,False

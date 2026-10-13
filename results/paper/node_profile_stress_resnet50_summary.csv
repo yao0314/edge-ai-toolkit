@@ -1,0 +1,2 @@
+model,run,latency_ms_no_profiler,latency_ms_from_profile,profiler_overhead_x,qdq_share_pct,n_op_types,n_events,nodes_per_iteration,warmup_events_dropped
+p00_int8,stress_resnet50,28.705650009214878,31.6415,1.1022742905958471,0.2952873072810497,9,2310,77,385

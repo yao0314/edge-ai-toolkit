@@ -1,0 +1,185 @@
+{
+  "rows": [
+    {
+      "variant": "baseline_fp32",
+      "metric_name": "top1",
+      "accuracy": 0.9234,
+      "eval_s": 20.63,
+      "size_bytes": 8919504,
+      "params": 2236682,
+      "macs": 26641920,
+      "runtime": "onnx",
+      "latency_p50_ms_t1": 0.9243500026059337,
+      "latency_p90_ms_t1": 1.1801400032709355,
+      "cpu_util_pct_t1": 92.96413433075746,
+      "cpu_util_pct_max_t1": 116.4,
+      "cpu_ms_per_inf_t1": 0.915948275862069,
+      "n_runs_t1": 2030,
+      "cpus_t1": "0",
+      "peak_rss_mb_t1": 22.453125,
+      "peak_rss_total_mb_t1": 75.37109375,
+      "rss_steady_mb_t1": 11.1796875,
+      "latency_p50_ms_t4": 0.5273499991744757,
+      "latency_p90_ms_t4": 0.9031800007505808,
+      "cpu_util_pct_t4": 370.2901344753111,
+      "cpu_util_pct_max_t4": 450.0,
+      "cpu_ms_per_inf_t4": 2.0285538208709943,
+      "n_runs_t4": 3651,
+      "cpus_t4": "0,2,4,6",
+      "peak_rss_mb_t4": 24.046875,
+      "peak_rss_total_mb_t4": 78.125,
+      "rss_steady_mb_t4": 11.11328125,
+      "latency_p50_ms": 0.9243500026059337,
+      "latency_p90_ms": 1.1801400032709355,
+      "cpu_util_pct": 92.96413433075746,
+      "cpu_ms_per_inf": 0.915948275862069,
+      "peak_rss_mb": 22.453125,
+      "primary_threads": 1,
+      "energy_j": NaN,
+      "energy_source": "",
+      "model_file": "C:\\Users\\User\\Desktop\\SEC\\edge-ai-toolkit\\results\\classification\\models\\baseline_fp32.onnx",
+      "source_format": "torch",
+      "precision": "fp32",
+      "prune_ratio": 0.0
+    }
+  ],
+  "adapter": {
+    "task": "classification",
+    "quick": false,
+    "dataset": "cifar10",
+    "arch": "mobilenet_v2",
+    "img_size": 32,
+    "n_train": 50000,
+    "n_val": 10000,
+    "num_classes": 10
+  },
+  "env": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "machine": "AMD64",
+    "cpu": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "physical_cores": 10,
+    "core_classes": "class 1: 6 cores, class 0: 4 cores",
+    "logical_cores": 16,
+    "ram_gb": 15.6,
+    "python": "3.11.9",
+    "torch": "2.14.0+cu126",
+    "onnxruntime": "1.30.0",
+    "note": "latency/RAM/CPU measured on this machine: relative comparisons only"
+  },
+  "config": {
+    "task": "classification",
+    "adapter": "adapters.classification:ClassificationAdapter",
+    "seed": 0,
+    "adapter_args": {
+      "dataset": "cifar10",
+      "img_size": 32,
+      "arch": "mobilenet_v2",
+      "pretrained": true,
+      "train_epochs": 15,
+      "lr": 0.05,
+      "finetune_lr": 0.01,
+      "batch_size": 128,
+      "num_workers": 4
+    },
+    "export": {
+      "opset": 17,
+      "atol": 0.001,
+      "rtol": 0.001
+    },
+    "measure": {
+      "threads": [
+        1,
+        4
+      ],
+      "warmup": 10,
+      "runs": 100,
+      "spinning": true,
+      "energy": {
+        "provider": "none"
+      }
+    },
+    "prune": {
+      "importance": "l2",
+      "round_to": 8,
+      "global_pruning": false,
+      "iterative_steps": 1
+    },
+    "quantize": {
+      "method": "static",
+      "per_channel": true,
+      "activation_type": "uint8",
+      "weight_type": "int8",
+      "calibrate_method": "minmax",
+      "calib_batches": 16,
+      "keep_fp32": []
+    },
+    "sweep": {
+      "prune_ratios": [
+        0.0,
+        0.25,
+        0.5
+      ],
+      "precisions": [
+        "fp32",
+        "int8"
+      ],
+      "finetune_epochs": 3,
+      "finetune_mode": "plain",
+      "pareto_x": [
+        "size_bytes",
+        "latency_p50_ms",
+        "peak_rss_mb"
+      ]
+    },
+    "aihub": {
+      "devices": [
+        "chipset:qualcomm-snapdragon-429",
+        "Dragonwing RB3 Gen 2 Vision Kit",
+        "QCS8550 (Proxy)"
+      ],
+      "compile_options": "--target_runtime onnx --compute_unit cpu"
+    },
+    "score": {
+      "normalize": "minmax",
+      "weights": {
+        "accuracy": 0.25,
+        "compression": 0.25,
+        "resource": 0.25,
+        "energy": 0.25
+      },
+      "groups": {
+        "accuracy": {
+          "cols": [
+            "accuracy"
+          ],
+          "higher_is_better": true
+        },
+        "compression": {
+          "cols": [
+            "size_bytes"
+          ]
+        },
+        "resource": {
+          "cols": [
+            "peak_rss_mb",
+            "cpu_ms_per_inf",
+            "latency_p50_ms"
+          ]
+        },
+        "energy": {
+          "cols": [
+            "energy_j"
+          ]
+        }
+      }
+    },
+    "distill": {
+      "student": {
+        "width_mult": 0.5
+      },
+      "epochs": 5,
+      "temperature": 4.0,
+      "alpha": 0.7
+    }
+  }
+}

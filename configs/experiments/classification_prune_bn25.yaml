@@ -1,0 +1,14 @@
+# Re-run of the budget-25 allocation with the FIXED sensitivity probe.
+#
+# The original a20/alloc runs allocated using a probe that scored models whose BatchNorm statistics
+# still belonged to removed channels - measured wrong by up to 20x on a detector, and the correlation
+# with real damage went +0.395 -> +0.975 once BN was re-estimated. The compression and accuracy those
+# runs reported are real (they really pruned, fine-tuned and evaluated); the DECISION behind them was
+# made on bad data, so the conclusion does not stand until this re-run agrees.
+#
+# Prediction to check: the fix should help or do nothing. If it makes things WORSE, my understanding
+# of the fix is wrong and that needs investigating rather than explaining away.
+extends: classification_prune_alloc.yaml
+name: classification_prune_bn25
+sweep:
+  prune_ratios: [0.0, 0.25]

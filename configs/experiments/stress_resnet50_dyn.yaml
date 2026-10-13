@@ -1,0 +1,36 @@
+# Experiment 1b: does dynamic quantization beat static QDQ on a CNN too, or only on transformers?
+#
+# The original justification for this experiment was wrong and is recorded here rather than deleted,
+# because the experiment is still the right one to run and a reader deserves to know why.
+#
+# WHAT WAS CLAIMED: static covers 26 op types (QLinearOpsRegistry) against dynamic's 7
+# (IntegerOpsRegistry), so on a heterogeneous graph the broad coverage produces many int8/fp32
+# boundaries - "MobileViT static carries 416 QuantizeLinear nodes against 90 compute ops" - while a
+# homogeneous CNN would see them land on contiguous runs and suffer less.
+#
+# WHY THAT IS DEAD (experiment 14, independent challengers, verified in results/paper/FINDINGS.md):
+#   * Those node counts are parsed from the .onnx FILE. ORT's QDQSelectorActionTransformer deletes
+#     ~90% of them before the first inference: MobileViT 416/599 -> 40/97, ResNet50 74/182 -> 1/1.
+#     Counted on the graph that actually executes, the variable points the WRONG WAY - the faster
+#     family runs more surviving Q/DQ than the slower one.
+#   * The 26-vs-7 contrast was never measured anyway. The transformer configs' dynamic arm is
+#     hand-written [MatMul, Gemm], and Gemm is not in IntegerOpsRegistry at all, so the comparison
+#     was 26 op types against TWO - with calibration mode confounded with op coverage.
+#
+# WHY THE EXPERIMENT STILL MATTERS, and what it now tests: the surviving claim is architectural -
+# ORT static QDQ INT8 fails on transformers and conv-heavy mobile nets and is fine on plain CNNs.
+# This config is the falsification test. PRE-REGISTERED: static INT8 should be FASTER than fp32 at
+# 4 threads here, and dynamic should gain little or nothing over it. If dynamic beats static on a
+# plain CNN by anything like the transformers' 1.45-1.56x, the architecture partition is refuted.
+#
+# The dynamic arm is [Conv, MatMul] rather than the transformers' [MatMul, Gemm] on purpose: Conv is
+# what a CNN is made of, and it separates op coverage from calibration mode.
+extends: ../stress_resnet50.yaml
+name: stress_resnet50_dyn
+sweep:
+  prune_ratios: [0.0]          # no pruning: this isolates the quantization method
+  precisions:
+    - fp32
+    - int8                                                        # static QDQ, 26 op types
+    - {name: int8_dyn_conv, method: dynamic, op_types_to_quantize: [Conv, MatMul]}
+  finetune_epochs: 0

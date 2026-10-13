@@ -1,0 +1,1278 @@
+{
+ "p00_int8": {
+  "1.23.2": {
+   "n_nodes": 698,
+   "n_transposes": 56,
+   "predicted_dispatches_this_release": 32,
+   "transpose_bytes": 105984
+  },
+  "1.24.4": {
+   "n_nodes": 698,
+   "n_transposes": 56,
+   "predicted_dispatches_this_release": 864,
+   "transpose_bytes": 105984
+  },
+  "node_ids_identical_across_releases": true
+ },
+ "p00_int8_e2": {
+  "1.23.2": {
+   "nodes_added_vs_original": [],
+   "nodes_removed_vs_original": [],
+   "n_nodes": 698,
+   "node_count_delta_vs_original": 0,
+   "op_census_delta_vs_original": {},
+   "n_transposes": 56,
+   "transposes_changed": [
+    "/stages/stages.2/stages.2.1/Transpose",
+    "/stages/stages.2/stages.2.1/Transpose_3",
+    "/stages/stages.3/stages.3.1/Transpose",
+    "/stages/stages.3/stages.3.1/Transpose_3"
+   ],
+   "only_intended_changed": true,
+   "same_transpose_name_set": true,
+   "predicted_dispatches_this_release": 32,
+   "dispatch_delta_vs_original": 0,
+   "transpose_bytes": 105984,
+   "transpose_bytes_delta": 0,
+   "changed_sites": {
+    "/stages/stages.2/stages.2.1/Transpose": {
+     "before": {
+      "name": "/stages/stages.2/stages.2.1/Transpose",
+      "dims": [
+       256,
+       2,
+       4,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "scalar out 16-bit loops=256",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=256 M=2 N=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 256,
+      "bytes": 4096
+     },
+     "after": {
+      "name": "/stages/stages.2/stages.2.1/Transpose",
+      "dims": [
+       256,
+       2,
+       4,
+       2,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       4,
+       3
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "bytes": 4096
+     }
+    },
+    "/stages/stages.2/stages.2.1/Transpose_3": {
+     "before": {
+      "name": "/stages/stages.2/stages.2.1/Transpose_3",
+      "dims": [
+       256,
+       4,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "scalar out 16-bit loops=256",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=256 M=4 N=2",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 256,
+      "bytes": 4096
+     },
+     "after": {
+      "name": "/stages/stages.2/stages.2.1/Transpose_3",
+      "dims": [
+       256,
+       4,
+       2,
+       2,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       4,
+       3
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "bytes": 4096
+     }
+    },
+    "/stages/stages.3/stages.3.1/Transpose": {
+     "before": {
+      "name": "/stages/stages.3/stages.3.1/Transpose",
+      "dims": [
+       160,
+       2,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "scalar out 16-bit loops=160",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=160 M=2 N=2",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 160,
+      "bytes": 1280
+     },
+     "after": {
+      "name": "/stages/stages.3/stages.3.1/Transpose",
+      "dims": [
+       160,
+       2,
+       2,
+       2,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       4,
+       3
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "bytes": 1280
+     }
+    },
+    "/stages/stages.3/stages.3.1/Transpose_3": {
+     "before": {
+      "name": "/stages/stages.3/stages.3.1/Transpose_3",
+      "dims": [
+       160,
+       2,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "scalar out 16-bit loops=160",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=160 M=2 N=2",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 160,
+      "bytes": 1280
+     },
+     "after": {
+      "name": "/stages/stages.3/stages.3.1/Transpose_3",
+      "dims": [
+       160,
+       2,
+       2,
+       2,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       4,
+       3
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "bytes": 1280
+     }
+    }
+   }
+  },
+  "1.24.4": {
+   "nodes_added_vs_original": [],
+   "nodes_removed_vs_original": [],
+   "n_nodes": 698,
+   "node_count_delta_vs_original": 0,
+   "op_census_delta_vs_original": {},
+   "n_transposes": 56,
+   "transposes_changed": [
+    "/stages/stages.2/stages.2.1/Transpose",
+    "/stages/stages.2/stages.2.1/Transpose_3",
+    "/stages/stages.3/stages.3.1/Transpose",
+    "/stages/stages.3/stages.3.1/Transpose_3"
+   ],
+   "only_intended_changed": true,
+   "same_transpose_name_set": true,
+   "predicted_dispatches_this_release": 32,
+   "dispatch_delta_vs_original": -832,
+   "transpose_bytes": 105984,
+   "transpose_bytes_delta": 0,
+   "changed_sites": {
+    "/stages/stages.2/stages.2.1/Transpose": {
+     "before": {
+      "name": "/stages/stages.2/stages.2.1/Transpose",
+      "dims": [
+       256,
+       2,
+       4,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "scalar out 16-bit loops=256",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=256 M=2 N=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 256,
+      "bytes": 4096
+     },
+     "after": {
+      "name": "/stages/stages.2/stages.2.1/Transpose",
+      "dims": [
+       256,
+       2,
+       4,
+       2,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       4,
+       3
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "bytes": 4096
+     }
+    },
+    "/stages/stages.2/stages.2.1/Transpose_3": {
+     "before": {
+      "name": "/stages/stages.2/stages.2.1/Transpose_3",
+      "dims": [
+       256,
+       4,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "scalar out 16-bit loops=256",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=256 M=4 N=2",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 256,
+      "bytes": 4096
+     },
+     "after": {
+      "name": "/stages/stages.2/stages.2.1/Transpose_3",
+      "dims": [
+       256,
+       4,
+       2,
+       2,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       4,
+       3
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "bytes": 4096
+     }
+    },
+    "/stages/stages.3/stages.3.1/Transpose": {
+     "before": {
+      "name": "/stages/stages.3/stages.3.1/Transpose",
+      "dims": [
+       160,
+       2,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "scalar out 16-bit loops=160",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=160 M=2 N=2",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 160,
+      "bytes": 1280
+     },
+     "after": {
+      "name": "/stages/stages.3/stages.3.1/Transpose",
+      "dims": [
+       160,
+       2,
+       2,
+       2,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       4,
+       3
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "bytes": 1280
+     }
+    },
+    "/stages/stages.3/stages.3.1/Transpose_3": {
+     "before": {
+      "name": "/stages/stages.3/stages.3.1/Transpose_3",
+      "dims": [
+       160,
+       2,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "scalar out 16-bit loops=160",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=160 M=2 N=2",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 160,
+      "bytes": 1280
+     },
+     "after": {
+      "name": "/stages/stages.3/stages.3.1/Transpose_3",
+      "dims": [
+       160,
+       2,
+       2,
+       2,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       4,
+       3
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "bytes": 1280
+     }
+    }
+   }
+  },
+  "node_ids_identical_across_releases": true
+ },
+ "p00_int8_sham": {
+  "1.23.2": {
+   "nodes_added_vs_original": [],
+   "nodes_removed_vs_original": [],
+   "n_nodes": 698,
+   "node_count_delta_vs_original": 0,
+   "op_census_delta_vs_original": {},
+   "n_transposes": 56,
+   "transposes_changed": [
+    "/stages/stages.2/stages.2.1/Transpose",
+    "/stages/stages.2/stages.2.1/Transpose_3",
+    "/stages/stages.3/stages.3.1/Transpose",
+    "/stages/stages.3/stages.3.1/Transpose_3"
+   ],
+   "only_intended_changed": true,
+   "same_transpose_name_set": true,
+   "predicted_dispatches_this_release": 32,
+   "dispatch_delta_vs_original": 0,
+   "transpose_bytes": 105984,
+   "transpose_bytes_delta": 0,
+   "changed_sites": {
+    "/stages/stages.2/stages.2.1/Transpose": {
+     "before": {
+      "name": "/stages/stages.2/stages.2.1/Transpose",
+      "dims": [
+       256,
+       2,
+       4,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "scalar out 16-bit loops=256",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=256 M=2 N=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 256,
+      "bytes": 4096
+     },
+     "after": {
+      "name": "/stages/stages.2/stages.2.1/Transpose",
+      "dims": [
+       256,
+       2,
+       4,
+       2,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3,
+       4
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "scalar out 16-bit loops=256",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=256 M=2 N=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 256,
+      "bytes": 4096
+     }
+    },
+    "/stages/stages.2/stages.2.1/Transpose_3": {
+     "before": {
+      "name": "/stages/stages.2/stages.2.1/Transpose_3",
+      "dims": [
+       256,
+       4,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "scalar out 16-bit loops=256",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=256 M=4 N=2",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 256,
+      "bytes": 4096
+     },
+     "after": {
+      "name": "/stages/stages.2/stages.2.1/Transpose_3",
+      "dims": [
+       256,
+       4,
+       2,
+       2,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3,
+       4
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "scalar out 16-bit loops=256",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=256 M=4 N=2",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 256,
+      "bytes": 4096
+     }
+    },
+    "/stages/stages.3/stages.3.1/Transpose": {
+     "before": {
+      "name": "/stages/stages.3/stages.3.1/Transpose",
+      "dims": [
+       160,
+       2,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "scalar out 16-bit loops=160",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=160 M=2 N=2",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 160,
+      "bytes": 1280
+     },
+     "after": {
+      "name": "/stages/stages.3/stages.3.1/Transpose",
+      "dims": [
+       160,
+       2,
+       2,
+       2,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3,
+       4
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "scalar out 16-bit loops=160",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=160 M=2 N=2",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 160,
+      "bytes": 1280
+     }
+    },
+    "/stages/stages.3/stages.3.1/Transpose_3": {
+     "before": {
+      "name": "/stages/stages.3/stages.3.1/Transpose_3",
+      "dims": [
+       160,
+       2,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "scalar out 16-bit loops=160",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=160 M=2 N=2",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 160,
+      "bytes": 1280
+     },
+     "after": {
+      "name": "/stages/stages.3/stages.3.1/Transpose_3",
+      "dims": [
+       160,
+       2,
+       2,
+       2,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3,
+       4
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "scalar out 16-bit loops=160",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=160 M=2 N=2",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 160,
+      "bytes": 1280
+     }
+    }
+   }
+  },
+  "1.24.4": {
+   "nodes_added_vs_original": [],
+   "nodes_removed_vs_original": [],
+   "n_nodes": 698,
+   "node_count_delta_vs_original": 0,
+   "op_census_delta_vs_original": {},
+   "n_transposes": 56,
+   "transposes_changed": [
+    "/stages/stages.2/stages.2.1/Transpose",
+    "/stages/stages.2/stages.2.1/Transpose_3",
+    "/stages/stages.3/stages.3.1/Transpose",
+    "/stages/stages.3/stages.3.1/Transpose_3"
+   ],
+   "only_intended_changed": true,
+   "same_transpose_name_set": true,
+   "predicted_dispatches_this_release": 864,
+   "dispatch_delta_vs_original": 0,
+   "transpose_bytes": 105984,
+   "transpose_bytes_delta": 0,
+   "changed_sites": {
+    "/stages/stages.2/stages.2.1/Transpose": {
+     "before": {
+      "name": "/stages/stages.2/stages.2.1/Transpose",
+      "dims": [
+       256,
+       2,
+       4,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "scalar out 16-bit loops=256",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=256 M=2 N=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 256,
+      "bytes": 4096
+     },
+     "after": {
+      "name": "/stages/stages.2/stages.2.1/Transpose",
+      "dims": [
+       256,
+       2,
+       4,
+       2,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3,
+       4
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "scalar out 16-bit loops=256",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=256 M=2 N=4",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 256,
+      "bytes": 4096
+     }
+    },
+    "/stages/stages.2/stages.2.1/Transpose_3": {
+     "before": {
+      "name": "/stages/stages.2/stages.2.1/Transpose_3",
+      "dims": [
+       256,
+       4,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "scalar out 16-bit loops=256",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=256 M=4 N=2",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 256,
+      "bytes": 4096
+     },
+     "after": {
+      "name": "/stages/stages.2/stages.2.1/Transpose_3",
+      "dims": [
+       256,
+       4,
+       2,
+       2,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3,
+       4
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "scalar out 16-bit loops=256",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=256 M=4 N=2",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 256,
+      "bytes": 4096
+     }
+    },
+    "/stages/stages.3/stages.3.1/Transpose": {
+     "before": {
+      "name": "/stages/stages.3/stages.3.1/Transpose",
+      "dims": [
+       160,
+       2,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "scalar out 16-bit loops=160",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=160 M=2 N=2",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 160,
+      "bytes": 1280
+     },
+     "after": {
+      "name": "/stages/stages.3/stages.3.1/Transpose",
+      "dims": [
+       160,
+       2,
+       2,
+       2,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3,
+       4
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "scalar out 16-bit loops=160",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=160 M=2 N=2",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 160,
+      "bytes": 1280
+     }
+    },
+    "/stages/stages.3/stages.3.1/Transpose_3": {
+     "before": {
+      "name": "/stages/stages.3/stages.3.1/Transpose_3",
+      "dims": [
+       160,
+       2,
+       2,
+       2
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "scalar out 16-bit loops=160",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=160 M=2 N=2",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 160,
+      "bytes": 1280
+     },
+     "after": {
+      "name": "/stages/stages.3/stages.3.1/Transpose_3",
+      "dims": [
+       160,
+       2,
+       2,
+       2,
+       1
+      ],
+      "perm": [
+       0,
+       2,
+       1,
+       3,
+       4
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "scalar out 16-bit loops=160",
+      "path_1.24.4": "MlasTranspose<16-bit> out loops=160 M=2 N=2",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 160,
+      "bytes": 1280
+     }
+    }
+   }
+  },
+  "node_ids_identical_across_releases": true
+ },
+ "p00_int8_plac": {
+  "1.23.2": {
+   "nodes_added_vs_original": [
+    [
+     "ai.onnx",
+     "Concat",
+     "/stages/stages.3/stages.3.1/Concat_3"
+    ]
+   ],
+   "nodes_removed_vs_original": [],
+   "n_nodes": 699,
+   "node_count_delta_vs_original": 1,
+   "op_census_delta_vs_original": {
+    "ai.onnx:Concat": 1
+   },
+   "n_transposes": 56,
+   "transposes_changed": [
+    "/stages/stages.2/stages.2.1/Transpose_1",
+    "/stages/stages.2/stages.2.1/Transpose_2",
+    "/stages/stages.3/stages.3.1/Transpose_1",
+    "/stages/stages.3/stages.3.1/Transpose_2"
+   ],
+   "only_intended_changed": true,
+   "same_transpose_name_set": true,
+   "predicted_dispatches_this_release": 32,
+   "dispatch_delta_vs_original": 0,
+   "transpose_bytes": 105984,
+   "transpose_bytes_delta": 0,
+   "changed_sites": {
+    "/stages/stages.2/stages.2.1/Transpose_1": {
+     "before": {
+      "name": "/stages/stages.2/stages.2.1/Transpose_1",
+      "dims": [
+       1,
+       64,
+       16,
+       4
+      ],
+      "perm": [
+       0,
+       3,
+       2,
+       1
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "bytes": 4096
+     },
+     "after": {
+      "name": "/stages/stages.2/stages.2.1/Transpose_1",
+      "dims": [
+       1,
+       64,
+       16,
+       4,
+       1
+      ],
+      "perm": [
+       0,
+       3,
+       2,
+       1,
+       4
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "bytes": 4096
+     }
+    },
+    "/stages/stages.2/stages.2.1/Transpose_2": {
+     "before": {
+      "name": "/stages/stages.2/stages.2.1/Transpose_2",
+      "dims": [
+       1,
+       4,
+       16,
+       64
+      ],
+      "perm": [
+       0,
+       3,
+       2,
+       1
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "bytes": 4096
+     },
+     "after": {
+      "name": "/stages/stages.2/stages.2.1/Transpose_2",
+      "dims": [
+       1,
+       4,
+       16,
+       64,
+       1
+      ],
+      "perm": [
+       0,
+       3,
+       2,
+       1,
+       4
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "bytes": 4096
+     }
+    },
+    "/stages/stages.3/stages.3.1/Transpose_1": {
+     "before": {
+      "name": "/stages/stages.3/stages.3.1/Transpose_1",
+      "dims": [
+       1,
+       80,
+       4,
+       4
+      ],
+      "perm": [
+       0,
+       3,
+       2,
+       1
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "bytes": 1280
+     },
+     "after": {
+      "name": "/stages/stages.3/stages.3.1/Transpose_1",
+      "dims": [
+       1,
+       80,
+       4,
+       4,
+       1
+      ],
+      "perm": [
+       0,
+       3,
+       2,
+       1,
+       4
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "bytes": 1280
+     }
+    },
+    "/stages/stages.3/stages.3.1/Transpose_2": {
+     "before": {
+      "name": "/stages/stages.3/stages.3.1/Transpose_2",
+      "dims": [
+       1,
+       4,
+       4,
+       80
+      ],
+      "perm": [
+       0,
+       3,
+       2,
+       1
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "bytes": 1280
+     },
+     "after": {
+      "name": "/stages/stages.3/stages.3.1/Transpose_2",
+      "dims": [
+       1,
+       4,
+       4,
+       80,
+       1
+      ],
+      "perm": [
+       0,
+       3,
+       2,
+       1,
+       4
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "bytes": 1280
+     }
+    }
+   }
+  },
+  "1.24.4": {
+   "nodes_added_vs_original": [
+    [
+     "ai.onnx",
+     "Concat",
+     "/stages/stages.3/stages.3.1/Concat_3"
+    ]
+   ],
+   "nodes_removed_vs_original": [],
+   "n_nodes": 699,
+   "node_count_delta_vs_original": 1,
+   "op_census_delta_vs_original": {
+    "ai.onnx:Concat": 1
+   },
+   "n_transposes": 56,
+   "transposes_changed": [
+    "/stages/stages.2/stages.2.1/Transpose_1",
+    "/stages/stages.2/stages.2.1/Transpose_2",
+    "/stages/stages.3/stages.3.1/Transpose_1",
+    "/stages/stages.3/stages.3.1/Transpose_2"
+   ],
+   "only_intended_changed": true,
+   "same_transpose_name_set": true,
+   "predicted_dispatches_this_release": 864,
+   "dispatch_delta_vs_original": 0,
+   "transpose_bytes": 105984,
+   "transpose_bytes_delta": 0,
+   "changed_sites": {
+    "/stages/stages.2/stages.2.1/Transpose_1": {
+     "before": {
+      "name": "/stages/stages.2/stages.2.1/Transpose_1",
+      "dims": [
+       1,
+       64,
+       16,
+       4
+      ],
+      "perm": [
+       0,
+       3,
+       2,
+       1
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "bytes": 4096
+     },
+     "after": {
+      "name": "/stages/stages.2/stages.2.1/Transpose_1",
+      "dims": [
+       1,
+       64,
+       16,
+       4,
+       1
+      ],
+      "perm": [
+       0,
+       3,
+       2,
+       1,
+       4
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "bytes": 4096
+     }
+    },
+    "/stages/stages.2/stages.2.1/Transpose_2": {
+     "before": {
+      "name": "/stages/stages.2/stages.2.1/Transpose_2",
+      "dims": [
+       1,
+       4,
+       16,
+       64
+      ],
+      "perm": [
+       0,
+       3,
+       2,
+       1
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "bytes": 4096
+     },
+     "after": {
+      "name": "/stages/stages.2/stages.2.1/Transpose_2",
+      "dims": [
+       1,
+       4,
+       16,
+       64,
+       1
+      ],
+      "perm": [
+       0,
+       3,
+       2,
+       1,
+       4
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "bytes": 4096
+     }
+    },
+    "/stages/stages.3/stages.3.1/Transpose_1": {
+     "before": {
+      "name": "/stages/stages.3/stages.3.1/Transpose_1",
+      "dims": [
+       1,
+       80,
+       4,
+       4
+      ],
+      "perm": [
+       0,
+       3,
+       2,
+       1
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "bytes": 1280
+     },
+     "after": {
+      "name": "/stages/stages.3/stages.3.1/Transpose_1",
+      "dims": [
+       1,
+       80,
+       4,
+       4,
+       1
+      ],
+      "perm": [
+       0,
+       3,
+       2,
+       1,
+       4
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "bytes": 1280
+     }
+    },
+    "/stages/stages.3/stages.3.1/Transpose_2": {
+     "before": {
+      "name": "/stages/stages.3/stages.3.1/Transpose_2",
+      "dims": [
+       1,
+       4,
+       4,
+       80
+      ],
+      "perm": [
+       0,
+       3,
+       2,
+       1
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "bytes": 1280
+     },
+     "after": {
+      "name": "/stages/stages.3/stages.3.1/Transpose_2",
+      "dims": [
+       1,
+       4,
+       4,
+       80,
+       1
+      ],
+      "perm": [
+       0,
+       3,
+       2,
+       1,
+       4
+      ],
+      "dtype": "u8",
+      "path_1.23.2": "untyped (serial)",
+      "path_1.24.4": "untyped (serial)",
+      "dispatches_1.23.2": 0,
+      "dispatches_1.24.4": 0,
+      "bytes": 1280
+     }
+    }
+   }
+  },
+  "node_ids_identical_across_releases": true
+ }
+}

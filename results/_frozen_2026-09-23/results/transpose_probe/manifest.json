@@ -1,0 +1,3062 @@
+{
+ "experiment": 27,
+ "seed": 27,
+ "input_shape": [
+  1,
+  3,
+  64,
+  64
+ ],
+ "versions": [
+  "1.23.2",
+  "1.24.4"
+ ],
+ "S_ref_ms": 0.48,
+ "variants": {
+  "tp_u8_all": {
+   "file": "results/transpose_probe/models/tp_u8_all.onnx",
+   "sha256": "af36d9c7e3f432885a23c1bccdf8152601bbeb24a4eae9354a941d1fba5e9562",
+   "dtype": "u8",
+   "skeleton": "full",
+   "transposes": 56,
+   "census": {
+    "ai.onnx:Concat": 1,
+    "ai.onnx:DequantizeLinear": 1,
+    "ai.onnx:QuantizeLinear": 1,
+    "ai.onnx:Reshape": 113,
+    "ai.onnx:Slice": 55,
+    "ai.onnx:Transpose": 56
+   },
+   "predicted_dispatches": {
+    "1.23.2": {
+     "1": 0,
+     "4": 32
+    },
+    "1.24.4": {
+     "1": 0,
+     "4": 864
+    }
+   },
+   "transpose_paths_4T": [
+    {
+     "idx": 1,
+     "shape": [
+      1,
+      3,
+      64,
+      64
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "MlasTranspose<8-bit> in loops=1 M=3 N=4096",
+     "1.24.4": "MlasTranspose<8-bit> in loops=1 M=3 N=4096"
+    },
+    {
+     "idx": 47,
+     "shape": [
+      1,
+      8,
+      8,
+      64
+     ],
+     "perm": [
+      0,
+      3,
+      1,
+      2
+     ],
+     "1.23.2": "MlasTranspose<8-bit> out loops=1 M=64 N=64",
+     "1.24.4": "MlasTranspose<8-bit> out loops=1 M=64 N=64"
+    },
+    {
+     "idx": 49,
+     "shape": [
+      256,
+      2,
+      4,
+      2
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 16-bit loops=256",
+     "1.24.4": "MlasTranspose<16-bit> out loops=256 M=2 N=4"
+    },
+    {
+     "idx": 60,
+     "shape": [
+      1,
+      64,
+      16,
+      4
+     ],
+     "perm": [
+      0,
+      3,
+      2,
+      1
+     ],
+     "1.23.2": "untyped (serial)",
+     "1.24.4": "untyped (serial)"
+    },
+    {
+     "idx": 84,
+     "shape": [
+      4,
+      16,
+      4,
+      16
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 128-bit loops=4",
+     "1.24.4": "scalar out 128-bit loops=4"
+    },
+    {
+     "idx": 86,
+     "shape": [
+      4,
+      16,
+      4,
+      16
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 128-bit loops=4",
+     "1.24.4": "scalar out 128-bit loops=4"
+    },
+    {
+     "idx": 98,
+     "shape": [
+      4,
+      16,
+      4,
+      16
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "MlasTranspose<8-bit> in loops=4 M=16 N=64",
+     "1.24.4": "MlasTranspose<8-bit> in loops=4 M=16 N=64"
+    },
+    {
+     "idx": 103,
+     "shape": [
+      4,
+      4,
+      16,
+      16
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 128-bit loops=4",
+     "1.24.4": "scalar out 128-bit loops=4"
+    },
+    {
+     "idx": 140,
+     "shape": [
+      4,
+      16,
+      4,
+      16
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 128-bit loops=4",
+     "1.24.4": "scalar out 128-bit loops=4"
+    },
+    {
+     "idx": 142,
+     "shape": [
+      4,
+      16,
+      4,
+      16
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 128-bit loops=4",
+     "1.24.4": "scalar out 128-bit loops=4"
+    },
+    {
+     "idx": 154,
+     "shape": [
+      4,
+      16,
+      4,
+      16
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "MlasTranspose<8-bit> in loops=4 M=16 N=64",
+     "1.24.4": "MlasTranspose<8-bit> in loops=4 M=16 N=64"
+    },
+    {
+     "idx": 159,
+     "shape": [
+      4,
+      4,
+      16,
+      16
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 128-bit loops=4",
+     "1.24.4": "scalar out 128-bit loops=4"
+    },
+    {
+     "idx": 184,
+     "shape": [
+      1,
+      4,
+      16,
+      64
+     ],
+     "perm": [
+      0,
+      3,
+      2,
+      1
+     ],
+     "1.23.2": "untyped (serial)",
+     "1.24.4": "untyped (serial)"
+    },
+    {
+     "idx": 186,
+     "shape": [
+      256,
+      4,
+      2,
+      2
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 16-bit loops=256",
+     "1.24.4": "MlasTranspose<16-bit> out loops=256 M=4 N=2"
+    },
+    {
+     "idx": 189,
+     "shape": [
+      1,
+      64,
+      8,
+      8
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "MlasTranspose<8-bit> in loops=1 M=64 N=64",
+     "1.24.4": "MlasTranspose<8-bit> in loops=1 M=64 N=64"
+    },
+    {
+     "idx": 208,
+     "shape": [
+      1,
+      4,
+      4,
+      80
+     ],
+     "perm": [
+      0,
+      3,
+      1,
+      2
+     ],
+     "1.23.2": "MlasTranspose<8-bit> out loops=1 M=16 N=80",
+     "1.24.4": "MlasTranspose<8-bit> out loops=1 M=16 N=80"
+    },
+    {
+     "idx": 220,
+     "shape": [
+      160,
+      2,
+      2,
+      2
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 16-bit loops=160",
+     "1.24.4": "MlasTranspose<16-bit> out loops=160 M=2 N=2"
+    },
+    {
+     "idx": 225,
+     "shape": [
+      1,
+      80,
+      4,
+      4
+     ],
+     "perm": [
+      0,
+      3,
+      2,
+      1
+     ],
+     "1.23.2": "untyped (serial)",
+     "1.24.4": "untyped (serial)"
+    },
+    {
+     "idx": 249,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 160-bit loops=4",
+     "1.24.4": "scalar out 160-bit loops=4"
+    },
+    {
+     "idx": 251,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 160-bit loops=4",
+     "1.24.4": "scalar out 160-bit loops=4"
+    },
+    {
+     "idx": 263,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "MlasTranspose<8-bit> in loops=4 M=4 N=80",
+     "1.24.4": "MlasTranspose<8-bit> in loops=4 M=4 N=80"
+    },
+    {
+     "idx": 268,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 160-bit loops=4",
+     "1.24.4": "scalar out 160-bit loops=4"
+    },
+    {
+     "idx": 305,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 160-bit loops=4",
+     "1.24.4": "scalar out 160-bit loops=4"
+    },
+    {
+     "idx": 307,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 160-bit loops=4",
+     "1.24.4": "scalar out 160-bit loops=4"
+    },
+    {
+     "idx": 319,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "MlasTranspose<8-bit> in loops=4 M=4 N=80",
+     "1.24.4": "MlasTranspose<8-bit> in loops=4 M=4 N=80"
+    },
+    {
+     "idx": 324,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 160-bit loops=4",
+     "1.24.4": "scalar out 160-bit loops=4"
+    },
+    {
+     "idx": 361,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 160-bit loops=4",
+     "1.24.4": "scalar out 160-bit loops=4"
+    },
+    {
+     "idx": 363,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 160-bit loops=4",
+     "1.24.4": "scalar out 160-bit loops=4"
+    },
+    {
+     "idx": 375,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "MlasTranspose<8-bit> in loops=4 M=4 N=80",
+     "1.24.4": "MlasTranspose<8-bit> in loops=4 M=4 N=80"
+    },
+    {
+     "idx": 380,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 160-bit loops=4",
+     "1.24.4": "scalar out 160-bit loops=4"
+    },
+    {
+     "idx": 417,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 160-bit loops=4",
+     "1.24.4": "scalar out 160-bit loops=4"
+    },
+    {
+     "idx": 419,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 160-bit loops=4",
+     "1.24.4": "scalar out 160-bit loops=4"
+    },
+    {
+     "idx": 431,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "MlasTranspose<8-bit> in loops=4 M=4 N=80",
+     "1.24.4": "MlasTranspose<8-bit> in loops=4 M=4 N=80"
+    },
+    {
+     "idx": 436,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 160-bit loops=4",
+     "1.24.4": "scalar out 160-bit loops=4"
+    },
+    {
+     "idx": 461,
+     "shape": [
+      1,
+      4,
+      4,
+      80
+     ],
+     "perm": [
+      0,
+      3,
+      2,
+      1
+     ],
+     "1.23.2": "untyped (serial)",
+     "1.24.4": "untyped (serial)"
+    },
+    {
+     "idx": 463,
+     "shape": [
+      160,
+      2,
+      2,
+      2
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 16-bit loops=160",
+     "1.24.4": "MlasTranspose<16-bit> out loops=160 M=2 N=2"
+    },
+    {
+     "idx": 465,
+     "shape": [
+      1,
+      80,
+      4,
+      4
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "MlasTranspose<8-bit> in loops=1 M=80 N=16",
+     "1.24.4": "MlasTranspose<8-bit> in loops=1 M=80 N=16"
+    },
+    {
+     "idx": 484,
+     "shape": [
+      1,
+      2,
+      2,
+      96
+     ],
+     "perm": [
+      0,
+      3,
+      1,
+      2
+     ],
+     "1.23.2": "MlasTranspose<8-bit> out loops=1 M=4 N=96",
+     "1.24.4": "MlasTranspose<8-bit> out loops=1 M=4 N=96"
+    },
+    {
+     "idx": 486,
+     "shape": [
+      96,
+      2,
+      1,
+      2
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 497,
+     "shape": [
+      1,
+      96,
+      1,
+      4
+     ],
+     "perm": [
+      0,
+      3,
+      2,
+      1
+     ],
+     "1.23.2": "untyped (serial)",
+     "1.24.4": "untyped (serial)"
+    },
+    {
+     "idx": 521,
+     "shape": [
+      4,
+      1,
+      4,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 523,
+     "shape": [
+      4,
+      1,
+      4,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 535,
+     "shape": [
+      4,
+      1,
+      4,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 540,
+     "shape": [
+      4,
+      4,
+      1,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 577,
+     "shape": [
+      4,
+      1,
+      4,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 579,
+     "shape": [
+      4,
+      1,
+      4,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 591,
+     "shape": [
+      4,
+      1,
+      4,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 596,
+     "shape": [
+      4,
+      4,
+      1,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 633,
+     "shape": [
+      4,
+      1,
+      4,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 635,
+     "shape": [
+      4,
+      1,
+      4,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 647,
+     "shape": [
+      4,
+      1,
+      4,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 652,
+     "shape": [
+      4,
+      4,
+      1,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 677,
+     "shape": [
+      1,
+      4,
+      1,
+      96
+     ],
+     "perm": [
+      0,
+      3,
+      2,
+      1
+     ],
+     "1.23.2": "untyped (serial)",
+     "1.24.4": "untyped (serial)"
+    },
+    {
+     "idx": 679,
+     "shape": [
+      96,
+      1,
+      2,
+      2
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 682,
+     "shape": [
+      1,
+      96,
+      2,
+      2
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "MlasTranspose<8-bit> in loops=1 M=96 N=4",
+     "1.24.4": "MlasTranspose<8-bit> in loops=1 M=96 N=4"
+    },
+    {
+     "idx": 691,
+     "shape": [
+      1,
+      2,
+      2,
+      320
+     ],
+     "perm": [
+      0,
+      3,
+      1,
+      2
+     ],
+     "1.23.2": "MlasTranspose<8-bit> out loops=1 M=4 N=320",
+     "1.24.4": "MlasTranspose<8-bit> out loops=1 M=4 N=320"
+    }
+   ]
+  },
+  "tp_u8_w2": {
+   "file": "results/transpose_probe/models/tp_u8_w2.onnx",
+   "sha256": "cf4c963beed312f87c470e70cb6c096bc64b948c4d4a3111dc2985e14e0c3500",
+   "dtype": "u8",
+   "skeleton": "full",
+   "transposes": 4,
+   "census": {
+    "ai.onnx:Concat": 1,
+    "ai.onnx:DequantizeLinear": 1,
+    "ai.onnx:QuantizeLinear": 1,
+    "ai.onnx:Reshape": 113,
+    "ai.onnx:Slice": 55,
+    "ai.onnx:Transpose": 4
+   },
+   "predicted_dispatches": {
+    "1.23.2": {
+     "1": 0,
+     "4": 0
+    },
+    "1.24.4": {
+     "1": 0,
+     "4": 832
+    }
+   },
+   "transpose_paths_4T": [
+    {
+     "idx": 49,
+     "shape": [
+      256,
+      2,
+      4,
+      2
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 16-bit loops=256",
+     "1.24.4": "MlasTranspose<16-bit> out loops=256 M=2 N=4"
+    },
+    {
+     "idx": 186,
+     "shape": [
+      256,
+      4,
+      2,
+      2
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 16-bit loops=256",
+     "1.24.4": "MlasTranspose<16-bit> out loops=256 M=4 N=2"
+    },
+    {
+     "idx": 220,
+     "shape": [
+      160,
+      2,
+      2,
+      2
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 16-bit loops=160",
+     "1.24.4": "MlasTranspose<16-bit> out loops=160 M=2 N=2"
+    },
+    {
+     "idx": 463,
+     "shape": [
+      160,
+      2,
+      2,
+      2
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 16-bit loops=160",
+     "1.24.4": "MlasTranspose<16-bit> out loops=160 M=2 N=2"
+    }
+   ]
+  },
+  "tp_u8_rest": {
+   "file": "results/transpose_probe/models/tp_u8_rest.onnx",
+   "sha256": "a7d3b670ed527f07f5715077fc72c4b758384ba6584ef7ccea03491197597e5a",
+   "dtype": "u8",
+   "skeleton": "full",
+   "transposes": 52,
+   "census": {
+    "ai.onnx:Concat": 1,
+    "ai.onnx:DequantizeLinear": 1,
+    "ai.onnx:QuantizeLinear": 1,
+    "ai.onnx:Reshape": 113,
+    "ai.onnx:Slice": 55,
+    "ai.onnx:Transpose": 52
+   },
+   "predicted_dispatches": {
+    "1.23.2": {
+     "1": 0,
+     "4": 32
+    },
+    "1.24.4": {
+     "1": 0,
+     "4": 32
+    }
+   },
+   "transpose_paths_4T": [
+    {
+     "idx": 1,
+     "shape": [
+      1,
+      3,
+      64,
+      64
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "MlasTranspose<8-bit> in loops=1 M=3 N=4096",
+     "1.24.4": "MlasTranspose<8-bit> in loops=1 M=3 N=4096"
+    },
+    {
+     "idx": 47,
+     "shape": [
+      1,
+      8,
+      8,
+      64
+     ],
+     "perm": [
+      0,
+      3,
+      1,
+      2
+     ],
+     "1.23.2": "MlasTranspose<8-bit> out loops=1 M=64 N=64",
+     "1.24.4": "MlasTranspose<8-bit> out loops=1 M=64 N=64"
+    },
+    {
+     "idx": 60,
+     "shape": [
+      1,
+      64,
+      16,
+      4
+     ],
+     "perm": [
+      0,
+      3,
+      2,
+      1
+     ],
+     "1.23.2": "untyped (serial)",
+     "1.24.4": "untyped (serial)"
+    },
+    {
+     "idx": 84,
+     "shape": [
+      4,
+      16,
+      4,
+      16
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 128-bit loops=4",
+     "1.24.4": "scalar out 128-bit loops=4"
+    },
+    {
+     "idx": 86,
+     "shape": [
+      4,
+      16,
+      4,
+      16
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 128-bit loops=4",
+     "1.24.4": "scalar out 128-bit loops=4"
+    },
+    {
+     "idx": 98,
+     "shape": [
+      4,
+      16,
+      4,
+      16
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "MlasTranspose<8-bit> in loops=4 M=16 N=64",
+     "1.24.4": "MlasTranspose<8-bit> in loops=4 M=16 N=64"
+    },
+    {
+     "idx": 103,
+     "shape": [
+      4,
+      4,
+      16,
+      16
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 128-bit loops=4",
+     "1.24.4": "scalar out 128-bit loops=4"
+    },
+    {
+     "idx": 140,
+     "shape": [
+      4,
+      16,
+      4,
+      16
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 128-bit loops=4",
+     "1.24.4": "scalar out 128-bit loops=4"
+    },
+    {
+     "idx": 142,
+     "shape": [
+      4,
+      16,
+      4,
+      16
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 128-bit loops=4",
+     "1.24.4": "scalar out 128-bit loops=4"
+    },
+    {
+     "idx": 154,
+     "shape": [
+      4,
+      16,
+      4,
+      16
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "MlasTranspose<8-bit> in loops=4 M=16 N=64",
+     "1.24.4": "MlasTranspose<8-bit> in loops=4 M=16 N=64"
+    },
+    {
+     "idx": 159,
+     "shape": [
+      4,
+      4,
+      16,
+      16
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 128-bit loops=4",
+     "1.24.4": "scalar out 128-bit loops=4"
+    },
+    {
+     "idx": 184,
+     "shape": [
+      1,
+      4,
+      16,
+      64
+     ],
+     "perm": [
+      0,
+      3,
+      2,
+      1
+     ],
+     "1.23.2": "untyped (serial)",
+     "1.24.4": "untyped (serial)"
+    },
+    {
+     "idx": 189,
+     "shape": [
+      1,
+      64,
+      8,
+      8
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "MlasTranspose<8-bit> in loops=1 M=64 N=64",
+     "1.24.4": "MlasTranspose<8-bit> in loops=1 M=64 N=64"
+    },
+    {
+     "idx": 208,
+     "shape": [
+      1,
+      4,
+      4,
+      80
+     ],
+     "perm": [
+      0,
+      3,
+      1,
+      2
+     ],
+     "1.23.2": "MlasTranspose<8-bit> out loops=1 M=16 N=80",
+     "1.24.4": "MlasTranspose<8-bit> out loops=1 M=16 N=80"
+    },
+    {
+     "idx": 225,
+     "shape": [
+      1,
+      80,
+      4,
+      4
+     ],
+     "perm": [
+      0,
+      3,
+      2,
+      1
+     ],
+     "1.23.2": "untyped (serial)",
+     "1.24.4": "untyped (serial)"
+    },
+    {
+     "idx": 249,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 160-bit loops=4",
+     "1.24.4": "scalar out 160-bit loops=4"
+    },
+    {
+     "idx": 251,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 160-bit loops=4",
+     "1.24.4": "scalar out 160-bit loops=4"
+    },
+    {
+     "idx": 263,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "MlasTranspose<8-bit> in loops=4 M=4 N=80",
+     "1.24.4": "MlasTranspose<8-bit> in loops=4 M=4 N=80"
+    },
+    {
+     "idx": 268,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 160-bit loops=4",
+     "1.24.4": "scalar out 160-bit loops=4"
+    },
+    {
+     "idx": 305,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 160-bit loops=4",
+     "1.24.4": "scalar out 160-bit loops=4"
+    },
+    {
+     "idx": 307,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 160-bit loops=4",
+     "1.24.4": "scalar out 160-bit loops=4"
+    },
+    {
+     "idx": 319,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "MlasTranspose<8-bit> in loops=4 M=4 N=80",
+     "1.24.4": "MlasTranspose<8-bit> in loops=4 M=4 N=80"
+    },
+    {
+     "idx": 324,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 160-bit loops=4",
+     "1.24.4": "scalar out 160-bit loops=4"
+    },
+    {
+     "idx": 361,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 160-bit loops=4",
+     "1.24.4": "scalar out 160-bit loops=4"
+    },
+    {
+     "idx": 363,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 160-bit loops=4",
+     "1.24.4": "scalar out 160-bit loops=4"
+    },
+    {
+     "idx": 375,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "MlasTranspose<8-bit> in loops=4 M=4 N=80",
+     "1.24.4": "MlasTranspose<8-bit> in loops=4 M=4 N=80"
+    },
+    {
+     "idx": 380,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 160-bit loops=4",
+     "1.24.4": "scalar out 160-bit loops=4"
+    },
+    {
+     "idx": 417,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 160-bit loops=4",
+     "1.24.4": "scalar out 160-bit loops=4"
+    },
+    {
+     "idx": 419,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 160-bit loops=4",
+     "1.24.4": "scalar out 160-bit loops=4"
+    },
+    {
+     "idx": 431,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "MlasTranspose<8-bit> in loops=4 M=4 N=80",
+     "1.24.4": "MlasTranspose<8-bit> in loops=4 M=4 N=80"
+    },
+    {
+     "idx": 436,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 160-bit loops=4",
+     "1.24.4": "scalar out 160-bit loops=4"
+    },
+    {
+     "idx": 461,
+     "shape": [
+      1,
+      4,
+      4,
+      80
+     ],
+     "perm": [
+      0,
+      3,
+      2,
+      1
+     ],
+     "1.23.2": "untyped (serial)",
+     "1.24.4": "untyped (serial)"
+    },
+    {
+     "idx": 465,
+     "shape": [
+      1,
+      80,
+      4,
+      4
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "MlasTranspose<8-bit> in loops=1 M=80 N=16",
+     "1.24.4": "MlasTranspose<8-bit> in loops=1 M=80 N=16"
+    },
+    {
+     "idx": 484,
+     "shape": [
+      1,
+      2,
+      2,
+      96
+     ],
+     "perm": [
+      0,
+      3,
+      1,
+      2
+     ],
+     "1.23.2": "MlasTranspose<8-bit> out loops=1 M=4 N=96",
+     "1.24.4": "MlasTranspose<8-bit> out loops=1 M=4 N=96"
+    },
+    {
+     "idx": 486,
+     "shape": [
+      96,
+      2,
+      1,
+      2
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 497,
+     "shape": [
+      1,
+      96,
+      1,
+      4
+     ],
+     "perm": [
+      0,
+      3,
+      2,
+      1
+     ],
+     "1.23.2": "untyped (serial)",
+     "1.24.4": "untyped (serial)"
+    },
+    {
+     "idx": 521,
+     "shape": [
+      4,
+      1,
+      4,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 523,
+     "shape": [
+      4,
+      1,
+      4,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 535,
+     "shape": [
+      4,
+      1,
+      4,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 540,
+     "shape": [
+      4,
+      4,
+      1,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 577,
+     "shape": [
+      4,
+      1,
+      4,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 579,
+     "shape": [
+      4,
+      1,
+      4,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 591,
+     "shape": [
+      4,
+      1,
+      4,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 596,
+     "shape": [
+      4,
+      4,
+      1,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 633,
+     "shape": [
+      4,
+      1,
+      4,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 635,
+     "shape": [
+      4,
+      1,
+      4,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 647,
+     "shape": [
+      4,
+      1,
+      4,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 652,
+     "shape": [
+      4,
+      4,
+      1,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 677,
+     "shape": [
+      1,
+      4,
+      1,
+      96
+     ],
+     "perm": [
+      0,
+      3,
+      2,
+      1
+     ],
+     "1.23.2": "untyped (serial)",
+     "1.24.4": "untyped (serial)"
+    },
+    {
+     "idx": 679,
+     "shape": [
+      96,
+      1,
+      2,
+      2
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 682,
+     "shape": [
+      1,
+      96,
+      2,
+      2
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "MlasTranspose<8-bit> in loops=1 M=96 N=4",
+     "1.24.4": "MlasTranspose<8-bit> in loops=1 M=96 N=4"
+    },
+    {
+     "idx": 691,
+     "shape": [
+      1,
+      2,
+      2,
+      320
+     ],
+     "perm": [
+      0,
+      3,
+      1,
+      2
+     ],
+     "1.23.2": "MlasTranspose<8-bit> out loops=1 M=4 N=320",
+     "1.24.4": "MlasTranspose<8-bit> out loops=1 M=4 N=320"
+    }
+   ]
+  },
+  "tp_u8_ctrl": {
+   "file": "results/transpose_probe/models/tp_u8_ctrl.onnx",
+   "sha256": "31d5509d54d5d01fd6e5f4b4dc7098cd38e2d6c0bc9efe0902ea4e4b9e75776b",
+   "dtype": "u8",
+   "skeleton": "full",
+   "transposes": 0,
+   "census": {
+    "ai.onnx:Concat": 1,
+    "ai.onnx:DequantizeLinear": 1,
+    "ai.onnx:QuantizeLinear": 1,
+    "ai.onnx:Reshape": 113,
+    "ai.onnx:Slice": 55
+   },
+   "predicted_dispatches": {
+    "1.23.2": {
+     "1": 0,
+     "4": 0
+    },
+    "1.24.4": {
+     "1": 0,
+     "4": 0
+    }
+   },
+   "transpose_paths_4T": []
+  },
+  "tp_f32_all": {
+   "file": "results/transpose_probe/models/tp_f32_all.onnx",
+   "sha256": "b00b71939302b02150ee889cbf06955e7419773dc69c047ee23351822370f3f5",
+   "dtype": "f32",
+   "skeleton": "full",
+   "transposes": 48,
+   "census": {
+    "ai.onnx:Concat": 1,
+    "ai.onnx:Reshape": 113,
+    "ai.onnx:Slice": 55,
+    "ai.onnx:Transpose": 48
+   },
+   "predicted_dispatches": {
+    "1.23.2": {
+     "1": 0,
+     "4": 24
+    },
+    "1.24.4": {
+     "1": 0,
+     "4": 24
+    }
+   },
+   "transpose_paths_4T": [
+    {
+     "idx": 49,
+     "shape": [
+      256,
+      2,
+      4,
+      2
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 64-bit loops=256",
+     "1.24.4": "scalar out 64-bit loops=256"
+    },
+    {
+     "idx": 60,
+     "shape": [
+      1,
+      64,
+      16,
+      4
+     ],
+     "perm": [
+      0,
+      3,
+      2,
+      1
+     ],
+     "1.23.2": "untyped (serial)",
+     "1.24.4": "untyped (serial)"
+    },
+    {
+     "idx": 84,
+     "shape": [
+      4,
+      16,
+      4,
+      16
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 512-bit loops=4",
+     "1.24.4": "scalar out 512-bit loops=4"
+    },
+    {
+     "idx": 86,
+     "shape": [
+      4,
+      16,
+      4,
+      16
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 512-bit loops=4",
+     "1.24.4": "scalar out 512-bit loops=4"
+    },
+    {
+     "idx": 98,
+     "shape": [
+      4,
+      16,
+      4,
+      16
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "MlasTranspose<32-bit> in loops=4 M=16 N=64",
+     "1.24.4": "MlasTranspose<32-bit> in loops=4 M=16 N=64"
+    },
+    {
+     "idx": 103,
+     "shape": [
+      4,
+      4,
+      16,
+      16
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 512-bit loops=4",
+     "1.24.4": "scalar out 512-bit loops=4"
+    },
+    {
+     "idx": 140,
+     "shape": [
+      4,
+      16,
+      4,
+      16
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 512-bit loops=4",
+     "1.24.4": "scalar out 512-bit loops=4"
+    },
+    {
+     "idx": 142,
+     "shape": [
+      4,
+      16,
+      4,
+      16
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 512-bit loops=4",
+     "1.24.4": "scalar out 512-bit loops=4"
+    },
+    {
+     "idx": 154,
+     "shape": [
+      4,
+      16,
+      4,
+      16
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "MlasTranspose<32-bit> in loops=4 M=16 N=64",
+     "1.24.4": "MlasTranspose<32-bit> in loops=4 M=16 N=64"
+    },
+    {
+     "idx": 159,
+     "shape": [
+      4,
+      4,
+      16,
+      16
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 512-bit loops=4",
+     "1.24.4": "scalar out 512-bit loops=4"
+    },
+    {
+     "idx": 184,
+     "shape": [
+      1,
+      4,
+      16,
+      64
+     ],
+     "perm": [
+      0,
+      3,
+      2,
+      1
+     ],
+     "1.23.2": "untyped (serial)",
+     "1.24.4": "untyped (serial)"
+    },
+    {
+     "idx": 186,
+     "shape": [
+      256,
+      4,
+      2,
+      2
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 64-bit loops=256",
+     "1.24.4": "scalar out 64-bit loops=256"
+    },
+    {
+     "idx": 220,
+     "shape": [
+      160,
+      2,
+      2,
+      2
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 64-bit loops=160",
+     "1.24.4": "scalar out 64-bit loops=160"
+    },
+    {
+     "idx": 225,
+     "shape": [
+      1,
+      80,
+      4,
+      4
+     ],
+     "perm": [
+      0,
+      3,
+      2,
+      1
+     ],
+     "1.23.2": "untyped (serial)",
+     "1.24.4": "untyped (serial)"
+    },
+    {
+     "idx": 249,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 640-bit loops=4",
+     "1.24.4": "scalar out 640-bit loops=4"
+    },
+    {
+     "idx": 251,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 640-bit loops=4",
+     "1.24.4": "scalar out 640-bit loops=4"
+    },
+    {
+     "idx": 263,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "MlasTranspose<32-bit> in loops=4 M=4 N=80",
+     "1.24.4": "MlasTranspose<32-bit> in loops=4 M=4 N=80"
+    },
+    {
+     "idx": 268,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 640-bit loops=4",
+     "1.24.4": "scalar out 640-bit loops=4"
+    },
+    {
+     "idx": 305,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 640-bit loops=4",
+     "1.24.4": "scalar out 640-bit loops=4"
+    },
+    {
+     "idx": 307,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 640-bit loops=4",
+     "1.24.4": "scalar out 640-bit loops=4"
+    },
+    {
+     "idx": 319,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "MlasTranspose<32-bit> in loops=4 M=4 N=80",
+     "1.24.4": "MlasTranspose<32-bit> in loops=4 M=4 N=80"
+    },
+    {
+     "idx": 324,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 640-bit loops=4",
+     "1.24.4": "scalar out 640-bit loops=4"
+    },
+    {
+     "idx": 361,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 640-bit loops=4",
+     "1.24.4": "scalar out 640-bit loops=4"
+    },
+    {
+     "idx": 363,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 640-bit loops=4",
+     "1.24.4": "scalar out 640-bit loops=4"
+    },
+    {
+     "idx": 375,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "MlasTranspose<32-bit> in loops=4 M=4 N=80",
+     "1.24.4": "MlasTranspose<32-bit> in loops=4 M=4 N=80"
+    },
+    {
+     "idx": 380,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 640-bit loops=4",
+     "1.24.4": "scalar out 640-bit loops=4"
+    },
+    {
+     "idx": 417,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 640-bit loops=4",
+     "1.24.4": "scalar out 640-bit loops=4"
+    },
+    {
+     "idx": 419,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 640-bit loops=4",
+     "1.24.4": "scalar out 640-bit loops=4"
+    },
+    {
+     "idx": 431,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "MlasTranspose<32-bit> in loops=4 M=4 N=80",
+     "1.24.4": "MlasTranspose<32-bit> in loops=4 M=4 N=80"
+    },
+    {
+     "idx": 436,
+     "shape": [
+      4,
+      4,
+      4,
+      20
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 640-bit loops=4",
+     "1.24.4": "scalar out 640-bit loops=4"
+    },
+    {
+     "idx": 461,
+     "shape": [
+      1,
+      4,
+      4,
+      80
+     ],
+     "perm": [
+      0,
+      3,
+      2,
+      1
+     ],
+     "1.23.2": "untyped (serial)",
+     "1.24.4": "untyped (serial)"
+    },
+    {
+     "idx": 463,
+     "shape": [
+      160,
+      2,
+      2,
+      2
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "scalar out 64-bit loops=160",
+     "1.24.4": "scalar out 64-bit loops=160"
+    },
+    {
+     "idx": 486,
+     "shape": [
+      96,
+      2,
+      1,
+      2
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 497,
+     "shape": [
+      1,
+      96,
+      1,
+      4
+     ],
+     "perm": [
+      0,
+      3,
+      2,
+      1
+     ],
+     "1.23.2": "untyped (serial)",
+     "1.24.4": "untyped (serial)"
+    },
+    {
+     "idx": 521,
+     "shape": [
+      4,
+      1,
+      4,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 523,
+     "shape": [
+      4,
+      1,
+      4,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 535,
+     "shape": [
+      4,
+      1,
+      4,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 540,
+     "shape": [
+      4,
+      4,
+      1,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 577,
+     "shape": [
+      4,
+      1,
+      4,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 579,
+     "shape": [
+      4,
+      1,
+      4,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 591,
+     "shape": [
+      4,
+      1,
+      4,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 596,
+     "shape": [
+      4,
+      4,
+      1,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 633,
+     "shape": [
+      4,
+      1,
+      4,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 635,
+     "shape": [
+      4,
+      1,
+      4,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 647,
+     "shape": [
+      4,
+      1,
+      4,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      3,
+      1
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 652,
+     "shape": [
+      4,
+      4,
+      1,
+      24
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    },
+    {
+     "idx": 677,
+     "shape": [
+      1,
+      4,
+      1,
+      96
+     ],
+     "perm": [
+      0,
+      3,
+      2,
+      1
+     ],
+     "1.23.2": "untyped (serial)",
+     "1.24.4": "untyped (serial)"
+    },
+    {
+     "idx": 679,
+     "shape": [
+      96,
+      1,
+      2,
+      2
+     ],
+     "perm": [
+      0,
+      2,
+      1,
+      3
+     ],
+     "1.23.2": "reshape-copy",
+     "1.24.4": "reshape-copy"
+    }
+   ]
+  },
+  "tp_f32_ctrl": {
+   "file": "results/transpose_probe/models/tp_f32_ctrl.onnx",
+   "sha256": "fc73f976339da9c69f04ac2ff42575fc3ff475a910c0a3461c4bd2db4353db97",
+   "dtype": "f32",
+   "skeleton": "full",
+   "transposes": 0,
+   "census": {
+    "ai.onnx:Concat": 1,
+    "ai.onnx:Reshape": 113,
+    "ai.onnx:Slice": 55
+   },
+   "predicted_dispatches": {
+    "1.23.2": {
+     "1": 0,
+     "4": 0
+    },
+    "1.24.4": {
+     "1": 0,
+     "4": 0
+    }
+   },
+   "transpose_paths_4T": []
+  },
+  "tp_f16_w2": {
+   "file": "results/transpose_probe/models/tp_f16_w2.onnx",
+   "sha256": "964922b650d39233cbf434419efada13402f9dfdd62e4c294c8c4c060295c56e",
+   "dtype": "f16",
+   "skeleton": "mech",
+   "transposes": 4,
+   "census": {
+    "ai.onnx:Cast": 2,
+    "ai.onnx:Concat": 1,
+    "ai.onnx:Reshape": 9,
+    "ai.onnx:Slice": 4,
+    "ai.onnx:Transpose": 4
+   },
+   "predicted_dispatches": {
+    "1.23.2": {
+     "1": 0,
+     "4": 0
+    },
+    "1.24.4": {
+     "1": 0,
+     "4": 832
+    }
+   },
+   "transpose_paths_4T": [
+    {
+     "idx": 49,
+     "shape": [
+      256,
+      2,
+      4
+     ],
+     "perm": [
+      0,
+      2,
+      1
+     ],
+     "1.23.2": "scalar out 16-bit loops=256",
+     "1.24.4": "MlasTranspose<16-bit> out loops=256 M=2 N=4"
+    },
+    {
+     "idx": 186,
+     "shape": [
+      256,
+      4,
+      2
+     ],
+     "perm": [
+      0,
+      2,
+      1
+     ],
+     "1.23.2": "scalar out 16-bit loops=256",
+     "1.24.4": "MlasTranspose<16-bit> out loops=256 M=4 N=2"
+    },
+    {
+     "idx": 220,
+     "shape": [
+      160,
+      2,
+      2
+     ],
+     "perm": [
+      0,
+      2,
+      1
+     ],
+     "1.23.2": "scalar out 16-bit loops=160",
+     "1.24.4": "MlasTranspose<16-bit> out loops=160 M=2 N=2"
+    },
+    {
+     "idx": 463,
+     "shape": [
+      160,
+      2,
+      2
+     ],
+     "perm": [
+      0,
+      2,
+      1
+     ],
+     "1.23.2": "scalar out 16-bit loops=160",
+     "1.24.4": "MlasTranspose<16-bit> out loops=160 M=2 N=2"
+    }
+   ]
+  },
+  "tp_f32_w4": {
+   "file": "results/transpose_probe/models/tp_f32_w4.onnx",
+   "sha256": "a8b41525929c7c437edfe570ea988823edf8f564b79837a3105426b4fc2eea01",
+   "dtype": "f32",
+   "skeleton": "mech",
+   "transposes": 4,
+   "census": {
+    "ai.onnx:Concat": 1,
+    "ai.onnx:Reshape": 9,
+    "ai.onnx:Slice": 4,
+    "ai.onnx:Transpose": 4
+   },
+   "predicted_dispatches": {
+    "1.23.2": {
+     "1": 0,
+     "4": 832
+    },
+    "1.24.4": {
+     "1": 0,
+     "4": 832
+    }
+   },
+   "transpose_paths_4T": [
+    {
+     "idx": 49,
+     "shape": [
+      256,
+      2,
+      4
+     ],
+     "perm": [
+      0,
+      2,
+      1
+     ],
+     "1.23.2": "MlasTranspose<32-bit> out loops=256 M=2 N=4",
+     "1.24.4": "MlasTranspose<32-bit> out loops=256 M=2 N=4"
+    },
+    {
+     "idx": 186,
+     "shape": [
+      256,
+      4,
+      2
+     ],
+     "perm": [
+      0,
+      2,
+      1
+     ],
+     "1.23.2": "MlasTranspose<32-bit> out loops=256 M=4 N=2",
+     "1.24.4": "MlasTranspose<32-bit> out loops=256 M=4 N=2"
+    },
+    {
+     "idx": 220,
+     "shape": [
+      160,
+      2,
+      2
+     ],
+     "perm": [
+      0,
+      2,
+      1
+     ],
+     "1.23.2": "MlasTranspose<32-bit> out loops=160 M=2 N=2",
+     "1.24.4": "MlasTranspose<32-bit> out loops=160 M=2 N=2"
+    },
+    {
+     "idx": 463,
+     "shape": [
+      160,
+      2,
+      2
+     ],
+     "perm": [
+      0,
+      2,
+      1
+     ],
+     "1.23.2": "MlasTranspose<32-bit> out loops=160 M=2 N=2",
+     "1.24.4": "MlasTranspose<32-bit> out loops=160 M=2 N=2"
+    }
+   ]
+  }
+ }
+}

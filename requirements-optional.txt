@@ -1,0 +1,7 @@
+# Optional extras (tested together with requirements.txt on Python 3.11, Windows 11).
+# Installing qai-hub pins protobuf 6.x (already pinned in requirements.txt).
+qai-hub==0.55.0          # Qualcomm AI Hub compile/profile (core/aihub.py)
+codecarbon               # energy provider (core/energy.py); named by the competition packet
+ai-edge-litert==2.2.0    # measure / evaluate .tflite models (LiteRT interpreter)
+tensorflow-cpu==2.21.0   # empty-TFLite RSS baseline + TFLite -> ONNX conversion
+tf2onnx==1.17.0          # float TFLite -> ONNX, so ORT can INT8-quantize it

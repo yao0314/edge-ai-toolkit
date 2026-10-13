@@ -1,0 +1,291 @@
+{
+ "experiment": "B",
+ "written_utc": "2026-09-23T08:51:32.496340+00:00",
+ "protocol": "results/paper/b_design_registered.md",
+ "protocol_sha256": "5bb5d73d14f5643e3a6c40ae480655ed2a0912c99bf45a6ec11a9fa81dbb440b",
+ "harness": "scripts/paper/ort_version_bisect.py",
+ "harness_sha256": "170a66325b0734e8ae531dc3385e74a7bdeb2d34514999a02404b4cd8095e8d4",
+ "runner": "scripts/paper/b_run.py",
+ "runner_sha256": "feece91f73f5b573f3d1c329c5c5269f320bf9920dab97e3e637d0c3d22cb999",
+ "envs_dir": "D:/sec_envs",
+ "seeds": {
+  "base": 71,
+  "batches": {
+   "r50": 72,
+   "c3_224x224": 73,
+   "y256": 74,
+   "c224_224x3": 75,
+   "mv64": 76,
+   "c3_320x320": 77,
+   "mv256": 78,
+   "c3_299x299": 79,
+   "deit224": 80,
+   "c1_64x64": 81,
+   "mnv2": 82,
+   "c3_112x112": 83,
+   "ae": 84,
+   "c3_240x320": 85,
+   "c56_56x3": 86
+  },
+  "replication": 91,
+  "decoy_sampling": 97,
+  "cluster_bootstrap": 101
+ },
+ "repeats": 5,
+ "threads": "1,4",
+ "spin": "runtime default",
+ "V1": {
+  "ort1163": {
+   "reported": "1.16.3",
+   "on_ladder": true,
+   "hash_match": true,
+   "expected": {
+    "onnxruntime_pybind11_state.pyd": "11545c116906",
+    "onnxruntime_providers_shared.dll": "fd04e715c9f4"
+   },
+   "got": {
+    "onnxruntime_providers_shared.dll": "fd04e715c9f4",
+    "onnxruntime_pybind11_state.pyd": "11545c116906"
+   },
+   "numpy": "2.4.6",
+   "python_version": "3.11.9"
+  },
+  "ort1201": {
+   "reported": "1.20.1",
+   "on_ladder": true,
+   "hash_match": true,
+   "expected": {
+    "onnxruntime_pybind11_state.pyd": "83f4061d6bc0",
+    "onnxruntime.dll": "2f92a249542d",
+    "onnxruntime_providers_shared.dll": "ff0a090202ab"
+   },
+   "got": {
+    "onnxruntime.dll": "2f92a249542d",
+    "onnxruntime_providers_shared.dll": "ff0a090202ab",
+    "onnxruntime_pybind11_state.pyd": "83f4061d6bc0"
+   },
+   "numpy": "2.4.6",
+   "python_version": "3.11.9"
+  },
+  "ort1211": {
+   "reported": "1.21.1",
+   "on_ladder": true,
+   "hash_match": true,
+   "expected": {
+    "onnxruntime_pybind11_state.pyd": "e6ca84c822e2",
+    "onnxruntime.dll": "a93e75cd85a2",
+    "onnxruntime_providers_shared.dll": "c80df011efa5"
+   },
+   "got": {
+    "onnxruntime.dll": "a93e75cd85a2",
+    "onnxruntime_providers_shared.dll": "c80df011efa5",
+    "onnxruntime_pybind11_state.pyd": "e6ca84c822e2"
+   },
+   "numpy": "2.4.6",
+   "python_version": "3.11.9"
+  },
+  "ort1221": {
+   "reported": "1.22.1",
+   "on_ladder": true,
+   "hash_match": true,
+   "expected": {
+    "onnxruntime_pybind11_state.pyd": "cf57f10c1d27",
+    "onnxruntime.dll": "b7d046825412",
+    "onnxruntime_providers_shared.dll": "121329b5f87d"
+   },
+   "got": {
+    "onnxruntime.dll": "b7d046825412",
+    "onnxruntime_providers_shared.dll": "121329b5f87d",
+    "onnxruntime_pybind11_state.pyd": "cf57f10c1d27"
+   },
+   "numpy": "2.4.6",
+   "python_version": "3.11.9"
+  },
+  "ort1232": {
+   "reported": "1.23.2",
+   "on_ladder": true,
+   "hash_match": true,
+   "expected": {
+    "onnxruntime_pybind11_state.pyd": "967a5a759076",
+    "onnxruntime.dll": "93457c4f1790",
+    "onnxruntime_providers_shared.dll": "056da4c9eec7"
+   },
+   "got": {
+    "onnxruntime.dll": "93457c4f1790",
+    "onnxruntime_providers_shared.dll": "056da4c9eec7",
+    "onnxruntime_pybind11_state.pyd": "967a5a759076"
+   },
+   "numpy": "2.4.6",
+   "python_version": "3.11.9"
+  },
+  "ort1244": {
+   "reported": "1.24.4",
+   "on_ladder": true,
+   "hash_match": true,
+   "expected": {
+    "onnxruntime_pybind11_state.pyd": "fbd869b4b1ff",
+    "onnxruntime.dll": "ef720fc44a4e",
+    "onnxruntime_providers_shared.dll": "f123ce892247"
+   },
+   "got": {
+    "onnxruntime.dll": "ef720fc44a4e",
+    "onnxruntime_providers_shared.dll": "f123ce892247",
+    "onnxruntime_pybind11_state.pyd": "fbd869b4b1ff"
+   },
+   "numpy": "2.4.6",
+   "python_version": "3.11.9"
+  },
+  "ort1251": {
+   "reported": "1.25.1",
+   "on_ladder": true,
+   "hash_match": true,
+   "expected": {
+    "onnxruntime_pybind11_state.pyd": "fae1c8be8b8d",
+    "onnxruntime.dll": "bb656592046f",
+    "onnxruntime_providers_shared.dll": "c56c986e157e"
+   },
+   "got": {
+    "onnxruntime.dll": "bb656592046f",
+    "onnxruntime_providers_shared.dll": "c56c986e157e",
+    "onnxruntime_pybind11_state.pyd": "fae1c8be8b8d"
+   },
+   "numpy": "2.4.6",
+   "python_version": "3.11.9"
+  },
+  "ort1260": {
+   "reported": "1.26.0",
+   "on_ladder": true,
+   "hash_match": true,
+   "expected": {
+    "onnxruntime_pybind11_state.pyd": "28a78fe15545",
+    "onnxruntime.dll": "b7dfcb4dea88",
+    "onnxruntime_providers_shared.dll": "669fa0fbb553"
+   },
+   "got": {
+    "onnxruntime.dll": "b7dfcb4dea88",
+    "onnxruntime_providers_shared.dll": "669fa0fbb553",
+    "onnxruntime_pybind11_state.pyd": "28a78fe15545"
+   },
+   "numpy": "2.4.6",
+   "python_version": "3.11.9"
+  },
+  "ort1270": {
+   "reported": "1.27.0",
+   "on_ladder": true,
+   "hash_match": true,
+   "expected": {
+    "onnxruntime_pybind11_state.pyd": "071e3be75111",
+    "onnxruntime.dll": "7b9ef55ecaa6",
+    "onnxruntime_providers_shared.dll": "4cc699327866"
+   },
+   "got": {
+    "onnxruntime.dll": "7b9ef55ecaa6",
+    "onnxruntime_providers_shared.dll": "4cc699327866",
+    "onnxruntime_pybind11_state.pyd": "071e3be75111"
+   },
+   "numpy": "2.4.6",
+   "python_version": "3.11.9"
+  },
+  "ort1280": {
+   "reported": "1.28.0",
+   "on_ladder": true,
+   "hash_match": true,
+   "expected": {
+    "onnxruntime_pybind11_state.pyd": "8fb176cc2c96",
+    "onnxruntime.dll": "14e186627f10",
+    "onnxruntime_providers_shared.dll": "d9a39bc6b34e"
+   },
+   "got": {
+    "onnxruntime.dll": "14e186627f10",
+    "onnxruntime_providers_shared.dll": "d9a39bc6b34e",
+    "onnxruntime_pybind11_state.pyd": "8fb176cc2c96"
+   },
+   "numpy": "2.4.6",
+   "python_version": "3.11.9"
+  },
+  "ort1300": {
+   "reported": "1.30.0",
+   "on_ladder": true,
+   "hash_match": true,
+   "expected": {
+    "onnxruntime_pybind11_state.pyd": "06b712319c15",
+    "onnxruntime.dll": "44741724166a",
+    "onnxruntime_providers_shared.dll": "fabb99add45a"
+   },
+   "got": {
+    "onnxruntime.dll": "44741724166a",
+    "onnxruntime_providers_shared.dll": "fabb99add45a",
+    "onnxruntime_pybind11_state.pyd": "06b712319c15"
+   },
+   "numpy": "2.4.6",
+   "python_version": "3.11.9"
+  }
+ },
+ "V1_pass": true,
+ "dropped_duplicate_envs": [
+  "project"
+ ],
+ "V2_pre_run": {
+  "r50/p00_fp32": "19b355585c64d4b599fd029f4bb4a2d9bd41a503d3118a103bf461a75574b6e5",
+  "r50/p00_int8": "41a987f1bc46dd3190eb3e2f5f0ef012049eab80c2a69141c55efff0b9ad4c4b",
+  "r50/p00_int8_dyn_conv": "63f183f117cfcdcdc446ff57f91a54e163238f303dd0acc3c63867ff56583847",
+  "c3_224x224/a01": "7c536d02e2f6af9569e5f3c7a4d8282060072119524c93c8da71e63876b4722b",
+  "c3_224x224/a02": "41a36090dafe98f4ad8f9b7fe0b218c56ac3c031e547f0367c30655d2702bffe",
+  "c3_224x224/a03": "e6429d274805654c79ba68dc886c1efd4eff95393e747c35d3fdab579febd8a0",
+  "c3_224x224/b02": "eda9007c0449f118f02b1e8c4ba6b43bec51a7d7ab677566d42929eb3da02874",
+  "c3_224x224/b03": "1d655ead9b9a9438f58e46b151cc78fa304d420a56f904d692b43089837ce194",
+  "c3_224x224/b15": "3da17dfad1b7ba23c93fac6dbf49f6db78cd42f7519e915a2e27d37c5c0a972b",
+  "c3_224x224/b16": "7d25f0bfa7a92e9a67d8049facd4454911ca4388a303fc61ee14664b1010c717",
+  "c3_224x224/c01": "def183c935215f146c675fbf97889bfe36ff1856dfb75412a679c3f5b020cfaa",
+  "c3_224x224/c05": "0723876d0a12903d84705a98c29851774fc947448b43b730db84f9ae15976415",
+  "y256/256_p00_fp32": "1aa3b72e152ccad41806339ef8606831bb5f28549369979ba9a3d9d158633a8f",
+  "y256/256_p00_int8": "c4a6e37c4a1491c865f410d1d0fa5def08ca639bfed0b3b6754cf7ac4145d5f3",
+  "y256/256_p00_int8_dyn_conv": "8f8e7af841b5f463a96f69179456c21f5fcf87c9e1a6dcc1f470ec7a81c6ef97",
+  "c224_224x3/a04": "6837d0b19625d4aff8266d7197a7f3775afd82a8c40f9fd0283d52db4955566f",
+  "c224_224x3/c02": "1a11f43a2fa14473fefff49a2d323e2ccaf915b4c6e96557f1aaa92d67c2b13a",
+  "mv64/p00_fp32": "8bba9618966c5739448d67738b4a0051e99125d96d8bda2673746b40103289fa",
+  "mv64/p00_int8": "911de4ee3257966074fe54952cf7ad5ed546798fe138fa8997efce9b11b1f629",
+  "mv64/p00_int8_dyn_mm": "9c0025026d71ead82278eba5122264009deee1eb8b4c272a8422f786348794f4",
+  "c3_320x320/b01": "d1538e0f392836832e7bbc0c80285396491444b2614e07bc04ee26d38de7b88c",
+  "c3_320x320/b18": "c410f847a75bcfe976fdca2620b9a426fb1d689ab5083d7862395e8d3b2e0e34",
+  "mv256/p00_fp32": "9ab14ae019564ef51b4f45103cd4db77f6c0c7a6ebdc9fb841f63f9f5448b138",
+  "mv256/p00_int8": "ae5d630c76ccc5d40983777666afc619250cfed3ae072ac9492ed354c68d32cd",
+  "mv256/p00_int8_dyn_mm": "7da9e649cd59fb9f23ef37994b80d8011e5ced7fe591f67e286ca9e22841c6f8",
+  "c3_299x299/b05": "a70e6a824c413ab9a1242ce08e6327fc71e78a1a3351e4416607451914c33472",
+  "deit224/p00_fp32": "47f7ea618ea7b456eb4143438a7c592a614c8b1f1df9c7f55a79633e7c68dcf9",
+  "deit224/p00_int8": "deffb7d51b6a0331c7d4f4a85f5c2c1b87583e178e81588e9c343b8a7facbc81",
+  "deit224/p00_int8_dyn_mm": "c7406a58789afe1600ab547ea03547ea9662b66ec3692624d7f4bd2318827f30",
+  "c1_64x64/a05": "3e47195d79e9593294df9e81a6d296a1e10969b68a717284081c29493a0ff5f1",
+  "mnv2/p00_fp32": "c0980c89d299a492d90b42b599b4359237c31b7c6e4363035a53552682a739b1",
+  "mnv2/p00_int8": "ad770b998718b3a07b36a11edcbc9f5c52547d8459624579087d3de6a246a88c",
+  "mnv2/p00_int8_dyn_conv": "fc9c8d273f5ad80d9a86c1c30e95662f94662f818d5ff1984f01a49fb2a606fc",
+  "c3_112x112/c04": "f0d7093aff10e2638c734c5f18a6a7eabd2b9239b20bdb9b8090865a6f69a1ed",
+  "ae/p00_fp32": "b5ccd9a0dd354d9119323f194e879f2fe20209fbec32c956d07360535166aef1",
+  "ae/p00_int8": "f88884883b10aa1d6480f010d4a06af19fcab437188128e52fc6fd97742d88ff",
+  "c3_240x320/a06": "093a9a55ff05fd71ace744593fd0c81eab8306d6d8c38b0892c5b3cff7f08265",
+  "c56_56x3/c03": "d76ccb210397bca910c224172a54a12c0b0cc5bcb8573b317f0df758c265b093"
+ },
+ "deviations": [
+  {
+   "item": "11.2(a) t_utc / order_index columns",
+   "handling": "The harness writes no per-session timestamp and no shuffle position. Per-BATCH start/end UTC are recorded in results/expB/batch_plan.json and added as columns to the merged CSVs, so the 5.2 arm-centre figure and V4/V5 time regressions are computable at batch resolution, not session resolution."
+  },
+  {
+   "item": "11.2(c) --anchor injection every 40 sessions",
+   "handling": "The harness cannot inject anchor cells inside a batch. Both anchors are measured in their own invocations at every batch BOUNDARY instead (16 boundaries x 2 anchors x --anchor-reps sessions), on the single 1.30.0 interpreter, into results/expB/b_drift_anchor.csv. V4's first-third / last-third medians are computable; the time resolution is one boundary (20-70 min) instead of ~3 min."
+  },
+  {
+   "item": "11.2(e) --not-applicable removal before the shuffle",
+   "handling": "--exclude takes family:variant pairs and cannot express a per-RELEASE exclusion, so the NOT-APPLICABLE (file, release) cells of 3.0 cannot be removed from a batch without splitting the batch by release group - which would confound release with invocation and destroy the within-batch shuffle that 5.2 requires. They are therefore left in the grid, where they fail at session construction in ~1 s and are recorded as status=FAILED rows carrying the runtime's own error text. No timing is produced for them; the analysis drops them by name from every denominator using results/expB/load_probe.json. --exclude IS used for any (family, variant) that stage 0 shows fails on EVERY release, which is release-independent and so expressible."
+  },
+  {
+   "item": "11.1 artefact paths",
+   "handling": "The protocol puts the CSVs under results/paper/. This run round is allowed to write only scripts/paper/b_run.py, results/expB/* and D:/sec_work/*, so every artefact keeps its registered FILE NAME under results/expB/ instead. Nothing under results/paper/ is written."
+  },
+  {
+   "item": "7 release-notes retrieval",
+   "handling": "Stage 0's notes retrieval is implemented (--stage notes) but is OFF by default: it is the one step that needs the network, and downloading is not done unprompted."
+  }
+ ],
+ "load_probe_sha256": "746f5eda7975b4dc0fe0318adc17aa967f6c8355fe8e73f4a546cba60409d00c"
+}

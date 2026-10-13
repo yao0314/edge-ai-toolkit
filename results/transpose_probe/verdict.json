@@ -1,0 +1,66 @@
+{
+ "final": "INCONCLUSIVE (gated and ungated verdicts differ)",
+ "mechanism": null,
+ "ungated": {
+  "label": "ungated (as the paper reports)",
+  "n_rows": 96,
+  "V2_controls_stable": true,
+  "delta_u8_4T": 0.4228000034345314,
+  "delta_u8_4T_envelope": [
+   0.3962499904446305,
+   0.44075001642340805
+  ],
+  "delta_u8_1T": 0.008299990440718927,
+  "delta_f32_4T": 0.0084999919636176,
+  "u8_all_above_own_floor": true,
+  "share_of_step": {
+   "ort_version_bisect.csv": 0.8735537261044037,
+   "spin_version.csv (spin on)": 0.9014925446365275,
+   "coverage_mobilevit.csv": 0.741754391990406
+  },
+  "P": "LOCALISED",
+  "delta_w2_4T": 0.4264999879524112,
+  "delta_w2_1T": 0.010400006431155032,
+  "delta_rest_4T": -0.0025000044843182107,
+  "D_f16_w2_4T": 0.4077000048710034,
+  "D_f32_w4_4T": 0.011700001778081004,
+  "per_dispatch_ms_f32_w4": 0.0005052884611919022,
+  "additivity": 0.0011999800335615873,
+  "M": "M-CONFIRMED (2-byte-block Transposes routed to per-loop threaded MlasTranspose)"
+ },
+ "gated": {
+  "label": "gated (core delivery >= 0.95)",
+  "n_rows": 77,
+  "V2_controls_stable": false,
+  "delta_u8_4T": NaN,
+  "delta_u8_4T_envelope": [
+   NaN,
+   NaN
+  ],
+  "delta_u8_1T": 0.008299990440718927,
+  "delta_f32_4T": NaN,
+  "u8_all_above_own_floor": true,
+  "share_of_step": {
+   "ort_version_bisect.csv": NaN,
+   "spin_version.csv (spin on)": NaN,
+   "coverage_mobilevit.csv": NaN
+  },
+  "P": "INCONCLUSIVE (control drift at or above the floor)",
+  "M": "not evaluated"
+ },
+ "below_gate": {
+  "tp_f16_w2": 4,
+  "tp_f32_ctrl": 6,
+  "tp_u8_ctrl": 6,
+  "tp_u8_w2": 3
+ },
+ "thresholds_ms": {
+  "loc": 0.33599999999999997,
+  "ref": 0.072,
+  "small": 0.033600000000000005
+ },
+ "S_ref_ms": 0.48,
+ "csv": [
+  "results\\paper\\transpose_probe.csv"
+ ]
+}

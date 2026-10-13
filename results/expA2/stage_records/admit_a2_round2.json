@@ -1,0 +1,3727 @@
+{
+ "results": {
+  "a01": {
+   "id": "a01",
+   "rules": {
+    "A1": {
+     "pass": true,
+     "detail": "1 graph inputs (need exactly 1)"
+    },
+    "A2": {
+     "pass": true,
+     "detail": "elem_type=1 dims=[1, 3, 224, 224]"
+    },
+    "A3": {
+     "pass": true,
+     "detail": "357 8-bit Q/DQ + 0 QLinear*/QOperator = 357 (need >= 8): ok; activation quantization measured from the graph = static (150 static 8-bit activation sites, 0 run-time sites): ok; format QDQ; counts {\"dynamic_quantize_linear\": 0, \"quantize_linear_runtime_scale\": 0, \"quantize_linear_static_activation\": 150, \"quantize_linear_static_weight\": 0, \"dequantize_linear_static\": 207, \"qlinear_ops\": 0, \"integer_ops_fed_by_dynamic\": 0, \"integer_ops_fed_by_static\": 0}"
+    },
+    "A4": {
+     "pass": true,
+     "detail": "0 sub-byte tensors, 0 float16 initializers"
+    },
+    "A5": {
+     "pass": true,
+     "detail": "banned ops []; runtime-K TopK []; ok"
+    },
+    "A6": {
+     "pass": true,
+     "detail": "{\"1.23.2\": \"1.23.2\", \"1.24.4\": \"1.24.4\"}"
+    },
+    "A7": {
+     "pass": true,
+     "detail": "2415805 bytes"
+    },
+    "A8": {
+     "pass": true,
+     "detail": "screen_ms 2.800 (cap 60.0)"
+    },
+    "A9": {
+     "pass": true,
+     "detail": "A9b slot 12: family 'shufflenet_v2' 1/2, publisher 'onnx/models' 5/6, checkpoint 'repo:onnx/models' 5, sha256 7c536d02e2f6"
+    }
+   },
+   "info": {
+    "opset": 12,
+    "ir_version": 7,
+    "n_graph_inputs": 1,
+    "input_name": "input",
+    "input_elem_type": 1,
+    "input_dims": [
+     1,
+     3,
+     224,
+     224
+    ],
+    "chw": [
+     3,
+     224,
+     224
+    ],
+    "batch": 1,
+    "n_nodes": 550,
+    "n_qdq_8bit": 357,
+    "n_qdq_total": 413,
+    "n_qlinear": 0,
+    "quantization_format": "QDQ",
+    "quant_mode": {
+     "counts": {
+      "dynamic_quantize_linear": 0,
+      "quantize_linear_runtime_scale": 0,
+      "quantize_linear_static_activation": 150,
+      "quantize_linear_static_weight": 0,
+      "dequantize_linear_static": 207,
+      "qlinear_ops": 0,
+      "integer_ops_fed_by_dynamic": 0,
+      "integer_ops_fed_by_static": 0
+     },
+     "static_activation_sites": 150,
+     "dynamic_activation_sites": 0,
+     "activation_quantization": "static"
+    },
+    "n_float16_initializers": 0,
+    "output_shapes_inferred": [
+     {
+      "name": "output",
+      "shape": [
+       1,
+       1000
+      ]
+     }
+    ]
+   },
+   "a6": {
+    "1.23.2": {
+     "ok": true,
+     "error": null,
+     "reported_ort": "1.23.2",
+     "output_shapes": [
+      [
+       1,
+       1000
+      ]
+     ]
+    },
+    "1.24.4": {
+     "ok": true,
+     "error": null,
+     "reported_ort": "1.24.4",
+     "output_shapes": [
+      [
+       1,
+       1000
+      ]
+     ]
+    }
+   },
+   "screen": {
+    "ort": "1.24.4",
+    "input_name": "input",
+    "threads": 4,
+    "screen_ms": 2.800050000587362,
+    "n": 20,
+    "min_ms": 2.50909999886062,
+    "max_ms": 4.094199997780379,
+    "cpu_ms_per_inf": 10.15625,
+    "core_delivery": 0.9067918428125873,
+    "quiet_check": {
+     "utc": "2026-09-23T05:19:23Z",
+     "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+     "samples_pct": [
+      21.0,
+      10.0,
+      9.0,
+      14.0,
+      6.0
+     ],
+     "mean_pct": 12.0,
+     "max_pct": 21.0,
+     "battery_status": 2,
+     "on_ac": true,
+     "quiet": true,
+     "attempt": 1,
+     "for_candidate": "a01"
+    }
+   },
+   "sha256": "7c536d02e2f6af9569e5f3c7a4d8282060072119524c93c8da71e63876b4722b",
+   "verdict": "ADMITTED",
+   "a9b_order": 12,
+   "first_failing_rule": null,
+   "a10": {
+    "base_checkpoint_key": "repo:onnx/models",
+    "matrix_row": false,
+    "pair_replicate": true,
+    "pair_replicate_of": "a06",
+    "checkpoint_group": [
+     "a06",
+     "a05",
+     "a02",
+     "a04",
+     "a01",
+     "a03"
+    ]
+   }
+  },
+  "a02": {
+   "id": "a02",
+   "rules": {
+    "A1": {
+     "pass": true,
+     "detail": "1 graph inputs (need exactly 1)"
+    },
+    "A2": {
+     "pass": true,
+     "detail": "elem_type=1 dims=['batch_size', 3, 224, 224]"
+    },
+    "A3": {
+     "pass": true,
+     "detail": "185 8-bit Q/DQ + 0 QLinear*/QOperator = 185 (need >= 8): ok; activation quantization measured from the graph = static (66 static 8-bit activation sites, 0 run-time sites): ok; format QDQ; counts {\"dynamic_quantize_linear\": 0, \"quantize_linear_runtime_scale\": 0, \"quantize_linear_static_activation\": 66, \"quantize_linear_static_weight\": 0, \"dequantize_linear_static\": 119, \"qlinear_ops\": 0, \"integer_ops_fed_by_dynamic\": 0, \"integer_ops_fed_by_static\": 0}"
+    },
+    "A4": {
+     "pass": true,
+     "detail": "0 sub-byte tensors, 0 float16 initializers"
+    },
+    "A5": {
+     "pass": true,
+     "detail": "banned ops []; runtime-K TopK []; ok"
+    },
+    "A6": {
+     "pass": true,
+     "detail": "{\"1.23.2\": \"1.23.2\", \"1.24.4\": \"1.24.4\"}"
+    },
+    "A7": {
+     "pass": true,
+     "detail": "3593903 bytes"
+    },
+    "A8": {
+     "pass": true,
+     "detail": "screen_ms 1.976 (cap 60.0)"
+    },
+    "A9": {
+     "pass": true,
+     "detail": "A9b slot 10: family 'mobilenet_v2' 1/2, publisher 'onnx/models' 3/6, checkpoint 'repo:onnx/models' 3, sha256 41a36090dafe"
+    }
+   },
+   "info": {
+    "opset": 12,
+    "ir_version": 7,
+    "n_graph_inputs": 1,
+    "input_name": "input",
+    "input_elem_type": 1,
+    "input_dims": [
+     "batch_size",
+     3,
+     224,
+     224
+    ],
+    "chw": [
+     3,
+     224,
+     224
+    ],
+    "batch": "symbolic",
+    "n_nodes": 307,
+    "n_qdq_8bit": 185,
+    "n_qdq_total": 237,
+    "n_qlinear": 0,
+    "quantization_format": "QDQ",
+    "quant_mode": {
+     "counts": {
+      "dynamic_quantize_linear": 0,
+      "quantize_linear_runtime_scale": 0,
+      "quantize_linear_static_activation": 66,
+      "quantize_linear_static_weight": 0,
+      "dequantize_linear_static": 119,
+      "qlinear_ops": 0,
+      "integer_ops_fed_by_dynamic": 0,
+      "integer_ops_fed_by_static": 0
+     },
+     "static_activation_sites": 66,
+     "dynamic_activation_sites": 0,
+     "activation_quantization": "static"
+    },
+    "n_float16_initializers": 0,
+    "output_shapes_inferred": [
+     {
+      "name": "output",
+      "shape": [
+       1,
+       1000
+      ]
+     }
+    ]
+   },
+   "a6": {
+    "1.23.2": {
+     "ok": true,
+     "error": null,
+     "reported_ort": "1.23.2",
+     "output_shapes": [
+      [
+       1,
+       1000
+      ]
+     ]
+    },
+    "1.24.4": {
+     "ok": true,
+     "error": null,
+     "reported_ort": "1.24.4",
+     "output_shapes": [
+      [
+       1,
+       1000
+      ]
+     ]
+    }
+   },
+   "screen": {
+    "ort": "1.24.4",
+    "input_name": "input",
+    "threads": 4,
+    "screen_ms": 1.976249999643187,
+    "n": 20,
+    "min_ms": 1.9047999994654674,
+    "max_ms": 3.271499997936189,
+    "cpu_ms_per_inf": 9.375,
+    "core_delivery": 1.1859582544835752,
+    "quiet_check": {
+     "utc": "2026-09-23T05:19:31Z",
+     "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+     "samples_pct": [
+      4.0,
+      13.0,
+      21.0,
+      0.0,
+      23.0
+     ],
+     "mean_pct": 12.2,
+     "max_pct": 23.0,
+     "battery_status": 2,
+     "on_ac": true,
+     "quiet": true,
+     "attempt": 1,
+     "for_candidate": "a02"
+    }
+   },
+   "sha256": "41a36090dafe98f4ad8f9b7fe0b218c56ac3c031e547f0367c30655d2702bffe",
+   "verdict": "ADMITTED",
+   "a9b_order": 10,
+   "first_failing_rule": null,
+   "a10": {
+    "base_checkpoint_key": "repo:onnx/models",
+    "matrix_row": false,
+    "pair_replicate": true,
+    "pair_replicate_of": "a06",
+    "checkpoint_group": [
+     "a06",
+     "a05",
+     "a02",
+     "a04",
+     "a01",
+     "a03"
+    ]
+   }
+  },
+  "a03": {
+   "id": "a03",
+   "rules": {
+    "A1": {
+     "pass": true,
+     "detail": "1 graph inputs (need exactly 1)"
+    },
+    "A2": {
+     "pass": true,
+     "detail": "elem_type=1 dims=['N', 3, 224, 224]"
+    },
+    "A3": {
+     "pass": true,
+     "detail": "202 8-bit Q/DQ + 0 QLinear*/QOperator = 202 (need >= 8): ok; activation quantization measured from the graph = static (74 static 8-bit activation sites, 0 run-time sites): ok; format QDQ; counts {\"dynamic_quantize_linear\": 0, \"quantize_linear_runtime_scale\": 0, \"quantize_linear_static_activation\": 74, \"quantize_linear_static_weight\": 0, \"dequantize_linear_static\": 128, \"qlinear_ops\": 0, \"integer_ops_fed_by_dynamic\": 0, \"integer_ops_fed_by_static\": 0}"
+    },
+    "A4": {
+     "pass": true,
+     "detail": "0 sub-byte tensors, 0 float16 initializers"
+    },
+    "A5": {
+     "pass": true,
+     "detail": "banned ops []; runtime-K TopK []; ok"
+    },
+    "A6": {
+     "pass": true,
+     "detail": "{\"1.23.2\": \"1.23.2\", \"1.24.4\": \"1.24.4\"}"
+    },
+    "A7": {
+     "pass": true,
+     "detail": "25753167 bytes"
+    },
+    "A8": {
+     "pass": true,
+     "detail": "screen_ms 12.418 (cap 60.0)"
+    },
+    "A9": {
+     "pass": true,
+     "detail": "A9b slot 13: family 'resnet50' 1/2, publisher 'onnx/models' 6/6, checkpoint 'repo:onnx/models' 6, sha256 e6429d274805"
+    }
+   },
+   "info": {
+    "opset": 12,
+    "ir_version": 4,
+    "n_graph_inputs": 1,
+    "input_name": "data",
+    "input_elem_type": 1,
+    "input_dims": [
+     "N",
+     3,
+     224,
+     224
+    ],
+    "chw": [
+     3,
+     224,
+     224
+    ],
+    "batch": "symbolic",
+    "n_nodes": 345,
+    "n_qdq_8bit": 202,
+    "n_qdq_total": 255,
+    "n_qlinear": 0,
+    "quantization_format": "QDQ",
+    "quant_mode": {
+     "counts": {
+      "dynamic_quantize_linear": 0,
+      "quantize_linear_runtime_scale": 0,
+      "quantize_linear_static_activation": 74,
+      "quantize_linear_static_weight": 0,
+      "dequantize_linear_static": 128,
+      "qlinear_ops": 0,
+      "integer_ops_fed_by_dynamic": 0,
+      "integer_ops_fed_by_static": 0
+     },
+     "static_activation_sites": 74,
+     "dynamic_activation_sites": 0,
+     "activation_quantization": "static"
+    },
+    "n_float16_initializers": 0,
+    "output_shapes_inferred": [
+     {
+      "name": "resnetv17_dense0_fwd",
+      "shape": [
+       1,
+       1000
+      ]
+     }
+    ]
+   },
+   "a6": {
+    "1.23.2": {
+     "ok": true,
+     "error": null,
+     "reported_ort": "1.23.2",
+     "output_shapes": [
+      [
+       1,
+       1000
+      ]
+     ]
+    },
+    "1.24.4": {
+     "ok": true,
+     "error": null,
+     "reported_ort": "1.24.4",
+     "output_shapes": [
+      [
+       1,
+       1000
+      ]
+     ]
+    }
+   },
+   "screen": {
+    "ort": "1.24.4",
+    "input_name": "data",
+    "threads": 4,
+    "screen_ms": 12.417649999406422,
+    "n": 20,
+    "min_ms": 11.727699999028118,
+    "max_ms": 13.16669999869191,
+    "cpu_ms_per_inf": 41.40625,
+    "core_delivery": 0.8336168679657436,
+    "quiet_check": {
+     "utc": "2026-09-23T05:19:40Z",
+     "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+     "samples_pct": [
+      13.0,
+      0.0,
+      20.0,
+      17.0,
+      5.0
+     ],
+     "mean_pct": 11.0,
+     "max_pct": 20.0,
+     "battery_status": 2,
+     "on_ac": true,
+     "quiet": true,
+     "attempt": 1,
+     "for_candidate": "a03"
+    }
+   },
+   "sha256": "e6429d274805654c79ba68dc886c1efd4eff95393e747c35d3fdab579febd8a0",
+   "verdict": "ADMITTED",
+   "a9b_order": 13,
+   "first_failing_rule": null,
+   "a10": {
+    "base_checkpoint_key": "repo:onnx/models",
+    "matrix_row": false,
+    "pair_replicate": true,
+    "pair_replicate_of": "a06",
+    "checkpoint_group": [
+     "a06",
+     "a05",
+     "a02",
+     "a04",
+     "a01",
+     "a03"
+    ]
+   }
+  },
+  "a04": {
+   "id": "a04",
+   "rules": {
+    "A1": {
+     "pass": true,
+     "detail": "1 graph inputs (need exactly 1)"
+    },
+    "A2": {
+     "pass": true,
+     "detail": "elem_type=1 dims=[1, 224, 224, 3]"
+    },
+    "A3": {
+     "pass": true,
+     "detail": "328 8-bit Q/DQ + 0 QLinear*/QOperator = 328 (need >= 8): ok; activation quantization measured from the graph = static (118 static 8-bit activation sites, 0 run-time sites): ok; format QDQ; counts {\"dynamic_quantize_linear\": 0, \"quantize_linear_runtime_scale\": 0, \"quantize_linear_static_activation\": 118, \"quantize_linear_static_weight\": 0, \"dequantize_linear_static\": 210, \"qlinear_ops\": 0, \"integer_ops_fed_by_dynamic\": 0, \"integer_ops_fed_by_static\": 0}"
+    },
+    "A4": {
+     "pass": true,
+     "detail": "0 sub-byte tensors, 0 float16 initializers"
+    },
+    "A5": {
+     "pass": true,
+     "detail": "banned ops []; runtime-K TopK []; ok"
+    },
+    "A6": {
+     "pass": true,
+     "detail": "{\"1.23.2\": \"1.23.2\", \"1.24.4\": \"1.24.4\"}"
+    },
+    "A7": {
+     "pass": true,
+     "detail": "13469992 bytes"
+    },
+    "A8": {
+     "pass": true,
+     "detail": "screen_ms 6.648 (cap 60.0)"
+    },
+    "A9": {
+     "pass": true,
+     "detail": "A9b slot 11: family 'efficientnet_lite4' 1/2, publisher 'onnx/models' 4/6, checkpoint 'repo:onnx/models' 4, sha256 6837d0b19625"
+    }
+   },
+   "info": {
+    "opset": 11,
+    "ir_version": 6,
+    "n_graph_inputs": 1,
+    "input_name": "images:0",
+    "input_elem_type": 1,
+    "input_dims": [
+     1,
+     224,
+     224,
+     3
+    ],
+    "chw": [
+     224,
+     224,
+     3
+    ],
+    "batch": 1,
+    "n_nodes": 539,
+    "n_qdq_8bit": 328,
+    "n_qdq_total": 419,
+    "n_qlinear": 0,
+    "quantization_format": "QDQ",
+    "quant_mode": {
+     "counts": {
+      "dynamic_quantize_linear": 0,
+      "quantize_linear_runtime_scale": 0,
+      "quantize_linear_static_activation": 118,
+      "quantize_linear_static_weight": 0,
+      "dequantize_linear_static": 210,
+      "qlinear_ops": 0,
+      "integer_ops_fed_by_dynamic": 0,
+      "integer_ops_fed_by_static": 0
+     },
+     "static_activation_sites": 118,
+     "dynamic_activation_sites": 0,
+     "activation_quantization": "static"
+    },
+    "n_float16_initializers": 0,
+    "output_shapes_inferred": [
+     {
+      "name": "Softmax:0",
+      "shape": [
+       1,
+       1000
+      ]
+     }
+    ]
+   },
+   "a6": {
+    "1.23.2": {
+     "ok": true,
+     "error": null,
+     "reported_ort": "1.23.2",
+     "output_shapes": [
+      [
+       1,
+       1000
+      ]
+     ]
+    },
+    "1.24.4": {
+     "ok": true,
+     "error": null,
+     "reported_ort": "1.24.4",
+     "output_shapes": [
+      [
+       1,
+       1000
+      ]
+     ]
+    }
+   },
+   "screen": {
+    "ort": "1.24.4",
+    "input_name": "images:0",
+    "threads": 4,
+    "screen_ms": 6.6482000020187115,
+    "n": 20,
+    "min_ms": 5.969599998934427,
+    "max_ms": 7.282300000952091,
+    "cpu_ms_per_inf": 24.21875,
+    "core_delivery": 0.9107258352879738,
+    "quiet_check": {
+     "utc": "2026-09-23T05:20:56Z",
+     "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+     "samples_pct": [
+      24.0,
+      0.0,
+      23.0,
+      0.0,
+      13.0
+     ],
+     "mean_pct": 12.0,
+     "max_pct": 24.0,
+     "battery_status": 2,
+     "on_ac": true,
+     "quiet": true,
+     "attempt": 2,
+     "for_candidate": "a04"
+    }
+   },
+   "sha256": "6837d0b19625d4aff8266d7197a7f3775afd82a8c40f9fd0283d52db4955566f",
+   "verdict": "ADMITTED",
+   "a9b_order": 11,
+   "first_failing_rule": null,
+   "a10": {
+    "base_checkpoint_key": "repo:onnx/models",
+    "matrix_row": false,
+    "pair_replicate": true,
+    "pair_replicate_of": "a06",
+    "checkpoint_group": [
+     "a06",
+     "a05",
+     "a02",
+     "a04",
+     "a01",
+     "a03"
+    ]
+   }
+  },
+  "a05": {
+   "id": "a05",
+   "rules": {
+    "A1": {
+     "pass": true,
+     "detail": "1 graph inputs (need exactly 1)"
+    },
+    "A2": {
+     "pass": true,
+     "detail": "elem_type=1 dims=[1, 1, 64, 64]"
+    },
+    "A3": {
+     "pass": true,
+     "detail": "6 8-bit Q/DQ + 3 QLinear*/QOperator = 9 (need >= 8): ok; activation quantization measured from the graph = static (6 static 8-bit activation sites, 0 run-time sites): ok; format QDQ+QOperator; counts {\"dynamic_quantize_linear\": 0, \"quantize_linear_runtime_scale\": 0, \"quantize_linear_static_activation\": 3, \"quantize_linear_static_weight\": 0, \"dequantize_linear_static\": 3, \"qlinear_ops\": 3, \"integer_ops_fed_by_dynamic\": 0, \"integer_ops_fed_by_static\": 0}"
+    },
+    "A4": {
+     "pass": true,
+     "detail": "0 sub-byte tensors, 0 float16 initializers"
+    },
+    "A5": {
+     "pass": true,
+     "detail": "banned ops []; runtime-K TopK []; ok"
+    },
+    "A6": {
+     "pass": true,
+     "detail": "{\"1.23.2\": \"1.23.2\", \"1.24.4\": \"1.24.4\"}"
+    },
+    "A7": {
+     "pass": true,
+     "detail": "19300656 bytes"
+    },
+    "A8": {
+     "pass": true,
+     "detail": "screen_ms 5.458 (cap 60.0)"
+    },
+    "A9": {
+     "pass": true,
+     "detail": "A9b slot 9: family 'emotion_ferplus' 1/2, publisher 'onnx/models' 2/6, checkpoint 'repo:onnx/models' 2, sha256 3e47195d79e9"
+    }
+   },
+   "info": {
+    "opset": 12,
+    "ir_version": 3,
+    "n_graph_inputs": 1,
+    "input_name": "Input3",
+    "input_elem_type": 1,
+    "input_dims": [
+     1,
+     1,
+     64,
+     64
+    ],
+    "chw": [
+     1,
+     64,
+     64
+    ],
+    "batch": 1,
+    "n_nodes": 41,
+    "n_qdq_8bit": 6,
+    "n_qdq_total": 6,
+    "n_qlinear": 3,
+    "quantization_format": "QDQ+QOperator",
+    "quant_mode": {
+     "counts": {
+      "dynamic_quantize_linear": 0,
+      "quantize_linear_runtime_scale": 0,
+      "quantize_linear_static_activation": 3,
+      "quantize_linear_static_weight": 0,
+      "dequantize_linear_static": 3,
+      "qlinear_ops": 3,
+      "integer_ops_fed_by_dynamic": 0,
+      "integer_ops_fed_by_static": 0
+     },
+     "static_activation_sites": 6,
+     "dynamic_activation_sites": 0,
+     "activation_quantization": "static"
+    },
+    "n_float16_initializers": 0,
+    "output_shapes_inferred": [
+     {
+      "name": "Plus692_Output_0",
+      "shape": [
+       1,
+       8
+      ]
+     }
+    ]
+   },
+   "a6": {
+    "1.23.2": {
+     "ok": true,
+     "error": null,
+     "reported_ort": "1.23.2",
+     "output_shapes": [
+      [
+       1,
+       8
+      ]
+     ]
+    },
+    "1.24.4": {
+     "ok": true,
+     "error": null,
+     "reported_ort": "1.24.4",
+     "output_shapes": [
+      [
+       1,
+       8
+      ]
+     ]
+    }
+   },
+   "screen": {
+    "ort": "1.24.4",
+    "input_name": "Input3",
+    "threads": 4,
+    "screen_ms": 5.457750001369277,
+    "n": 20,
+    "min_ms": 4.85119999939343,
+    "max_ms": 7.576899999548914,
+    "cpu_ms_per_inf": 21.875,
+    "core_delivery": 1.002015482319264,
+    "quiet_check": {
+     "utc": "2026-09-23T05:21:05Z",
+     "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+     "samples_pct": [
+      14.0,
+      12.0,
+      12.0,
+      16.0,
+      14.0
+     ],
+     "mean_pct": 13.6,
+     "max_pct": 16.0,
+     "battery_status": 2,
+     "on_ac": true,
+     "quiet": true,
+     "attempt": 1,
+     "for_candidate": "a05"
+    }
+   },
+   "sha256": "3e47195d79e9593294df9e81a6d296a1e10969b68a717284081c29493a0ff5f1",
+   "verdict": "ADMITTED",
+   "a9b_order": 9,
+   "first_failing_rule": null,
+   "a10": {
+    "base_checkpoint_key": "repo:onnx/models",
+    "matrix_row": false,
+    "pair_replicate": true,
+    "pair_replicate_of": "a06",
+    "checkpoint_group": [
+     "a06",
+     "a05",
+     "a02",
+     "a04",
+     "a01",
+     "a03"
+    ]
+   }
+  },
+  "a06": {
+   "id": "a06",
+   "rules": {
+    "A1": {
+     "pass": true,
+     "detail": "1 graph inputs (need exactly 1)"
+    },
+    "A2": {
+     "pass": true,
+     "detail": "elem_type=1 dims=[1, 3, 240, 320]"
+    },
+    "A3": {
+     "pass": true,
+     "detail": "3 8-bit Q/DQ + 56 QLinear*/QOperator = 59 (need >= 8): ok; activation quantization measured from the graph = static (57 static 8-bit activation sites, 0 run-time sites): ok; format QDQ+QOperator; counts {\"dynamic_quantize_linear\": 0, \"quantize_linear_runtime_scale\": 0, \"quantize_linear_static_activation\": 1, \"quantize_linear_static_weight\": 0, \"dequantize_linear_static\": 2, \"qlinear_ops\": 56, \"integer_ops_fed_by_dynamic\": 0, \"integer_ops_fed_by_static\": 0}"
+    },
+    "A4": {
+     "pass": true,
+     "detail": "0 sub-byte tensors, 0 float16 initializers"
+    },
+    "A5": {
+     "pass": true,
+     "detail": "banned ops []; runtime-K TopK []; ok"
+    },
+    "A6": {
+     "pass": true,
+     "detail": "{\"1.23.2\": \"1.23.2\", \"1.24.4\": \"1.24.4\"}"
+    },
+    "A7": {
+     "pass": true,
+     "detail": "458144 bytes"
+    },
+    "A8": {
+     "pass": true,
+     "detail": "screen_ms 1.652 (cap 60.0)"
+    },
+    "A9": {
+     "pass": true,
+     "detail": "A9b slot 1: family 'ultraface' 1/2, publisher 'onnx/models' 1/6, checkpoint 'repo:onnx/models' 1, sha256 093a9a55ff05"
+    }
+   },
+   "info": {
+    "opset": 12,
+    "ir_version": 4,
+    "n_graph_inputs": 1,
+    "input_name": "input",
+    "input_elem_type": 1,
+    "input_dims": [
+     1,
+     3,
+     240,
+     320
+    ],
+    "chw": [
+     3,
+     240,
+     320
+    ],
+    "batch": 1,
+    "n_nodes": 91,
+    "n_qdq_8bit": 3,
+    "n_qdq_total": 3,
+    "n_qlinear": 56,
+    "quantization_format": "QDQ+QOperator",
+    "quant_mode": {
+     "counts": {
+      "dynamic_quantize_linear": 0,
+      "quantize_linear_runtime_scale": 0,
+      "quantize_linear_static_activation": 1,
+      "quantize_linear_static_weight": 0,
+      "dequantize_linear_static": 2,
+      "qlinear_ops": 56,
+      "integer_ops_fed_by_dynamic": 0,
+      "integer_ops_fed_by_static": 0
+     },
+     "static_activation_sites": 57,
+     "dynamic_activation_sites": 0,
+     "activation_quantization": "static"
+    },
+    "n_float16_initializers": 0,
+    "output_shapes_inferred": [
+     {
+      "name": "scores",
+      "shape": [
+       1,
+       4420,
+       2
+      ]
+     },
+     {
+      "name": "boxes",
+      "shape": [
+       1,
+       4420,
+       4
+      ]
+     }
+    ]
+   },
+   "a6": {
+    "1.23.2": {
+     "ok": true,
+     "error": null,
+     "reported_ort": "1.23.2",
+     "output_shapes": [
+      [
+       1,
+       4420,
+       2
+      ],
+      [
+       1,
+       4420,
+       4
+      ]
+     ]
+    },
+    "1.24.4": {
+     "ok": true,
+     "error": null,
+     "reported_ort": "1.24.4",
+     "output_shapes": [
+      [
+       1,
+       4420,
+       2
+      ],
+      [
+       1,
+       4420,
+       4
+      ]
+     ]
+    }
+   },
+   "screen": {
+    "ort": "1.24.4",
+    "input_name": "input",
+    "threads": 4,
+    "screen_ms": 1.6522500009159558,
+    "n": 20,
+    "min_ms": 1.62810000256286,
+    "max_ms": 2.468100003170548,
+    "cpu_ms_per_inf": 6.25,
+    "core_delivery": 0.9456801326275073,
+    "quiet_check": {
+     "utc": "2026-09-23T05:21:13Z",
+     "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+     "samples_pct": [
+      6.0,
+      18.0,
+      15.0,
+      0.0,
+      7.0
+     ],
+     "mean_pct": 9.2,
+     "max_pct": 18.0,
+     "battery_status": 2,
+     "on_ac": true,
+     "quiet": true,
+     "attempt": 1,
+     "for_candidate": "a06"
+    }
+   },
+   "sha256": "093a9a55ff05fd71ace744593fd0c81eab8306d6d8c38b0892c5b3cff7f08265",
+   "verdict": "ADMITTED",
+   "a9b_order": 1,
+   "first_failing_rule": null,
+   "a10": {
+    "base_checkpoint_key": "repo:onnx/models",
+    "matrix_row": true,
+    "pair_replicate": false,
+    "pair_replicate_of": null,
+    "checkpoint_group": [
+     "a06",
+     "a05",
+     "a02",
+     "a04",
+     "a01",
+     "a03"
+    ]
+   }
+  },
+  "a07": {
+   "id": "a07",
+   "rules": {
+    "A1": {
+     "pass": true,
+     "detail": "1 graph inputs (need exactly 1)"
+    },
+    "A2": {
+     "pass": false,
+     "detail": "elem_type=1 dims=['batch_size', 'num_channels', 'height', 'width']"
+    }
+   },
+   "info": {
+    "opset": 11,
+    "ir_version": 6,
+    "n_graph_inputs": 1,
+    "input_name": "pixel_values",
+    "input_elem_type": 1,
+    "input_dims": [
+     "batch_size",
+     "num_channels",
+     "height",
+     "width"
+    ]
+   },
+   "verdict": "REJECTED",
+   "first_failing_rule": "A2"
+  },
+  "a08": {
+   "id": "a08",
+   "rules": {
+    "A1": {
+     "pass": true,
+     "detail": "1 graph inputs (need exactly 1)"
+    },
+    "A2": {
+     "pass": false,
+     "detail": "elem_type=1 dims=['batch_size', 'num_channels', 'height', 'width']"
+    }
+   },
+   "info": {
+    "opset": 11,
+    "ir_version": 6,
+    "n_graph_inputs": 1,
+    "input_name": "pixel_values",
+    "input_elem_type": 1,
+    "input_dims": [
+     "batch_size",
+     "num_channels",
+     "height",
+     "width"
+    ]
+   },
+   "verdict": "REJECTED",
+   "first_failing_rule": "A2"
+  },
+  "a09": {
+   "id": "a09",
+   "rules": {
+    "A1": {
+     "pass": true,
+     "detail": "1 graph inputs (need exactly 1)"
+    },
+    "A2": {
+     "pass": false,
+     "detail": "elem_type=1 dims=['batch_size', 'num_channels', 'height', 'width']"
+    }
+   },
+   "info": {
+    "opset": 11,
+    "ir_version": 6,
+    "n_graph_inputs": 1,
+    "input_name": "pixel_values",
+    "input_elem_type": 1,
+    "input_dims": [
+     "batch_size",
+     "num_channels",
+     "height",
+     "width"
+    ]
+   },
+   "verdict": "REJECTED",
+   "first_failing_rule": "A2"
+  },
+  "a10": {
+   "id": "a10",
+   "rules": {
+    "A1": {
+     "pass": true,
+     "detail": "1 graph inputs (need exactly 1)"
+    },
+    "A2": {
+     "pass": false,
+     "detail": "elem_type=1 dims=['batch_size', 'num_channels', 'height', 'width']"
+    }
+   },
+   "info": {
+    "opset": 11,
+    "ir_version": 6,
+    "n_graph_inputs": 1,
+    "input_name": "pixel_values",
+    "input_elem_type": 1,
+    "input_dims": [
+     "batch_size",
+     "num_channels",
+     "height",
+     "width"
+    ]
+   },
+   "verdict": "REJECTED",
+   "first_failing_rule": "A2"
+  },
+  "a11": {
+   "id": "a11",
+   "rules": {
+    "A1": {
+     "pass": true,
+     "detail": "1 graph inputs (need exactly 1)"
+    },
+    "A2": {
+     "pass": false,
+     "detail": "elem_type=1 dims=['batch_size', 'num_channels', 'height', 'width']"
+    }
+   },
+   "info": {
+    "opset": 14,
+    "ir_version": 10,
+    "n_graph_inputs": 1,
+    "input_name": "pixel_values",
+    "input_elem_type": 1,
+    "input_dims": [
+     "batch_size",
+     "num_channels",
+     "height",
+     "width"
+    ]
+   },
+   "verdict": "REJECTED",
+   "first_failing_rule": "A2"
+  },
+  "a12": {
+   "id": "a12",
+   "rules": {
+    "A1": {
+     "pass": true,
+     "detail": "1 graph inputs (need exactly 1)"
+    },
+    "A2": {
+     "pass": false,
+     "detail": "elem_type=1 dims=['batch_size', 3, 'height', 'width']"
+    }
+   },
+   "info": {
+    "opset": 14,
+    "ir_version": 9,
+    "n_graph_inputs": 1,
+    "input_name": "pixel_values",
+    "input_elem_type": 1,
+    "input_dims": [
+     "batch_size",
+     3,
+     "height",
+     "width"
+    ]
+   },
+   "verdict": "REJECTED",
+   "first_failing_rule": "A2"
+  },
+  "a13": {
+   "id": "a13",
+   "rules": {
+    "A1": {
+     "pass": true,
+     "detail": "1 graph inputs (need exactly 1)"
+    },
+    "A2": {
+     "pass": false,
+     "detail": "elem_type=1 dims=['batch_size', 'num_channels', 'height', 'width']"
+    }
+   },
+   "info": {
+    "opset": 12,
+    "ir_version": 7,
+    "n_graph_inputs": 1,
+    "input_name": "pixel_values",
+    "input_elem_type": 1,
+    "input_dims": [
+     "batch_size",
+     "num_channels",
+     "height",
+     "width"
+    ]
+   },
+   "verdict": "REJECTED",
+   "first_failing_rule": "A2"
+  },
+  "a14": {
+   "id": "a14",
+   "rules": {
+    "A1": {
+     "pass": false,
+     "detail": "2 graph inputs (need exactly 1)"
+    }
+   },
+   "info": {
+    "opset": 12,
+    "ir_version": 7,
+    "n_graph_inputs": 2
+   },
+   "verdict": "REJECTED",
+   "first_failing_rule": "A1"
+  },
+  "a15": {
+   "id": "a15",
+   "rules": {
+    "A1": {
+     "pass": true,
+     "detail": "1 graph inputs (need exactly 1)"
+    },
+    "A2": {
+     "pass": false,
+     "detail": "elem_type=1 dims=['batch_size', 'num_channels', 'height', 'width']"
+    }
+   },
+   "info": {
+    "opset": 11,
+    "ir_version": 6,
+    "n_graph_inputs": 1,
+    "input_name": "pixel_values",
+    "input_elem_type": 1,
+    "input_dims": [
+     "batch_size",
+     "num_channels",
+     "height",
+     "width"
+    ]
+   },
+   "verdict": "REJECTED",
+   "first_failing_rule": "A2"
+  },
+  "a16": {
+   "id": "a16",
+   "rules": {
+    "A1": {
+     "pass": true,
+     "detail": "1 graph inputs (need exactly 1)"
+    },
+    "A2": {
+     "pass": false,
+     "detail": "elem_type=2 dims=[1, 320, 320, 3]"
+    }
+   },
+   "info": {
+    "opset": 16,
+    "ir_version": 8,
+    "n_graph_inputs": 1,
+    "input_name": "serving_default_images:0",
+    "input_elem_type": 2,
+    "input_dims": [
+     1,
+     320,
+     320,
+     3
+    ]
+   },
+   "verdict": "REJECTED",
+   "first_failing_rule": "A2"
+  },
+  "a17": {
+   "id": "a17",
+   "rules": {
+    "A1": {
+     "pass": true,
+     "detail": "1 graph inputs (need exactly 1)"
+    },
+    "A2": {
+     "pass": false,
+     "detail": "elem_type=1 dims=['batch_size', 'num_channels', 'height', 'width']"
+    }
+   },
+   "info": {
+    "opset": 11,
+    "ir_version": 6,
+    "n_graph_inputs": 1,
+    "input_name": "pixel_values",
+    "input_elem_type": 1,
+    "input_dims": [
+     "batch_size",
+     "num_channels",
+     "height",
+     "width"
+    ]
+   },
+   "verdict": "REJECTED",
+   "first_failing_rule": "A2"
+  },
+  "b01": {
+   "id": "b01",
+   "rules": {
+    "A1": {
+     "pass": true,
+     "detail": "1 graph inputs (need exactly 1)"
+    },
+    "A2": {
+     "pass": true,
+     "detail": "elem_type=1 dims=[1, 3, 320, 320]"
+    },
+    "A3": {
+     "pass": true,
+     "detail": "284 8-bit Q/DQ + 0 QLinear*/QOperator = 284 (need >= 8): ok; activation quantization measured from the graph = static (118 static 8-bit activation sites, 0 run-time sites): ok; format QDQ; counts {\"dynamic_quantize_linear\": 0, \"quantize_linear_runtime_scale\": 0, \"quantize_linear_static_activation\": 118, \"quantize_linear_static_weight\": 0, \"dequantize_linear_static\": 166, \"qlinear_ops\": 0, \"integer_ops_fed_by_dynamic\": 0, \"integer_ops_fed_by_static\": 0}"
+    },
+    "A4": {
+     "pass": true,
+     "detail": "0 sub-byte tensors, 0 float16 initializers"
+    },
+    "A5": {
+     "pass": true,
+     "detail": "banned ops []; runtime-K TopK []; ok"
+    },
+    "A6": {
+     "pass": true,
+     "detail": "{\"1.23.2\": \"1.23.2\", \"1.24.4\": \"1.24.4\"}"
+    },
+    "A7": {
+     "pass": true,
+     "detail": "7160419 bytes"
+    },
+    "A8": {
+     "pass": true,
+     "detail": "screen_ms 24.051 (cap 60.0)"
+    },
+    "A9": {
+     "pass": true,
+     "detail": "A9b slot 7: family 'edgenext' 1/2, publisher 'CoreEpoch' 2/6, checkpoint 'base:timm/edgenext_small.usi_in1k' 1, sha256 d1538e0f3928"
+    }
+   },
+   "info": {
+    "opset": 18,
+    "ir_version": 8,
+    "n_graph_inputs": 1,
+    "input_name": "input",
+    "input_elem_type": 1,
+    "input_dims": [
+     1,
+     3,
+     320,
+     320
+    ],
+    "chw": [
+     3,
+     320,
+     320
+    ],
+    "batch": 1,
+    "n_nodes": 914,
+    "n_qdq_8bit": 284,
+    "n_qdq_total": 284,
+    "n_qlinear": 0,
+    "quantization_format": "QDQ",
+    "quant_mode": {
+     "counts": {
+      "dynamic_quantize_linear": 0,
+      "quantize_linear_runtime_scale": 0,
+      "quantize_linear_static_activation": 118,
+      "quantize_linear_static_weight": 0,
+      "dequantize_linear_static": 166,
+      "qlinear_ops": 0,
+      "integer_ops_fed_by_dynamic": 0,
+      "integer_ops_fed_by_static": 0
+     },
+     "static_activation_sites": 118,
+     "dynamic_activation_sites": 0,
+     "activation_quantization": "static"
+    },
+    "n_float16_initializers": 0,
+    "output_shapes_inferred": [
+     {
+      "name": "logits",
+      "shape": [
+       1,
+       1000
+      ]
+     }
+    ]
+   },
+   "a6": {
+    "1.23.2": {
+     "ok": true,
+     "error": null,
+     "reported_ort": "1.23.2",
+     "output_shapes": [
+      [
+       1,
+       1000
+      ]
+     ]
+    },
+    "1.24.4": {
+     "ok": true,
+     "error": null,
+     "reported_ort": "1.24.4",
+     "output_shapes": [
+      [
+       1,
+       1000
+      ]
+     ]
+    }
+   },
+   "screen": {
+    "ort": "1.24.4",
+    "input_name": "input",
+    "threads": 4,
+    "screen_ms": 24.050800000622985,
+    "n": 20,
+    "min_ms": 22.03399999780231,
+    "max_ms": 26.903599999059225,
+    "cpu_ms_per_inf": 92.1875,
+    "core_delivery": 0.9582581452343797,
+    "quiet_check": {
+     "utc": "2026-09-23T05:21:23Z",
+     "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+     "samples_pct": [
+      14.0,
+      18.0,
+      12.0,
+      9.0,
+      5.0
+     ],
+     "mean_pct": 11.6,
+     "max_pct": 18.0,
+     "battery_status": 2,
+     "on_ac": true,
+     "quiet": true,
+     "attempt": 1,
+     "for_candidate": "b01"
+    }
+   },
+   "sha256": "d1538e0f392836832e7bbc0c80285396491444b2614e07bc04ee26d38de7b88c",
+   "verdict": "ADMITTED",
+   "a9b_order": 7,
+   "first_failing_rule": null,
+   "a10": {
+    "base_checkpoint_key": "base:timm/edgenext_small.usi_in1k",
+    "matrix_row": true,
+    "pair_replicate": false,
+    "pair_replicate_of": null,
+    "checkpoint_group": [
+     "b01"
+    ]
+   }
+  },
+  "b02": {
+   "id": "b02",
+   "rules": {
+    "A1": {
+     "pass": true,
+     "detail": "1 graph inputs (need exactly 1)"
+    },
+    "A2": {
+     "pass": true,
+     "detail": "elem_type=1 dims=[1, 3, 224, 224]"
+    },
+    "A3": {
+     "pass": true,
+     "detail": "336 8-bit Q/DQ + 0 QLinear*/QOperator = 336 (need >= 8): ok; activation quantization measured from the graph = static (147 static 8-bit activation sites, 0 run-time sites): ok; format QDQ; counts {\"dynamic_quantize_linear\": 0, \"quantize_linear_runtime_scale\": 0, \"quantize_linear_static_activation\": 147, \"quantize_linear_static_weight\": 0, \"dequantize_linear_static\": 189, \"qlinear_ops\": 0, \"integer_ops_fed_by_dynamic\": 0, \"integer_ops_fed_by_static\": 0}"
+    },
+    "A4": {
+     "pass": true,
+     "detail": "0 sub-byte tensors, 0 float16 initializers"
+    },
+    "A5": {
+     "pass": true,
+     "detail": "banned ops []; runtime-K TopK []; ok"
+    },
+    "A6": {
+     "pass": true,
+     "detail": "{\"1.23.2\": \"1.23.2\", \"1.24.4\": \"1.24.4\"}"
+    },
+    "A7": {
+     "pass": true,
+     "detail": "9228567 bytes"
+    },
+    "A8": {
+     "pass": true,
+     "detail": "screen_ms 18.190 (cap 60.0)"
+    },
+    "A9": {
+     "pass": true,
+     "detail": "A9b slot 8: family 'tinyvit' 1/2, publisher 'CoreEpoch' 3/6, checkpoint 'base:timm/tiny_vit_5m_224.dist_in22k_ft_in1k' 1, sha256 eda9007c0449"
+    }
+   },
+   "info": {
+    "opset": 18,
+    "ir_version": 8,
+    "n_graph_inputs": 1,
+    "input_name": "input",
+    "input_elem_type": 1,
+    "input_dims": [
+     1,
+     3,
+     224,
+     224
+    ],
+    "chw": [
+     3,
+     224,
+     224
+    ],
+    "batch": 1,
+    "n_nodes": 1210,
+    "n_qdq_8bit": 336,
+    "n_qdq_total": 336,
+    "n_qlinear": 0,
+    "quantization_format": "QDQ",
+    "quant_mode": {
+     "counts": {
+      "dynamic_quantize_linear": 0,
+      "quantize_linear_runtime_scale": 0,
+      "quantize_linear_static_activation": 147,
+      "quantize_linear_static_weight": 0,
+      "dequantize_linear_static": 189,
+      "qlinear_ops": 0,
+      "integer_ops_fed_by_dynamic": 0,
+      "integer_ops_fed_by_static": 0
+     },
+     "static_activation_sites": 147,
+     "dynamic_activation_sites": 0,
+     "activation_quantization": "static"
+    },
+    "n_float16_initializers": 0,
+    "output_shapes_inferred": [
+     {
+      "name": "logits",
+      "shape": [
+       1,
+       1000
+      ]
+     }
+    ]
+   },
+   "a6": {
+    "1.23.2": {
+     "ok": true,
+     "error": null,
+     "reported_ort": "1.23.2",
+     "output_shapes": [
+      [
+       1,
+       1000
+      ]
+     ]
+    },
+    "1.24.4": {
+     "ok": true,
+     "error": null,
+     "reported_ort": "1.24.4",
+     "output_shapes": [
+      [
+       1,
+       1000
+      ]
+     ]
+    }
+   },
+   "screen": {
+    "ort": "1.24.4",
+    "input_name": "input",
+    "threads": 4,
+    "screen_ms": 18.190200000390178,
+    "n": 20,
+    "min_ms": 16.371900001104223,
+    "max_ms": 18.97330000065267,
+    "cpu_ms_per_inf": 70.3125,
+    "core_delivery": 0.96635138698986,
+    "quiet_check": {
+     "utc": "2026-09-23T05:22:39Z",
+     "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+     "samples_pct": [
+      19.0,
+      16.0,
+      16.0,
+      11.0,
+      9.0
+     ],
+     "mean_pct": 14.2,
+     "max_pct": 19.0,
+     "battery_status": 2,
+     "on_ac": true,
+     "quiet": true,
+     "attempt": 2,
+     "for_candidate": "b02"
+    }
+   },
+   "sha256": "eda9007c0449f118f02b1e8c4ba6b43bec51a7d7ab677566d42929eb3da02874",
+   "verdict": "ADMITTED",
+   "a9b_order": 8,
+   "first_failing_rule": null,
+   "a10": {
+    "base_checkpoint_key": "base:timm/tiny_vit_5m_224.dist_in22k_ft_in1k",
+    "matrix_row": true,
+    "pair_replicate": false,
+    "pair_replicate_of": null,
+    "checkpoint_group": [
+     "b02"
+    ]
+   }
+  },
+  "b03": {
+   "id": "b03",
+   "rules": {
+    "A1": {
+     "pass": true,
+     "detail": "1 graph inputs (need exactly 1)"
+    },
+    "A2": {
+     "pass": true,
+     "detail": "elem_type=1 dims=[1, 3, 224, 224]"
+    },
+    "A3": {
+     "pass": true,
+     "detail": "527 8-bit Q/DQ + 0 QLinear*/QOperator = 527 (need >= 8): ok; activation quantization measured from the graph = static (231 static 8-bit activation sites, 0 run-time sites): ok; format QDQ; counts {\"dynamic_quantize_linear\": 0, \"quantize_linear_runtime_scale\": 0, \"quantize_linear_static_activation\": 231, \"quantize_linear_static_weight\": 0, \"dequantize_linear_static\": 296, \"qlinear_ops\": 0, \"integer_ops_fed_by_dynamic\": 0, \"integer_ops_fed_by_static\": 0}"
+    },
+    "A4": {
+     "pass": true,
+     "detail": "0 sub-byte tensors, 0 float16 initializers"
+    },
+    "A5": {
+     "pass": true,
+     "detail": "banned ops []; runtime-K TopK []; ok"
+    },
+    "A6": {
+     "pass": true,
+     "detail": "{\"1.23.2\": \"1.23.2\", \"1.24.4\": \"1.24.4\"}"
+    },
+    "A7": {
+     "pass": true,
+     "detail": "8589884 bytes"
+    },
+    "A8": {
+     "pass": true,
+     "detail": "screen_ms 47.917 (cap 60.0)"
+    },
+    "A9": {
+     "pass": true,
+     "detail": "A9b slot 2: family 'xcit' 1/2, publisher 'CoreEpoch' 1/6, checkpoint 'base:timm/xcit_tiny_12_p8_224.fb_dist_in1k' 1, sha256 1d655ead9b9a"
+    }
+   },
+   "info": {
+    "opset": 18,
+    "ir_version": 8,
+    "n_graph_inputs": 1,
+    "input_name": "input",
+    "input_elem_type": 1,
+    "input_dims": [
+     1,
+     3,
+     224,
+     224
+    ],
+    "chw": [
+     3,
+     224,
+     224
+    ],
+    "batch": 1,
+    "n_nodes": 1720,
+    "n_qdq_8bit": 527,
+    "n_qdq_total": 527,
+    "n_qlinear": 0,
+    "quantization_format": "QDQ",
+    "quant_mode": {
+     "counts": {
+      "dynamic_quantize_linear": 0,
+      "quantize_linear_runtime_scale": 0,
+      "quantize_linear_static_activation": 231,
+      "quantize_linear_static_weight": 0,
+      "dequantize_linear_static": 296,
+      "qlinear_ops": 0,
+      "integer_ops_fed_by_dynamic": 0,
+      "integer_ops_fed_by_static": 0
+     },
+     "static_activation_sites": 231,
+     "dynamic_activation_sites": 0,
+     "activation_quantization": "static"
+    },
+    "n_float16_initializers": 0,
+    "output_shapes_inferred": [
+     {
+      "name": "logits",
+      "shape": [
+       1,
+       1000
+      ]
+     }
+    ]
+   },
+   "a6": {
+    "1.23.2": {
+     "ok": true,
+     "error": null,
+     "reported_ort": "1.23.2",
+     "output_shapes": [
+      [
+       1,
+       1000
+      ]
+     ]
+    },
+    "1.24.4": {
+     "ok": true,
+     "error": null,
+     "reported_ort": "1.24.4",
+     "output_shapes": [
+      [
+       1,
+       1000
+      ]
+     ]
+    }
+   },
+   "screen": {
+    "ort": "1.24.4",
+    "input_name": "input",
+    "threads": 4,
+    "screen_ms": 47.91655000008177,
+    "n": 20,
+    "min_ms": 45.746499999950174,
+    "max_ms": 51.42840000189608,
+    "cpu_ms_per_inf": 181.25,
+    "core_delivery": 0.9456544763745026,
+    "quiet_check": {
+     "utc": "2026-09-23T05:23:56Z",
+     "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+     "samples_pct": [
+      11.0,
+      18.0,
+      18.0,
+      0.0,
+      16.0
+     ],
+     "mean_pct": 12.6,
+     "max_pct": 18.0,
+     "battery_status": 2,
+     "on_ac": true,
+     "quiet": true,
+     "attempt": 2,
+     "for_candidate": "b03"
+    }
+   },
+   "sha256": "1d655ead9b9a9438f58e46b151cc78fa304d420a56f904d692b43089837ce194",
+   "verdict": "ADMITTED",
+   "a9b_order": 2,
+   "first_failing_rule": null,
+   "a10": {
+    "base_checkpoint_key": "base:timm/xcit_tiny_12_p8_224.fb_dist_in1k",
+    "matrix_row": true,
+    "pair_replicate": false,
+    "pair_replicate_of": null,
+    "checkpoint_group": [
+     "b03"
+    ]
+   }
+  },
+  "b04": {
+   "id": "b04",
+   "rules": {
+    "A1": {
+     "pass": true,
+     "detail": "1 graph inputs (need exactly 1)"
+    },
+    "A2": {
+     "pass": true,
+     "detail": "elem_type=1 dims=[1, 3, 640, 640]"
+    },
+    "A3": {
+     "pass": true,
+     "detail": "366 8-bit Q/DQ + 0 QLinear*/QOperator = 366 (need >= 8): ok; activation quantization measured from the graph = static (143 static 8-bit activation sites, 0 run-time sites): ok; format QDQ; counts {\"dynamic_quantize_linear\": 0, \"quantize_linear_runtime_scale\": 0, \"quantize_linear_static_activation\": 143, \"quantize_linear_static_weight\": 0, \"dequantize_linear_static\": 223, \"qlinear_ops\": 0, \"integer_ops_fed_by_dynamic\": 0, \"integer_ops_fed_by_static\": 0}"
+    },
+    "A4": {
+     "pass": true,
+     "detail": "0 sub-byte tensors, 0 float16 initializers"
+    },
+    "A5": {
+     "pass": false,
+     "detail": "banned ops []; runtime-K TopK ['/m/model/TopK']; ok"
+    }
+   },
+   "info": {
+    "opset": 18,
+    "ir_version": 8,
+    "n_graph_inputs": 1,
+    "input_name": "input",
+    "input_elem_type": 1,
+    "input_dims": [
+     1,
+     3,
+     640,
+     640
+    ],
+    "chw": [
+     3,
+     640,
+     640
+    ],
+    "batch": 1,
+    "n_nodes": 1963,
+    "n_qdq_8bit": 366,
+    "n_qdq_total": 366,
+    "n_qlinear": 0,
+    "quantization_format": "QDQ",
+    "quant_mode": {
+     "counts": {
+      "dynamic_quantize_linear": 0,
+      "quantize_linear_runtime_scale": 0,
+      "quantize_linear_static_activation": 143,
+      "quantize_linear_static_weight": 0,
+      "dequantize_linear_static": 223,
+      "qlinear_ops": 0,
+      "integer_ops_fed_by_dynamic": 0,
+      "integer_ops_fed_by_static": 0
+     },
+     "static_activation_sites": 143,
+     "dynamic_activation_sites": 0,
+     "activation_quantization": "static"
+    },
+    "n_float16_initializers": 0,
+    "output_shapes_inferred": [
+     {
+      "name": "logits",
+      "shape": [
+       1,
+       300,
+       80
+      ]
+     },
+     {
+      "name": "boxes",
+      "shape": [
+       1,
+       300,
+       4
+      ]
+     }
+    ]
+   },
+   "verdict": "REJECTED",
+   "first_failing_rule": "A5"
+  },
+  "b05": {
+   "id": "b05",
+   "rules": {
+    "A1": {
+     "pass": true,
+     "detail": "1 graph inputs (need exactly 1)"
+    },
+    "A2": {
+     "pass": true,
+     "detail": "elem_type=1 dims=[1, 3, 299, 299]"
+    },
+    "A3": {
+     "pass": true,
+     "detail": "347 8-bit Q/DQ + 0 QLinear*/QOperator = 347 (need >= 8): ok; activation quantization measured from the graph = static (126 static 8-bit activation sites, 0 run-time sites): ok; format QDQ; counts {\"dynamic_quantize_linear\": 0, \"quantize_linear_runtime_scale\": 0, \"quantize_linear_static_activation\": 126, \"quantize_linear_static_weight\": 0, \"dequantize_linear_static\": 221, \"qlinear_ops\": 0, \"integer_ops_fed_by_dynamic\": 0, \"integer_ops_fed_by_static\": 0}"
+    },
+    "A4": {
+     "pass": true,
+     "detail": "0 sub-byte tensors, 0 float16 initializers"
+    },
+    "A5": {
+     "pass": true,
+     "detail": "banned ops []; runtime-K TopK []; ok"
+    },
+    "A6": {
+     "pass": true,
+     "detail": "{\"1.23.2\": \"1.23.2\", \"1.24.4\": \"1.24.4\"}"
+    },
+    "A7": {
+     "pass": true,
+     "detail": "24865194 bytes"
+    },
+    "A8": {
+     "pass": true,
+     "detail": "screen_ms 37.835 (cap 60.0)"
+    },
+    "A9": {
+     "pass": true,
+     "detail": "A9b slot 5: family 'inception_v3' 1/2, publisher 'Arm' 1/6, checkpoint 'base:torchvision/inception_v3' 1, sha256 a70e6a824c41"
+    }
+   },
+   "info": {
+    "opset": 20,
+    "ir_version": 10,
+    "n_graph_inputs": 1,
+    "input_name": "x",
+    "input_elem_type": 1,
+    "input_dims": [
+     1,
+     3,
+     299,
+     299
+    ],
+    "chw": [
+     3,
+     299,
+     299
+    ],
+    "batch": 1,
+    "n_nodes": 566,
+    "n_qdq_8bit": 347,
+    "n_qdq_total": 347,
+    "n_qlinear": 0,
+    "quantization_format": "QDQ",
+    "quant_mode": {
+     "counts": {
+      "dynamic_quantize_linear": 0,
+      "quantize_linear_runtime_scale": 0,
+      "quantize_linear_static_activation": 126,
+      "quantize_linear_static_weight": 0,
+      "dequantize_linear_static": 221,
+      "qlinear_ops": 0,
+      "integer_ops_fed_by_dynamic": 0,
+      "integer_ops_fed_by_static": 0
+     },
+     "static_activation_sites": 126,
+     "dynamic_activation_sites": 0,
+     "activation_quantization": "static"
+    },
+    "n_float16_initializers": 0,
+    "output_shapes_inferred": [
+     {
+      "name": "dequantize_per_tensor_160",
+      "shape": [
+       1,
+       1000
+      ]
+     }
+    ]
+   },
+   "a6": {
+    "1.23.2": {
+     "ok": true,
+     "error": null,
+     "reported_ort": "1.23.2",
+     "output_shapes": [
+      [
+       1,
+       1000
+      ]
+     ]
+    },
+    "1.24.4": {
+     "ok": true,
+     "error": null,
+     "reported_ort": "1.24.4",
+     "output_shapes": [
+      [
+       1,
+       1000
+      ]
+     ]
+    }
+   },
+   "screen": {
+    "ort": "1.24.4",
+    "input_name": "x",
+    "threads": 4,
+    "screen_ms": 37.83484999803477,
+    "n": 20,
+    "min_ms": 36.237899999832734,
+    "max_ms": 40.05890000189538,
+    "cpu_ms_per_inf": 142.1875,
+    "core_delivery": 0.9395273141520685,
+    "quiet_check": {
+     "utc": "2026-09-23T05:24:07Z",
+     "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+     "samples_pct": [
+      11.0,
+      29.0,
+      8.0,
+      8.0,
+      4.0
+     ],
+     "mean_pct": 12.0,
+     "max_pct": 29.0,
+     "battery_status": 2,
+     "on_ac": true,
+     "quiet": true,
+     "attempt": 1,
+     "for_candidate": "b05"
+    }
+   },
+   "sha256": "a70e6a824c413ab9a1242ce08e6327fc71e78a1a3351e4416607451914c33472",
+   "verdict": "ADMITTED",
+   "a9b_order": 5,
+   "first_failing_rule": null,
+   "a10": {
+    "base_checkpoint_key": "base:torchvision/inception_v3",
+    "matrix_row": true,
+    "pair_replicate": false,
+    "pair_replicate_of": null,
+    "checkpoint_group": [
+     "b05"
+    ]
+   }
+  },
+  "b06": {
+   "id": "b06",
+   "rules": {
+    "fetch": {
+     "pass": false,
+     "detail": "download failed"
+    }
+   },
+   "info": {},
+   "verdict": "REJECTED",
+   "first_failing_rule": "fetch"
+  },
+  "b07": {
+   "id": "b07",
+   "rules": {
+    "A1": {
+     "pass": true,
+     "detail": "1 graph inputs (need exactly 1)"
+    },
+    "A2": {
+     "pass": true,
+     "detail": "elem_type=1 dims=['qat_model::input_0_dynamic_axes_1', 224, 224, 3]"
+    },
+    "A3": {
+     "pass": false,
+     "detail": "0 8-bit Q/DQ + 0 QLinear*/QOperator = 0 (need >= 8): FAILS; activation quantization measured from the graph = none (0 static 8-bit activation sites, 0 run-time sites): FAILS - activations are not quantized statically; format none; counts {\"dynamic_quantize_linear\": 0, \"quantize_linear_runtime_scale\": 0, \"quantize_linear_static_activation\": 0, \"quantize_linear_static_weight\": 0, \"dequantize_linear_static\": 0, \"qlinear_ops\": 0, \"integer_ops_fed_by_dynamic\": 0, \"integer_ops_fed_by_static\": 0}"
+    }
+   },
+   "info": {
+    "opset": 15,
+    "ir_version": 8,
+    "n_graph_inputs": 1,
+    "input_name": "qat_model::input_0",
+    "input_elem_type": 1,
+    "input_dims": [
+     "qat_model::input_0_dynamic_axes_1",
+     224,
+     224,
+     3
+    ],
+    "chw": [
+     224,
+     224,
+     3
+    ],
+    "batch": "symbolic",
+    "n_nodes": 1149,
+    "n_qdq_8bit": 0,
+    "n_qdq_total": 342,
+    "n_qlinear": 0,
+    "quantization_format": "none",
+    "quant_mode": {
+     "counts": {
+      "dynamic_quantize_linear": 0,
+      "quantize_linear_runtime_scale": 0,
+      "quantize_linear_static_activation": 0,
+      "quantize_linear_static_weight": 0,
+      "dequantize_linear_static": 0,
+      "qlinear_ops": 0,
+      "integer_ops_fed_by_dynamic": 0,
+      "integer_ops_fed_by_static": 0
+     },
+     "static_activation_sites": 0,
+     "dynamic_activation_sites": 0,
+     "activation_quantization": "none"
+    }
+   },
+   "verdict": "REJECTED",
+   "first_failing_rule": "A3"
+  },
+  "b08": {
+   "id": "b08",
+   "rules": {
+    "A1": {
+     "pass": true,
+     "detail": "1 graph inputs (need exactly 1)"
+    },
+    "A2": {
+     "pass": true,
+     "detail": "elem_type=1 dims=['SqueezeNet::input_0_dynamic_axes_1', 224, 224, 3]"
+    },
+    "A3": {
+     "pass": false,
+     "detail": "0 8-bit Q/DQ + 0 QLinear*/QOperator = 0 (need >= 8): FAILS; activation quantization measured from the graph = none (0 static 8-bit activation sites, 0 run-time sites): FAILS - activations are not quantized statically; format none; counts {\"dynamic_quantize_linear\": 0, \"quantize_linear_runtime_scale\": 0, \"quantize_linear_static_activation\": 0, \"quantize_linear_static_weight\": 0, \"dequantize_linear_static\": 0, \"qlinear_ops\": 0, \"integer_ops_fed_by_dynamic\": 0, \"integer_ops_fed_by_static\": 0}"
+    }
+   },
+   "info": {
+    "opset": 17,
+    "ir_version": 8,
+    "n_graph_inputs": 1,
+    "input_name": "SqueezeNet::input_0",
+    "input_elem_type": 1,
+    "input_dims": [
+     "SqueezeNet::input_0_dynamic_axes_1",
+     224,
+     224,
+     3
+    ],
+    "chw": [
+     224,
+     224,
+     3
+    ],
+    "batch": "symbolic",
+    "n_nodes": 529,
+    "n_qdq_8bit": 0,
+    "n_qdq_total": 150,
+    "n_qlinear": 0,
+    "quantization_format": "none",
+    "quant_mode": {
+     "counts": {
+      "dynamic_quantize_linear": 0,
+      "quantize_linear_runtime_scale": 0,
+      "quantize_linear_static_activation": 0,
+      "quantize_linear_static_weight": 0,
+      "dequantize_linear_static": 0,
+      "qlinear_ops": 0,
+      "integer_ops_fed_by_dynamic": 0,
+      "integer_ops_fed_by_static": 0
+     },
+     "static_activation_sites": 0,
+     "dynamic_activation_sites": 0,
+     "activation_quantization": "none"
+    }
+   },
+   "verdict": "REJECTED",
+   "first_failing_rule": "A3"
+  },
+  "b09": {
+   "id": "b09",
+   "rules": {
+    "A1": {
+     "pass": true,
+     "detail": "1 graph inputs (need exactly 1)"
+    },
+    "A2": {
+     "pass": true,
+     "detail": "elem_type=1 dims=['RetinaFace::input_0_dynamic_axes_1', 608, 640, 3]"
+    },
+    "A3": {
+     "pass": false,
+     "detail": "0 8-bit Q/DQ + 0 QLinear*/QOperator = 0 (need >= 8): FAILS; activation quantization measured from the graph = none (0 static 8-bit activation sites, 0 run-time sites): FAILS - activations are not quantized statically; format none; counts {\"dynamic_quantize_linear\": 0, \"quantize_linear_runtime_scale\": 0, \"quantize_linear_static_activation\": 0, \"quantize_linear_static_weight\": 0, \"dequantize_linear_static\": 0, \"qlinear_ops\": 0, \"integer_ops_fed_by_dynamic\": 0, \"integer_ops_fed_by_static\": 0}"
+    }
+   },
+   "info": {
+    "opset": 12,
+    "ir_version": 6,
+    "n_graph_inputs": 1,
+    "input_name": "RetinaFace::input_0",
+    "input_elem_type": 1,
+    "input_dims": [
+     "RetinaFace::input_0_dynamic_axes_1",
+     608,
+     640,
+     3
+    ],
+    "chw": [
+     608,
+     640,
+     3
+    ],
+    "batch": "symbolic",
+    "n_nodes": 1203,
+    "n_qdq_8bit": 0,
+    "n_qdq_total": 328,
+    "n_qlinear": 0,
+    "quantization_format": "none",
+    "quant_mode": {
+     "counts": {
+      "dynamic_quantize_linear": 0,
+      "quantize_linear_runtime_scale": 0,
+      "quantize_linear_static_activation": 0,
+      "quantize_linear_static_weight": 0,
+      "dequantize_linear_static": 0,
+      "qlinear_ops": 0,
+      "integer_ops_fed_by_dynamic": 0,
+      "integer_ops_fed_by_static": 0
+     },
+     "static_activation_sites": 0,
+     "dynamic_activation_sites": 0,
+     "activation_quantization": "none"
+    }
+   },
+   "verdict": "REJECTED",
+   "first_failing_rule": "A3"
+  },
+  "b10": {
+   "id": "b10",
+   "rules": {
+    "A1": {
+     "pass": true,
+     "detail": "1 graph inputs (need exactly 1)"
+    },
+    "A2": {
+     "pass": true,
+     "detail": "elem_type=1 dims=[1, 192, 192, 3]"
+    },
+    "A3": {
+     "pass": false,
+     "detail": "0 8-bit Q/DQ + 0 QLinear*/QOperator = 0 (need >= 8): FAILS; activation quantization measured from the graph = none (0 static 8-bit activation sites, 0 run-time sites): FAILS - activations are not quantized statically; format none; counts {\"dynamic_quantize_linear\": 0, \"quantize_linear_runtime_scale\": 0, \"quantize_linear_static_activation\": 0, \"quantize_linear_static_weight\": 0, \"dequantize_linear_static\": 0, \"qlinear_ops\": 0, \"integer_ops_fed_by_dynamic\": 0, \"integer_ops_fed_by_static\": 0}"
+    }
+   },
+   "info": {
+    "opset": 12,
+    "ir_version": 6,
+    "n_graph_inputs": 1,
+    "input_name": "blob.1",
+    "input_elem_type": 1,
+    "input_dims": [
+     1,
+     192,
+     192,
+     3
+    ],
+    "chw": [
+     192,
+     192,
+     3
+    ],
+    "batch": 1,
+    "n_nodes": 1572,
+    "n_qdq_8bit": 0,
+    "n_qdq_total": 476,
+    "n_qlinear": 0,
+    "quantization_format": "none",
+    "quant_mode": {
+     "counts": {
+      "dynamic_quantize_linear": 0,
+      "quantize_linear_runtime_scale": 0,
+      "quantize_linear_static_activation": 0,
+      "quantize_linear_static_weight": 0,
+      "dequantize_linear_static": 0,
+      "qlinear_ops": 0,
+      "integer_ops_fed_by_dynamic": 0,
+      "integer_ops_fed_by_static": 0
+     },
+     "static_activation_sites": 0,
+     "dynamic_activation_sites": 0,
+     "activation_quantization": "none"
+    }
+   },
+   "verdict": "REJECTED",
+   "first_failing_rule": "A3"
+  },
+  "b11": {
+   "id": "b11",
+   "rules": {
+    "A1": {
+     "pass": true,
+     "detail": "1 graph inputs (need exactly 1)"
+    },
+    "A2": {
+     "pass": true,
+     "detail": "elem_type=1 dims=['YOLOX::input_0_dynamic_axes_1', 640, 640, 3]"
+    },
+    "A3": {
+     "pass": false,
+     "detail": "0 8-bit Q/DQ + 0 QLinear*/QOperator = 0 (need >= 8): FAILS; activation quantization measured from the graph = none (0 static 8-bit activation sites, 0 run-time sites): FAILS - activations are not quantized statically; format none; counts {\"dynamic_quantize_linear\": 0, \"quantize_linear_runtime_scale\": 0, \"quantize_linear_static_activation\": 0, \"quantize_linear_static_weight\": 0, \"dequantize_linear_static\": 0, \"qlinear_ops\": 0, \"integer_ops_fed_by_dynamic\": 0, \"integer_ops_fed_by_static\": 0}"
+    }
+   },
+   "info": {
+    "opset": 15,
+    "ir_version": 8,
+    "n_graph_inputs": 1,
+    "input_name": "YOLOX::input_0",
+    "input_elem_type": 1,
+    "input_dims": [
+     "YOLOX::input_0_dynamic_axes_1",
+     640,
+     640,
+     3
+    ],
+    "chw": [
+     640,
+     640,
+     3
+    ],
+    "batch": "symbolic",
+    "n_nodes": 1666,
+    "n_qdq_8bit": 0,
+    "n_qdq_total": 492,
+    "n_qlinear": 0,
+    "quantization_format": "none",
+    "quant_mode": {
+     "counts": {
+      "dynamic_quantize_linear": 0,
+      "quantize_linear_runtime_scale": 0,
+      "quantize_linear_static_activation": 0,
+      "quantize_linear_static_weight": 0,
+      "dequantize_linear_static": 0,
+      "qlinear_ops": 0,
+      "integer_ops_fed_by_dynamic": 0,
+      "integer_ops_fed_by_static": 0
+     },
+     "static_activation_sites": 0,
+     "dynamic_activation_sites": 0,
+     "activation_quantization": "none"
+    }
+   },
+   "verdict": "REJECTED",
+   "first_failing_rule": "A3"
+  },
+  "b12": {
+   "id": "b12",
+   "rules": {
+    "A1": {
+     "pass": true,
+     "detail": "1 graph inputs (need exactly 1)"
+    },
+    "A2": {
+     "pass": true,
+     "detail": "elem_type=1 dims=['FPN::input_0_dynamic_axes_1', 256, 512, 3]"
+    },
+    "A3": {
+     "pass": false,
+     "detail": "0 8-bit Q/DQ + 0 QLinear*/QOperator = 0 (need >= 8): FAILS; activation quantization measured from the graph = none (0 static 8-bit activation sites, 0 run-time sites): FAILS - activations are not quantized statically; format none; counts {\"dynamic_quantize_linear\": 0, \"quantize_linear_runtime_scale\": 0, \"quantize_linear_static_activation\": 0, \"quantize_linear_static_weight\": 0, \"dequantize_linear_static\": 0, \"qlinear_ops\": 0, \"integer_ops_fed_by_dynamic\": 0, \"integer_ops_fed_by_static\": 0}"
+    }
+   },
+   "info": {
+    "opset": 18,
+    "ir_version": 8,
+    "n_graph_inputs": 1,
+    "input_name": "FPN::input_0",
+    "input_elem_type": 1,
+    "input_dims": [
+     "FPN::input_0_dynamic_axes_1",
+     256,
+     512,
+     3
+    ],
+    "chw": [
+     256,
+     512,
+     3
+    ],
+    "batch": "symbolic",
+    "n_nodes": 887,
+    "n_qdq_8bit": 0,
+    "n_qdq_total": 256,
+    "n_qlinear": 0,
+    "quantization_format": "none",
+    "quant_mode": {
+     "counts": {
+      "dynamic_quantize_linear": 0,
+      "quantize_linear_runtime_scale": 0,
+      "quantize_linear_static_activation": 0,
+      "quantize_linear_static_weight": 0,
+      "dequantize_linear_static": 0,
+      "qlinear_ops": 0,
+      "integer_ops_fed_by_dynamic": 0,
+      "integer_ops_fed_by_static": 0
+     },
+     "static_activation_sites": 0,
+     "dynamic_activation_sites": 0,
+     "activation_quantization": "none"
+    }
+   },
+   "verdict": "REJECTED",
+   "first_failing_rule": "A3"
+  },
+  "b13": {
+   "id": "b13",
+   "rules": {
+    "A1": {
+     "pass": true,
+     "detail": "1 graph inputs (need exactly 1)"
+    },
+    "A2": {
+     "pass": false,
+     "detail": "elem_type=2 dims=[1, 224, 224, 3]"
+    }
+   },
+   "info": {
+    "opset": 16,
+    "ir_version": 8,
+    "n_graph_inputs": 1,
+    "input_name": "input",
+    "input_elem_type": 2,
+    "input_dims": [
+     1,
+     224,
+     224,
+     3
+    ]
+   },
+   "verdict": "REJECTED",
+   "first_failing_rule": "A2"
+  },
+  "b14": {
+   "id": "b14",
+   "rules": {
+    "A1": {
+     "pass": true,
+     "detail": "1 graph inputs (need exactly 1)"
+    },
+    "A2": {
+     "pass": false,
+     "detail": "elem_type=2 dims=[1, 513, 513, 3]"
+    }
+   },
+   "info": {
+    "opset": 16,
+    "ir_version": 8,
+    "n_graph_inputs": 1,
+    "input_name": "MobilenetV2/MobilenetV2/input",
+    "input_elem_type": 2,
+    "input_dims": [
+     1,
+     513,
+     513,
+     3
+    ]
+   },
+   "verdict": "REJECTED",
+   "first_failing_rule": "A2"
+  },
+  "b15": {
+   "id": "b15",
+   "rules": {
+    "A1": {
+     "pass": true,
+     "detail": "1 graph inputs (need exactly 1)"
+    },
+    "A2": {
+     "pass": true,
+     "detail": "elem_type=1 dims=[1, 3, 224, 224]"
+    },
+    "A3": {
+     "pass": true,
+     "detail": "26 8-bit Q/DQ + 27 QLinear*/QOperator = 53 (need >= 8): ok; activation quantization measured from the graph = static (36 static 8-bit activation sites, 0 run-time sites): ok; format QDQ+QOperator; counts {\"dynamic_quantize_linear\": 0, \"quantize_linear_runtime_scale\": 0, \"quantize_linear_static_activation\": 9, \"quantize_linear_static_weight\": 0, \"dequantize_linear_static\": 17, \"qlinear_ops\": 27, \"integer_ops_fed_by_dynamic\": 0, \"integer_ops_fed_by_static\": 0}"
+    },
+    "A4": {
+     "pass": true,
+     "detail": "0 sub-byte tensors, 0 float16 initializers"
+    },
+    "A5": {
+     "pass": true,
+     "detail": "banned ops []; runtime-K TopK []; ok"
+    },
+    "A6": {
+     "pass": true,
+     "detail": "{\"1.23.2\": \"1.23.2\", \"1.24.4\": \"1.24.4\"}"
+    },
+    "A7": {
+     "pass": true,
+     "detail": "1293388 bytes"
+    },
+    "A8": {
+     "pass": true,
+     "detail": "screen_ms 1.387 (cap 60.0)"
+    },
+    "A9": {
+     "pass": true,
+     "detail": "A9b slot 3: family 'squeezenet' 1/2, publisher 'ketiswp' 1/6, checkpoint 'base:ONNX Model Zoo squeezenet1.0-12-int8.onnx at commit 4f43949841cb55a0b98dc8fcd045431ccafd9f96; the card states 'Original model; no duplicate source file', i.e. model.onnx IS the zoo file' 1, sha256 3da17dfad1b7"
+    }
+   },
+   "info": {
+    "opset": 12,
+    "ir_version": 7,
+    "n_graph_inputs": 1,
+    "input_name": "data_0",
+    "input_elem_type": 1,
+    "input_dims": [
+     1,
+     3,
+     224,
+     224
+    ],
+    "chw": [
+     3,
+     224,
+     224
+    ],
+    "batch": 1,
+    "n_nodes": 65,
+    "n_qdq_8bit": 26,
+    "n_qdq_total": 26,
+    "n_qlinear": 27,
+    "quantization_format": "QDQ+QOperator",
+    "quant_mode": {
+     "counts": {
+      "dynamic_quantize_linear": 0,
+      "quantize_linear_runtime_scale": 0,
+      "quantize_linear_static_activation": 9,
+      "quantize_linear_static_weight": 0,
+      "dequantize_linear_static": 17,
+      "qlinear_ops": 27,
+      "integer_ops_fed_by_dynamic": 0,
+      "integer_ops_fed_by_static": 0
+     },
+     "static_activation_sites": 36,
+     "dynamic_activation_sites": 0,
+     "activation_quantization": "static"
+    },
+    "n_float16_initializers": 0,
+    "output_shapes_inferred": [
+     {
+      "name": "softmaxout_1",
+      "shape": [
+       1,
+       1000,
+       1,
+       1
+      ]
+     }
+    ]
+   },
+   "a6": {
+    "1.23.2": {
+     "ok": true,
+     "error": null,
+     "reported_ort": "1.23.2",
+     "output_shapes": [
+      [
+       1,
+       1000,
+       1,
+       1
+      ]
+     ]
+    },
+    "1.24.4": {
+     "ok": true,
+     "error": null,
+     "reported_ort": "1.24.4",
+     "output_shapes": [
+      [
+       1,
+       1000,
+       1,
+       1
+      ]
+     ]
+    }
+   },
+   "screen": {
+    "ort": "1.24.4",
+    "input_name": "data_0",
+    "threads": 4,
+    "screen_ms": 1.3866500012227334,
+    "n": 20,
+    "min_ms": 1.3647999985550996,
+    "max_ms": 1.941300000908086,
+    "cpu_ms_per_inf": 6.25,
+    "core_delivery": 1.1268164270884533,
+    "quiet_check": {
+     "utc": "2026-09-23T05:24:16Z",
+     "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+     "samples_pct": [
+      5.0,
+      9.0,
+      6.0,
+      14.0,
+      8.0
+     ],
+     "mean_pct": 8.4,
+     "max_pct": 14.0,
+     "battery_status": 2,
+     "on_ac": true,
+     "quiet": true,
+     "attempt": 1,
+     "for_candidate": "b15"
+    }
+   },
+   "sha256": "3da17dfad1b7ba23c93fac6dbf49f6db78cd42f7519e915a2e27d37c5c0a972b",
+   "verdict": "ADMITTED",
+   "a9b_order": 3,
+   "first_failing_rule": null,
+   "a10": {
+    "base_checkpoint_key": "base:ONNX Model Zoo squeezenet1.0-12-int8.onnx at commit 4f43949841cb55a0b98dc8fcd045431ccafd9f96; the card states 'Original model; no duplicate source file', i.e. model.onnx IS the zoo file",
+    "matrix_row": true,
+    "pair_replicate": false,
+    "pair_replicate_of": null,
+    "checkpoint_group": [
+     "b15"
+    ]
+   }
+  },
+  "b16": {
+   "id": "b16",
+   "rules": {
+    "A1": {
+     "pass": true,
+     "detail": "1 graph inputs (need exactly 1)"
+    },
+    "A2": {
+     "pass": true,
+     "detail": "elem_type=1 dims=[1, 3, 224, 224]"
+    },
+    "A3": {
+     "pass": true,
+     "detail": "7 8-bit Q/DQ + 67 QLinear*/QOperator = 74 (need >= 8): ok; activation quantization measured from the graph = static (71 static 8-bit activation sites, 0 run-time sites): ok; format QDQ+QOperator; counts {\"dynamic_quantize_linear\": 0, \"quantize_linear_runtime_scale\": 0, \"quantize_linear_static_activation\": 4, \"quantize_linear_static_weight\": 0, \"dequantize_linear_static\": 3, \"qlinear_ops\": 67, \"integer_ops_fed_by_dynamic\": 0, \"integer_ops_fed_by_static\": 0}"
+    },
+    "A4": {
+     "pass": true,
+     "detail": "0 sub-byte tensors, 0 float16 initializers"
+    },
+    "A5": {
+     "pass": true,
+     "detail": "banned ops []; runtime-K TopK []; ok"
+    },
+    "A6": {
+     "pass": true,
+     "detail": "{\"1.23.2\": \"1.23.2\", \"1.24.4\": \"1.24.4\"}"
+    },
+    "A7": {
+     "pass": true,
+     "detail": "10191535 bytes"
+    },
+    "A8": {
+     "pass": true,
+     "detail": "screen_ms 11.429 (cap 60.0)"
+    },
+    "A9": {
+     "pass": true,
+     "detail": "A9b slot 4: family 'inception_v1' 1/2, publisher 'onnx (Hugging Face organisation)' 1/6, checkpoint 'repo:onnx/Inception-1-int8' 1, sha256 7d25f0bfa7a9"
+    }
+   },
+   "info": {
+    "opset": 12,
+    "ir_version": 7,
+    "n_graph_inputs": 1,
+    "input_name": "data_0",
+    "input_elem_type": 1,
+    "input_dims": [
+     1,
+     3,
+     224,
+     224
+    ],
+    "chw": [
+     3,
+     224,
+     224
+    ],
+    "batch": 1,
+    "n_nodes": 92,
+    "n_qdq_8bit": 7,
+    "n_qdq_total": 7,
+    "n_qlinear": 67,
+    "quantization_format": "QDQ+QOperator",
+    "quant_mode": {
+     "counts": {
+      "dynamic_quantize_linear": 0,
+      "quantize_linear_runtime_scale": 0,
+      "quantize_linear_static_activation": 4,
+      "quantize_linear_static_weight": 0,
+      "dequantize_linear_static": 3,
+      "qlinear_ops": 67,
+      "integer_ops_fed_by_dynamic": 0,
+      "integer_ops_fed_by_static": 0
+     },
+     "static_activation_sites": 71,
+     "dynamic_activation_sites": 0,
+     "activation_quantization": "static"
+    },
+    "n_float16_initializers": 0,
+    "output_shapes_inferred": [
+     {
+      "name": "prob_1",
+      "shape": [
+       1,
+       1000
+      ]
+     }
+    ]
+   },
+   "a6": {
+    "1.23.2": {
+     "ok": true,
+     "error": null,
+     "reported_ort": "1.23.2",
+     "output_shapes": [
+      [
+       1,
+       1000
+      ]
+     ]
+    },
+    "1.24.4": {
+     "ok": true,
+     "error": null,
+     "reported_ort": "1.24.4",
+     "output_shapes": [
+      [
+       1,
+       1000
+      ]
+     ]
+    }
+   },
+   "screen": {
+    "ort": "1.24.4",
+    "input_name": "data_0",
+    "threads": 4,
+    "screen_ms": 11.429300000600051,
+    "n": 20,
+    "min_ms": 10.870400001294911,
+    "max_ms": 15.370199998869793,
+    "cpu_ms_per_inf": 46.09375,
+    "core_delivery": 1.008236506119798,
+    "quiet_check": {
+     "utc": "2026-09-23T05:24:25Z",
+     "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+     "samples_pct": [
+      20.0,
+      0.0,
+      10.0,
+      31.0,
+      11.0
+     ],
+     "mean_pct": 14.4,
+     "max_pct": 31.0,
+     "battery_status": 2,
+     "on_ac": true,
+     "quiet": true,
+     "attempt": 1,
+     "for_candidate": "b16"
+    }
+   },
+   "sha256": "7d25f0bfa7a92e9a67d8049facd4454911ca4388a303fc61ee14664b1010c717",
+   "verdict": "ADMITTED",
+   "a9b_order": 4,
+   "first_failing_rule": null,
+   "a10": {
+    "base_checkpoint_key": "repo:onnx/Inception-1-int8",
+    "matrix_row": true,
+    "pair_replicate": false,
+    "pair_replicate_of": null,
+    "checkpoint_group": [
+     "b16"
+    ]
+   }
+  },
+  "b17": {
+   "id": "b17",
+   "rules": {
+    "A1": {
+     "pass": true,
+     "detail": "1 graph inputs (need exactly 1)"
+    },
+    "A2": {
+     "pass": true,
+     "detail": "elem_type=1 dims=[1, 3, 416, 416]"
+    },
+    "A3": {
+     "pass": true,
+     "detail": "9 8-bit Q/DQ + 51 QLinear*/QOperator = 60 (need >= 8): ok; activation quantization measured from the graph = static (55 static 8-bit activation sites, 0 run-time sites): ok; format QDQ+QOperator; counts {\"dynamic_quantize_linear\": 0, \"quantize_linear_runtime_scale\": 0, \"quantize_linear_static_activation\": 4, \"quantize_linear_static_weight\": 0, \"dequantize_linear_static\": 5, \"qlinear_ops\": 51, \"integer_ops_fed_by_dynamic\": 0, \"integer_ops_fed_by_static\": 0}"
+    },
+    "A4": {
+     "pass": true,
+     "detail": "0 sub-byte tensors, 0 float16 initializers"
+    },
+    "A5": {
+     "pass": true,
+     "detail": "banned ops []; runtime-K TopK []; ok"
+    },
+    "A6": {
+     "pass": true,
+     "detail": "{\"1.23.2\": \"1.23.2\", \"1.24.4\": \"1.24.4\"}"
+    },
+    "A7": {
+     "pass": true,
+     "detail": "6113440 bytes"
+    },
+    "A8": {
+     "pass": false,
+     "detail": "screen_ms 328.294 (cap 60.0)"
+    }
+   },
+   "info": {
+    "opset": 13,
+    "ir_version": 7,
+    "n_graph_inputs": 1,
+    "input_name": "images",
+    "input_elem_type": 1,
+    "input_dims": [
+     1,
+     3,
+     416,
+     416
+    ],
+    "chw": [
+     3,
+     416,
+     416
+    ],
+    "batch": 1,
+    "n_nodes": 80,
+    "n_qdq_8bit": 9,
+    "n_qdq_total": 9,
+    "n_qlinear": 51,
+    "quantization_format": "QDQ+QOperator",
+    "quant_mode": {
+     "counts": {
+      "dynamic_quantize_linear": 0,
+      "quantize_linear_runtime_scale": 0,
+      "quantize_linear_static_activation": 4,
+      "quantize_linear_static_weight": 0,
+      "dequantize_linear_static": 5,
+      "qlinear_ops": 51,
+      "integer_ops_fed_by_dynamic": 0,
+      "integer_ops_fed_by_static": 0
+     },
+     "static_activation_sites": 55,
+     "dynamic_activation_sites": 0,
+     "activation_quantization": "static"
+    },
+    "n_float16_initializers": 0,
+    "output_shapes_inferred": [
+     {
+      "name": "out_stride16",
+      "shape": [
+       1,
+       255,
+       13,
+       13
+      ]
+     },
+     {
+      "name": "out_stride32",
+      "shape": [
+       1,
+       255,
+       26,
+       26
+      ]
+     }
+    ]
+   },
+   "a6": {
+    "1.23.2": {
+     "ok": true,
+     "error": null,
+     "reported_ort": "1.23.2",
+     "output_shapes": [
+      [
+       1,
+       255,
+       13,
+       13
+      ],
+      [
+       1,
+       255,
+       26,
+       26
+      ]
+     ]
+    },
+    "1.24.4": {
+     "ok": true,
+     "error": null,
+     "reported_ort": "1.24.4",
+     "output_shapes": [
+      [
+       1,
+       255,
+       13,
+       13
+      ],
+      [
+       1,
+       255,
+       26,
+       26
+      ]
+     ]
+    }
+   },
+   "screen": {
+    "ort": "1.24.4",
+    "input_name": "images",
+    "threads": 4,
+    "screen_ms": 328.29375000073924,
+    "n": 20,
+    "min_ms": 324.138200001471,
+    "max_ms": 335.10260000184644,
+    "cpu_ms_per_inf": 1269.53125,
+    "core_delivery": 0.9667647114795372,
+    "quiet_check": {
+     "utc": "2026-09-23T05:24:34Z",
+     "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+     "samples_pct": [
+      4.0,
+      16.0,
+      17.0,
+      26.0,
+      8.0
+     ],
+     "mean_pct": 14.2,
+     "max_pct": 26.0,
+     "battery_status": 2,
+     "on_ac": true,
+     "quiet": true,
+     "attempt": 1,
+     "for_candidate": "b17"
+    }
+   },
+   "verdict": "REJECTED",
+   "first_failing_rule": "A8"
+  },
+  "b18": {
+   "id": "b18",
+   "rules": {
+    "A1": {
+     "pass": true,
+     "detail": "1 graph inputs (need exactly 1)"
+    },
+    "A2": {
+     "pass": true,
+     "detail": "elem_type=1 dims=[1, 3, 320, 320]"
+    },
+    "A3": {
+     "pass": true,
+     "detail": "3 8-bit Q/DQ + 160 QLinear*/QOperator = 163 (need >= 8): ok; activation quantization measured from the graph = static (161 static 8-bit activation sites, 0 run-time sites): ok; format QDQ+QOperator; counts {\"dynamic_quantize_linear\": 0, \"quantize_linear_runtime_scale\": 0, \"quantize_linear_static_activation\": 1, \"quantize_linear_static_weight\": 0, \"dequantize_linear_static\": 2, \"qlinear_ops\": 160, \"integer_ops_fed_by_dynamic\": 0, \"integer_ops_fed_by_static\": 0}"
+    },
+    "A4": {
+     "pass": true,
+     "detail": "0 sub-byte tensors, 0 float16 initializers"
+    },
+    "A5": {
+     "pass": true,
+     "detail": "banned ops []; runtime-K TopK []; ok"
+    },
+    "A6": {
+     "pass": true,
+     "detail": "{\"1.23.2\": \"1.23.2\", \"1.24.4\": \"1.24.4\"}"
+    },
+    "A7": {
+     "pass": true,
+     "detail": "488222 bytes"
+    },
+    "A8": {
+     "pass": true,
+     "detail": "screen_ms 15.111 (cap 60.0)"
+    },
+    "A9": {
+     "pass": true,
+     "detail": "A9b slot 6: family 'yolo_fastest' 1/2, publisher 'Thefalley' 1/6, checkpoint 'base:Yolo-Fastest-1.1 (dog-qiuqiu, 2021); the FP32 sibling yolo-fastest-1.1-320_float.onnx (1348660 B) is in the same repository' 1, sha256 c410f847a75b"
+    }
+   },
+   "info": {
+    "opset": 13,
+    "ir_version": 7,
+    "n_graph_inputs": 1,
+    "input_name": "images",
+    "input_elem_type": 1,
+    "input_dims": [
+     1,
+     3,
+     320,
+     320
+    ],
+    "chw": [
+     3,
+     320,
+     320
+    ],
+    "batch": 1,
+    "n_nodes": 168,
+    "n_qdq_8bit": 3,
+    "n_qdq_total": 3,
+    "n_qlinear": 160,
+    "quantization_format": "QDQ+QOperator",
+    "quant_mode": {
+     "counts": {
+      "dynamic_quantize_linear": 0,
+      "quantize_linear_runtime_scale": 0,
+      "quantize_linear_static_activation": 1,
+      "quantize_linear_static_weight": 0,
+      "dequantize_linear_static": 2,
+      "qlinear_ops": 160,
+      "integer_ops_fed_by_dynamic": 0,
+      "integer_ops_fed_by_static": 0
+     },
+     "static_activation_sites": 161,
+     "dynamic_activation_sites": 0,
+     "activation_quantization": "static"
+    },
+    "n_float16_initializers": 0,
+    "output_shapes_inferred": [
+     {
+      "name": "out_stride16",
+      "shape": [
+       1,
+       255,
+       10,
+       10
+      ]
+     },
+     {
+      "name": "out_stride32",
+      "shape": [
+       1,
+       255,
+       20,
+       20
+      ]
+     }
+    ]
+   },
+   "a6": {
+    "1.23.2": {
+     "ok": true,
+     "error": null,
+     "reported_ort": "1.23.2",
+     "output_shapes": [
+      [
+       1,
+       255,
+       10,
+       10
+      ],
+      [
+       1,
+       255,
+       20,
+       20
+      ]
+     ]
+    },
+    "1.24.4": {
+     "ok": true,
+     "error": null,
+     "reported_ort": "1.24.4",
+     "output_shapes": [
+      [
+       1,
+       255,
+       10,
+       10
+      ],
+      [
+       1,
+       255,
+       20,
+       20
+      ]
+     ]
+    }
+   },
+   "screen": {
+    "ort": "1.24.4",
+    "input_name": "images",
+    "threads": 4,
+    "screen_ms": 15.110549999008072,
+    "n": 20,
+    "min_ms": 14.646499999798834,
+    "max_ms": 17.095300001528813,
+    "cpu_ms_per_inf": 58.59375,
+    "core_delivery": 0.9694178902132347,
+    "quiet_check": {
+     "utc": "2026-09-23T05:24:50Z",
+     "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+     "samples_pct": [
+      13.0,
+      17.0,
+      0.0,
+      0.0,
+      20.0
+     ],
+     "mean_pct": 10.0,
+     "max_pct": 20.0,
+     "battery_status": 2,
+     "on_ac": true,
+     "quiet": true,
+     "attempt": 1,
+     "for_candidate": "b18"
+    }
+   },
+   "sha256": "c410f847a75bcfe976fdca2620b9a426fb1d689ab5083d7862395e8d3b2e0e34",
+   "verdict": "ADMITTED",
+   "a9b_order": 6,
+   "first_failing_rule": null,
+   "a10": {
+    "base_checkpoint_key": "base:Yolo-Fastest-1.1 (dog-qiuqiu, 2021); the FP32 sibling yolo-fastest-1.1-320_float.onnx (1348660 B) is in the same repository",
+    "matrix_row": true,
+    "pair_replicate": false,
+    "pair_replicate_of": null,
+    "checkpoint_group": [
+     "b18"
+    ]
+   }
+  },
+  "b19": {
+   "id": "b19",
+   "rules": {
+    "A1": {
+     "pass": true,
+     "detail": "1 graph inputs (need exactly 1)"
+    },
+    "A2": {
+     "pass": true,
+     "detail": "elem_type=1 dims=[1, 3, 416, 416]"
+    },
+    "A3": {
+     "pass": true,
+     "detail": "14 8-bit Q/DQ + 111 QLinear*/QOperator = 125 (need >= 8): ok; activation quantization measured from the graph = static (118 static 8-bit activation sites, 0 run-time sites): ok; format QDQ+QOperator; counts {\"dynamic_quantize_linear\": 0, \"quantize_linear_runtime_scale\": 0, \"quantize_linear_static_activation\": 7, \"quantize_linear_static_weight\": 0, \"dequantize_linear_static\": 7, \"qlinear_ops\": 111, \"integer_ops_fed_by_dynamic\": 0, \"integer_ops_fed_by_static\": 0}"
+    },
+    "A4": {
+     "pass": true,
+     "detail": "0 sub-byte tensors, 0 float16 initializers"
+    },
+    "A5": {
+     "pass": true,
+     "detail": "banned ops []; runtime-K TopK []; ok"
+    },
+    "A6": {
+     "pass": true,
+     "detail": "{\"1.23.2\": \"1.23.2\", \"1.24.4\": \"1.24.4\"}"
+    },
+    "A7": {
+     "pass": true,
+     "detail": "2422851 bytes"
+    },
+    "A8": {
+     "pass": false,
+     "detail": "screen_ms 146.984 (cap 60.0)"
+    }
+   },
+   "info": {
+    "opset": 13,
+    "ir_version": 7,
+    "n_graph_inputs": 1,
+    "input_name": "images",
+    "input_elem_type": 1,
+    "input_dims": [
+     1,
+     3,
+     416,
+     416
+    ],
+    "chw": [
+     3,
+     416,
+     416
+    ],
+    "batch": 1,
+    "n_nodes": 352,
+    "n_qdq_8bit": 14,
+    "n_qdq_total": 14,
+    "n_qlinear": 111,
+    "quantization_format": "QDQ+QOperator",
+    "quant_mode": {
+     "counts": {
+      "dynamic_quantize_linear": 0,
+      "quantize_linear_runtime_scale": 0,
+      "quantize_linear_static_activation": 7,
+      "quantize_linear_static_weight": 0,
+      "dequantize_linear_static": 7,
+      "qlinear_ops": 111,
+      "integer_ops_fed_by_dynamic": 0,
+      "integer_ops_fed_by_static": 0
+     },
+     "static_activation_sites": 118,
+     "dynamic_activation_sites": 0,
+     "activation_quantization": "static"
+    },
+    "n_float16_initializers": 0,
+    "output_shapes_inferred": [
+     {
+      "name": "output",
+      "shape": [
+       1,
+       3549,
+       85
+      ]
+     }
+    ]
+   },
+   "a6": {
+    "1.23.2": {
+     "ok": true,
+     "error": null,
+     "reported_ort": "1.23.2",
+     "output_shapes": [
+      [
+       1,
+       3549,
+       85
+      ]
+     ]
+    },
+    "1.24.4": {
+     "ok": true,
+     "error": null,
+     "reported_ort": "1.24.4",
+     "output_shapes": [
+      [
+       1,
+       3549,
+       85
+      ]
+     ]
+    }
+   },
+   "screen": {
+    "ort": "1.24.4",
+    "input_name": "images",
+    "threads": 4,
+    "screen_ms": 146.9843499999115,
+    "n": 20,
+    "min_ms": 144.45550000164076,
+    "max_ms": 149.2820000021311,
+    "cpu_ms_per_inf": 544.53125,
+    "core_delivery": 0.9261721571043582,
+    "quiet_check": {
+     "utc": "2026-09-23T05:25:00Z",
+     "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+     "samples_pct": [
+      9.0,
+      19.0,
+      1.0,
+      14.0,
+      6.0
+     ],
+     "mean_pct": 9.8,
+     "max_pct": 19.0,
+     "battery_status": 2,
+     "on_ac": true,
+     "quiet": true,
+     "attempt": 1,
+     "for_candidate": "b19"
+    }
+   },
+   "verdict": "REJECTED",
+   "first_failing_rule": "A8"
+  }
+ },
+ "admitted": [
+  "a06",
+  "b03",
+  "b15",
+  "b16",
+  "b05",
+  "b18",
+  "b01",
+  "b02",
+  "a05",
+  "a02",
+  "a04",
+  "a01",
+  "a03"
+ ],
+ "passing_a1_a8": [
+  "a01",
+  "a02",
+  "a03",
+  "a04",
+  "a05",
+  "a06",
+  "b01",
+  "b02",
+  "b03",
+  "b05",
+  "b15",
+  "b16",
+  "b18"
+ ],
+ "a10": {
+  "a06": {
+   "base_checkpoint_key": "repo:onnx/models",
+   "matrix_row": true,
+   "pair_replicate": false,
+   "pair_replicate_of": null,
+   "checkpoint_group": [
+    "a06",
+    "a05",
+    "a02",
+    "a04",
+    "a01",
+    "a03"
+   ]
+  },
+  "a05": {
+   "base_checkpoint_key": "repo:onnx/models",
+   "matrix_row": false,
+   "pair_replicate": true,
+   "pair_replicate_of": "a06",
+   "checkpoint_group": [
+    "a06",
+    "a05",
+    "a02",
+    "a04",
+    "a01",
+    "a03"
+   ]
+  },
+  "a02": {
+   "base_checkpoint_key": "repo:onnx/models",
+   "matrix_row": false,
+   "pair_replicate": true,
+   "pair_replicate_of": "a06",
+   "checkpoint_group": [
+    "a06",
+    "a05",
+    "a02",
+    "a04",
+    "a01",
+    "a03"
+   ]
+  },
+  "a04": {
+   "base_checkpoint_key": "repo:onnx/models",
+   "matrix_row": false,
+   "pair_replicate": true,
+   "pair_replicate_of": "a06",
+   "checkpoint_group": [
+    "a06",
+    "a05",
+    "a02",
+    "a04",
+    "a01",
+    "a03"
+   ]
+  },
+  "a01": {
+   "base_checkpoint_key": "repo:onnx/models",
+   "matrix_row": false,
+   "pair_replicate": true,
+   "pair_replicate_of": "a06",
+   "checkpoint_group": [
+    "a06",
+    "a05",
+    "a02",
+    "a04",
+    "a01",
+    "a03"
+   ]
+  },
+  "a03": {
+   "base_checkpoint_key": "repo:onnx/models",
+   "matrix_row": false,
+   "pair_replicate": true,
+   "pair_replicate_of": "a06",
+   "checkpoint_group": [
+    "a06",
+    "a05",
+    "a02",
+    "a04",
+    "a01",
+    "a03"
+   ]
+  },
+  "b03": {
+   "base_checkpoint_key": "base:timm/xcit_tiny_12_p8_224.fb_dist_in1k",
+   "matrix_row": true,
+   "pair_replicate": false,
+   "pair_replicate_of": null,
+   "checkpoint_group": [
+    "b03"
+   ]
+  },
+  "b15": {
+   "base_checkpoint_key": "base:ONNX Model Zoo squeezenet1.0-12-int8.onnx at commit 4f43949841cb55a0b98dc8fcd045431ccafd9f96; the card states 'Original model; no duplicate source file', i.e. model.onnx IS the zoo file",
+   "matrix_row": true,
+   "pair_replicate": false,
+   "pair_replicate_of": null,
+   "checkpoint_group": [
+    "b15"
+   ]
+  },
+  "b16": {
+   "base_checkpoint_key": "repo:onnx/Inception-1-int8",
+   "matrix_row": true,
+   "pair_replicate": false,
+   "pair_replicate_of": null,
+   "checkpoint_group": [
+    "b16"
+   ]
+  },
+  "b05": {
+   "base_checkpoint_key": "base:torchvision/inception_v3",
+   "matrix_row": true,
+   "pair_replicate": false,
+   "pair_replicate_of": null,
+   "checkpoint_group": [
+    "b05"
+   ]
+  },
+  "b18": {
+   "base_checkpoint_key": "base:Yolo-Fastest-1.1 (dog-qiuqiu, 2021); the FP32 sibling yolo-fastest-1.1-320_float.onnx (1348660 B) is in the same repository",
+   "matrix_row": true,
+   "pair_replicate": false,
+   "pair_replicate_of": null,
+   "checkpoint_group": [
+    "b18"
+   ]
+  },
+  "b01": {
+   "base_checkpoint_key": "base:timm/edgenext_small.usi_in1k",
+   "matrix_row": true,
+   "pair_replicate": false,
+   "pair_replicate_of": null,
+   "checkpoint_group": [
+    "b01"
+   ]
+  },
+  "b02": {
+   "base_checkpoint_key": "base:timm/tiny_vit_5m_224.dist_in22k_ft_in1k",
+   "matrix_row": true,
+   "pair_replicate": false,
+   "pair_replicate_of": null,
+   "checkpoint_group": [
+    "b02"
+   ]
+  }
+ },
+ "quiet_machine_checks": [
+  {
+   "utc": "2026-09-23T05:19:23Z",
+   "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+   "samples_pct": [
+    21.0,
+    10.0,
+    9.0,
+    14.0,
+    6.0
+   ],
+   "mean_pct": 12.0,
+   "max_pct": 21.0,
+   "battery_status": 2,
+   "on_ac": true,
+   "quiet": true,
+   "attempt": 1,
+   "for_candidate": "a01"
+  },
+  {
+   "utc": "2026-09-23T05:19:31Z",
+   "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+   "samples_pct": [
+    4.0,
+    13.0,
+    21.0,
+    0.0,
+    23.0
+   ],
+   "mean_pct": 12.2,
+   "max_pct": 23.0,
+   "battery_status": 2,
+   "on_ac": true,
+   "quiet": true,
+   "attempt": 1,
+   "for_candidate": "a02"
+  },
+  {
+   "utc": "2026-09-23T05:19:40Z",
+   "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+   "samples_pct": [
+    13.0,
+    0.0,
+    20.0,
+    17.0,
+    5.0
+   ],
+   "mean_pct": 11.0,
+   "max_pct": 20.0,
+   "battery_status": 2,
+   "on_ac": true,
+   "quiet": true,
+   "attempt": 1,
+   "for_candidate": "a03"
+  },
+  {
+   "utc": "2026-09-23T05:19:49Z",
+   "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+   "samples_pct": [
+    39.0,
+    0.0,
+    19.0,
+    27.0,
+    16.0
+   ],
+   "mean_pct": 20.2,
+   "max_pct": 39.0,
+   "battery_status": 2,
+   "on_ac": true,
+   "quiet": false,
+   "attempt": 1
+  },
+  {
+   "utc": "2026-09-23T05:20:56Z",
+   "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+   "samples_pct": [
+    24.0,
+    0.0,
+    23.0,
+    0.0,
+    13.0
+   ],
+   "mean_pct": 12.0,
+   "max_pct": 24.0,
+   "battery_status": 2,
+   "on_ac": true,
+   "quiet": true,
+   "attempt": 2,
+   "for_candidate": "a04"
+  },
+  {
+   "utc": "2026-09-23T05:21:05Z",
+   "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+   "samples_pct": [
+    14.0,
+    12.0,
+    12.0,
+    16.0,
+    14.0
+   ],
+   "mean_pct": 13.6,
+   "max_pct": 16.0,
+   "battery_status": 2,
+   "on_ac": true,
+   "quiet": true,
+   "attempt": 1,
+   "for_candidate": "a05"
+  },
+  {
+   "utc": "2026-09-23T05:21:13Z",
+   "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+   "samples_pct": [
+    6.0,
+    18.0,
+    15.0,
+    0.0,
+    7.0
+   ],
+   "mean_pct": 9.2,
+   "max_pct": 18.0,
+   "battery_status": 2,
+   "on_ac": true,
+   "quiet": true,
+   "attempt": 1,
+   "for_candidate": "a06"
+  },
+  {
+   "utc": "2026-09-23T05:21:23Z",
+   "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+   "samples_pct": [
+    14.0,
+    18.0,
+    12.0,
+    9.0,
+    5.0
+   ],
+   "mean_pct": 11.6,
+   "max_pct": 18.0,
+   "battery_status": 2,
+   "on_ac": true,
+   "quiet": true,
+   "attempt": 1,
+   "for_candidate": "b01"
+  },
+  {
+   "utc": "2026-09-23T05:21:32Z",
+   "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+   "samples_pct": [
+    15.0,
+    0.0,
+    15.0,
+    45.0,
+    29.0
+   ],
+   "mean_pct": 20.8,
+   "max_pct": 45.0,
+   "battery_status": 2,
+   "on_ac": true,
+   "quiet": false,
+   "attempt": 1
+  },
+  {
+   "utc": "2026-09-23T05:22:39Z",
+   "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+   "samples_pct": [
+    19.0,
+    16.0,
+    16.0,
+    11.0,
+    9.0
+   ],
+   "mean_pct": 14.2,
+   "max_pct": 19.0,
+   "battery_status": 2,
+   "on_ac": true,
+   "quiet": true,
+   "attempt": 2,
+   "for_candidate": "b02"
+  },
+  {
+   "utc": "2026-09-23T05:22:49Z",
+   "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+   "samples_pct": [
+    23.0,
+    14.0,
+    19.0,
+    23.0,
+    7.0
+   ],
+   "mean_pct": 17.2,
+   "max_pct": 23.0,
+   "battery_status": 2,
+   "on_ac": true,
+   "quiet": false,
+   "attempt": 1
+  },
+  {
+   "utc": "2026-09-23T05:23:56Z",
+   "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+   "samples_pct": [
+    11.0,
+    18.0,
+    18.0,
+    0.0,
+    16.0
+   ],
+   "mean_pct": 12.6,
+   "max_pct": 18.0,
+   "battery_status": 2,
+   "on_ac": true,
+   "quiet": true,
+   "attempt": 2,
+   "for_candidate": "b03"
+  },
+  {
+   "utc": "2026-09-23T05:24:07Z",
+   "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+   "samples_pct": [
+    11.0,
+    29.0,
+    8.0,
+    8.0,
+    4.0
+   ],
+   "mean_pct": 12.0,
+   "max_pct": 29.0,
+   "battery_status": 2,
+   "on_ac": true,
+   "quiet": true,
+   "attempt": 1,
+   "for_candidate": "b05"
+  },
+  {
+   "utc": "2026-09-23T05:24:16Z",
+   "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+   "samples_pct": [
+    5.0,
+    9.0,
+    6.0,
+    14.0,
+    8.0
+   ],
+   "mean_pct": 8.4,
+   "max_pct": 14.0,
+   "battery_status": 2,
+   "on_ac": true,
+   "quiet": true,
+   "attempt": 1,
+   "for_candidate": "b15"
+  },
+  {
+   "utc": "2026-09-23T05:24:25Z",
+   "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+   "samples_pct": [
+    20.0,
+    0.0,
+    10.0,
+    31.0,
+    11.0
+   ],
+   "mean_pct": 14.4,
+   "max_pct": 31.0,
+   "battery_status": 2,
+   "on_ac": true,
+   "quiet": true,
+   "attempt": 1,
+   "for_candidate": "b16"
+  },
+  {
+   "utc": "2026-09-23T05:24:34Z",
+   "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+   "samples_pct": [
+    4.0,
+    16.0,
+    17.0,
+    26.0,
+    8.0
+   ],
+   "mean_pct": 14.2,
+   "max_pct": 26.0,
+   "battery_status": 2,
+   "on_ac": true,
+   "quiet": true,
+   "attempt": 1,
+   "for_candidate": "b17"
+  },
+  {
+   "utc": "2026-09-23T05:24:50Z",
+   "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+   "samples_pct": [
+    13.0,
+    17.0,
+    0.0,
+    0.0,
+    20.0
+   ],
+   "mean_pct": 10.0,
+   "max_pct": 20.0,
+   "battery_status": 2,
+   "on_ac": true,
+   "quiet": true,
+   "attempt": 1,
+   "for_candidate": "b18"
+  },
+  {
+   "utc": "2026-09-23T05:25:00Z",
+   "source": "Win32_PerfFormattedData_PerfOS_Processor _Total",
+   "samples_pct": [
+    9.0,
+    19.0,
+    1.0,
+    14.0,
+    6.0
+   ],
+   "mean_pct": 9.8,
+   "max_pct": 19.0,
+   "battery_status": 2,
+   "on_ac": true,
+   "quiet": true,
+   "attempt": 1,
+   "for_candidate": "b19"
+  }
+ ]
+}

@@ -1,0 +1,248 @@
+{
+ "tp_u8_all": {
+  "per_version": {
+   "1.23.2": {
+    "transposes": 56,
+    "designed": 56,
+    "essential_ok": true,
+    "reshape_equivalent_converted": 0,
+    "census": {
+     "ai.onnx:Concat": 1,
+     "ai.onnx:DequantizeLinear": 1,
+     "ai.onnx:QuantizeLinear": 1,
+     "ai.onnx:Reshape": 113,
+     "ai.onnx:Slice": 55,
+     "ai.onnx:Transpose": 56
+    }
+   },
+   "1.24.4": {
+    "transposes": 56,
+    "designed": 56,
+    "essential_ok": true,
+    "reshape_equivalent_converted": 0,
+    "census": {
+     "ai.onnx:Concat": 1,
+     "ai.onnx:DequantizeLinear": 1,
+     "ai.onnx:QuantizeLinear": 1,
+     "ai.onnx:Reshape": 113,
+     "ai.onnx:Slice": 55,
+     "ai.onnx:Transpose": 56
+    }
+   }
+  },
+  "census_identical_across_releases": true
+ },
+ "tp_u8_w2": {
+  "per_version": {
+   "1.23.2": {
+    "transposes": 4,
+    "designed": 4,
+    "essential_ok": true,
+    "reshape_equivalent_converted": 0,
+    "census": {
+     "ai.onnx:Concat": 1,
+     "ai.onnx:DequantizeLinear": 1,
+     "ai.onnx:QuantizeLinear": 1,
+     "ai.onnx:Reshape": 61,
+     "ai.onnx:Slice": 55,
+     "ai.onnx:Transpose": 4
+    }
+   },
+   "1.24.4": {
+    "transposes": 4,
+    "designed": 4,
+    "essential_ok": true,
+    "reshape_equivalent_converted": 0,
+    "census": {
+     "ai.onnx:Concat": 1,
+     "ai.onnx:DequantizeLinear": 1,
+     "ai.onnx:QuantizeLinear": 1,
+     "ai.onnx:Reshape": 61,
+     "ai.onnx:Slice": 55,
+     "ai.onnx:Transpose": 4
+    }
+   }
+  },
+  "census_identical_across_releases": true
+ },
+ "tp_u8_rest": {
+  "per_version": {
+   "1.23.2": {
+    "transposes": 52,
+    "designed": 52,
+    "essential_ok": true,
+    "reshape_equivalent_converted": 0,
+    "census": {
+     "ai.onnx:Concat": 1,
+     "ai.onnx:DequantizeLinear": 1,
+     "ai.onnx:QuantizeLinear": 1,
+     "ai.onnx:Reshape": 109,
+     "ai.onnx:Slice": 55,
+     "ai.onnx:Transpose": 52
+    }
+   },
+   "1.24.4": {
+    "transposes": 52,
+    "designed": 52,
+    "essential_ok": true,
+    "reshape_equivalent_converted": 0,
+    "census": {
+     "ai.onnx:Concat": 1,
+     "ai.onnx:DequantizeLinear": 1,
+     "ai.onnx:QuantizeLinear": 1,
+     "ai.onnx:Reshape": 109,
+     "ai.onnx:Slice": 55,
+     "ai.onnx:Transpose": 52
+    }
+   }
+  },
+  "census_identical_across_releases": true
+ },
+ "tp_u8_ctrl": {
+  "per_version": {
+   "1.23.2": {
+    "transposes": 0,
+    "designed": 0,
+    "essential_ok": true,
+    "reshape_equivalent_converted": 0,
+    "census": {
+     "ai.onnx:Concat": 1,
+     "ai.onnx:DequantizeLinear": 1,
+     "ai.onnx:QuantizeLinear": 1,
+     "ai.onnx:Reshape": 57,
+     "ai.onnx:Slice": 55
+    }
+   },
+   "1.24.4": {
+    "transposes": 0,
+    "designed": 0,
+    "essential_ok": true,
+    "reshape_equivalent_converted": 0,
+    "census": {
+     "ai.onnx:Concat": 1,
+     "ai.onnx:DequantizeLinear": 1,
+     "ai.onnx:QuantizeLinear": 1,
+     "ai.onnx:Reshape": 57,
+     "ai.onnx:Slice": 55
+    }
+   }
+  },
+  "census_identical_across_releases": true
+ },
+ "tp_f32_all": {
+  "per_version": {
+   "1.23.2": {
+    "transposes": 48,
+    "designed": 48,
+    "essential_ok": true,
+    "reshape_equivalent_converted": 0,
+    "census": {
+     "ai.onnx:Concat": 1,
+     "ai.onnx:Reshape": 105,
+     "ai.onnx:Slice": 55,
+     "ai.onnx:Transpose": 48
+    }
+   },
+   "1.24.4": {
+    "transposes": 48,
+    "designed": 48,
+    "essential_ok": true,
+    "reshape_equivalent_converted": 0,
+    "census": {
+     "ai.onnx:Concat": 1,
+     "ai.onnx:Reshape": 105,
+     "ai.onnx:Slice": 55,
+     "ai.onnx:Transpose": 48
+    }
+   }
+  },
+  "census_identical_across_releases": true
+ },
+ "tp_f32_ctrl": {
+  "per_version": {
+   "1.23.2": {
+    "transposes": 0,
+    "designed": 0,
+    "essential_ok": true,
+    "reshape_equivalent_converted": 0,
+    "census": {
+     "ai.onnx:Concat": 1,
+     "ai.onnx:Reshape": 57,
+     "ai.onnx:Slice": 55
+    }
+   },
+   "1.24.4": {
+    "transposes": 0,
+    "designed": 0,
+    "essential_ok": true,
+    "reshape_equivalent_converted": 0,
+    "census": {
+     "ai.onnx:Concat": 1,
+     "ai.onnx:Reshape": 57,
+     "ai.onnx:Slice": 55
+    }
+   }
+  },
+  "census_identical_across_releases": true
+ },
+ "tp_f16_w2": {
+  "per_version": {
+   "1.23.2": {
+    "transposes": 4,
+    "designed": 4,
+    "essential_ok": true,
+    "reshape_equivalent_converted": 0,
+    "census": {
+     "ai.onnx:Cast": 2,
+     "ai.onnx:Concat": 1,
+     "ai.onnx:Reshape": 9,
+     "ai.onnx:Slice": 4,
+     "ai.onnx:Transpose": 4
+    }
+   },
+   "1.24.4": {
+    "transposes": 4,
+    "designed": 4,
+    "essential_ok": true,
+    "reshape_equivalent_converted": 0,
+    "census": {
+     "ai.onnx:Cast": 2,
+     "ai.onnx:Concat": 1,
+     "ai.onnx:Reshape": 9,
+     "ai.onnx:Slice": 4,
+     "ai.onnx:Transpose": 4
+    }
+   }
+  },
+  "census_identical_across_releases": true
+ },
+ "tp_f32_w4": {
+  "per_version": {
+   "1.23.2": {
+    "transposes": 4,
+    "designed": 4,
+    "essential_ok": true,
+    "reshape_equivalent_converted": 0,
+    "census": {
+     "ai.onnx:Concat": 1,
+     "ai.onnx:Reshape": 9,
+     "ai.onnx:Slice": 4,
+     "ai.onnx:Transpose": 4
+    }
+   },
+   "1.24.4": {
+    "transposes": 4,
+    "designed": 4,
+    "essential_ok": true,
+    "reshape_equivalent_converted": 0,
+    "census": {
+     "ai.onnx:Concat": 1,
+     "ai.onnx:Reshape": 9,
+     "ai.onnx:Slice": 4,
+     "ai.onnx:Transpose": 4
+    }
+   }
+  },
+  "census_identical_across_releases": true
+ }
+}

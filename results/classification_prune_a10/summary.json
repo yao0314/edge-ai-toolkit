@@ -1,0 +1,224 @@
+{
+  "produced_by": "edge-ai-toolkit 0.5.0 by \u694a\u5143\u84c1 (Price Yang)",
+  "author": "\u694a\u5143\u84c1 (Price Yang)",
+  "toolkit": "edge-ai-toolkit",
+  "toolkit_version": "0.5.0",
+  "copyright": "Copyright (c) 2026 \u694a\u5143\u84c1 (Price Yang)",
+  "n_variants": 4,
+  "n_failed": 0,
+  "n_skipped": 0,
+  "n_ineligible": 0,
+  "plots": [
+    "C:\\Users\\User\\Desktop\\SEC\\edge-ai-toolkit\\results\\classification_prune_a10\\pareto_size_bytes.png",
+    "C:\\Users\\User\\Desktop\\SEC\\edge-ai-toolkit\\results\\classification_prune_a10\\pareto_latency_p50_ms.png",
+    "C:\\Users\\User\\Desktop\\SEC\\edge-ai-toolkit\\results\\classification_prune_a10\\pareto_peak_rss_mb.png",
+    "C:\\Users\\User\\Desktop\\SEC\\edge-ai-toolkit\\results\\classification_prune_a10\\curves.png"
+  ],
+  "best_by_score": "p00_int8",
+  "candidates": [
+    {
+      "variant": "p00_int8",
+      "accuracy": 0.9236,
+      "metric_name": "top1",
+      "size_bytes": 2621369,
+      "latency_p50_ms": 0.47539999650325626,
+      "peak_rss_mb": 7.359375,
+      "score": 0.8719238265924669,
+      "why": "top-3 score; Pareto size_bytes; Pareto latency_p50_ms; Pareto peak_rss_mb"
+    },
+    {
+      "variant": "p10_int8",
+      "accuracy": 0.9168,
+      "metric_name": "top1",
+      "size_bytes": 2029800,
+      "latency_p50_ms": 0.4353499971330166,
+      "peak_rss_mb": 6.3515625,
+      "score": 0.6666666666666666,
+      "why": "top-3 score; Pareto size_bytes; Pareto latency_p50_ms; Pareto peak_rss_mb"
+    },
+    {
+      "variant": "p00_fp32",
+      "accuracy": 0.9237,
+      "metric_name": "top1",
+      "size_bytes": 8919751,
+      "latency_p50_ms": 0.5317000031936914,
+      "peak_rss_mb": 23.69921875,
+      "score": 0.3333333333333333,
+      "why": "top-3 score; Pareto size_bytes; Pareto latency_p50_ms; Pareto peak_rss_mb"
+    },
+    {
+      "variant": "p10_fp32",
+      "accuracy": 0.9185,
+      "metric_name": "top1",
+      "size_bytes": 6712743,
+      "latency_p50_ms": 0.4619999963324517,
+      "peak_rss_mb": 16.08984375,
+      "score": 0.32417819293778194,
+      "why": "Pareto latency_p50_ms"
+    }
+  ],
+  "ineligible": [],
+  "adapter": {
+    "task": "classification",
+    "quick": false,
+    "dataset": "cifar10",
+    "arch": "mobilenet_v2",
+    "img_size": 32,
+    "n_train": 50000,
+    "n_val": 10000,
+    "num_classes": 10
+  },
+  "env": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "machine": "AMD64",
+    "cpu": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "physical_cores": 10,
+    "core_classes": "class 1: 6 cores, class 0: 4 cores",
+    "logical_cores": 16,
+    "ram_gb": 15.6,
+    "python": "3.11.9",
+    "torch": "2.14.0+cu126",
+    "onnxruntime": "1.30.0",
+    "torch_train_device": "cuda",
+    "cuda_device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "note": "latency/RAM/CPU measured on this machine's CPU: relative comparisons only"
+  },
+  "config": {
+    "task": "classification",
+    "adapter": "adapters.classification:ClassificationAdapter",
+    "seed": 0,
+    "adapter_args": {
+      "dataset": "cifar10",
+      "img_size": 32,
+      "arch": "mobilenet_v2",
+      "pretrained": true,
+      "train_epochs": 15,
+      "lr": 0.05,
+      "finetune_lr": 0.01,
+      "batch_size": 128,
+      "num_workers": 4,
+      "finetune_warmup_frac": 0.05,
+      "eval_every": 4
+    },
+    "target_runtime": "onnx",
+    "export": {
+      "opset": 17,
+      "atol": 0.001,
+      "rtol": 0.001
+    },
+    "measure": {
+      "threads": [
+        1,
+        4
+      ],
+      "primary_threads": 4,
+      "repeats": 3,
+      "warmup": 10,
+      "runs": 100,
+      "spinning": true,
+      "energy": {
+        "provider": "none"
+      }
+    },
+    "prune": {
+      "importance": "l2",
+      "round_to": 8,
+      "global_pruning": false,
+      "iterative_steps": 1,
+      "bn_recalibrate": true,
+      "bn_recal_batches": 32,
+      "allocate": "dp",
+      "alloc_cost": "macs",
+      "probe_ratio": 0.25,
+      "probe_batches": 2,
+      "alloc_levels": [
+        0.0,
+        0.125,
+        0.25,
+        0.375,
+        0.5
+      ],
+      "alloc_rounds": 4
+    },
+    "quantize": {
+      "method": "static",
+      "per_channel": true,
+      "activation_type": "uint8",
+      "weight_type": "int8",
+      "calibrate_method": "auto",
+      "calib_batches": 16,
+      "auto_keep_fp32": "rules",
+      "keep_fp32": []
+    },
+    "sweep": {
+      "prune_ratios": [
+        0.0,
+        0.1
+      ],
+      "precisions": [
+        "fp32",
+        "int8"
+      ],
+      "finetune_epochs": 20,
+      "finetune_mode": "plain",
+      "pareto_x": [
+        "size_bytes",
+        "latency_p50_ms",
+        "peak_rss_mb"
+      ]
+    },
+    "aihub": {
+      "devices": [
+        "chipset:qualcomm-snapdragon-429",
+        "Dragonwing RB3 Gen 2 Vision Kit",
+        "QCS8550 (Proxy)"
+      ],
+      "compile_options": "--target_runtime onnx --compute_unit cpu"
+    },
+    "score": {
+      "max_accuracy_drop": 0.02,
+      "min_accuracy": null,
+      "normalize": "minmax",
+      "weights": {
+        "accuracy": 0.25,
+        "compression": 0.25,
+        "resource": 0.25,
+        "energy": 0.25
+      },
+      "groups": {
+        "accuracy": {
+          "cols": [
+            "accuracy"
+          ],
+          "higher_is_better": true
+        },
+        "compression": {
+          "cols": [
+            "size_bytes"
+          ]
+        },
+        "resource": {
+          "cols": [
+            "peak_rss_mb",
+            "cpu_ms_per_inf",
+            "latency_p50_ms"
+          ]
+        },
+        "energy": {
+          "cols": [
+            "energy_j"
+          ]
+        }
+      }
+    },
+    "distill": {
+      "student": {
+        "width_mult": 0.5
+      },
+      "epochs": 5,
+      "temperature": 4.0,
+      "alpha": 0.7
+    },
+    "name": "classification_prune_a10"
+  }
+}

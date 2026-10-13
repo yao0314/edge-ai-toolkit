@@ -1,0 +1,1245 @@
+[
+ {
+  "label": "stage 0",
+  "utc": "2026-09-23T08:46:00.301373+00:00",
+  "ac_power": true,
+  "ac_detail": "BatteryStatus=2",
+  "wsl_running": false,
+  "wsl_detail": "rc=4294967295 (no running distro)",
+  "threshold_pct": 15.0,
+  "attempts": [
+   {
+    "i": 0,
+    "utc": "2026-09-23T08:46:07.793283+00:00",
+    "n": 5,
+    "mean": 8.2,
+    "max": 24.0,
+    "samples": [
+     0.0,
+     8.0,
+     9.0,
+     0.0,
+     24.0
+    ]
+   }
+  ],
+  "passed": true,
+  "reason": "ok"
+ },
+ {
+  "label": "stage 0",
+  "utc": "2026-09-23T08:50:16.535142+00:00",
+  "ac_power": true,
+  "ac_detail": "BatteryStatus=2",
+  "wsl_running": false,
+  "wsl_detail": "rc=4294967295 (no running distro)",
+  "threshold_pct": 15.0,
+  "attempts": [
+   {
+    "i": 0,
+    "utc": "2026-09-23T08:50:23.784525+00:00",
+    "n": 5,
+    "mean": 9.2,
+    "max": 28.0,
+    "samples": [
+     0.0,
+     7.0,
+     6.0,
+     5.0,
+     28.0
+    ]
+   }
+  ],
+  "passed": true,
+  "reason": "ok"
+ },
+ {
+  "label": "batch 1 r50",
+  "utc": "2026-09-23T09:38:22.219825+00:00",
+  "ac_power": true,
+  "ac_detail": "BatteryStatus=2",
+  "wsl_running": false,
+  "wsl_detail": "rc=4294967295 (no running distro)",
+  "threshold_pct": 15.0,
+  "attempts": [
+   {
+    "i": 0,
+    "utc": "2026-09-23T09:38:29.272118+00:00",
+    "n": 5,
+    "mean": 16.0,
+    "max": 29.0,
+    "samples": [
+     20.0,
+     6.0,
+     0.0,
+     25.0,
+     29.0
+    ]
+   },
+   {
+    "i": 1,
+    "utc": "2026-09-23T09:39:36.265329+00:00",
+    "n": 5,
+    "mean": 16.8,
+    "max": 30.0,
+    "samples": [
+     29.0,
+     25.0,
+     0.0,
+     0.0,
+     30.0
+    ]
+   },
+   {
+    "i": 2,
+    "utc": "2026-09-23T09:40:43.362553+00:00",
+    "n": 5,
+    "mean": 27.6,
+    "max": 35.0,
+    "samples": [
+     28.0,
+     28.0,
+     35.0,
+     27.0,
+     20.0
+    ]
+   },
+   {
+    "i": 3,
+    "utc": "2026-09-23T09:41:50.381573+00:00",
+    "n": 5,
+    "mean": 19.0,
+    "max": 28.0,
+    "samples": [
+     24.0,
+     0.0,
+     28.0,
+     20.0,
+     23.0
+    ]
+   },
+   {
+    "i": 4,
+    "utc": "2026-09-23T09:42:57.409545+00:00",
+    "n": 5,
+    "mean": 21.0,
+    "max": 28.0,
+    "samples": [
+     28.0,
+     8.0,
+     25.0,
+     27.0,
+     17.0
+    ]
+   },
+   {
+    "i": 5,
+    "utc": "2026-09-23T09:44:04.451295+00:00",
+    "n": 5,
+    "mean": 11.8,
+    "max": 24.0,
+    "samples": [
+     24.0,
+     0.0,
+     8.0,
+     13.0,
+     14.0
+    ]
+   }
+  ],
+  "passed": true,
+  "reason": "ok"
+ },
+ {
+  "label": "batch 2 c3_224x224",
+  "utc": "2026-09-23T10:43:02.851987+00:00",
+  "ac_power": true,
+  "ac_detail": "BatteryStatus=2",
+  "wsl_running": false,
+  "wsl_detail": "rc=4294967295 (no running distro)",
+  "threshold_pct": 15.0,
+  "attempts": [
+   {
+    "i": 0,
+    "utc": "2026-09-23T10:43:09.798270+00:00",
+    "n": 5,
+    "mean": 3.6,
+    "max": 8.0,
+    "samples": [
+     5.0,
+     0.0,
+     2.0,
+     3.0,
+     8.0
+    ]
+   }
+  ],
+  "passed": true,
+  "reason": "ok"
+ },
+ {
+  "label": "batch 3 y256",
+  "utc": "2026-09-23T11:48:17.492997+00:00",
+  "ac_power": true,
+  "ac_detail": "BatteryStatus=2",
+  "wsl_running": false,
+  "wsl_detail": "rc=4294967295 (no running distro)",
+  "threshold_pct": 15.0,
+  "attempts": [
+   {
+    "i": 0,
+    "utc": "2026-09-23T11:48:25.996093+00:00",
+    "n": 5,
+    "mean": 7.4,
+    "max": 26.0,
+    "samples": [
+     26.0,
+     0.0,
+     0.0,
+     11.0,
+     0.0
+    ]
+   }
+  ],
+  "passed": true,
+  "reason": "ok"
+ },
+ {
+  "label": "batch 4 c224_224x3",
+  "utc": "2026-09-23T12:12:39.304337+00:00",
+  "ac_power": true,
+  "ac_detail": "BatteryStatus=2",
+  "wsl_running": false,
+  "wsl_detail": "rc=4294967295 (no running distro)",
+  "threshold_pct": 15.0,
+  "attempts": [
+   {
+    "i": 0,
+    "utc": "2026-09-23T12:12:46.218485+00:00",
+    "n": 5,
+    "mean": 3.6,
+    "max": 12.0,
+    "samples": [
+     12.0,
+     1.0,
+     2.0,
+     0.0,
+     3.0
+    ]
+   }
+  ],
+  "passed": true,
+  "reason": "ok"
+ },
+ {
+  "label": "batch 5 mv64",
+  "utc": "2026-09-23T12:26:55.209335+00:00",
+  "ac_power": true,
+  "ac_detail": "BatteryStatus=2",
+  "wsl_running": false,
+  "wsl_detail": "rc=4294967295 (no running distro)",
+  "threshold_pct": 15.0,
+  "attempts": [
+   {
+    "i": 0,
+    "utc": "2026-09-23T12:27:02.176237+00:00",
+    "n": 5,
+    "mean": 15.0,
+    "max": 33.0,
+    "samples": [
+     20.0,
+     10.0,
+     0.0,
+     12.0,
+     33.0
+    ]
+   }
+  ],
+  "passed": true,
+  "reason": "ok"
+ },
+ {
+  "label": "batch 6 c3_320x320",
+  "utc": "2026-09-23T12:48:26.259013+00:00",
+  "ac_power": true,
+  "ac_detail": "BatteryStatus=2",
+  "wsl_running": false,
+  "wsl_detail": "rc=4294967295 (no running distro)",
+  "threshold_pct": 15.0,
+  "attempts": [
+   {
+    "i": 0,
+    "utc": "2026-09-23T12:48:33.176492+00:00",
+    "n": 5,
+    "mean": 25.4,
+    "max": 46.0,
+    "samples": [
+     13.0,
+     26.0,
+     20.0,
+     46.0,
+     22.0
+    ]
+   },
+   {
+    "i": 1,
+    "utc": "2026-09-23T12:49:40.153105+00:00",
+    "n": 5,
+    "mean": 25.2,
+    "max": 42.0,
+    "samples": [
+     31.0,
+     0.0,
+     42.0,
+     24.0,
+     29.0
+    ]
+   },
+   {
+    "i": 2,
+    "utc": "2026-09-23T12:50:47.205238+00:00",
+    "n": 5,
+    "mean": 26.4,
+    "max": 30.0,
+    "samples": [
+     30.0,
+     26.0,
+     28.0,
+     21.0,
+     27.0
+    ]
+   },
+   {
+    "i": 3,
+    "utc": "2026-09-23T12:51:54.168290+00:00",
+    "n": 5,
+    "mean": 19.4,
+    "max": 32.0,
+    "samples": [
+     32.0,
+     1.0,
+     31.0,
+     16.0,
+     17.0
+    ]
+   },
+   {
+    "i": 4,
+    "utc": "2026-09-23T12:53:01.116558+00:00",
+    "n": 5,
+    "mean": 8.6,
+    "max": 25.0,
+    "samples": [
+     4.0,
+     25.0,
+     1.0,
+     6.0,
+     7.0
+    ]
+   }
+  ],
+  "passed": true,
+  "reason": "ok"
+ },
+ {
+  "label": "batch 7 mv256",
+  "utc": "2026-09-23T13:07:35.998686+00:00",
+  "ac_power": true,
+  "ac_detail": "BatteryStatus=2",
+  "wsl_running": false,
+  "wsl_detail": "rc=4294967295 (no running distro)",
+  "threshold_pct": 15.0,
+  "attempts": [
+   {
+    "i": 0,
+    "utc": "2026-09-23T13:07:42.941297+00:00",
+    "n": 5,
+    "mean": 24.4,
+    "max": 67.0,
+    "samples": [
+     20.0,
+     0.0,
+     16.0,
+     67.0,
+     19.0
+    ]
+   },
+   {
+    "i": 1,
+    "utc": "2026-09-23T13:08:49.856416+00:00",
+    "n": 5,
+    "mean": 12.6,
+    "max": 21.0,
+    "samples": [
+     20.0,
+     16.0,
+     21.0,
+     0.0,
+     6.0
+    ]
+   }
+  ],
+  "passed": true,
+  "reason": "ok"
+ },
+ {
+  "label": "batch 8 c3_299x299",
+  "utc": "2026-09-23T13:30:26.613776+00:00",
+  "ac_power": true,
+  "ac_detail": "BatteryStatus=2",
+  "wsl_running": false,
+  "wsl_detail": "rc=4294967295 (no running distro)",
+  "threshold_pct": 15.0,
+  "attempts": [
+   {
+    "i": 0,
+    "utc": "2026-09-23T13:30:33.578831+00:00",
+    "n": 5,
+    "mean": 13.0,
+    "max": 27.0,
+    "samples": [
+     11.0,
+     0.0,
+     3.0,
+     24.0,
+     27.0
+    ]
+   }
+  ],
+  "passed": true,
+  "reason": "ok"
+ },
+ {
+  "label": "batch 9 deit224",
+  "utc": "2026-09-23T13:40:22.279149+00:00",
+  "ac_power": true,
+  "ac_detail": "BatteryStatus=2",
+  "wsl_running": false,
+  "wsl_detail": "rc=4294967295 (no running distro)",
+  "threshold_pct": 15.0,
+  "attempts": [
+   {
+    "i": 0,
+    "utc": "2026-09-23T13:40:29.241964+00:00",
+    "n": 5,
+    "mean": 20.6,
+    "max": 40.0,
+    "samples": [
+     8.0,
+     8.0,
+     24.0,
+     40.0,
+     23.0
+    ]
+   },
+   {
+    "i": 1,
+    "utc": "2026-09-23T13:41:36.206176+00:00",
+    "n": 5,
+    "mean": 19.2,
+    "max": 23.0,
+    "samples": [
+     17.0,
+     17.0,
+     18.0,
+     21.0,
+     23.0
+    ]
+   },
+   {
+    "i": 2,
+    "utc": "2026-09-23T13:42:43.173746+00:00",
+    "n": 5,
+    "mean": 19.6,
+    "max": 28.0,
+    "samples": [
+     27.0,
+     25.0,
+     0.0,
+     18.0,
+     28.0
+    ]
+   },
+   {
+    "i": 3,
+    "utc": "2026-09-23T13:43:50.187295+00:00",
+    "n": 5,
+    "mean": 24.4,
+    "max": 35.0,
+    "samples": [
+     20.0,
+     22.0,
+     22.0,
+     35.0,
+     23.0
+    ]
+   },
+   {
+    "i": 4,
+    "utc": "2026-09-23T13:44:57.173240+00:00",
+    "n": 5,
+    "mean": 15.8,
+    "max": 22.0,
+    "samples": [
+     22.0,
+     14.0,
+     21.0,
+     0.0,
+     22.0
+    ]
+   },
+   {
+    "i": 5,
+    "utc": "2026-09-23T13:46:04.167435+00:00",
+    "n": 5,
+    "mean": 19.4,
+    "max": 27.0,
+    "samples": [
+     22.0,
+     9.0,
+     25.0,
+     27.0,
+     14.0
+    ]
+   },
+   {
+    "i": 6,
+    "utc": "2026-09-23T13:47:11.115559+00:00",
+    "n": 5,
+    "mean": 12.0,
+    "max": 21.0,
+    "samples": [
+     21.0,
+     11.0,
+     13.0,
+     4.0,
+     11.0
+    ]
+   }
+  ],
+  "passed": true,
+  "reason": "ok"
+ },
+ {
+  "label": "batch 10 c1_64x64",
+  "utc": "2026-09-23T14:09:00.835934+00:00",
+  "ac_power": true,
+  "ac_detail": "BatteryStatus=2",
+  "wsl_running": false,
+  "wsl_detail": "rc=4294967295 (no running distro)",
+  "threshold_pct": 15.0,
+  "attempts": [
+   {
+    "i": 0,
+    "utc": "2026-09-23T14:09:07.756599+00:00",
+    "n": 5,
+    "mean": 13.2,
+    "max": 23.0,
+    "samples": [
+     17.0,
+     10.0,
+     8.0,
+     8.0,
+     23.0
+    ]
+   }
+  ],
+  "passed": true,
+  "reason": "ok"
+ },
+ {
+  "label": "batch 11 mnv2",
+  "utc": "2026-09-23T14:16:23.344381+00:00",
+  "ac_power": true,
+  "ac_detail": "BatteryStatus=2",
+  "wsl_running": false,
+  "wsl_detail": "rc=4294967295 (no running distro)",
+  "threshold_pct": 15.0,
+  "attempts": [
+   {
+    "i": 0,
+    "utc": "2026-09-23T14:16:30.270999+00:00",
+    "n": 5,
+    "mean": 16.2,
+    "max": 32.0,
+    "samples": [
+     17.0,
+     32.0,
+     7.0,
+     0.0,
+     25.0
+    ]
+   },
+   {
+    "i": 1,
+    "utc": "2026-09-23T14:17:37.313883+00:00",
+    "n": 5,
+    "mean": 23.8,
+    "max": 27.0,
+    "samples": [
+     27.0,
+     25.0,
+     16.0,
+     26.0,
+     25.0
+    ]
+   },
+   {
+    "i": 2,
+    "utc": "2026-09-23T14:18:44.262495+00:00",
+    "n": 5,
+    "mean": 27.0,
+    "max": 61.0,
+    "samples": [
+     26.0,
+     29.0,
+     0.0,
+     19.0,
+     61.0
+    ]
+   },
+   {
+    "i": 3,
+    "utc": "2026-09-23T14:19:51.205042+00:00",
+    "n": 5,
+    "mean": 21.6,
+    "max": 31.0,
+    "samples": [
+     28.0,
+     23.0,
+     26.0,
+     0.0,
+     31.0
+    ]
+   },
+   {
+    "i": 4,
+    "utc": "2026-09-23T14:20:58.129727+00:00",
+    "n": 5,
+    "mean": 19.4,
+    "max": 26.0,
+    "samples": [
+     24.0,
+     26.0,
+     0.0,
+     22.0,
+     25.0
+    ]
+   },
+   {
+    "i": 5,
+    "utc": "2026-09-23T14:22:05.036733+00:00",
+    "n": 5,
+    "mean": 7.0,
+    "max": 12.0,
+    "samples": [
+     12.0,
+     0.0,
+     7.0,
+     6.0,
+     10.0
+    ]
+   }
+  ],
+  "passed": true,
+  "reason": "ok"
+ },
+ {
+  "label": "batch 12 c3_112x112",
+  "utc": "2026-09-23T14:40:07.677824+00:00",
+  "ac_power": true,
+  "ac_detail": "BatteryStatus=2",
+  "wsl_running": false,
+  "wsl_detail": "rc=4294967295 (no running distro)",
+  "threshold_pct": 15.0,
+  "attempts": [
+   {
+    "i": 0,
+    "utc": "2026-09-23T14:40:14.682116+00:00",
+    "n": 5,
+    "mean": 17.4,
+    "max": 44.0,
+    "samples": [
+     9.0,
+     6.0,
+     44.0,
+     14.0,
+     14.0
+    ]
+   },
+   {
+    "i": 1,
+    "utc": "2026-09-23T14:41:21.622483+00:00",
+    "n": 5,
+    "mean": 12.4,
+    "max": 17.0,
+    "samples": [
+     11.0,
+     6.0,
+     16.0,
+     12.0,
+     17.0
+    ]
+   }
+  ],
+  "passed": true,
+  "reason": "ok"
+ },
+ {
+  "label": "batch 13 ae",
+  "utc": "2026-09-23T14:48:38.898724+00:00",
+  "ac_power": true,
+  "ac_detail": "BatteryStatus=2",
+  "wsl_running": false,
+  "wsl_detail": "rc=4294967295 (no running distro)",
+  "threshold_pct": 15.0,
+  "attempts": [
+   {
+    "i": 0,
+    "utc": "2026-09-23T14:48:45.892783+00:00",
+    "n": 5,
+    "mean": 24.6,
+    "max": 41.0,
+    "samples": [
+     41.0,
+     36.0,
+     0.0,
+     16.0,
+     30.0
+    ]
+   },
+   {
+    "i": 1,
+    "utc": "2026-09-23T14:49:52.772455+00:00",
+    "n": 5,
+    "mean": 17.4,
+    "max": 24.0,
+    "samples": [
+     24.0,
+     19.0,
+     21.0,
+     0.0,
+     23.0
+    ]
+   },
+   {
+    "i": 2,
+    "utc": "2026-09-23T14:50:59.663751+00:00",
+    "n": 5,
+    "mean": 15.8,
+    "max": 31.0,
+    "samples": [
+     20.0,
+     14.0,
+     0.0,
+     14.0,
+     31.0
+    ]
+   },
+   {
+    "i": 3,
+    "utc": "2026-09-23T14:52:06.584712+00:00",
+    "n": 5,
+    "mean": 10.0,
+    "max": 15.0,
+    "samples": [
+     15.0,
+     5.0,
+     9.0,
+     8.0,
+     13.0
+    ]
+   }
+  ],
+  "passed": true,
+  "reason": "ok"
+ },
+ {
+  "label": "batch 14 c3_240x320",
+  "utc": "2026-09-23T15:05:49.112303+00:00",
+  "ac_power": true,
+  "ac_detail": "BatteryStatus=2",
+  "wsl_running": false,
+  "wsl_detail": "rc=4294967295 (no running distro)",
+  "threshold_pct": 15.0,
+  "attempts": [
+   {
+    "i": 0,
+    "utc": "2026-09-23T15:05:56.023908+00:00",
+    "n": 5,
+    "mean": 13.4,
+    "max": 24.0,
+    "samples": [
+     16.0,
+     7.0,
+     0.0,
+     20.0,
+     24.0
+    ]
+   }
+  ],
+  "passed": true,
+  "reason": "ok"
+ },
+ {
+  "label": "batch 15 c56_56x3",
+  "utc": "2026-09-23T15:13:07.265784+00:00",
+  "ac_power": true,
+  "ac_detail": "BatteryStatus=2",
+  "wsl_running": false,
+  "wsl_detail": "rc=4294967295 (no running distro)",
+  "threshold_pct": 15.0,
+  "attempts": [
+   {
+    "i": 0,
+    "utc": "2026-09-23T15:13:15.119819+00:00",
+    "n": 5,
+    "mean": 12.2,
+    "max": 24.0,
+    "samples": [
+     0.0,
+     9.0,
+     24.0,
+     12.0,
+     16.0
+    ]
+   }
+  ],
+  "passed": true,
+  "reason": "ok"
+ },
+ {
+  "label": "batch 1 r50",
+  "utc": "2026-09-23T16:38:08.863312+00:00",
+  "ac_power": true,
+  "ac_detail": "BatteryStatus=2",
+  "wsl_running": false,
+  "wsl_detail": "rc=4294967295 (no running distro)",
+  "threshold_pct": 15.0,
+  "attempts": [
+   {
+    "i": 0,
+    "utc": "2026-09-23T16:38:19.101174+00:00",
+    "n": 5,
+    "mean": 23.2,
+    "max": 32.0,
+    "samples": [
+     19.0,
+     19.0,
+     21.0,
+     25.0,
+     32.0
+    ]
+   },
+   {
+    "i": 1,
+    "utc": "2026-09-23T16:39:26.094358+00:00",
+    "n": 5,
+    "mean": 17.0,
+    "max": 22.0,
+    "samples": [
+     21.0,
+     8.0,
+     15.0,
+     19.0,
+     22.0
+    ]
+   },
+   {
+    "i": 2,
+    "utc": "2026-09-23T16:40:33.011400+00:00",
+    "n": 5,
+    "mean": 12.6,
+    "max": 23.0,
+    "samples": [
+     20.0,
+     7.0,
+     0.0,
+     13.0,
+     23.0
+    ]
+   }
+  ],
+  "passed": true,
+  "reason": "ok"
+ },
+ {
+  "label": "replication c3_299x299",
+  "utc": "2026-09-24T02:22:58.455250+00:00",
+  "ac_power": true,
+  "ac_detail": "BatteryStatus=2",
+  "wsl_running": false,
+  "wsl_detail": "rc=4294967295 (no running distro)",
+  "threshold_pct": 15.0,
+  "attempts": [
+   {
+    "i": 0,
+    "utc": "2026-09-24T02:23:09.181272+00:00",
+    "n": 5,
+    "mean": 14.2,
+    "max": 34.0,
+    "samples": [
+     8.0,
+     0.0,
+     12.0,
+     34.0,
+     17.0
+    ]
+   }
+  ],
+  "passed": true,
+  "reason": "ok"
+ },
+ {
+  "label": "replication c3_112x112",
+  "utc": "2026-09-24T02:29:10.251818+00:00",
+  "ac_power": true,
+  "ac_detail": "BatteryStatus=2",
+  "wsl_running": false,
+  "wsl_detail": "rc=4294967295 (no running distro)",
+  "threshold_pct": 15.0,
+  "attempts": [
+   {
+    "i": 0,
+    "utc": "2026-09-24T02:29:17.948314+00:00",
+    "n": 5,
+    "mean": 11.8,
+    "max": 25.0,
+    "samples": [
+     25.0,
+     21.0,
+     0.0,
+     6.0,
+     7.0
+    ]
+   }
+  ],
+  "passed": true,
+  "reason": "ok"
+ },
+ {
+  "label": "replication c3_224x224",
+  "utc": "2026-09-24T02:32:00.257949+00:00",
+  "ac_power": true,
+  "ac_detail": "BatteryStatus=2",
+  "wsl_running": false,
+  "wsl_detail": "rc=4294967295 (no running distro)",
+  "threshold_pct": 15.0,
+  "attempts": [
+   {
+    "i": 0,
+    "utc": "2026-09-24T02:32:07.954640+00:00",
+    "n": 5,
+    "mean": 7.8,
+    "max": 25.0,
+    "samples": [
+     9.0,
+     25.0,
+     0.0,
+     2.0,
+     3.0
+    ]
+   }
+  ],
+  "passed": true,
+  "reason": "ok"
+ },
+ {
+  "label": "replication ae",
+  "utc": "2026-09-24T03:14:53.734160+00:00",
+  "ac_power": true,
+  "ac_detail": "BatteryStatus=2",
+  "wsl_running": false,
+  "wsl_detail": "rc=4294967295 (no running distro)",
+  "threshold_pct": 15.0,
+  "attempts": [
+   {
+    "i": 0,
+    "utc": "2026-09-24T03:15:01.398077+00:00",
+    "n": 5,
+    "mean": 4.8,
+    "max": 19.0,
+    "samples": [
+     0.0,
+     0.0,
+     19.0,
+     2.0,
+     3.0
+    ]
+   }
+  ],
+  "passed": true,
+  "reason": "ok"
+ },
+ {
+  "label": "replication mv256",
+  "utc": "2026-09-24T03:22:50.914404+00:00",
+  "ac_power": true,
+  "ac_detail": "BatteryStatus=2",
+  "wsl_running": false,
+  "wsl_detail": "rc=4294967295 (no running distro)",
+  "threshold_pct": 15.0,
+  "attempts": [
+   {
+    "i": 0,
+    "utc": "2026-09-24T03:22:58.585261+00:00",
+    "n": 5,
+    "mean": 6.4,
+    "max": 16.0,
+    "samples": [
+     0.0,
+     0.0,
+     16.0,
+     6.0,
+     10.0
+    ]
+   }
+  ],
+  "passed": true,
+  "reason": "ok"
+ },
+ {
+  "label": "replication c224_224x3",
+  "utc": "2026-09-24T03:39:27.179998+00:00",
+  "ac_power": true,
+  "ac_detail": "BatteryStatus=2",
+  "wsl_running": false,
+  "wsl_detail": "rc=4294967295 (no running distro)",
+  "threshold_pct": 15.0,
+  "attempts": [
+   {
+    "i": 0,
+    "utc": "2026-09-24T03:39:34.922263+00:00",
+    "n": 5,
+    "mean": 9.6,
+    "max": 25.0,
+    "samples": [
+     12.0,
+     25.0,
+     0.0,
+     3.0,
+     8.0
+    ]
+   }
+  ],
+  "passed": true,
+  "reason": "ok"
+ },
+ {
+  "label": "replication mv64",
+  "utc": "2026-09-24T03:41:19.919198+00:00",
+  "ac_power": true,
+  "ac_detail": "BatteryStatus=2",
+  "wsl_running": false,
+  "wsl_detail": "rc=4294967295 (no running distro)",
+  "threshold_pct": 15.0,
+  "attempts": [
+   {
+    "i": 0,
+    "utc": "2026-09-24T03:41:27.624279+00:00",
+    "n": 5,
+    "mean": 11.8,
+    "max": 36.0,
+    "samples": [
+     7.0,
+     2.0,
+     36.0,
+     0.0,
+     14.0
+    ]
+   }
+  ],
+  "passed": true,
+  "reason": "ok"
+ },
+ {
+  "label": "replication c3_320x320",
+  "utc": "2026-09-24T03:59:51.193748+00:00",
+  "ac_power": true,
+  "ac_detail": "BatteryStatus=2",
+  "wsl_running": false,
+  "wsl_detail": "rc=4294967295 (no running distro)",
+  "threshold_pct": 15.0,
+  "attempts": [
+   {
+    "i": 0,
+    "utc": "2026-09-24T04:00:00.841146+00:00",
+    "n": 5,
+    "mean": 12.8,
+    "max": 23.0,
+    "samples": [
+     20.0,
+     23.0,
+     11.0,
+     4.0,
+     6.0
+    ]
+   }
+  ],
+  "passed": true,
+  "reason": "ok"
+ },
+ {
+  "label": "replication deit224",
+  "utc": "2026-09-24T04:04:57.063643+00:00",
+  "ac_power": true,
+  "ac_detail": "BatteryStatus=2",
+  "wsl_running": false,
+  "wsl_detail": "rc=4294967295 (no running distro)",
+  "threshold_pct": 15.0,
+  "attempts": [
+   {
+    "i": 0,
+    "utc": "2026-09-24T04:05:04.737582+00:00",
+    "n": 5,
+    "mean": 11.6,
+    "max": 26.0,
+    "samples": [
+     26.0,
+     3.0,
+     12.0,
+     0.0,
+     17.0
+    ]
+   }
+  ],
+  "passed": true,
+  "reason": "ok"
+ },
+ {
+  "label": "replication y256",
+  "utc": "2026-09-24T04:23:38.406779+00:00",
+  "ac_power": true,
+  "ac_detail": "BatteryStatus=2",
+  "wsl_running": false,
+  "wsl_detail": "rc=4294967295 (no running distro)",
+  "threshold_pct": 15.0,
+  "attempts": [
+   {
+    "i": 0,
+    "utc": "2026-09-24T04:23:46.112200+00:00",
+    "n": 5,
+    "mean": 16.8,
+    "max": 30.0,
+    "samples": [
+     30.0,
+     19.0,
+     13.0,
+     5.0,
+     17.0
+    ]
+   },
+   {
+    "i": 1,
+    "utc": "2026-09-24T04:24:53.793657+00:00",
+    "n": 5,
+    "mean": 6.2,
+    "max": 13.0,
+    "samples": [
+     13.0,
+     4.0,
+     1.0,
+     0.0,
+     13.0
+    ]
+   }
+  ],
+  "passed": true,
+  "reason": "ok"
+ },
+ {
+  "label": "replication r50",
+  "utc": "2026-09-24T04:40:11.014847+00:00",
+  "ac_power": true,
+  "ac_detail": "BatteryStatus=2",
+  "wsl_running": false,
+  "wsl_detail": "rc=4294967295 (no running distro)",
+  "threshold_pct": 15.0,
+  "attempts": [
+   {
+    "i": 0,
+    "utc": "2026-09-24T04:40:18.710950+00:00",
+    "n": 5,
+    "mean": 6.2,
+    "max": 15.0,
+    "samples": [
+     5.0,
+     15.0,
+     7.0,
+     3.0,
+     1.0
+    ]
+   }
+  ],
+  "passed": true,
+  "reason": "ok"
+ },
+ {
+  "label": "replication c56_56x3",
+  "utc": "2026-09-24T04:52:09.710807+00:00",
+  "ac_power": true,
+  "ac_detail": "BatteryStatus=2",
+  "wsl_running": false,
+  "wsl_detail": "rc=4294967295 (no running distro)",
+  "threshold_pct": 15.0,
+  "attempts": [
+   {
+    "i": 0,
+    "utc": "2026-09-24T04:52:17.381776+00:00",
+    "n": 5,
+    "mean": 6.0,
+    "max": 16.0,
+    "samples": [
+     4.0,
+     16.0,
+     1.0,
+     9.0,
+     0.0
+    ]
+   }
+  ],
+  "passed": true,
+  "reason": "ok"
+ },
+ {
+  "label": "replication mnv2",
+  "utc": "2026-09-24T04:56:15.539453+00:00",
+  "ac_power": true,
+  "ac_detail": "BatteryStatus=2",
+  "wsl_running": false,
+  "wsl_detail": "rc=4294967295 (no running distro)",
+  "threshold_pct": 15.0,
+  "attempts": [
+   {
+    "i": 0,
+    "utc": "2026-09-24T04:56:23.869540+00:00",
+    "n": 5,
+    "mean": 17.2,
+    "max": 47.0,
+    "samples": [
+     5.0,
+     47.0,
+     18.0,
+     5.0,
+     11.0
+    ]
+   },
+   {
+    "i": 1,
+    "utc": "2026-09-24T04:57:31.568334+00:00",
+    "n": 5,
+    "mean": 6.2,
+    "max": 13.0,
+    "samples": [
+     6.0,
+     8.0,
+     4.0,
+     0.0,
+     13.0
+    ]
+   }
+  ],
+  "passed": true,
+  "reason": "ok"
+ }
+]

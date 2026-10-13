@@ -1,0 +1,82 @@
+{
+ "dest": "D:\\sec_envs",
+ "versions": {
+  "1.16.3": {
+   "ok": true,
+   "reported": "1.16.3 2.4.6",
+   "python": "D:\\sec_envs\\ort1163\\Scripts\\python.exe",
+   "seconds": 0.5,
+   "err": ""
+  },
+  "1.20.1": {
+   "ok": true,
+   "reported": "1.20.1 2.4.6",
+   "python": "D:\\sec_envs\\ort1201\\Scripts\\python.exe",
+   "seconds": 0.4,
+   "err": ""
+  },
+  "1.21.1": {
+   "ok": true,
+   "reported": "1.21.1 2.4.6",
+   "python": "D:\\sec_envs\\ort1211\\Scripts\\python.exe",
+   "seconds": 0.4,
+   "err": ""
+  },
+  "1.22.1": {
+   "ok": true,
+   "reported": "1.22.1 2.4.6",
+   "python": "D:\\sec_envs\\ort1221\\Scripts\\python.exe",
+   "seconds": 0.5,
+   "err": ""
+  },
+  "1.23.2": {
+   "ok": true,
+   "reported": "1.23.2 2.4.6",
+   "python": "D:\\sec_envs\\ort1232\\Scripts\\python.exe",
+   "seconds": 9.8,
+   "err": ""
+  },
+  "1.24.4": {
+   "ok": true,
+   "reported": "1.24.4 2.4.6",
+   "python": "D:\\sec_envs\\ort1244\\Scripts\\python.exe",
+   "seconds": 7.9,
+   "err": ""
+  },
+  "1.25.1": {
+   "ok": true,
+   "reported": "1.25.1 2.4.6",
+   "python": "D:\\sec_envs\\ort1251\\Scripts\\python.exe",
+   "seconds": 0.4,
+   "err": ""
+  },
+  "1.26.0": {
+   "ok": true,
+   "reported": "1.26.0 2.4.6",
+   "python": "D:\\sec_envs\\ort1260\\Scripts\\python.exe",
+   "seconds": 0.5,
+   "err": ""
+  },
+  "1.27.0": {
+   "ok": true,
+   "reported": "1.27.0 2.4.6",
+   "python": "D:\\sec_envs\\ort1270\\Scripts\\python.exe",
+   "seconds": 0.4,
+   "err": ""
+  },
+  "1.28.0": {
+   "ok": true,
+   "reported": "1.28.0 2.4.6",
+   "python": "D:\\sec_envs\\ort1280\\Scripts\\python.exe",
+   "seconds": 0.5,
+   "err": ""
+  },
+  "1.30.0": {
+   "ok": true,
+   "reported": "1.30.0 2.4.6",
+   "python": "D:\\sec_envs\\ort1300\\Scripts\\python.exe",
+   "seconds": 0.5,
+   "err": ""
+  }
+ }
+}
