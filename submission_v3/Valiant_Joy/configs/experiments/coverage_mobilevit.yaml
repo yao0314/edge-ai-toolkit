@@ -1,0 +1,22 @@
+# Experiment 24 (K3), pre-registered in results/paper/FINDINGS.md before anything was run.
+#
+# Is dynamic INT8's win on the hybrid a METHOD effect or an op-COVERAGE effect? The dynamic arm
+# quantizes only MatMul and leaves all 35 convolutions in FP32, while every static arm measured so
+# far also quantized the convolutions. int8_static_mm restricts static QDQ to the same MatMuls, so
+# the two INT8 arms differ in method only. Calibration is pinned to what 'auto' chose for the
+# paper's p00_int8 (percentile 99.9), so it cannot switch between arms.
+extends: ../classification_mobilevit.yaml
+name: coverage_mobilevit
+sweep:
+  prune_ratios: [0.0]
+  finetune_epochs: 0
+  precisions:
+    - fp32
+    - {name: int8, calibrate_method: percentile, calib_percentile: 99.9}
+    - {name: int8_static_mm, op_types_to_quantize: [MatMul], calibrate_method: percentile, calib_percentile: 99.9}
+    # int8_static_mm above also quantizes the 18 activation x activation attention MatMuls, which
+    # dynamic leaves in FP32, and skips the head Gemm, which dynamic quantizes. This arm matches
+    # dynamic's coverage exactly (coverage check recorded in FINDINGS.md before timing).
+    - {name: int8_static_mmw, op_types_to_quantize: [MatMul, Gemm], keep_fp32: ["re:attn/MatMul(_1)?$"],
+       calibrate_method: percentile, calib_percentile: 99.9}
+    - {name: int8_dyn_mm, method: dynamic, op_types_to_quantize: [MatMul, Gemm]}

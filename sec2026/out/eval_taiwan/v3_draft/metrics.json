@@ -1,0 +1,31 @@
+{
+  "team_name": "Valiant Joy",
+  "baseline": {
+    "accuracy": 0.990926,
+    "params_million": 2.2367,
+    "size_mb": 8.7723,
+    "macs_giga": 0.3262,
+    "latency_ms": 3.5009,
+    "peak_ram_mb": 78.852,
+    "joules_per_inference": 0.217681
+  },
+  "final": {
+    "accuracy": 0.971481,
+    "params_million": 0.401,
+    "size_mb": 0.6046,
+    "macs_giga": 0.0795,
+    "latency_ms": 1.1193,
+    "peak_ram_mb": 62.137,
+    "joules_per_inference": 0.070935
+  },
+  "worst_class_accuracy": 0.926078,
+  "codecarbon_mode": "tdp_estimate",
+  "techniques_applied": [
+    "structured pruning (60% of channels)",
+    "static INT8 quantization (QDQ, per-channel weights)",
+    "BN recalibration after pruning",
+    "recovery fine-tuning distilled from the provided ResNet-50 teacher (T=4, alpha=0.7, 8 epochs)"
+  ],
+  "ai_hub_profile_summary": "Dragonwing RB3 Gen 2 Vision Kit (QCS6490), ONNX CPU: baseline 27.969 ms / 32.33 MB peak, final 3.127 ms / 19.45 MB peak - 8.94x faster, 1.66x less memory (profile jobs jp3o60znp, jprxwv90p)",
+  "measurement_machine": "13th Gen Intel(R) Core(TM) i7-13620H, 16 GB, Windows 11, CPU-only ONNX Runtime 1.30.0, 4 intra-op threads"
+}

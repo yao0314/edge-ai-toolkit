@@ -1,0 +1,21 @@
+# Where does the cliff actually start?
+#
+# The twelve-cell sweep behind the submission stops at 50% and never finds one: accuracy declines
+# smoothly and is still at 98.0% of the baseline at the deepest point measured. A curve that only
+# shows the good half cannot show where the knee is, and section 6.1 asks for exactly that knee.
+#
+# 60% and 70% are expected to break - params fall roughly as (1 - r)^2, so 70% lands near 0.20 M,
+# an 11x reduction, which would be remarkable if accuracy survived and is informative if it does
+# not. Either outcome earns its ten minutes: a documented negative result is named in section 9 as
+# scoring under Engineering Judgment.
+extends: sec2026_real.yaml
+name: sec2026_deep
+
+sweep:
+  prune_ratios: [0.6, 0.7]
+  precisions: [fp32, int8]
+  finetune_epochs: 3
+
+measure:
+  energy:
+    provider: none

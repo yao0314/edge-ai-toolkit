@@ -1,0 +1,26 @@
+# Does channel pruning recover with REAL training data? (coco128's 64 images said no, but that is a data
+# limit, not an architecture limit.) Train on 5000 COCO train2017 images, validate on 500 unseen val2017.
+#   python scripts/fetch_coco_val.py --split train2017 --n 5000
+extends: ../detection.yaml
+name: detection_prune
+adapter_args:
+  data_root: data/coco_train5000
+  images: images/train
+  labels: labels/train
+  val_images: ../coco_val500/images/val
+  val_labels: ../coco_val500/labels/val
+  img_size: 320
+  batch_size: 16
+  calib_size: 128
+prune:
+  round_to: null
+  bn_recalibrate: true
+sweep:
+  prune_ratios: [0.0, 0.2, 0.1, 0.3]   # 0.2 first: it is the decision threshold, and CPU
+                                       # fine-tuning 5000 images x 10 epochs is ~1 h per ratio
+  precisions: [fp32, int8]
+  adapter_variants: [{img_size: 320}]   # one resolution: the question here is pruning, not resolution
+  finetune_epochs: 10                   # 5000 images x 10 epochs, vs 64 x 3 before
+score:
+  max_accuracy_drop: 0.01
+  max_accuracy_drop_rel: 0.025

@@ -1,0 +1,15 @@
+# Experiment 25 (K4), pre-registered in results/paper/FINDINGS.md before anything was run.
+#
+# Does the dynamic-Conv penalty shrink when the SAME architecture runs at deployment resolution?
+# The 12.6-16.8x evidence spans different architectures (confounding architecture with scale) and,
+# within one model, only YOLOv8n at 192-320 px. MobileNetV2 was only measured at 32 px; this is the
+# same architecture at 224 px on Imagenette. The dynamic arm matches classification_dyn.yaml.
+extends: ../stress_imagenette.yaml
+name: stress_imagenette_dyn
+sweep:
+  prune_ratios: [0.0]
+  finetune_epochs: 0
+  precisions:
+    - fp32
+    - int8
+    - {name: int8_dyn_conv, method: dynamic, op_types_to_quantize: [Conv, MatMul]}

@@ -1,0 +1,18 @@
+# Round 2 of the pruning study. Round 1 (configs/detection_prune.yaml) showed structured pruning
+# delivers the expected 1.4-1.8x size at 20-25% but the model could not RECOVER: at 20% the loss
+# converged (4.286 -> 4.282 over the last epoch) to 43% below the baseline metric. Three changes,
+# each aimed at a specific defect found there:
+#   recovery_lr_mult  the adapter's 2e-5 is tuned not to disturb a healthy model; repairing a
+#                     damaged one needs more room to move
+#   finetune_warmup   a damaged model's first full-LR step can push it further out
+#   round_to: 8       round 1 left 54% of conv layers at channel counts that are not multiples of
+#                     8, which made 10% pruning 28% SLOWER than the unpruned baseline
+extends: detection_prune.yaml
+name: detection_prune_v2
+adapter_args:
+  finetune_warmup_frac: 0.1
+prune:
+  round_to: 8
+  recovery_lr_mult: 20.0     # 2e-5 -> 4e-4
+sweep:
+  prune_ratios: [0.0, 0.2]   # just the decision point; widen only if 0.2 recovers

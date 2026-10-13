@@ -1,0 +1,31 @@
+# MobileViT-XXS (conv + attention, timm) on CIFAR-10 upsampled to 64x64.
+extends: classification.yaml
+name: classification_mobilevit
+adapter_args:
+  arch: timm:mobilevit_xxs
+  img_size: 64             # 32x32 would leave 1x1 maps at the last stage
+  batch_size: 128
+  lr: 0.05
+  finetune_lr: 0.01
+  train_epochs: 30
+
+# INT8 on MobileViT (measured on the trained 0.9165 model):
+#   * plain static INT8 collapses to 0.668. The cause is NOT attention: the SiLU inverted-residual
+#     (MV2) blocks, worst stages.1.0, have channels up to +-90 next to channels within +-1, and one
+#     per-tensor activation scale erases the small ones (per-channel activation scales would fix it,
+#     ORT static QDQ has none). DYNAMIC quantization of Conv has the same problem: top-1 0.513.
+#   * dynamic INT8 on MatMul/Gemm only: 0.9161 and faster than FP32 (convs stay FP32 -> ~1.5x smaller).
+#   * static INT8 with the worst MV2 blocks in FP32 (auto_keep_fp32: search finds them): ~0.91.
+sweep:
+  precisions:
+    - fp32
+    - int8
+    - {name: int8_dyn_mm, method: dynamic, op_types_to_quantize: [MatMul, Gemm]}
+    # percentile calibration + the label-free block search: 1.72x compression at -0.5 pt (vs 1.49x for
+    # dyn_mm), but ~1.5x slower at 4 threads - both stay in the shortlist and the score decides.
+    - {name: int8_search_pct, auto_keep_fp32: search, calibrate_method: percentile, calib_percentile: 99.9,
+       search_max_blocks: 8, search_target_db: 25}
+    # QAT: fine-tune with simulated per-tensor INT8 so plain static quantization survives. On the 10-epoch
+    # baseline it lifted static INT8 from 0.668 to 0.882 at 2.24x - the best compression here, but still
+    # short of the accuracy budget. More epochs at a lower LR was worse (0.867).
+    - {name: int8_qat, calibrate_method: percentile, calib_percentile: 99.9, qat: {epochs: 3}}

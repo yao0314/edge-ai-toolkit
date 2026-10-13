@@ -1,0 +1,15 @@
+# STRESS TEST: YOLOv8n at its native 640 px on 2000 unseen COCO val2017 images (4x the data, 4x the MACs).
+# Exercises: memory at 640, letterbox at native resolution, evaluation throughput, calibration on big inputs.
+extends: detection.yaml
+name: detection_640
+adapter_args:
+  img_size: 640
+  val_images: ../coco_val2000/images/val
+  val_labels: ../coco_val2000/labels/val
+  batch_size: 8
+sweep:
+  adapter_variants: [{img_size: 640}, {img_size: 320}]
+  precisions: [fp32, int8]
+measure:
+  repeats: 2        # keep runs at the default 100: min_time_s already bounds the cost, and a lower
+                    # run count would make these numbers incomparable to every other result table

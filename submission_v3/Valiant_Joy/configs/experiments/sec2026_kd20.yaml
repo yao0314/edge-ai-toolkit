@@ -1,0 +1,26 @@
+# The same KD recovery, run until it stops improving.
+#
+# Eight epochs at 60% recovered the weakest class from 0.8480 to 0.9261 - seven and a half points -
+# and the loss was still falling 8% per epoch when the schedule ran out:
+#
+#   4.2703  2.4358  1.7380  1.3842  1.1124  0.9719  0.8384  0.7739
+#
+# So that 7.5 points is a partial result reported as a final one. The gap left to close is 2.05
+# points: 0.9261 against the provided baseline's own weakest class of 0.9466. Clearing it would
+# make the 60% prune better than the submitted 40% on EVERY criterion rather than trading one for
+# three - 5.58x parameters against 2.61x, 14.07x file against 7.81x, 3.13x faster against 2.39x,
+# and a weakest class no worse than the model we started from.
+#
+# 70% is carried along at the same budget. Its KD gain was small (0.8770 -> 0.8850, against 60%'s
+# 7.5 points), which reads as capacity rather than training - but that reading was wrong once
+# already today, so it gets measured rather than assumed.
+#
+#   python scripts/compress.py --config configs/experiments/sec2026_kd20.yaml \
+#       --model data/sec2026/student_mobilenetv2_distilled.pt
+extends: sec2026_kd.yaml
+name: sec2026_kd20
+
+sweep:
+  prune_ratios: [0.6, 0.7]
+  precisions: [fp32, int8]
+  finetune_epochs: 20

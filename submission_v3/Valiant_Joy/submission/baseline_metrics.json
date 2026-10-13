@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.990926,
+  "params_million": 2.2367,
+  "size_mb": 8.7723,
+  "macs_giga": 0.3262,
+  "latency_ms": 3.5009,
+  "peak_ram_mb": 78.852,
+  "joules_per_inference": 0.217681,
+  "model": "student_mobilenetv2_distilled.pt (provided)",
+  "worst_class_accuracy": 0.946612,
+  "per_class_recall": [
+    0.985246,
+    0.998445,
+    0.993043,
+    0.998,
+    0.998092,
+    0.986702,
+    0.946612,
+    1.0,
+    0.996094,
+    1.0
+  ],
+  "codecarbon_mode": "tdp_estimate",
+  "measurement_machine": "13th Gen Intel(R) Core(TM) i7-13620H, 16 GB, Windows 11, CPU-only ONNX Runtime 1.30.0, 4 intra-op threads",
+  "val_split": "val_split.json (21600 train / 5400 val, disjoint, over the 27000 EuroSAT indices)",
+  "note": "Measured by us on our own machine. size_mb is the provided .pt file, as in section 5.2 of the task sheet; the FP32 ONNX export of the same model is 8.51 MB. Every ratio in metrics.json uses these figures as the denominator, measured the same way as the final model.",
+  "team_name": "Valiant Joy"
+}

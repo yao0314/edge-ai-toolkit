@@ -1,0 +1,18 @@
+# STRESS TEST: real-resolution photos through the ImageFolder path (CIFAR-10 is 32x32 and synthetic-looking).
+# Exercises: dataset: imagefolder, img_size 224, ImageNet-pretrained stem, bigger activations.
+extends: classification.yaml
+name: stress_imagenette
+adapter_args:
+  dataset: imagefolder
+  data_root: data/imagenette      # scripts/fetch_imagenette.py
+  img_size: 224
+  arch: mobilenet_v2
+  batch_size: 64
+  train_epochs: 3                 # fine-tuning ImageNet weights on 10 classes converges fast
+  lr: 0.01
+  finetune_lr: 0.002
+  calib_size: 256
+sweep:
+  prune_ratios: [0.0, 0.25]
+  precisions: [fp32, int8]
+  finetune_epochs: 1

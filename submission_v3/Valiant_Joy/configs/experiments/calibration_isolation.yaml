@@ -1,0 +1,52 @@
+# Experiment 19: is dynamic quantization's accuracy damage just minmax calibration?
+#
+# Stage 1b measured the dynamic [Conv, MatMul] arm at -11.07 pt on MobileNetV2 and -0.46 pt on
+# ResNet50 - a 24x difference in damage from the SAME method. The proposed explanation (experiment
+# 18) is that dynamic quantization is not "static without calibration"; it is static pinned to the
+# WORST calibration method:
+#
+#   static   calibrates offline. This project's `calibrate_method: auto` picks percentile 99.99,
+#            which CLIPS activation outliers and preserves small-range channels.
+#   dynamic  takes the EXACT min/max of each activation at run time. That is minmax calibration,
+#            recomputed per inference, with no percentile option available.
+#
+# Depthwise separable blocks have channels spanning +-90 next to channels within +-1
+# (configs/classification_mobilevit.yaml:14 recorded this and nobody connected it to the dynamic
+# arm). One per-tensor scale from exact min/max erases the small ones; percentile clipping does not.
+#
+# THE TEST: hold everything else fixed and vary ONLY the calibration method. If static+minmax
+# reproduces a large part of the dynamic arm's -11.07 pt, the explanation holds. If static+minmax
+# stays near the -0.14 pt of the shipped percentile default, then calibration is NOT the difference
+# and something else about the ConvInteger path is responsible - in which case experiment 18's
+# unification has to be withdrawn.
+#
+# PREDICTION REFUTED BEFORE THIS RAN, 2026-09-16 05:10. The quant factorial resolved `auto` to
+# MINMAX on this model, which means the shipped `int8` variant already IS static+minmax - and it
+# scores -0.13 pt, not -11.07. Static minmax calibration is fine here; dynamic, which is minmax
+# recomputed per inference, is catastrophic. The calibration explanation is dead, and a graph
+# inspection killed the per-channel-weights explanation alongside it (the dynamic model carries
+# per-channel weight scales at the same channel widths as the static one).
+#
+# This config is KEPT anyway, for two reasons worth more than the original hypothesis:
+#   * percentile 99.9 and entropy arms pin down how much calibration choice matters AT ALL on this
+#     model, for the record, at a cost of minutes.
+#   * it is the control any future mechanism claim will be compared against, and having it measured
+#     before the mechanism is known is better than measuring it afterwards to fit one.
+#
+# The live question has moved to the ConvInteger requantization path (int32 -> Cast -> per-channel
+# Mul -> Add) versus QLinearConv's fused int32 requantization, and to DynamicQuantizeLinear's
+# forced-zero range. Neither is testable by varying calibrate_method, so neither is tested here.
+#
+# entropy is included as a third point: it is neither exact-minmax nor percentile, so it says
+# whether the axis is really "clipping vs not" or just "these two happen to differ".
+extends: ../classification.yaml
+name: calibration_isolation
+sweep:
+  prune_ratios: [0.0]          # no pruning: this isolates calibration
+  finetune_epochs: 0
+  precisions:
+    - fp32
+    - int8                                                    # shipped default: auto -> percentile
+    - {name: int8_minmax, calibrate_method: minmax}
+    - {name: int8_pct999, calibrate_method: percentile, calib_percentile: 99.9}
+    - {name: int8_entropy, calibrate_method: entropy}

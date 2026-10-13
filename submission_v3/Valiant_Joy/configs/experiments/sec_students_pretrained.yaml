@@ -1,0 +1,58 @@
+# Can one model clear BOTH top bands at once?
+#
+#   compression (18-20 of 20): >= 10x in parameter count AND on-disk size
+#   accuracy    (22-25 of 25): >= 97% of the baseline's accuracy
+#
+# The from-scratch ladder (sec_students.yaml) cleared compression everywhere and accuracy nowhere:
+# every student reached Excellent on size, the best reached 77% of the teacher against a 97% bar.
+# That was not capacity — `results/stress_imagenette` has the same 2.24M-parameter architecture at
+# 0.9806 on this data — it was the starting point. Eight KD epochs on 9,469 images cannot train an
+# architecture from random initialisation.
+#
+# So this ladder changes ARCHITECTURE rather than width. torchvision ships ImageNet weights for
+# mobilenet_v2 only at full width, so `width_mult: 0.5` would silently be from-scratch again; the
+# smaller rungs have to be other networks that carry their own weights.
+#
+#   architecture          params(10-cls)   vs 23.53M teacher
+#   mobilenet_v2              2.24 M            10.5x
+#   mobilenet_v3_small        1.53 M            15.4x
+#   shufflenet_v2_x1_0        1.26 M            18.6x
+#   mnasnet0_5               ~0.95 M           ~25x
+#   shufflenet_v2_x0_5        0.35 M            66.8x
+#
+# Compression caps at 10x, so the rungs below it buy nothing there — they buy quartile position in
+# resource and energy, which is only worth having while accuracy stays above 97%. The question this
+# run answers is where that line falls.
+#
+#   python scripts/compress.py --config configs/experiments/sec_students_pretrained.yaml
+extends: ../stress_resnet50.yaml
+name: sec_students_pretrained
+
+adapter_args:
+  train_epochs: 3        # teacher: fine-tune ImageNet weights onto the 10 classes
+  batch_size: 48         # teacher forward + student backward in one step
+
+distill:
+  epochs: 8
+  temperature: 4.0
+  alpha: 0.7
+  lr: 0.01
+  optimizer: sgd
+
+sweep:
+  prune_ratios: [0.0]    # the students ARE the compression; pruning them is a separate question
+  precisions: [fp32, int8]
+  finetune_epochs: 1
+  students:
+    - {arch: mobilenet_v2, pretrained: true}
+    - {arch: mobilenet_v3_small, pretrained: true}
+    - {arch: shufflenet_v2_x1_0, pretrained: true}
+    - {arch: mnasnet0_5, pretrained: true}
+    - {arch: shufflenet_v2_x0_5, pretrained: true}
+
+quick:
+  distill:
+    epochs: 1
+  sweep:
+    students:
+      - {arch: mobilenet_v2, pretrained: true}

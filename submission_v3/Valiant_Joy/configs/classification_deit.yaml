@@ -1,0 +1,23 @@
+# DeiT-tiny (plain ViT attention, timm) on CIFAR-10: 32x32 with 4x4 patches (64 tokens).
+# ImageNet weights are adapted by timm (patch-embed resampling + pos-embed interpolation).
+extends: classification.yaml
+name: classification_deit
+adapter_args:
+  arch: timm:deit_tiny_patch16_224
+  timm_kwargs: {img_size: 32, patch_size: 4}
+  batch_size: 128
+  lr: 0.001
+  finetune_lr: 0.0003
+  weight_decay: 0.05
+  optimizer: adam
+  train_epochs: 30
+prune:
+  attention_mode: head_dims   # head_dims (shrink every head) | num_heads (drop whole heads)
+
+# INT8 is fine on DeiT (plain static: -0.3 pt, 1.6x faster; MatMul is 68% of the FP32 time).
+# Dynamic MatMul/Gemm INT8 was the fastest variant measured (and lossless).
+sweep:
+  precisions:
+    - fp32
+    - int8
+    - {name: int8_dyn_mm, method: dynamic, op_types_to_quantize: [MatMul, Gemm]}

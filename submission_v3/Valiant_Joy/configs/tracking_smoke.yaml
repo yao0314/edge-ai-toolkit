@@ -1,0 +1,46 @@
+# Multi-object tracking: the organisers' own first example workload.
+#
+# Ranking stays on mAP; MOTA/IDF1/MOTP are reported as detail columns. mAP measures only the thing
+# we compress (the detector); MOTA also depends on the tracker's hyper-parameters, which we do not
+# compress, so it can reorder variants on tuning noise. To rank on identity instead, set
+# score.groups.accuracy.cols: [mota] - the official metric is unknown, so it is a parameter.
+#
+# data/mot_smoke is built by a scratch script from COCO frames purely to exercise the pipeline;
+# consecutive frames are unrelated images, so MOTA will be poor and means nothing. Point data_root
+# at a real MOT-layout dataset for real numbers.
+adapter: adapters.tracking:TrackingAdapter
+name: tracking_smoke
+
+adapter_args:
+  data_root: data/mot_smoke
+  img_size: 320
+  batch_size: 8
+  calib_size: 16
+  tracker: bytetrack.yaml
+  track_conf: 0.25
+  gt_classes: null       # MOT17 pedestrians are class 1; null keeps every gt class
+  track_classes: null    # restrict which DETECTOR classes may become tracks
+  weights: weights/detection/yolov8n.pt
+
+sweep:
+  prune_ratios: [0.0]        # no box labels here, so no recovery training: quantization only
+  precisions: [fp32, int8]
+
+measure:
+  threads: [1, 4]
+  primary_threads: 4
+  runs: 30
+  repeats: 1
+
+score:
+  max_accuracy_drop: 0.02
+  weights: {accuracy: 0.25, compression: 0.25, resource: 0.25, energy: 0.25}
+  # Ranking stays on mAP (the `score` an adapter returns). To rank on identity consistency instead,
+  # uncomment this block AS A WHOLE: score.groups is deep-merged, so replacing one group's cols
+  # without higher_is_better inverts that group, and the other three groups must be restated or they
+  # vanish from the total.
+  # groups:
+  #   accuracy:    {cols: [mota], higher_is_better: true}
+  #   compression: {cols: [size_bytes]}
+  #   resource:    {cols: [peak_rss_mb, cpu_ms_per_inf, latency_p50_ms]}
+  #   energy:      {cols: [energy_j]}

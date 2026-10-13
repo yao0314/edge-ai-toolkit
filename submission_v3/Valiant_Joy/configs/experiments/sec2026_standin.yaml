@@ -1,0 +1,36 @@
+# Rehearsal on the real task with a stand-in for the provided checkpoint.
+#
+# The task sheet hands out a MobileNetV2 already distilled from a ResNet-50 and trained on EuroSAT.
+# We cannot have that file before kickoff, but we can have everything around it: the same dataset,
+# the same architecture, the same input size, the same export and quantization settings. Training a
+# MobileNetV2 on EuroSAT here gives a target of the same shape, so the question the day turns on —
+# how much accuracy does compressing an ALREADY compact model cost — gets an answer in advance.
+#
+# Two honest differences from the real thing, both of which make this rehearsal the easier case:
+#   * ours is fine-tuned from ImageNet weights, not distilled from a ResNet-50. What that changes
+#     is which redundancy is left to prune, which is exactly the quantity under test.
+#   * the split is ours (data/eurosat_stand_in_split.json), not theirs. Numbers from here are not
+#     comparable to the judges' and must never be quoted as if they were.
+#
+# Training runs on whatever device is present; the competition is CPU-only, so the TIME this takes
+# here says nothing about the time it will take there. The accuracy curve is what transfers.
+extends: ../sec2026.yaml
+name: sec2026_standin
+
+adapter_args:
+  split_json: data/eurosat_stand_in_split.json
+  train_epochs: 4            # enough for a pretrained MobileNetV2 to converge on EuroSAT
+  pretrained: true           # stand-in only: the real baseline arrives as a checkpoint
+  lr: 0.01
+  num_workers: 4
+
+sweep:
+  # The sheet warns that MobileNetV2's depthwise convolutions make a ratio harmless on a ResNet
+  # destructive here, so the ladder starts fine and stops before it is obviously pointless.
+  prune_ratios: [0.0, 0.1, 0.2, 0.3, 0.4]
+  precisions: [fp32, int8]
+  finetune_epochs: 1
+
+measure:
+  energy:
+    provider: none           # energy is measured once, on the chosen variant, not every cell

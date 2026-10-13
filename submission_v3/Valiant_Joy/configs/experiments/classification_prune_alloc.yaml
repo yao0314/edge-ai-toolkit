@@ -1,0 +1,22 @@
+# Per-layer allocation instead of a uniform ratio: the label-free sensitivity probe measures what
+# each layer costs to prune, and a knapsack solver spends a budget across them.
+#
+# The comparison this config exists to make, against configs/classification_prune_long.yaml
+# (uniform 0.25, 20 epochs, -2.40 pt for 42.7% of parameters / 36.5% of MACs):
+#   does a plan that AVOIDS the sensitive layers lose less accuracy at a comparable cut?
+#
+# Measured allocations at a 0.25 budget (before fine-tuning):
+#   alloc_cost: params -> 23.6% params / 8.7% MACs over 4 layers   (file size, not latency)
+#   alloc_cost: macs   -> 35.5% params / 25.9% MACs over 17 layers (better on BOTH axes)
+# so macs is the default here; params is the right choice only if compression is judged on file size.
+extends: classification_prune_long.yaml
+name: classification_prune_alloc
+adapter_args:
+  eval_every: 4
+prune:
+  allocate: dp           # dp | greedy
+  alloc_cost: macs       # macs (latency-shaped) | params (file-size-shaped)
+  probe_ratio: 0.25
+  probe_batches: 2
+  alloc_levels: [0.0, 0.125, 0.25, 0.375, 0.5]
+  alloc_rounds: 4

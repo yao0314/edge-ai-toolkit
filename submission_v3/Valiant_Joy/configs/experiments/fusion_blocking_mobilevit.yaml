@@ -1,0 +1,43 @@
+# Experiment 16: the fusion-blocking mechanism, and its opposite prediction.
+#
+# The boundary-density mechanism is dead (experiment 14): the Q/DQ counts it rested on were parsed
+# from the .onnx file, and ORT deletes ~90% of those nodes before the first inference. The
+# replacement mechanism the challengers found in the optimized-graph dumps is FUSION BLOCKING:
+# static QDQ over all 26 QLinearOpsRegistry op types prevents the QuickGelu / Gelu / SkipLayerNorm
+# fusions that both fp32 and dynamic receive. DeiT static executes
+#
+#     Erf 12 + Div 24 + Sqrt 24 + QLinearMul 48       where fp32 executes       BiasGelu 15
+#
+# and substitutes QLinearAdd / QLinearMul / QLinearSigmoid for cheap fp32 elementwise kernels.
+#
+# THE TWO MECHANISMS MAKE OPPOSITE PREDICTIONS, which is what makes this worth a run:
+#
+#   boundary density says   restricting static quantization to [Conv, MatMul] leaves MORE of the
+#                           graph in fp32, so MORE int8/fp32 crossings, so it should be SLOWER.
+#   fusion blocking says    leaving the elementwise ops unquantized lets Gelu/LayerNorm fuse again,
+#                           so it should be FASTER - despite the higher boundary count.
+#
+# PRE-REGISTERED: if int8_static_cm is FASTER than plain static int8 on MobileViT and DeiT at both
+# thread counts, boundary density is refuted and fusion blocking is supported. If it is SLOWER,
+# fusion blocking is refuted and the replacement mechanism has to be found somewhere else - the
+# honest outcome there is to publish the effect with no mechanism rather than invent a third one.
+#
+# int8_static_ex is the same idea from the other side: keep the elementwise ops in fp32 explicitly
+# while leaving everything else on the default path, so the two arms bracket the hypothesis.
+# CAVEAT on int8_static_ex, written before the run so it is not an excuse afterwards: in QDQ mode
+# excluding an op type may be INERT. core/quantize.py:601 records the reason - a node's inputs are
+# quantized by their producers and its output by its consumers, so removing one node from the
+# exclude list does not keep its tensors in fp32. If int8_static_ex lands on top of plain int8,
+# that is the expected null result and says nothing about fusion. int8_static_cm is the arm that
+# actually restricts what gets Q/DQ'd, and it is the one the prediction is about.
+extends: ../classification_mobilevit.yaml
+name: fusion_blocking_mobilevit
+sweep:
+  prune_ratios: [0.0]          # no pruning: this isolates the quantization configuration
+  finetune_epochs: 0
+  precisions:
+    - fp32
+    - int8                                                    # static QDQ, all 26 op types
+    - {name: int8_static_cm, op_types_to_quantize: [Conv, MatMul]}
+    - {name: int8_static_ex, keep_fp32_op_types: [Add, Mul, Sigmoid, Erf, Div, Sqrt, Softmax]}
+    - {name: int8_dyn_mm, method: dynamic, op_types_to_quantize: [MatMul]}
