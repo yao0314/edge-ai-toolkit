@@ -1,0 +1,141 @@
+# SEC 2026 Software Track, as specified by the task sheet handed out on the day.
+#
+# Every value here is the organisers' requirement, not our preference. The differences from
+# configs/classification.yaml are the ones that would make our numbers incomparable to the judges':
+#
+#   opset 13          the sheet pins it; recent PyTorch defaults higher and ignores the argument
+#                     unless dynamo=False, which core/export.py already sets
+#   img_size 224      "Input stays 224x224 ... every submission must accept (1, 3, 224, 224)"
+#   split_json        the supplied val_split.json. "Your own split will not be comparable, and
+#                     judges score on this one." Without it the adapter refuses to build the data.
+#   static INT8       "Use static (QDQ) quantization, not dynamic" - dynamic emits ConvInteger,
+#                     which AI Hub's compile targets often reject
+#
+# On the day: set adapter_args.split_json and data_root to the files in the starter kit, then
+#   python scripts/compress.py --config configs/sec2026.yaml --model student_mobilenetv2_distilled.pt
+task: classification
+adapter: adapters.classification:ClassificationAdapter
+name: sec2026
+seed: 0
+
+adapter_args:
+  dataset: eurosat
+  data_root: data/eurosat          # the pre-cached ./data folder from the starter kit
+  download: false                  # it is handed out; do not fetch at the venue
+  split_json: null                 # <-- val_split.json. REQUIRED; the adapter refuses without it
+  img_size: 224
+  arch: mobilenet_v2               # the provided student's architecture
+  pretrained: false                # weights come from the provided checkpoint, not from ImageNet
+  small_input_stem: false          # that trick is for 32 px inputs; 224 px keeps the stock stem
+  batch_size: 32                   # the sheet's loaders use 32; drop to 8 if RAM is tight
+  eval_batch_size: 64
+  num_workers: 4
+  # CPU only, no GPUs. "Anything needing many epochs will not finish." Recovery after pruning is
+  # the only training we can afford, and it is budgeted, not open-ended.
+  train_epochs: 0
+  finetune_lr: 0.005
+  calib_size: 256
+
+target_runtime: onnx
+
+export:
+  opset: 13                        # pinned by the sheet
+  atol: 1.0e-3
+  rtol: 1.0e-3
+  # The sheet requires only that the model ACCEPT (1, 3, 224, 224), which a dynamic batch axis
+  # satisfies - but a dynamic dimension turns off ONNX Runtime's memory-pattern planner, and it is
+  # a common reason AI Hub's compile targets reject a graph (section 7's own snippet pins
+  # input_specs for that reason). Nothing here needs batching, so pin it and let the planner work.
+  dynamic_batch: false
+
+measure:
+  threads: [1, 4]
+  primary_threads: 4
+  repeats: 3
+  warmup: 10
+  runs: 50                         # the sheet times 50 iterations
+  spinning: true
+  energy:
+    provider: codecarbon
+    min_seconds: 30
+    # The sheet asks for codecarbon_mode in metrics.json and says a TDP estimate is not penalised
+    # but a measured figure is stronger. core/energy.py records which one it got.
+
+prune:
+  importance: l2
+  round_to: 8
+  global_pruning: false
+  iterative_steps: 1
+  bn_recalibrate: true
+  bn_recal_batches: 32
+  mode: structured                 # unstructured changes neither parameter count nor file size
+
+quantize:
+  method: static                   # the sheet: static QDQ, never dynamic
+  per_channel: true
+  activation_type: uint8
+  weight_type: int8
+  calibrate_method: auto
+  calib_batches: 8
+  preprocess: true                 # quant_pre_process: the sheet warns quantizing a fresh export fails
+  auto_keep_fp32: rules
+
+sweep:
+  # MobileNetV2's depthwise convolutions have few parameters per layer, so the sheet warns that a
+  # ratio harmless on a ResNet is destructive here. Sweep from the conservative end and let the
+  # accuracy constraint cut the rest; the curve itself is the report's most valuable artifact.
+  prune_ratios: [0.0, 0.1, 0.2, 0.3, 0.4]
+  precisions: [fp32, int8]
+  finetune_epochs: 1
+  pareto_x: [size_bytes, latency_p50_ms, peak_rss_mb]
+
+score:
+  # "Accuracy retained vs. the provided baseline, plus consistency across all 10 classes."
+  # The relative floor is ours, not the sheet's: the sheet publishes no numeric band, and says the
+  # bands are calibrated for a model with narrow headroom. Raise or lower it once the curve is in.
+  max_accuracy_drop: null
+  max_accuracy_drop_rel: 0.03
+  min_accuracy: null
+  # baseline, not minmax. Section 9: resource and energy are "ratios against your own baseline",
+  # and accuracy is "retained vs. the provided baseline" - all three are relative to ONE row.
+  # minmax instead scores each variant by its distance to the best and worst rows that happen to be
+  # in this sweep, so accuracy (which spans 2.3 points here) is handed the same dynamic range as
+  # file size (which spans tenfold), and adding or removing a sweep cell re-scores every other row.
+  normalize: baseline
+  weights: {accuracy: 0.294, compression: 0.235, resource: 0.235, energy: 0.235}
+  groups:
+    accuracy:    {cols: [accuracy], higher_is_better: true}
+    # equal halves, per the organisers' own answer; not the weaker half
+    compression: {cols: [size_bytes, params]}
+    # peak_rss_total_mb, not peak_rss_mb: the organisers specified raw process peak RSS with no
+    # baseline subtraction, and peak_rss_mb in this CSV is net of an empty ONNX Runtime session.
+    resource:    {cols: [peak_rss_total_mb, cpu_ms_per_inf, latency_p50_ms]}
+    energy:      {cols: [energy_j]}
+
+aihub:
+  # The sheet names one device profile at kickoff ("[PROFILE]" in its snippet). Put it first here.
+  devices: ["Dragonwing RB3 Gen 2 Vision Kit", "Dragonwing Q-6690 MTP", "QCS8550 (Proxy)"]
+  compile_options: "--target_runtime onnx --compute_unit cpu"
+  device_rationale: >
+    Replace with the profile the organisers name. If none is given, the sheet allows the laptop,
+    and the nearest embedded Dragonwing profile is the honest substitute; do NOT pick
+    "Arduino VENTUNO Q" for its name, which is a 40-TOPS IQ8, not the UNO Q's 4x Cortex-A53.
+
+quick:
+  adapter_args:
+    train_subset: 512
+    val_subset: 256
+    calib_size: 64
+    batch_size: 16
+    num_workers: 0
+  measure:
+    threads: [1]
+    warmup: 3
+    runs: 20
+    min_time_s: 0.5
+    energy: {provider: none}
+  quantize:
+    calib_batches: 2
+  sweep:
+    prune_ratios: [0.0, 0.2]
+    finetune_epochs: 1

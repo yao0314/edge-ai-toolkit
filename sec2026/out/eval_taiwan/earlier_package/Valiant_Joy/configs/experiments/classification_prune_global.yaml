@@ -1,0 +1,13 @@
+# Pruning lever test: global_pruning: one threshold across all layers
+#
+# Baseline for comparison is configs/classification_prune_long.yaml (uniform per-layer l2, 20
+# epochs): 25% pruning costs 2.40 pt fp32 / 2.49 pt int8 against a 2.0 pt budget - 0.49 pt short,
+# with p25_int8 offering 5.56x against the current 3.40x winner. Training budget is already spent
+# (ResNet50 showed 12 -> 30 epochs buys only 0.35 pt), so these levers change WHICH channels go,
+# not how long we train afterwards.
+extends: classification_prune_long.yaml
+name: classification_prune_global
+adapter_args:
+  eval_every: 4        # curve: is the metric still moving, or only the loss?
+prune:
+  global_pruning: true

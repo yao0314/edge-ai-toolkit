@@ -1,0 +1,8 @@
+# STRESS TEST: a 25M-parameter model (10x the usual baseline) on real photos.
+# Exercises: pruning bottleneck blocks with downsample shortcuts, INT8 calibration at scale, export size.
+extends: stress_imagenette.yaml
+name: stress_resnet50
+adapter_args:
+  arch: resnet50
+  batch_size: 32
+  train_epochs: 2

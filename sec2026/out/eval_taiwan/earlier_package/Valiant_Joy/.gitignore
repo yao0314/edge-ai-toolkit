@@ -1,0 +1,43 @@
+# environments
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# large / downloaded artifacts (never commit)
+data/
+weights/
+*.onnx
+*.onnx.data
+*.pt
+*.pth
+*.zip
+
+# results: keep small example summaries only (see results/README.md)
+results/**/models/
+results/**/*.npy
+results/**/work/
+results/*_quick/
+
+# secrets
+.env
+client.ini
+
+# tiny test fixtures are small enough to commit
+!tests/fixtures/*.onnx
+# The submitted artifact is not a build product. *.onnx keeps regenerable models out of the repo,
+# which is right for results/, but the file handed to the judges has to be the one in the history:
+# a reviewer reproducing the pipeline needs to diff what we claimed against what we shipped.
+!submission/*.onnx
+results/adhoc/
+deliverables/
+
+# offline wheel bundles built by scripts/make_offline_bundle.py (hundreds of MB, rebuildable)
+vendor/
+.envs/
+
+# stray logs written to the project root by mistake; real scratch goes in the session scratchpad
+scratchpad_*.log
+
+# the v1 freeze lives in the tag submission-v1; this on-disk copy is a convenience
+submission_v1_frozen/

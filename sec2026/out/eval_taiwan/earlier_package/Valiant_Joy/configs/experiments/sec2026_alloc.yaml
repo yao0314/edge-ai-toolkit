@@ -1,0 +1,38 @@
+# Decide the per-layer prune ratio instead of applying one threshold everywhere.
+#
+# Section 6.1 of the task sheet names this as worth investigating: "where accuracy falls off a
+# cliff, whether that cliff sits in the same place for every layer". Our submitted model answers
+# the first half and assumes the second - every layer gets the same 40%. MobileNetV2's blocks are
+# not equally redundant, so a uniform ratio spends its parameter budget wherever the importance
+# threshold happens to land rather than where the damage is cheapest.
+#
+# allocate_ratios probes each layer label-free, then solves a knapsack: reach the parameter target
+# for the least summed damage. core/prune.py records the measurement that motivated it - a uniform
+# threshold buying 0.34 accuracy points while costing 1.21x of compression, with nothing
+# controlling the trade.
+#
+# What this run is for: at the SAME accuracy as the submitted model, how many more parameters come
+# out. If the answer is "none", the uniform ratio was already near optimal and that is a finding
+# worth a sentence in the report.
+#
+#   python scripts/compress.py --config configs/experiments/sec2026_alloc.yaml \
+#       --model data/sec2026/student_mobilenetv2_distilled.pt
+extends: sec2026_real.yaml
+name: sec2026_alloc
+
+prune:
+  allocate: greedy          # greedy | dp; greedy is usually within noise of the exact solver
+  alloc_cost: params        # the rubric scores parameter count, so budget in parameters
+  alloc_levels: [0.0, 0.125, 0.25, 0.375, 0.5, 0.625]
+
+sweep:
+  # Around and past the submitted point. Allocation changes WHERE the parameters come from, so the
+  # same nominal ratio should reach the same budget with less damage - or reach a bigger budget for
+  # the same damage, which is the version that scores.
+  prune_ratios: [0.4, 0.5, 0.6]
+  precisions: [fp32, int8]
+  finetune_epochs: 3
+
+measure:
+  energy:
+    provider: none          # energy is measured on the chosen point, not on every cell

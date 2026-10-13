@@ -1,0 +1,7 @@
+# The 0.25 budget produced 6.94x for -2.68 pt - more compression than uniform (5.56x / -2.40) but
+# further past the 2.0 pt budget, because the allocator honestly spent what it was given. The
+# question that matters is the other direction: how much compression survives INSIDE the budget?
+extends: classification_prune_alloc.yaml
+name: classification_prune_a15
+sweep:
+  prune_ratios: [0.0, 0.15]

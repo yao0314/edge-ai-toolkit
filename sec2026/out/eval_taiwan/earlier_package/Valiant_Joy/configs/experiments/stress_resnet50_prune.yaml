@@ -1,0 +1,22 @@
+# Is "pruning does not recover" a training-budget problem or a capacity problem?
+#
+# The evidence so far splits clean along capacity: DeiT-tiny (5.36M, transformer redundancy) recovers
+# 25% pruning for -0.64 pt, the 1D autoencoder recovers 50% for -1.19 pt, while MobileNetV2 (2.24M)
+# and YOLOv8n (3.16M) lose 5-13 pt. ResNet50 has 23.5M parameters - the most redundancy of anything
+# here - and its 25% variant lost 9.5 pt, but it was fine-tuned for exactly ONE epoch.
+#
+# So this is the cheap decisive test: same model, same ratio, a real fine-tune budget. If it recovers,
+# "capacity-sufficient models were just under-trained" holds and the whole pruning path is worth
+# investing in (3.91x -> 6.88x available). If it does not, our fine-tune loop has a structural
+# problem and the fix is the upstream trainer, not a number.
+extends: ../stress_resnet50.yaml
+name: stress_resnet50_prune
+adapter_args:
+  finetune_warmup_frac: 0.05
+prune:
+  round_to: 8                # round 1 of the detection study proved this is needed for latency
+  bn_recalibrate: true
+sweep:
+  prune_ratios: [0.0, 0.25]
+  precisions: [fp32, int8]
+  finetune_epochs: 12        # was 1

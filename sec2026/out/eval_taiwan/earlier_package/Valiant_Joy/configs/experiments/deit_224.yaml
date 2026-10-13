@@ -1,0 +1,18 @@
+# Experiment 26 (K1): DeiT-tiny at its native 224 px / patch 16 (197 tokens) instead of 32 px / patch 4.
+# RANDOM weights: no ImageNet DeiT weights are cached and nothing may be downloaded; train_epochs 0
+# so no training runs. Latency only - accuracy is not interpreted. Static calibration minmax, as the
+# paper's DeiT static arm. Pre-registered in results/paper/FINDINGS.md.
+extends: ../classification_deit.yaml
+name: deit_224
+adapter_args:
+  img_size: 224
+  timm_kwargs: {img_size: 224, patch_size: 16}
+  pretrained: false
+  train_epochs: 0
+sweep:
+  prune_ratios: [0.0]
+  finetune_epochs: 0
+  precisions:
+    - fp32
+    - {name: int8, calibrate_method: minmax}
+    - {name: int8_dyn_mm, method: dynamic, op_types_to_quantize: [MatMul, Gemm]}

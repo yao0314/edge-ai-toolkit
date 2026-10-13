@@ -1,0 +1,67 @@
+# The real baseline, the real dataset, our own split.
+#
+# The provided student checkpoint is here (2.2367 M trainable parameters, 8.77 MB, top-1 0.9960
+# with a worst class of 0.9721 sampled over the whole dataset), and so is the ResNet-50 teacher
+# (23.5817 M stored tensors, 23.528522 M trainable, 90.06 MB).
+#
+# The split is ours, and that is now correct rather than a compromise: the organisers confirmed
+# verbally on the day that each team generates the JSON files itself, because the teams run on
+# different devices. So this is the split we report on, and the recipe has to be written down or
+# the numbers are not reproducible from the repository alone:
+#
+#   import json, random
+#   random.seed(0); idx = list(range(27000)); random.shuffle(idx)
+#   json.dump({"train": sorted(idx[:21600]), "val": sorted(idx[21600:])},
+#             open("data/eurosat_stand_in_split.json", "w"))
+#
+# It is a plain seeded 80/20 shuffle, not stratified. With 5,400 held-out images the per-class
+# counts land near their population share anyway, and the run was already under way when the
+# organisers' answer arrived; restarting would have cost the machine time that buys the curve.
+# Per-class recall is reported for all ten classes, so any imbalance it did cause is visible
+# rather than hidden inside the mean.
+#
+# What this run answers: how far can an already-compact MobileNetV2 be pruned before accuracy
+# falls off, and where is the cliff.
+#
+#   python scripts/compress.py --config configs/experiments/sec2026_real.yaml \
+#       --model data/sec2026/student_mobilenetv2_distilled.pt
+#
+# NOTE on what "baseline" means, and a correction. An earlier version of this file argued that
+# the scorecard's denominator is the ResNet-50 teacher, because the task sheet's baseline table
+# reads [23.53] M parameters and [4.13] G MACs and a ResNet-50 at 224 with a 10-way head measures
+# 23,528,522 and 4,131,715,072 - both to every printed digit. That inference was wrong. Section 2
+# of the sheet names the denominator outright: student_mobilenetv2_distilled.pt is "Your starting
+# point and baseline", and teacher_resnet50_eurosat.pt is "Optional - useful for distillation loss
+# during recovery fine-tuning". The whole table is placeholders - the same row carries [XX.XX]% for
+# worst class - and somebody filled two of its cells with the teacher's numbers. Matching digits
+# are evidence about where a number came from, not about what a rule means; the rule was written
+# in prose one page earlier and went unread.
+#
+# So every ratio in the report is against p00_fp32, the provided student, measured here the same
+# way as the final model. Section 8 is explicit that baseline and final must come from one machine
+# or the ratios mean nothing.
+extends: ../sec2026.yaml
+name: sec2026_real
+
+adapter_args:
+  split_json: data/eurosat_stand_in_split.json
+  train_epochs: 0                                 # the baseline is given, never retrained
+  pretrained: false
+  finetune_lr: 0.005
+  num_workers: 4
+
+sweep:
+  # The sheet warns that a ratio harmless on a ResNet is destructive on MobileNetV2's depthwise
+  # convolutions, so the ladder is fine at the start and runs past the expected cliff rather than
+  # stopping at it: a curve that only shows the good half cannot show where the knee is.
+  prune_ratios: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5]
+  precisions: [fp32, int8]
+  # This machine has a GPU, so recovery is not the scarce resource the sheet assumes. Three epochs
+  # on 21,600 images is minutes here; on the competition's CPU-only assumption it would not be.
+  # Report the budget, not just the result.
+  finetune_epochs: 3
+
+measure:
+  energy:
+    provider: codecarbon  # the whole curve, not one point: the tradeoff curve is what section 6.3 rewards
+    min_seconds: 20

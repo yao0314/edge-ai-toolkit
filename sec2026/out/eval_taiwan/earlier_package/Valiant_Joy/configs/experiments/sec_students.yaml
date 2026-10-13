@@ -1,0 +1,40 @@
+# Competition rehearsal: can we clear BOTH of the rubric's top bands at once?
+#
+#   compression (18-20 of 20): >= 10x in parameter count AND on-disk size
+#   accuracy    (22-25 of 25): >= 97% of the baseline's accuracy
+#
+# Proxy for the unknown task: Imagenette is 10 real-photo classes (the rubric's bands mention "all
+# 10 classes") and ResNet-50 is a heavy baseline, so the parameter ratios here are the ones a
+# handed-out heavy model would give. From a 23.5M-parameter teacher the ladder below spans 10.5x
+# (mobilenet_v2 at full width) to 57x (at 0.35), so the question is not whether 10x is reachable
+# but how far past it accuracy survives.
+#
+#   python scripts/distill_student.py --config configs/experiments/sec_students.yaml
+extends: ../stress_resnet50.yaml
+name: sec_students
+
+adapter_args:
+  train_epochs: 3        # teacher: fine-tune ImageNet weights onto the 10 classes
+  batch_size: 48         # ResNet-50 forward (teacher) + student backward in the same step
+
+distill:
+  epochs: 8
+  temperature: 4.0
+  alpha: 0.7
+  lr: 0.01
+  optimizer: sgd
+  # pretrained: true starts the student from public ImageNet weights. Measured both ways because
+  # on a 6-hour clock the initialisation matters more than anything else in this file.
+  students:
+    - {arch: mobilenet_v2, width_mult: 1.0}
+    - {arch: mobilenet_v2, width_mult: 0.75}
+    - {arch: mobilenet_v2, width_mult: 0.5}
+    - {arch: mobilenet_v2, width_mult: 0.35}
+    - {arch: shufflenet_v2_x1_0}
+    - {arch: shufflenet_v2_x0_5}
+
+quick:
+  distill:
+    epochs: 1
+    students:
+      - {arch: mobilenet_v2, width_mult: 0.5}

@@ -1,0 +1,8 @@
+# p80_int8 missed the accuracy budget by 0.09 pt (-2.09 against a 2.0 budget) while offering gz 8.63x
+# against the current winner's 3.73x. That is within measurement noise of passing, so more fine-tuning
+# is the whole experiment.
+extends: classification_unstructured.yaml
+name: classification_unstructured_long
+sweep:
+  prune_ratios: [0.0, 0.8]
+  finetune_epochs: 20        # was 5

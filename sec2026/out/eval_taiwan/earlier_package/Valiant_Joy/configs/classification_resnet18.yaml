@@ -1,0 +1,8 @@
+# ResNet18 (residual connections) on CIFAR-10. Everything else from classification.yaml.
+extends: classification.yaml
+name: classification_resnet18
+adapter_args:
+  arch: resnet18
+  small_input_stem: true   # 32x32: conv1 stride 1 and no stem max-pool (the usual CIFAR ResNet)
+  lr: 0.05
+  train_epochs: 10

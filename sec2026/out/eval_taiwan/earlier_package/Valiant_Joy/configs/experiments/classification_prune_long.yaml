@@ -1,0 +1,14 @@
+# Is MobileNetV2's pruning failure capacity, or the same under-training ResNet50 had?
+#
+# It loses 5.19 pt at 25% - but with only 3 fine-tune epochs, the same situation ResNet50 was in at
+# 1 epoch (where 12 epochs recovered 6.35 of its 9.53 pt). And the "small models have no redundancy"
+# story is already contradicted by the 0.05M-parameter autoencoder, which recovers 50% pruning for
+# -1.19 pt. So capacity RELATIVE TO THE TASK is the real variable, and this tests the training half.
+extends: ../classification.yaml
+name: classification_prune_long
+adapter_args:
+  finetune_warmup_frac: 0.05
+sweep:
+  prune_ratios: [0.0, 0.25]
+  precisions: [fp32, int8]
+  finetune_epochs: 20        # was 3

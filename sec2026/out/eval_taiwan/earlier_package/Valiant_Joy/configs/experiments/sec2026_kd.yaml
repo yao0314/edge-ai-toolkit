@@ -1,0 +1,45 @@
+# Make a deep prune affordable by recovering from the teacher instead of from hard labels.
+#
+# The bottleneck is not how deep we can cut, it is how much comes back afterwards. At 60% the model
+# is already the best compression in this project - 5.58x parameters, 14.06x file, 1.13 ms - and
+# its mean accuracy is still 97.03% of the baseline. The single thing stopping us submitting it is
+# that its weakest class collapses to 0.8480, against the baseline's own 0.9466.
+#
+# Two things about the recovery that produced that number were left at their defaults, and the task
+# sheet points at both:
+#
+#   * it trained on HARD LABELS. Section 4: "if you prune and then fine-tune to recover accuracy,
+#     training against the teacher's softened outputs often recovers more than hard labels alone".
+#     The ResNet-50 they provided scores 0.9964 against the student's 0.9909, so it carries exactly
+#     the information a one-hot label throws away - which classes a confusable tile resembles.
+#   * it ran for THREE epochs, and results/sec2026_real/curves/*.csv show the loss still falling at
+#     the third with the learning rate already annealed to zero. That recovery never converged.
+#
+# If this lifts 60%'s weakest class back above 0.9466, the submission changes and both 20-point
+# criteria move at once: compression 2.61x -> 5.58x on parameters and 8.06x -> 14.06x on file,
+# latency 1.47 ms -> 1.13 ms. If it does not, we have measured what a stronger teacher is worth on
+# an already-distilled student, which is the more interesting negative result of the two.
+#
+#   python scripts/compress.py --config configs/experiments/sec2026_kd.yaml \
+#       --model data/sec2026/student_mobilenetv2_distilled.pt
+extends: sec2026_real.yaml
+name: sec2026_kd
+
+distill:
+  teacher_checkpoint: data/sec2026/teacher_resnet50_eurosat.pt
+  teacher_kwargs: {arch: resnet50, pretrained: false}
+  temperature: 4.0
+  alpha: 0.7              # weight on the soft targets; the rest stays on the true labels
+  lr: 0.01
+
+sweep:
+  finetune_mode: distill
+  # Around and past the cliff. 50% is the deepest point that is currently defensible, 60% is the
+  # prize, 70% is there so a failure has a shape rather than an edge.
+  prune_ratios: [0.5, 0.6, 0.7]
+  precisions: [fp32, int8]
+  finetune_epochs: 8      # the 3-epoch runs had not converged; this is still minutes on a GPU
+
+measure:
+  energy:
+    provider: none

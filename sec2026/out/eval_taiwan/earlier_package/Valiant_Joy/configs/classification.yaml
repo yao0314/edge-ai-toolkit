@@ -1,0 +1,148 @@
+# Image classification: MobileNetV2 on CIFAR-10.
+# On-site: change adapter_args (dataset: imagefolder + data_root) or swap the adapter.
+task: classification
+adapter: adapters.classification:ClassificationAdapter
+seed: 0
+
+adapter_args:
+  dataset: cifar10
+  img_size: 32
+  arch: mobilenet_v2
+  pretrained: true
+  train_epochs: 15
+  lr: 0.05
+  finetune_lr: 0.01
+  batch_size: 128
+  num_workers: 4
+
+# Deployment target: decides quantizer + measuring runtime + RSS baseline together.
+# onnx (implemented) | tflite (reserved until the organisers confirm the submission format)
+target_runtime: onnx
+
+export:
+  opset: 17
+  atol: 1.0e-3
+  rtol: 1.0e-3
+
+measure:
+  threads: [1, 4]         # the UNO Q has 4 Cortex-A53 cores: quote 4T numbers for target-like settings
+  primary_threads: 4      # the un-suffixed columns (and therefore the SCORE and the
+                          # winner) come from this thread count - 4 matches the UNO Q's 4 cores
+  repeats: 3              # median of 3 probe runs; the spread is reported in *_sd columns
+  warmup: 10
+  runs: 100
+  spinning: true
+  energy:
+    provider: none        # none | csv | command | aihub  (see core/energy.py) - never estimated
+
+prune:
+  importance: l2          # l1 | l2 | random | bn_scale - torch-pruning group magnitude
+  round_to: 8             # kept channels rounded UP to a multiple of 8 (never prunes more than `ratio`)
+  global_pruning: false
+  iterative_steps: 1
+  bn_recalibrate: true    # re-estimate BN statistics on calib data after pruning (10%: 0.11 -> 0.79 top-1)
+  bn_recal_batches: 32
+
+quantize:
+  method: static          # static (INT8 QDQ, calibrated) | dynamic
+  per_channel: true       # never turn off for BN-folded depthwise nets (MobileViT: 0.67 -> 0.40)
+  activation_type: uint8  # uint8 (U8S8, fast on x86 + ARM) | int8 (S8S8: slower than FP32 on our x86)
+  weight_type: int8
+  # auto: try the candidates in quantize.calib_auto_methods and keep the one with the best label-free
+  # per-channel SQNR. Nearly free (the SQNR probe already runs for every INT8 variant) and it matters:
+  # the 25%-pruned ResNet50 scored 1.5 dB / top-1 0.468 with minmax and 13.6 dB / 0.894 - lossless vs
+  # its FP32 - with percentile 99.99. Pin a fixed method (minmax | entropy | percentile) to reproduce.
+  calibrate_method: auto
+  # Fixed alternatives and what they are for: minmax is the cheapest and is fine on well-behaved
+  # nets (plain MobileNetV2: 24.8 dB); percentile 99.9 helps SiLU/Swish nets and anything with
+  # activation outliers; entropy is the slowest and was the WORST here (1.0 dB on pruned ResNet50).
+  # More minmax calibration data only widens the ranges further, so it can hurt rather than help.
+  calib_batches: 16
+  auto_keep_fp32: rules   # rules (output tail + mismatched Concat in FP32) | search (+ label-free block search) | none
+  keep_fp32: []           # module-path prefixes to keep in FP32, e.g. ["features.0"]; single ops/op types
+                          # rarely help because neighbouring nodes still quantize the shared tensors
+
+sweep:
+  prune_ratios: [0.0, 0.25, 0.5]
+  precisions: [fp32, int8]
+  finetune_epochs: 3
+  finetune_mode: plain    # plain | distill (KD from the unpruned baseline)
+  pareto_x: [size_bytes, latency_p50_ms, peak_rss_mb]
+
+aihub:                    # optional: scripts/aihub_profile.py (token from env QAIHUB_API_TOKEN)
+  # Device catalogue checked against a real account 2026-10-11: 76 devices, and the target board is
+  # NOT among them. The competition packet anticipates this and asks for "the closest available
+  # low-power embedded or mobile device profile" plus the reasoning, so here it is.
+  #
+  #   Arduino UNO Q (the target)   Dragonwing QRB2210: 4x Cortex-A53 @ 2.0 GHz, Adreno GPU
+  #                                (docs.arduino.cc/hardware/uno-q, read 2026-10-11)
+  #   Arduino VENTUNO Q (on hub)   Dragonwing IQ8 / QCS8275, up to 40 dense TOPS - a different
+  #                                class entirely. DO NOT pick it for the name: it would understate
+  #                                latency and energy badly.
+  #   RB3 Gen 2 (QCS6490)          4x A78 + 4x A55. Still faster per core than an A53, but the
+  #                                nearest embedded Dragonwing board, and we profile CPU-only.
+  #   Galaxy A14 5G (Exynos 1330)  2x A78 + 6x A55 - a low-end phone, kept as a second reading so
+  #                                the report can show the conclusion survives the device choice.
+  #
+  # `chipset:qualcomm-snapdragon-429` (the previous first preference, chosen as the closest 4x A53)
+  # does not exist in the catalogue at all - it silently fell through to RB3 Gen 2.
+  devices: ["Dragonwing RB3 Gen 2 Vision Kit", "Dragonwing Q-6690 MTP", "QCS8550 (Proxy)"]
+  also_profile: ["Samsung Galaxy A14 5G"]   # second device, for the sensitivity check
+  compile_options: "--target_runtime onnx --compute_unit cpu"
+  # Printed in the deliverable's report, where the packet asks for the rationale behind the profile.
+  device_rationale: >
+    The Arduino UNO Q (Qualcomm Dragonwing QRB2210, 4x Cortex-A53 @ 2.0 GHz) is not in the AI Hub
+    catalogue, so the packet's instruction to use the closest available low-power profile applies.
+    We profile on the RB3 Gen 2 Vision Kit (QCS6490): an embedded Dragonwing board, profiled
+    CPU-only. Its cores are newer and faster than an A53, so absolute latency on the real board
+    will be higher; the comparison between baseline and submission is what these numbers support.
+    We deliberately did NOT pick "Arduino VENTUNO Q", which the catalogue does list: it is a
+    Dragonwing IQ8 rated up to 40 dense TOPS, a different class of device, and choosing it for the
+    matching brand name would understate both latency and energy.
+
+score:
+  # HARD CONSTRAINT, applied before ranking: the rubric's top accuracy band (22-25 of 25) is "retains
+  # at least 97% of baseline accuracy", so a variant below that is ineligible whatever its score.
+  # Accuracy is under a third of the weighted score, so without this a variant 20 points worse can
+  # rank first just for being small and fast.
+  max_accuracy_drop: null
+  max_accuracy_drop_rel: 0.03
+  min_accuracy: null      # optional absolute floor, e.g. 0.90 top-1
+  # Rubric section 10, renormalised over the 85 machine-scored points (accuracy 25, compression 20,
+  # resource 20, energy 20; documentation 10 and presentation 5 are judged from the report).
+  normalize: minmax       # minmax (across variants) | baseline (ratio vs. unpruned fp32)
+  weights: {accuracy: 0.294, compression: 0.235, resource: 0.235, energy: 0.235}
+  groups:
+    accuracy:    {cols: [accuracy], higher_is_better: true}
+    # agg: min - the rubric's bands need the reduction in parameter count AND on-disk size, so the
+    # weaker half decides. Plain INT8 shrinks the file ~4x and the parameter count not at all.
+    compression: {cols: [size_bytes, params], agg: min}
+    resource:    {cols: [peak_rss_mb, cpu_ms_per_inf, latency_p50_ms]}
+    energy:      {cols: [energy_j]}
+
+distill:
+  student: {width_mult: 0.5}
+  epochs: 5
+  temperature: 4.0
+  alpha: 0.7              # weight of the soft-target term
+
+# --quick: small subset, must finish in < 5 min on CPU
+quick:
+  adapter_args:
+    train_subset: 2000
+    val_subset: 500
+    calib_size: 128
+    train_epochs: 1
+    batch_size: 64
+    num_workers: 0
+  measure:
+    threads: [1]
+    warmup: 3
+    runs: 20
+    min_time_s: 0.5
+  quantize:
+    calib_batches: 4
+  sweep:
+    finetune_epochs: 1
+  distill:
+    epochs: 1

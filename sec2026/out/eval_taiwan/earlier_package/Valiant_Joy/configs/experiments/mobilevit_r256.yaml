@@ -1,0 +1,14 @@
+# Experiment 26 (K1): MobileViT-XXS at 256 px, a deployment-like resolution from the paper's weights.
+# Precisions are overridden so no QAT or search arm runs; calibration pinned to what 'auto' chose
+# for the paper's p00_int8 (percentile 99.9). Pre-registered in results/paper/FINDINGS.md.
+extends: ../classification_mobilevit.yaml
+name: mobilevit_r256
+adapter_args:
+  img_size: 256
+sweep:
+  prune_ratios: [0.0]
+  finetune_epochs: 0
+  precisions:
+    - fp32
+    - {name: int8, calibrate_method: percentile, calib_percentile: 99.9}
+    - {name: int8_dyn_mm, method: dynamic, op_types_to_quantize: [MatMul, Gemm]}

@@ -1,0 +1,99 @@
+# Time-series anomaly detection: 1D-CNN autoencoder on ECG5000, metric = ROC AUC.
+# On-site: set adapter_args.source: npz + npz_path for your own data (see adapters/anomaly.py).
+task: anomaly
+adapter: adapters.anomaly:AnomalyAdapter
+seed: 0
+
+adapter_args:
+  source: ecg5000
+  channels: [32, 64]
+  kernel: 7
+  train_epochs: 40
+  lr: 2.0e-3
+  finetune_lr: 5.0e-4
+  batch_size: 64
+
+# Deployment target: decides quantizer + measuring runtime + RSS baseline together.
+# onnx (implemented) | tflite (reserved until the organisers confirm the submission format)
+target_runtime: onnx
+
+export:
+  opset: 17
+  atol: 1.0e-3
+  rtol: 1.0e-3
+
+measure:
+  threads: [1, 4]
+  primary_threads: 4      # the un-suffixed columns (and therefore the SCORE and the
+                          # winner) come from this thread count - 4 matches the UNO Q's 4 cores
+  repeats: 3              # median of 3 probe runs; spread reported in *_sd columns
+  warmup: 10
+  runs: 100
+  energy:
+    provider: none
+
+prune:
+  importance: l2
+  round_to: 8
+  global_pruning: false
+
+quantize:
+  method: static
+  per_channel: true
+  activation_type: uint8  # uint8 (U8S8) | int8 (S8S8)
+  weight_type: int8
+  # auto: try the candidates in quantize.calib_auto_methods and keep the one with the best label-free
+  # per-channel SQNR. Nearly free (the SQNR probe already runs for every INT8 variant) and it matters:
+  # the 25%-pruned ResNet50 scored 1.5 dB / top-1 0.468 with minmax and 13.6 dB / 0.894 - lossless vs
+  # its FP32 - with percentile 99.99. Pin a fixed method (minmax | entropy | percentile) to reproduce.
+  calibrate_method: auto
+  calib_batches: 8
+  keep_fp32: []           # e.g. ["out"] keeps the reconstruction layer in FP32
+
+sweep:
+  prune_ratios: [0.0, 0.25, 0.5, 0.75]
+  precisions: [fp32, int8]
+  finetune_epochs: 10
+  finetune_mode: plain
+  pareto_x: [size_bytes, latency_p50_ms, peak_rss_mb]
+
+aihub:                    # optional: scripts/aihub_profile.py (token from env QAIHUB_API_TOKEN)
+  # No UNO Q / QRB2210 on AI Hub (2026-09). First available wins; Snapdragon 429 = 4x A53 (closest CPU).
+  devices: ["chipset:qualcomm-snapdragon-429", "Dragonwing RB3 Gen 2 Vision Kit", "QCS8550 (Proxy)"]
+  compile_options: "--target_runtime onnx --compute_unit cpu"
+
+score:
+  # HARD CONSTRAINT before ranking (see configs/classification.yaml for the rationale)
+  max_accuracy_drop: 0.02
+  min_accuracy: null
+  # OFFICIAL WEIGHTS / FORMULA UNKNOWN - equal weights by default.
+  normalize: minmax
+  weights: {accuracy: 0.25, compression: 0.25, resource: 0.25, energy: 0.25}
+  groups:
+    accuracy:    {cols: [accuracy], higher_is_better: true}
+    compression: {cols: [size_bytes]}
+    resource:    {cols: [peak_rss_mb, cpu_ms_per_inf, latency_p50_ms]}
+    energy:      {cols: [energy_j]}
+
+distill:
+  student: {channels: [16, 32]}
+  epochs: 20
+  lr: 1.0e-3
+  optimizer: adam
+
+quick:
+  adapter_args:
+    train_epochs: 5
+    test_subset: 800
+  measure:
+    threads: [1]
+    warmup: 3
+    runs: 20
+    min_time_s: 0.5
+  quantize:
+    calib_batches: 2
+  sweep:
+    prune_ratios: [0.0, 0.25, 0.5]
+    finetune_epochs: 2
+  distill:
+    epochs: 2

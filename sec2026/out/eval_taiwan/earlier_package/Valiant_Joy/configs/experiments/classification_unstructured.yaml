@@ -1,0 +1,21 @@
+# Magnitude (unstructured) pruning: zeroes weights instead of removing channels, so shapes - and
+# therefore latency and peak RAM - are unchanged. The payoff is size_bytes_gz, not size_bytes.
+# Included because "compression" may be scored on file size; structured stays the default because
+# it is the only one of the two that also moves latency and RAM.
+extends: ../classification.yaml
+name: classification_unstructured
+prune:
+  mode: unstructured
+  global_pruning: true       # one threshold across layers: robust layers keep more weights
+sweep:
+  prune_ratios: [0.0, 0.5, 0.8, 0.9]
+  precisions: [fp32, int8]
+  finetune_epochs: 5
+  # Rank on the COMPRESSED size and show it on the Pareto front. Without this the scorer is blind
+  # to unstructured pruning: the shapes never change, so size_bytes is identical (two variants
+  # differed by 1 byte) while the gzipped sizes were 3.73x vs 5.01x - and the unpruned variant won
+  # every time.
+  pareto_x: [size_bytes_gz, latency_p50_ms, peak_rss_mb]
+score:
+  groups:
+    compression: {cols: [size_bytes_gz]}
