@@ -1,0 +1,33 @@
+{
+  "source": "sec2026\\out\\sweep600\\p30\\pruned.pt",
+  "opset": 13,
+  "fp32": {
+    "file": "sec2026\\out\\p30_int8\\student_model.onnx",
+    "params": 1131170,
+    "macs": 166130328,
+    "size_mb": 4.354117393493652
+  },
+  "int8": {
+    "file": "sec2026\\out\\p30_int8\\student_model_int8.onnx",
+    "params": 1131170,
+    "macs": 166130328,
+    "size_mb": 1.3762245178222656,
+    "settings": {
+      "format": "QDQ",
+      "activations": "uint8",
+      "weights": "int8",
+      "per_channel": true,
+      "reduce_range": true,
+      "calibrate_method": "percentile",
+      "calib_images": 128,
+      "excluded_nodes": [],
+      "percentile": 99.999
+    },
+    "health": {
+      "sqnr_db": 19.11,
+      "top1_agreement": 0.9688,
+      "n_images": 128
+    }
+  },
+  "seconds": 53.5
+}

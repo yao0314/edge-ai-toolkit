@@ -1,0 +1,47 @@
+{
+  "ratio": 0.1,
+  "kd_alpha": 0.0,
+  "max_layer_cut": 0.1,
+  "acc_pruned": 0.801,
+  "acc_bn": 0.988,
+  "ft_steps": 600,
+  "ft_seconds": 1069.8,
+  "acc_ft": 0.987,
+  "worst_ft": 0.9767441749572754,
+  "params": 1838866,
+  "macs": 263766760,
+  "fp32_size_mb": 7.054,
+  "total_seconds": 1141.0,
+  "finetune": {
+    "steps": 600,
+    "images": 19200,
+    "seconds": 1069.8,
+    "final_loss": 0.1003
+  },
+  "args": {
+    "kit": null,
+    "model": null,
+    "out": "sec2026\\out\\sweep600",
+    "ratios": [
+      0.2,
+      0.3,
+      0.1
+    ],
+    "ft_steps": 600,
+    "lr": 0.005,
+    "batch_size": 32,
+    "kd": 0.0,
+    "kd_t": 4.0,
+    "round_to": 8,
+    "global_pruning": false,
+    "importance": "l2",
+    "bn_batches": 32,
+    "calib": 256,
+    "calib_method": "minmax",
+    "no_int8": true,
+    "val_limit": 1000,
+    "train_limit": null,
+    "threads": null,
+    "dry": false
+  }
+}

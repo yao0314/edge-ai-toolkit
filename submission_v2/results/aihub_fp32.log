@@ -1,0 +1,11 @@
+﻿compile job j57o9r49g submitted (https://workbench.aihub.qualcomm.com/jobs/j57o9r49g/)
+profile job jpx0xo4lp submitted (https://workbench.aihub.qualcomm.com/jobs/jpx0xo4lp/)
+{
+  "inference_time_ms": 5.458,
+  "peak_memory_mb": 23.19140625,
+  "compute_units": [
+    "GPU",
+    "NPU"
+  ]
+}
+-> sec2026\out\p00\aihub_student_model.json

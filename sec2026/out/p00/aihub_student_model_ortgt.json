@@ -1,0 +1,556 @@
+{
+  "model": "sec2026\\out\\p00\\student_model.onnx",
+  "device": "Dragonwing RB3 Gen 2 Vision Kit",
+  "compile_options": "--target_runtime onnx",
+  "value_info_removed": 0,
+  "compile_job": "jp0o60mnp",
+  "profile_job": "jgk68x2n5",
+  "profile_url": "https://workbench.aihub.qualcomm.com/jobs/jgk68x2n5/",
+  "summary": {
+    "inference_time_ms": 28.148,
+    "peak_memory_mb": 27.296875,
+    "compute_units": [
+      "CPU"
+    ]
+  },
+  "profile": {
+    "execution_summary": {
+      "estimated_inference_time": 28148,
+      "estimated_inference_peak_memory": 28622848,
+      "first_load_time": 50817,
+      "first_load_peak_memory": 12509184,
+      "warm_load_time": 65304,
+      "warm_load_peak_memory": 11939840,
+      "compile_time": 0,
+      "compile_peak_memory": 0,
+      "compile_memory_increase_range": [
+        0,
+        0
+      ],
+      "compile_memory_peak_range": [
+        0,
+        0
+      ],
+      "first_load_memory_increase_range": [
+        7344928,
+        8144848
+      ],
+      "first_load_memory_peak_range": [
+        9576448,
+        10376368
+      ],
+      "warm_load_memory_increase_range": [
+        7343392,
+        8145776
+      ],
+      "warm_load_memory_peak_range": [
+        9003008,
+        9805392
+      ],
+      "inference_memory_increase_range": [
+        0,
+        0
+      ],
+      "inference_memory_peak_range": [
+        13434880,
+        16271168
+      ],
+      "all_compile_times": [],
+      "all_first_load_times": [
+        50817
+      ],
+      "all_warm_load_times": [
+        65304
+      ],
+      "all_inference_times": [
+        54058,
+        28761,
+        28939,
+        28721,
+        29441,
+        28873,
+        29790,
+        28817,
+        29102,
+        29182,
+        29068,
+        39795,
+        28868,
+        29107,
+        28981,
+        28807,
+        28953,
+        28290,
+        28614,
+        28876,
+        29103,
+        28964,
+        28401,
+        28525,
+        29324,
+        29281,
+        29045,
+        28398,
+        28930,
+        28761,
+        28732,
+        29334,
+        29344,
+        28789,
+        28626,
+        28914,
+        28818,
+        29060,
+        28613,
+        28797,
+        28765,
+        29019,
+        29026,
+        28704,
+        28482,
+        28655,
+        28608,
+        28649,
+        29218,
+        29214,
+        28601,
+        28569,
+        29079,
+        28708,
+        28913,
+        28669,
+        28702,
+        28239,
+        28664,
+        28389,
+        28404,
+        28177,
+        28162,
+        29281,
+        29031,
+        28777,
+        28677,
+        28676,
+        28221,
+        28148,
+        28311,
+        28662,
+        28639,
+        29714,
+        29160,
+        28702,
+        28399,
+        28529,
+        28913,
+        29137,
+        28457,
+        28268,
+        28612,
+        28563,
+        29296,
+        29457,
+        28940,
+        28956,
+        28360,
+        28639,
+        28430,
+        29541,
+        29242,
+        28233,
+        28307,
+        28362,
+        28515,
+        28625,
+        29468,
+        28742
+      ]
+    },
+    "execution_detail": [
+      {
+        "name": "/features/features.0/features.0.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 812,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.1/conv/conv.0/conv.0.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 690,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.1/conv/conv.1/Conv",
+        "type": "Conv",
+        "compute_unit": "CPU",
+        "execution_time": 612,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.2/conv/conv.0/conv.0.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 5772,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.2/conv/conv.1/conv.1.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 1538,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.2/conv/conv.2/Conv",
+        "type": "Conv",
+        "compute_unit": "CPU",
+        "execution_time": 715,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.3/conv/conv.0/conv.0.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 1487,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.3/conv/conv.1/conv.1.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 858,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.3/conv/conv.2/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 1033,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.4/conv/conv.0/conv.0.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 1484,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.4/conv/conv.1/conv.1.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 727,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.4/conv/conv.2/Conv",
+        "type": "Conv",
+        "compute_unit": "CPU",
+        "execution_time": 312,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.5/conv/conv.0/conv.0.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 593,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.5/conv/conv.1/conv.1.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 363,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.5/conv/conv.2/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 332,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.6/conv/conv.0/conv.0.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 559,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.6/conv/conv.1/conv.1.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 347,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.6/conv/conv.2/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 312,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.7/conv/conv.0/conv.0.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 563,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.7/conv/conv.1/conv.1.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 262,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.7/conv/conv.2/Conv",
+        "type": "Conv",
+        "compute_unit": "CPU",
+        "execution_time": 197,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.8/conv/conv.0/conv.0.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 403,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.8/conv/conv.1/conv.1.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 224,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.8/conv/conv.2/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 319,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.9/conv/conv.0/conv.0.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 401,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.9/conv/conv.1/conv.1.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 224,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.9/conv/conv.2/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 316,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.10/conv/conv.0/conv.0.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 404,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.10/conv/conv.1/conv.1.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 218,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.10/conv/conv.2/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 308,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.11/conv/conv.0/conv.0.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 442,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.11/conv/conv.1/conv.1.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 221,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.11/conv/conv.2/Conv",
+        "type": "Conv",
+        "compute_unit": "CPU",
+        "execution_time": 406,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.12/conv/conv.0/conv.0.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 688,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.12/conv/conv.1/conv.1.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 293,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.12/conv/conv.2/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 585,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.13/conv/conv.0/conv.0.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 699,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.13/conv/conv.1/conv.1.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 299,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.13/conv/conv.2/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 588,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.14/conv/conv.0/conv.0.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 769,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.14/conv/conv.1/conv.1.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 266,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.14/conv/conv.2/Conv",
+        "type": "Conv",
+        "compute_unit": "CPU",
+        "execution_time": 341,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.15/conv/conv.0/conv.0.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 560,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.15/conv/conv.1/conv.1.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 223,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.15/conv/conv.2/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 516,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.16/conv/conv.0/conv.0.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 516,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.16/conv/conv.1/conv.1.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 221,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.16/conv/conv.2/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 515,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.17/conv/conv.0/conv.0.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 512,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.17/conv/conv.1/conv.1.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 221,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.17/conv/conv.2/Conv",
+        "type": "Conv",
+        "compute_unit": "CPU",
+        "execution_time": 978,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.18/features.18.0/Conv",
+        "type": "FusedConv",
+        "compute_unit": "CPU",
+        "execution_time": 1204,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/GlobalAveragePool",
+        "type": "GlobalAveragePool",
+        "compute_unit": "CPU",
+        "execution_time": 93,
+        "execution_cycles": 0
+      },
+      {
+        "name": "node_Reshape_0",
+        "type": "Reshape",
+        "compute_unit": "CPU",
+        "execution_time": 51,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/classifier/classifier.1/Gemm",
+        "type": "Gemm",
+        "compute_unit": "CPU",
+        "execution_time": 78,
+        "execution_cycles": 0
+      }
+    ]
+  }
+}

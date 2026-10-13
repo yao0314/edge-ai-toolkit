@@ -1,0 +1,10 @@
+﻿compile job jp0o60mnp submitted (https://workbench.aihub.qualcomm.com/jobs/jp0o60mnp/)
+profile job jgk68x2n5 submitted (https://workbench.aihub.qualcomm.com/jobs/jgk68x2n5/)
+{
+  "inference_time_ms": 28.148,
+  "peak_memory_mb": 27.296875,
+  "compute_units": [
+    "CPU"
+  ]
+}
+-> sec2026\out\p00\aihub_student_model_ortgt.json

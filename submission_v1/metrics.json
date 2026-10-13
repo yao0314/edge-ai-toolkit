@@ -1,0 +1,28 @@
+{
+  "team_name": "TEAM_NAME_TBD",
+  "baseline": {
+    "accuracy": 0.993333,
+    "params_million": 2.219626,
+    "size_mb": 8.5063,
+    "macs_giga": 0.299507,
+    "latency_ms": 6.4878,
+    "peak_ram_mb": 82.312,
+    "joules_per_inference": 0.147465
+  },
+  "final": {
+    "accuracy": 0.986111,
+    "params_million": 2.219626,
+    "size_mb": 2.4905,
+    "macs_giga": 0.299507,
+    "latency_ms": 6.5347,
+    "peak_ram_mb": 72.082,
+    "joules_per_inference": 0.124799
+  },
+  "worst_class_accuracy": 0.966667,
+  "codecarbon_mode": "measured",
+  "techniques_applied": [
+    "static INT8 quantization (ONNX Runtime QDQ, U8S8, per-channel, reduce_range, percentile 99.999 calibration on 256 train images)"
+  ],
+  "ai_hub_profile_summary": "not profiled (AI Hub unavailable): local measurements only",
+  "measurement_machine": "MSI Bravo 15, AMD Ryzen 7 4800H (8C/16T, AVX2, no AVX-VNNI), 16 GB RAM, CPU only, Windows 11 build 26200, onnxruntime 1.30.0"
+}

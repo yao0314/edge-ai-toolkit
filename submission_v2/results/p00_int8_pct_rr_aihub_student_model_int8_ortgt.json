@@ -1,0 +1,654 @@
+{
+  "model": "sec2026\\out\\p00_int8_pct_rr\\student_model_int8.onnx",
+  "device": "Dragonwing RB3 Gen 2 Vision Kit",
+  "compile_options": "--target_runtime onnx",
+  "value_info_removed": 0,
+  "compile_job": "jp1o6zo75",
+  "profile_job": "jg9odnomg",
+  "profile_url": "https://workbench.aihub.qualcomm.com/jobs/jg9odnomg/",
+  "summary": {
+    "inference_time_ms": 6.833,
+    "peak_memory_mb": 30.234375,
+    "compute_units": [
+      "CPU"
+    ]
+  },
+  "profile": {
+    "execution_summary": {
+      "estimated_inference_time": 6833,
+      "estimated_inference_peak_memory": 31703040,
+      "first_load_time": 87219,
+      "first_load_peak_memory": 14540800,
+      "warm_load_time": 86408,
+      "warm_load_peak_memory": 15572992,
+      "compile_time": 0,
+      "compile_peak_memory": 0,
+      "compile_memory_increase_range": [
+        0,
+        0
+      ],
+      "compile_memory_peak_range": [
+        0,
+        0
+      ],
+      "first_load_memory_increase_range": [
+        11121184,
+        11921104
+      ],
+      "first_load_memory_peak_range": [
+        11608064,
+        12407984
+      ],
+      "warm_load_memory_increase_range": [
+        11118320,
+        11920704
+      ],
+      "warm_load_memory_peak_range": [
+        12636160,
+        13438544
+      ],
+      "inference_memory_increase_range": [
+        0,
+        0
+      ],
+      "inference_memory_peak_range": [
+        12312576,
+        17646240
+      ],
+      "all_compile_times": [],
+      "all_first_load_times": [
+        87219
+      ],
+      "all_warm_load_times": [
+        86408
+      ],
+      "all_inference_times": [
+        18255,
+        7890,
+        7035,
+        7391,
+        6973,
+        7230,
+        7048,
+        6965,
+        7296,
+        9495,
+        7168,
+        9987,
+        9323,
+        13463,
+        10325,
+        7308,
+        6897,
+        6965,
+        7342,
+        7116,
+        7073,
+        6919,
+        7340,
+        7013,
+        7046,
+        6860,
+        7259,
+        6992,
+        7104,
+        6888,
+        7249,
+        7164,
+        6980,
+        7024,
+        7289,
+        7115,
+        6833,
+        7121,
+        7098,
+        7078,
+        7052,
+        7120,
+        7103,
+        7067,
+        7099,
+        7050,
+        6870,
+        7372,
+        7213,
+        7244,
+        6868,
+        7071,
+        7058,
+        7289,
+        6843,
+        7120,
+        7095,
+        7249,
+        6926,
+        7212,
+        7029,
+        7167,
+        7146,
+        7070,
+        7057,
+        7090,
+        7127,
+        6837,
+        7130,
+        6895,
+        7187,
+        6851,
+        7114,
+        6912,
+        7130,
+        7079,
+        7066,
+        7124,
+        7189,
+        6873,
+        7073,
+        7117,
+        7219,
+        6926,
+        7001,
+        7077,
+        7142,
+        6911,
+        7037,
+        7252,
+        7190,
+        6908,
+        7014,
+        7110,
+        7107,
+        6890,
+        7042,
+        7935,
+        7093,
+        7270
+      ]
+    },
+    "execution_detail": [
+      {
+        "name": "input_QuantizeLinear",
+        "type": "QuantizeLinear",
+        "compute_unit": "CPU",
+        "execution_time": 161,
+        "execution_cycles": 0
+      },
+      {
+        "name": "Transpose",
+        "type": "Transpose",
+        "compute_unit": "CPU",
+        "execution_time": 120,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.0/features.0.0/Conv_token_1",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 488,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.1/conv/conv.0/conv.0.0/Conv_token_4",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 228,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.1/conv/conv.1/Conv_token_7",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 107,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.2/conv/conv.0/conv.0.0/Conv_token_10",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 1154,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.2/conv/conv.1/conv.1.0/Conv_token_13",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 589,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.2/conv/conv.2/Conv_token_16",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 190,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.3/conv/conv.0/conv.0.0/Conv_token_19",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 277,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.3/conv/conv.1/conv.1.0/Conv_token_22",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 230,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.3/conv/conv.2/Conv_token_25",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 158,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.3/Add",
+        "type": "QLinearAdd",
+        "compute_unit": "CPU",
+        "execution_time": 204,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.4/conv/conv.0/conv.0.0/Conv_token_29",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 244,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.4/conv/conv.1/conv.1.0/Conv_token_32",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 131,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.4/conv/conv.2/Conv_token_35",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 114,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.5/conv/conv.0/conv.0.0/Conv_token_38",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 149,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.5/conv/conv.1/conv.1.0/Conv_token_41",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 134,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.5/conv/conv.2/Conv_token_44",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 112,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.5/Add",
+        "type": "QLinearAdd",
+        "compute_unit": "CPU",
+        "execution_time": 116,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.6/conv/conv.0/conv.0.0/Conv_token_48",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 132,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.6/conv/conv.1/conv.1.0/Conv_token_51",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 126,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.6/conv/conv.2/Conv_token_54",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 108,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.6/Add",
+        "type": "QLinearAdd",
+        "compute_unit": "CPU",
+        "execution_time": 108,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.7/conv/conv.0/conv.0.0/Conv_token_58",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 129,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.7/conv/conv.1/conv.1.0/Conv_token_61",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 97,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.7/conv/conv.2/Conv_token_64",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 99,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.8/conv/conv.0/conv.0.0/Conv_token_67",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 131,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.8/conv/conv.1/conv.1.0/Conv_token_70",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 109,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.8/conv/conv.2/Conv_token_73",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 109,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.8/Add",
+        "type": "QLinearAdd",
+        "compute_unit": "CPU",
+        "execution_time": 88,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.9/conv/conv.0/conv.0.0/Conv_token_77",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 127,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.9/conv/conv.1/conv.1.0/Conv_token_80",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 107,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.9/conv/conv.2/Conv_token_83",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 111,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.9/Add",
+        "type": "QLinearAdd",
+        "compute_unit": "CPU",
+        "execution_time": 85,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.10/conv/conv.0/conv.0.0/Conv_token_87",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 125,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.10/conv/conv.1/conv.1.0/Conv_token_90",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 106,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.10/conv/conv.2/Conv_token_93",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 108,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.10/Add",
+        "type": "QLinearAdd",
+        "compute_unit": "CPU",
+        "execution_time": 81,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.11/conv/conv.0/conv.0.0/Conv_token_97",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 125,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.11/conv/conv.1/conv.1.0/Conv_token_100",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 103,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.11/conv/conv.2/Conv_token_103",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 123,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.12/conv/conv.0/conv.0.0/Conv_token_106",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 173,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.12/conv/conv.1/conv.1.0/Conv_token_109",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 118,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.12/conv/conv.2/Conv_token_112",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 148,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.12/Add",
+        "type": "QLinearAdd",
+        "compute_unit": "CPU",
+        "execution_time": 94,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.13/conv/conv.0/conv.0.0/Conv_token_116",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 169,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.13/conv/conv.1/conv.1.0/Conv_token_119",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 118,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.13/conv/conv.2/Conv_token_122",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 138,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.13/Add",
+        "type": "QLinearAdd",
+        "compute_unit": "CPU",
+        "execution_time": 94,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.14/conv/conv.0/conv.0.0/Conv_token_126",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 169,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.14/conv/conv.1/conv.1.0/Conv_token_129",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 100,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.14/conv/conv.2/Conv_token_132",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 132,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.15/conv/conv.0/conv.0.0/Conv_token_135",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 185,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.15/conv/conv.1/conv.1.0/Conv_token_138",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 116,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.15/conv/conv.2/Conv_token_141",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 164,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.15/Add",
+        "type": "QLinearAdd",
+        "compute_unit": "CPU",
+        "execution_time": 78,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.16/conv/conv.0/conv.0.0/Conv_token_145",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 179,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.16/conv/conv.1/conv.1.0/Conv_token_148",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 107,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.16/conv/conv.2/Conv_token_151",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 164,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.16/Add",
+        "type": "QLinearAdd",
+        "compute_unit": "CPU",
+        "execution_time": 81,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.17/conv/conv.0/conv.0.0/Conv_token_155",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 180,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.17/conv/conv.1/conv.1.0/Conv_token_158",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 106,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.17/conv/conv.2/Conv_token_161",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 246,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/features/features.18/features.18.0/Conv_token_164",
+        "type": "QLinearConv",
+        "compute_unit": "CPU",
+        "execution_time": 319,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/GlobalAveragePool",
+        "type": "QLinearGlobalAveragePool",
+        "compute_unit": "CPU",
+        "execution_time": 108,
+        "execution_cycles": 0
+      },
+      {
+        "name": "Transpose_token_176",
+        "type": "Transpose",
+        "compute_unit": "CPU",
+        "execution_time": 50,
+        "execution_cycles": 0
+      },
+      {
+        "name": "node_Reshape_0",
+        "type": "Reshape",
+        "compute_unit": "CPU",
+        "execution_time": 50,
+        "execution_cycles": 0
+      },
+      {
+        "name": "/classifier/classifier.1/Gemm",
+        "type": "QGemm",
+        "compute_unit": "CPU",
+        "execution_time": 85,
+        "execution_cycles": 0
+      },
+      {
+        "name": "output_DequantizeLinear",
+        "type": "DequantizeLinear",
+        "compute_unit": "CPU",
+        "execution_time": 56,
+        "execution_cycles": 0
+      }
+    ]
+  }
+}

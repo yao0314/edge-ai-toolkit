@@ -1,0 +1,11 @@
+{
+  "source": "starter_kit\\student_mobilenetv2_distilled.pt",
+  "opset": 13,
+  "fp32": {
+    "file": "sec2026\\out\\p00\\student_model.onnx",
+    "params": 2219626,
+    "macs": 299507072,
+    "size_mb": 8.506294250488281
+  },
+  "seconds": 8.5
+}

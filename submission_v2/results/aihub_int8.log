@@ -1,0 +1,26 @@
+﻿compile job jp2oeyrqg submitted (https://workbench.aihub.qualcomm.com/jobs/jp2oeyrqg/)
+.venv\Scripts\python : Traceback (most recent call last):
+At line:1 char:535
++ ... TEXITCODE"; .venv\Scripts\python sec2026\aihub_profile.py --model sec ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "D:\SEC\edge-ai-toolkit\sec2026\aihub_profile.py", line 89, in <module>
+    main()
+  File "D:\SEC\edge-ai-toolkit\sec2026\aihub_profile.py", line 74, in main
+    profile_job = hub.submit_profile_job(model=compile_job.get_target_model(), device=device)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SEC\edge-ai-toolkit\.venv\Lib\site-packages\qai_hub\client.py", line 5115, in submit_profile_job
+    response_pb = self._api_call_with_retry(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SEC\edge-ai-toolkit\.venv\Lib\site-packages\qai_hub\client.py", line 3412, in _api_call_with_retry
+    response_pb = self._api_call(api_func, *args, **kwargs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SEC\edge-ai-toolkit\.venv\Lib\site-packages\qai_hub\client.py", line 3328, in _api_call
+    self._handle_api_exception(e, api_url, web_url)
+  File "D:\SEC\edge-ai-toolkit\.venv\Lib\site-packages\qai_hub\client.py", line 3379, in _handle_api_exception
+    _raise_if_hub_user_error(e, web_url)
+  File "D:\SEC\edge-ai-toolkit\.venv\Lib\site-packages\qai_hub\client.py", line 402, in _raise_if_hub_user_error
+    raise UserError(_get_exception_string(e)) from None
+qai_hub.client.UserError: Producer for input model mnwpdywwq has already failed.

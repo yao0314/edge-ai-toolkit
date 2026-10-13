@@ -1,0 +1,661 @@
+{
+  "model": "sec2026\\out\\p00\\student_model.onnx",
+  "device": "Dragonwing RB3 Gen 2 Vision Kit",
+  "value_info_removed": 0,
+  "compile_job": "j57o9r49g",
+  "profile_job": "jpx0xo4lp",
+  "profile_url": "https://workbench.aihub.qualcomm.com/jobs/jpx0xo4lp/",
+  "summary": {
+    "inference_time_ms": 5.458,
+    "peak_memory_mb": 23.19140625,
+    "compute_units": [
+      "GPU",
+      "NPU"
+    ]
+  },
+  "profile": {
+    "execution_summary": {
+      "estimated_inference_time": 5458,
+      "estimated_inference_peak_memory": 24317952,
+      "first_load_time": 1508624,
+      "first_load_peak_memory": 76976128,
+      "warm_load_time": 392991,
+      "warm_load_peak_memory": 30674944,
+      "compile_time": 0,
+      "compile_peak_memory": 0,
+      "compile_memory_increase_range": [
+        0,
+        0
+      ],
+      "compile_memory_peak_range": [
+        0,
+        0
+      ],
+      "first_load_memory_increase_range": [
+        14815248,
+        15613792
+      ],
+      "first_load_memory_peak_range": [
+        74039296,
+        74837840
+      ],
+      "warm_load_memory_increase_range": [
+        18446744073700868608,
+        18446744073701611088
+      ],
+      "warm_load_memory_peak_range": [
+        27717632,
+        28460112
+      ],
+      "inference_memory_increase_range": [
+        18446744073681137664,
+        390704
+      ],
+      "inference_memory_peak_range": [
+        610304,
+        29414960
+      ],
+      "all_compile_times": [],
+      "all_first_load_times": [
+        1508624
+      ],
+      "all_warm_load_times": [
+        392991
+      ],
+      "all_inference_times": [
+        11283,
+        5664,
+        5804,
+        5458,
+        6235,
+        6093,
+        5961,
+        5535,
+        6206,
+        6118,
+        6301,
+        5566,
+        6182,
+        6059,
+        5930,
+        6200,
+        5988,
+        6246,
+        6129,
+        6048,
+        6095,
+        6572,
+        6382,
+        6332,
+        6168,
+        6247,
+        6528,
+        6284,
+        6755,
+        6633,
+        6261,
+        6513,
+        6663,
+        6676,
+        6524,
+        6524,
+        6371,
+        6590,
+        6712,
+        6631,
+        6643,
+        6750,
+        7076,
+        7007,
+        7009,
+        6712,
+        6702,
+        6609,
+        6747,
+        6791,
+        6929,
+        6861,
+        6831,
+        6957,
+        7186,
+        7299,
+        7015,
+        7082,
+        7016,
+        6914,
+        6814,
+        7441,
+        6922,
+        6894,
+        6971,
+        6905,
+        7106,
+        6976,
+        6977,
+        7012,
+        7203,
+        7098,
+        7443,
+        7033,
+        7202,
+        7199,
+        7503,
+        7003,
+        6947,
+        7194,
+        7177,
+        7325,
+        7240,
+        6894,
+        7180,
+        7034,
+        7260,
+        7255,
+        7067,
+        7418,
+        7596,
+        7571,
+        7658,
+        7241,
+        7104,
+        7326,
+        7356,
+        7656,
+        7464,
+        7720
+      ]
+    },
+    "execution_detail": [
+      {
+        "name": "model/tf.compat.v1.transpose/transpose",
+        "type": "TRANSPOSE",
+        "compute_unit": "NPU",
+        "execution_time": 56,
+        "execution_cycles": 77883
+      },
+      {
+        "name": "model/tf.compat.v1.pad/Pad",
+        "type": "PAD",
+        "compute_unit": "GPU",
+        "execution_time": 0,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 82,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/.features/features.1/conv/conv.0/conv.0.0/Conv/depthwise",
+        "type": "DEPTHWISE_CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 116,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d_1/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 0,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d_2/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 216,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/tf.compat.v1.pad_1/Pad",
+        "type": "PAD",
+        "compute_unit": "GPU",
+        "execution_time": 0,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/.features/features.2/conv/conv.1/conv.1.0/Conv/depthwise",
+        "type": "DEPTHWISE_CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 248,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d_3/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 64,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d_4/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 77,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/.features/features.3/conv/conv.1/conv.1.0/Conv/depthwise",
+        "type": "DEPTHWISE_CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 144,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d_5/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 107,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/tf.math.add_9/Add",
+        "type": "ADD",
+        "compute_unit": "GPU",
+        "execution_time": 0,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d_6/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 77,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/tf.compat.v1.pad_2/Pad",
+        "type": "PAD",
+        "compute_unit": "GPU",
+        "execution_time": 0,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/.features/features.4/conv/conv.1/conv.1.0/Conv/depthwise",
+        "type": "DEPTHWISE_CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 116,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d_7/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 35,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d_8/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 37,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/.features/features.5/conv/conv.1/conv.1.0/Conv/depthwise",
+        "type": "DEPTHWISE_CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 43,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d_9/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 56,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/tf.math.add_16/Add",
+        "type": "ADD",
+        "compute_unit": "GPU",
+        "execution_time": 0,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d_10/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 42,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/.features/features.6/conv/conv.1/conv.1.0/Conv/depthwise",
+        "type": "DEPTHWISE_CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 41,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d_11/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 55,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/tf.math.add_20/Add",
+        "type": "ADD",
+        "compute_unit": "GPU",
+        "execution_time": 0,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d_12/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 41,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/tf.compat.v1.pad_3/Pad",
+        "type": "PAD",
+        "compute_unit": "GPU",
+        "execution_time": 0,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/.features/features.7/conv/conv.1/conv.1.0/Conv/depthwise",
+        "type": "DEPTHWISE_CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 28,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d_13/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 45,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d_14/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 36,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/.features/features.8/conv/conv.1/conv.1.0/Conv/depthwise",
+        "type": "DEPTHWISE_CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 15,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d_15/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 84,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/tf.math.add_27/Add",
+        "type": "ADD",
+        "compute_unit": "GPU",
+        "execution_time": 0,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d_16/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 36,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/.features/features.9/conv/conv.1/conv.1.0/Conv/depthwise",
+        "type": "DEPTHWISE_CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 14,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d_17/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 79,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/tf.math.add_31/Add",
+        "type": "ADD",
+        "compute_unit": "GPU",
+        "execution_time": 0,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d_18/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 35,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/.features/features.10/conv/conv.1/conv.1.0/Conv/depthwise",
+        "type": "DEPTHWISE_CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 15,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d_19/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 82,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/tf.math.add_35/Add",
+        "type": "ADD",
+        "compute_unit": "GPU",
+        "execution_time": 0,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d_20/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 36,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/.features/features.11/conv/conv.1/conv.1.0/Conv/depthwise",
+        "type": "DEPTHWISE_CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 14,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d_21/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 84,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d_22/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 59,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/.features/features.12/conv/conv.1/conv.1.0/Conv/depthwise",
+        "type": "DEPTHWISE_CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 26,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d_23/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 131,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/tf.math.add_42/Add",
+        "type": "ADD",
+        "compute_unit": "GPU",
+        "execution_time": 0,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d_24/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 62,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/.features/features.13/conv/conv.1/conv.1.0/Conv/depthwise",
+        "type": "DEPTHWISE_CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 29,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d_25/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 135,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/tf.math.add_46/Add",
+        "type": "ADD",
+        "compute_unit": "GPU",
+        "execution_time": 0,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d_26/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 62,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/tf.compat.v1.pad_4/Pad",
+        "type": "PAD",
+        "compute_unit": "GPU",
+        "execution_time": 0,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/.features/features.14/conv/conv.1/conv.1.0/Conv/depthwise",
+        "type": "DEPTHWISE_CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 21,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d_27/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 119,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d_28/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 56,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/.features/features.15/conv/conv.1/conv.1.0/Conv/depthwise",
+        "type": "DEPTHWISE_CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 14,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d_29/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 189,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/tf.math.add_53/Add",
+        "type": "ADD",
+        "compute_unit": "GPU",
+        "execution_time": 0,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d_30/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 55,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/.features/features.16/conv/conv.1/conv.1.0/Conv/depthwise",
+        "type": "DEPTHWISE_CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 14,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d_31/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 188,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/tf.math.add_57/Add",
+        "type": "ADD",
+        "compute_unit": "GPU",
+        "execution_time": 0,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d_32/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 55,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/.features/features.17/conv/conv.1/conv.1.0/Conv/depthwise",
+        "type": "DEPTHWISE_CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 11,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d_33/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 205,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/dynamic_conv2d_34/DynamicConv2D",
+        "type": "CONV_2D",
+        "compute_unit": "GPU",
+        "execution_time": 153,
+        "execution_cycles": 0
+      },
+      {
+        "name": "model/tf.math.reduce_mean/Mean",
+        "type": "MEAN",
+        "compute_unit": "GPU",
+        "execution_time": 14,
+        "execution_cycles": 0
+      },
+      {
+        "name": "output_0",
+        "type": "FULLY_CONNECTED",
+        "compute_unit": "GPU",
+        "execution_time": 58,
+        "execution_cycles": 0
+      }
+    ]
+  }
+}

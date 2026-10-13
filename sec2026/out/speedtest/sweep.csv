@@ -1,0 +1,2 @@
+ratio,params,macs,fp32_size_mb,int8_size_mb,max_layer_cut,acc_pruned,acc_bn,acc_ft,worst_ft,acc_int8,worst_int8,int8_sqnr_db,ft_steps,kd_alpha,ft_seconds,total_seconds
+0.2,1470218,223698768,5.648,,0.2,0.192,0.944,0.94,0.8723404407501221,,,,20,0.0,37.8,88.9

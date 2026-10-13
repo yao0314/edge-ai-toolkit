@@ -1,0 +1,30 @@
+{
+  "team_name": "Valiant Joy",
+  "baseline": {
+    "accuracy": 0.993333,
+    "params_million": 2.219626,
+    "size_mb": 8.5063,
+    "macs_giga": 0.299507,
+    "latency_ms": 6.4878,
+    "peak_ram_mb": 82.312,
+    "joules_per_inference": 0.147465
+  },
+  "final": {
+    "accuracy": 0.981481,
+    "params_million": 1.470218,
+    "size_mb": 1.7267,
+    "macs_giga": 0.223699,
+    "latency_ms": 5.9784,
+    "peak_ram_mb": 71.113,
+    "joules_per_inference": 0.117448
+  },
+  "worst_class_accuracy": 0.96,
+  "codecarbon_mode": "measured",
+  "techniques_applied": [
+    "structured channel pruning, 20% per layer group (torch-pruning, L2 importance, round_to 8, classifier protected)",
+    "BatchNorm re-estimation + 600-step recovery fine-tune (SGD, hard labels)",
+    "static INT8 quantization (ONNX Runtime QDQ, U8S8, per-channel, reduce_range, percentile 99.999 calibration on 128 train images)"
+  ],
+  "ai_hub_profile_summary": "student_model.onnx on Dragonwing RB3 Gen 2 Vision Kit: 28.148 ms, peak memory 27.30 MB (profile job jgk68x2n5); student_model_int8.onnx on Dragonwing RB3 Gen 2 Vision Kit: 5.638 ms, peak memory 24.38 MB (profile job jp3o6jjzp)",
+  "measurement_machine": "MSI Bravo 15, AMD Ryzen 7 4800H (8C/16T, AVX2, no AVX-VNNI), 16 GB RAM, CPU only, Windows 11 build 26200, Python 3.11.9, onnxruntime 1.30.0"
+}

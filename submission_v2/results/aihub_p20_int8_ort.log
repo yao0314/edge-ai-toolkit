@@ -1,0 +1,10 @@
+﻿compile job jglwlvvlp submitted (https://workbench.aihub.qualcomm.com/jobs/jglwlvvlp/)
+profile job jp3o6jjzp submitted (https://workbench.aihub.qualcomm.com/jobs/jp3o6jjzp/)
+{
+  "inference_time_ms": 5.638,
+  "peak_memory_mb": 24.37890625,
+  "compute_units": [
+    "CPU"
+  ]
+}
+-> sec2026\out\p20_int8\aihub_student_model_int8_ortgt.json

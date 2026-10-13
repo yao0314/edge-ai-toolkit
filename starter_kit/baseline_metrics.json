@@ -1,0 +1,172 @@
+{
+  "baseline": {
+    "accuracy": 0.993333,
+    "params_million": 2.219626,
+    "size_mb": 8.5063,
+    "macs_giga": 0.299507,
+    "latency_ms": 6.4878,
+    "peak_ram_mb": 82.312,
+    "joules_per_inference": 0.147465
+  },
+  "worst_class_accuracy": 0.964,
+  "codecarbon_mode": "measured",
+  "measurement_machine": "AMD Ryzen 7 4800H with Radeon Graphics, 8 cores / 16 threads, 15.4 GB RAM, CPU only, Windows-10-10.0.26200-SP0",
+  "baseline_pytorch_checkpoint": {
+    "accuracy": 0.993333,
+    "params_million": 2.236682,
+    "size_mb": 8.7723,
+    "macs_giga": 0.32622,
+    "latency_ms": 46.6795,
+    "peak_ram_mb": 326.383,
+    "joules_per_inference": 0.930069,
+    "worst_class_accuracy": 0.964,
+    "codecarbon_mode": "measured"
+  },
+  "provenance": {
+    "status": "team-generated on our own device, per the organisers' verbal instruction; the task sheet's 'Baseline figures' table was an example of the fields, not values to copy",
+    "student_checkpoint": {
+      "file": "student_mobilenetv2_distilled.pt",
+      "sha256": "842e9dc640bbdb6c71186ff2ecae06f670b1aef7be8ac6b64ede56f5c727c9a8"
+    },
+    "validation_split": {
+      "file": "val_split.json",
+      "sha256": "f96401e9f1046d0421ef2051eacde253b134d1e65a7a9890fe9451da3180b7c3",
+      "status": "team-generated (organisers said verbally that teams produce the JSON files); NOT an official split",
+      "method": "class-stratified random split; per class, numpy.random.default_rng(seed) shuffles that class's indices and the first round(val_fraction*n) go to val",
+      "seed": 42,
+      "val_fraction": 0.2,
+      "n_train": 21600,
+      "n_val": 5400
+    },
+    "software": {
+      "python": "3.11.9",
+      "torch": "2.14.0+cpu",
+      "onnxruntime": "1.30.0"
+    },
+    "avx_vnni": false,
+    "method": {
+      "accuracy": "top-1 and per-class recall on the full val split (Section 5.1 arithmetic)",
+      "params_size_macs": "ONNX: weights+biases of Conv/Gemm and MACs from the graph; PyTorch: thop (Section 5.2); size = file bytes / 1024^2",
+      "latency": "mean of 50 runs of a (1,3,224,224) input after warm-up (ONNX 10 runs, PyTorch 0 as in Section 5.3), default runtime threads, fresh subprocess per session",
+      "peak_ram": "process RSS sampled every 10 ms during the 50 timed runs (Section 5.3)",
+      "energy": "CodeCarbon EmissionsTracker(measure_power_secs=1) around >= 30 s and >= 100 inferences; joules = energy_consumed kWh * 3.6e6 / inferences (Section 5.5)",
+      "statistic": "median of 3 sessions; whole-machine CPU load recorded before each session"
+    },
+    "baseline_onnx": {
+      "model_file": "sec2026\\out\\p00\\student_model.onnx",
+      "format": "ONNX (FP32, opset 13)",
+      "params_method": "ONNX graph (Conv/Gemm weights+bias)",
+      "macs_method": "ONNX graph",
+      "accuracy_n_images": 5400,
+      "worst_class": 6,
+      "per_class_recall": [
+        0.995,
+        0.998333,
+        0.991667,
+        1.0,
+        1.0,
+        0.99,
+        0.964,
+        1.0,
+        0.99,
+        1.0
+      ],
+      "sessions": [
+        {
+          "latency_ms": 6.757584000006318,
+          "peak_ram_mb": 82.3125,
+          "joules_per_inference": 0.14621565485355856,
+          "machine_cpu_load_pct_before": 11.6666666666667,
+          "codecarbon_cpu_mode": "windows_emi",
+          "energy_runs": 5079,
+          "energy_seconds": 34.11353799999961
+        },
+        {
+          "latency_ms": 6.397672000002785,
+          "peak_ram_mb": 82.3984375,
+          "joules_per_inference": 0.15159887261435956,
+          "machine_cpu_load_pct_before": 11.6666666666667,
+          "codecarbon_cpu_mode": "windows_emi",
+          "energy_runs": 4820,
+          "energy_seconds": 33.99969460000011
+        },
+        {
+          "latency_ms": 6.487823999996181,
+          "peak_ram_mb": 82.23828125,
+          "joules_per_inference": 0.14746537482799074,
+          "machine_cpu_load_pct_before": 12.3333333333333,
+          "codecarbon_cpu_mode": "windows_emi",
+          "energy_runs": 5101,
+          "energy_seconds": 34.04572180000014
+        }
+      ],
+      "statistic": "median of 3 sessions",
+      "settings": {
+        "threads": null,
+        "runs": 50,
+        "warmup": 10,
+        "repeats": 3,
+        "energy_seconds": 30.0
+      },
+      "codecarbon_cpu_mode": "windows_emi"
+    },
+    "baseline_pytorch": {
+      "model_file": "starter_kit\\student_mobilenetv2_distilled.pt",
+      "format": "PyTorch state_dict (torchvision mobilenet_v2, 10-class head)",
+      "params_method": "thop",
+      "macs_method": "thop",
+      "accuracy_n_images": 5400,
+      "worst_class": 6,
+      "per_class_recall": [
+        0.995,
+        0.998333,
+        0.991667,
+        1.0,
+        1.0,
+        0.99,
+        0.964,
+        1.0,
+        0.99,
+        1.0
+      ],
+      "sessions": [
+        {
+          "latency_ms": 45.2528859999984,
+          "peak_ram_mb": 326.2578125,
+          "joules_per_inference": 1.0261188253061369,
+          "machine_cpu_load_pct_before": 10.6666666666667,
+          "codecarbon_cpu_mode": "windows_emi",
+          "energy_runs": 1225,
+          "energy_seconds": 33.64473719999933
+        },
+        {
+          "latency_ms": 46.67946600000505,
+          "peak_ram_mb": 326.3828125,
+          "joules_per_inference": 0.9256835102040976,
+          "machine_cpu_load_pct_before": 20.6666666666667,
+          "codecarbon_cpu_mode": "windows_emi",
+          "energy_runs": 735,
+          "energy_seconds": 34.12924470000053
+        },
+        {
+          "latency_ms": 48.10346000000209,
+          "peak_ram_mb": 326.59375,
+          "joules_per_inference": 0.9300688878133174,
+          "machine_cpu_load_pct_before": 15.0,
+          "codecarbon_cpu_mode": "windows_emi",
+          "energy_runs": 722,
+          "energy_seconds": 33.97682000000077
+        }
+      ],
+      "statistic": "median of 3 sessions",
+      "settings": {
+        "threads": null,
+        "runs": 50,
+        "warmup": 0,
+        "repeats": 3,
+        "energy_seconds": 30.0
+      },
+      "codecarbon_cpu_mode": "windows_emi"
+    }
+  }
+}

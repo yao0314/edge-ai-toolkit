@@ -1,0 +1,79 @@
+{
+  "name": "baseline_pt_timing",
+  "model": "starter_kit\\student_mobilenetv2_distilled.pt",
+  "measured_at": "2026-10-13 10:50:52 -0700",
+  "machine": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.9",
+    "torch": "2.14.0+cpu",
+    "onnxruntime": "1.30.0",
+    "physical_cores": 8,
+    "logical_cpus": 16,
+    "ram_gb": 15.4,
+    "cpu": "AMD Ryzen 7 4800H with Radeon Graphics",
+    "avx_vnni": false
+  },
+  "settings": {
+    "threads": null,
+    "runs": 50,
+    "warmup": 0,
+    "repeats": 3,
+    "energy_seconds": 30.0
+  },
+  "size_mb": 8.77234935760498,
+  "params": 2236682,
+  "macs": 326219520,
+  "params_method": "thop",
+  "macs_method": "thop",
+  "machine_cpu_load_pct_before": 10.6666666666667,
+  "latency_ms": 46.67946600000505,
+  "peak_ram_mb": 326.3828125,
+  "cpu_ms_per_inference": 352.8125,
+  "joules_per_inference": 0.9300688878133174,
+  "codecarbon_mode": "measured",
+  "codecarbon_cpu_mode": "windows_emi",
+  "sessions": [
+    {
+      "kind": "torch",
+      "latency_ms": 45.2528859999984,
+      "peak_ram_mb": 326.2578125,
+      "rss_after_load_mb": 310.0546875,
+      "cpu_ms_per_inference": 352.8125,
+      "joules_per_inference": 1.0261188253061369,
+      "energy_runs": 1225,
+      "energy_seconds": 33.64473719999933,
+      "codecarbon_cpu_mode": "windows_emi",
+      "codecarbon_mode": "measured",
+      "cpu_power_w": 31.05725920723527,
+      "machine_cpu_load_pct_before": 10.6666666666667
+    },
+    {
+      "kind": "torch",
+      "latency_ms": 46.67946600000505,
+      "peak_ram_mb": 326.3828125,
+      "rss_after_load_mb": 309.8984375,
+      "cpu_ms_per_inference": 352.5,
+      "joules_per_inference": 0.9256835102040976,
+      "energy_runs": 735,
+      "energy_seconds": 34.12924470000053,
+      "codecarbon_cpu_mode": "windows_emi",
+      "codecarbon_mode": "measured",
+      "cpu_power_w": 12.565472423314096,
+      "machine_cpu_load_pct_before": 20.6666666666667
+    },
+    {
+      "kind": "torch",
+      "latency_ms": 48.10346000000209,
+      "peak_ram_mb": 326.59375,
+      "rss_after_load_mb": 310.0390625,
+      "cpu_ms_per_inference": 356.875,
+      "joules_per_inference": 0.9300688878133174,
+      "energy_runs": 722,
+      "energy_seconds": 33.97682000000077,
+      "codecarbon_cpu_mode": "windows_emi",
+      "codecarbon_mode": "measured",
+      "cpu_power_w": 12.332635957709678,
+      "machine_cpu_load_pct_before": 15.0
+    }
+  ]
+}

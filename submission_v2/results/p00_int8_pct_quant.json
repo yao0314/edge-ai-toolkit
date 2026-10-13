@@ -1,0 +1,33 @@
+{
+  "source": "starter_kit\\student_mobilenetv2_distilled.pt",
+  "opset": 13,
+  "fp32": {
+    "file": "sec2026\\out\\p00_int8_pct\\student_model.onnx",
+    "params": 2219626,
+    "macs": 299507072,
+    "size_mb": 8.506294250488281
+  },
+  "int8": {
+    "file": "sec2026\\out\\p00_int8_pct\\student_model_int8.onnx",
+    "params": 2219626,
+    "macs": 299507072,
+    "size_mb": 2.490542411804199,
+    "settings": {
+      "format": "QDQ",
+      "activations": "uint8",
+      "weights": "int8",
+      "per_channel": true,
+      "reduce_range": false,
+      "calibrate_method": "percentile",
+      "calib_images": 256,
+      "excluded_nodes": [],
+      "percentile": 99.999
+    },
+    "health": {
+      "sqnr_db": 17.8,
+      "top1_agreement": 0.9844,
+      "n_images": 128
+    }
+  },
+  "seconds": 334.3
+}

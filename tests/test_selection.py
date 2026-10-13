@@ -105,7 +105,7 @@ def test_compress_report_states_constraint_and_rejects(tmp_path, dummy):
     p = mod.write_report(tmp_path, cfg,
                          dummy, s.iloc[0], best, candidates(s, ["size_bytes"]), rejected, files)
     text = p.read_text(encoding="utf-8")
-    assert "p00_int8_dyn_mm" in text and "max_accuracy_drop = 0.02" in text
+    assert "p00_int8_dyn_mm" in text and "at most 0.02 absolute" in text
     assert "p50_int8_dyn_mm" in text and "Rejected despite scoring" in text
     assert "never estimated" in text
     # The thread rows must carry the RIGHT numbers, not merely the right words: asserting only that
