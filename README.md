@@ -1,4 +1,45 @@
 # edge-ai-toolkit
+**Original toolkit author and maintainer:** Price Yang
+**SEC 2026 collaborating contributor:** Weiyao (David) Chang
+
+See [AUTHORS.md](AUTHORS.md) for attribution details.
+
+---
+
+## SEC 2026 Competition Results — Team Valiant Joy
+
+**3rd Place — Software Optimization Track** | Santa Clara University | October 13–15, 2026
+
+Team Valiant Joy used this toolkit for **EuroSAT satellite-image classification**, optimizing a MobileNetV2 student model with **structured channel pruning**, **ResNet50-teacher knowledge distillation**, and **static INT8 quantization** for ONNX deployment.
+
+### Reported optimization results
+
+| Metric | Result | Measurement context |
+| --- | ---: | --- |
+| Competition placement | **3rd Place** | SEC 2026 Software Optimization Track |
+| Parameter reduction | **5.58×** | Baseline vs. optimized model, team technical report |
+| Baseline accuracy retained | **98.04%** | Ratio of optimized accuracy to baseline accuracy, team technical report |
+| ONNX model-size reduction | **~14.5×** | Baseline vs. final INT8 ONNX, team technical report |
+| CPU inference speedup | **8.94×** | Qualcomm AI Hub profiling on **QCS6490**, 27.969 ms → 3.127 ms |
+| Peak memory reduction | **1.66×** | Qualcomm AI Hub profiling on **QCS6490**, 32.33 MB → 19.45 MB |
+
+**Measurement note:** The QCS6490 results above are **team-run Qualcomm AI Hub profiles**, not measurements from a physical QCS6490 board and not organizer-certified performance figures. Local ONNX Runtime evaluations are a separate measurement context and should not be directly compared with AI Hub latency. Competition placement is the team's reported final result.
+
+### Submission artifacts
+
+- [Final submission package](submission_v3/Valiant_Joy/) — technical report, presentation, code, model files, and evaluation metrics
+- [INT8 ONNX model](submission_v3/Valiant_Joy/valiant_joy_int8.onnx)
+- [FP32 ONNX model](submission_v3/Valiant_Joy/valiant_joy_fp32.onnx)
+- [Submission record](submission_v3/SUBMITTED.md) — identifies the files actually submitted
+
+### Collaboration and attribution
+
+The toolkit was originally developed by **Price Yang**. **Weiyao (David) Chang** contributed to the collaborative SEC 2026 model-optimization, evaluation, and competition-deliverable effort. These descriptions distinguish the toolkit's original authorship from the team's competition work; see [AUTHORS.md](AUTHORS.md). The contribution descriptions should be adjusted if the collaborators agree on a more detailed division of responsibilities.
+
+---
+
+---
+
 
 A task-agnostic model compression and measurement toolchain for the **SEC 2026 Minimalist Edge AI Challenge, Software Optimization Track**.
 

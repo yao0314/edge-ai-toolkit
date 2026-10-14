@@ -7,6 +7,15 @@ Copyright (c) 2026 楊元蓁 (Price Yang). All rights reserved.
 Built for the ACM/IEEE SEC 2026 Student Innovation Challenge — Minimalist Edge AI Challenge,
 Software Optimization Track.
 
+## SEC 2026 collaborative contribution
+
+**張維銚 (Weiyao / David Chang)** — contributor to the Team Valiant Joy SEC 2026 effort, collaborating on MobileNetV2 compression, knowledge distillation, INT8 model optimization, benchmarking, and preparation of competition deliverables.
+
+**Team Valiant Joy** — 3rd Place, SEC 2026 Software Optimization Track.
+
+The original toolkit authorship and the existing copyright notice above are preserved. This section acknowledges the competition collaboration; it does not assert that one contributor individually authored the entire toolkit or transfer ownership of pre-existing code. Specific contributions can be refined by mutual agreement.
+
+
 ## Where this attribution appears
 
 The author is recorded in the places that travel with the work, not only in this file:
