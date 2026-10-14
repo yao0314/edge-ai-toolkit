@@ -43,7 +43,7 @@ The toolkit was originally developed by **Price Yang**. **Weiyao (David) Chang**
 
 A task-agnostic model compression and measurement toolchain for the **SEC 2026 Minimalist Edge AI Challenge, Software Optimization Track**.
 
-**Author: 張維銚 (David Chang)** — Copyright (c) 2026 張維銚 (David Chang). See [AUTHORS.md](AUTHORS.md); the same attribution is embedded in every exported model and report.
+**Original toolkit author and maintainer:** Price Yang. **SEC 2026 collaborating contributor:** Weiyao (David) Chang. See [AUTHORS.md](AUTHORS.md) for attribution details.
 
 Input: a model plus a task adapter. Output: several compressed versions (structured pruning × INT8 quantization), every metric for each version, a Pareto plot, and a configurable total score.
 
